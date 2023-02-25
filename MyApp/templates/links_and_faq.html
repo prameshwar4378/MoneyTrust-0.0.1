@@ -1,0 +1,830 @@
+{% load static %}
+{% block custom_style %}
+<style>
+/* related links start  */
+
+.related-item{
+  border:2px solid red;
+  border-radius:5px;
+}
+.related-item:hover{
+  border:2px solid white;
+  border-radius:5px;
+  background:#B40018;
+  transition:0.3s;
+  cursor: pointer;
+  color:white;
+  box-shadow:0px 0px 8px black;
+}
+/* related links stop  */
+
+
+
+/* FAQ Section   */
+
+.faq-container{
+border:2px solid #CDBDBF;
+margin-top:20px;
+padding-bottom:20px;
+border-radius:10px;
+}
+
+.faq-options{
+  border:2px solid gray;
+  border-radius:5px;
+  padding:10px;
+  margin-bottom:5px;
+}
+.faq-options:hover{
+cursor:pointer;
+border:2px solid white;
+transition:0.4s;
+background:#B40018;
+color:white;
+box-shadow:0px 0px 8px black;
+
+}
+
+input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+.accordion-wrapper {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.5);
+  width: 100%%;
+  margin:0 auto;
+}
+.accordion {
+  width: 100%;
+  color: white;
+  overflow: hidden;
+  margin-bottom: 0px;
+}
+.accordion:last-child{
+  margin-bottom: 0;
+}
+.accordion-label {
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  padding: 15px;
+  background: #B40018;
+  cursor: pointer;
+  font-size: 15px;
+}
+.accordion-label:hover {
+  background: rgba(4,57,94,1);
+}
+.accordion-label::after {
+  content: "\276F";
+  width: 16px;
+  height: 16px;
+  text-align: center;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.accordion-content {
+  max-height: 0;
+  padding: 0 16px;
+  color: rgba(4,57,94,1);
+  background: white;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.accordion-content p{
+  margin: 0;
+  color: rgba(4,57,94,.7);
+  {% comment %} font-size: 18px; {% endcomment %}
+}
+
+@media screen and (max-width: 770px) {
+  .accordion-content p{
+    text-align:justify;
+  }
+}
+input:checked + .accordion-label {
+  background: rgba(4,57,94,1);
+}
+input:checked + .accordion-label::after {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+input:checked ~ .accordion-content {
+  max-height: 100vh;
+  padding: 16px;
+}
+</style>
+{% endblock custom_style %}
+
+{% block links_and_faq %}
+
+
+
+
+  <!-- Other Links start  -->
+  <section style="background:#FED2D6; padding-bottom:15px;" >
+    <div class="container pb-">
+      
+      <div class="row">
+        <div class="col-md-12">
+          <div class="titlepage">
+              <h2 class="text-dark mt-2 mb-2">Related</h2>
+          </div>
+        </div>
+    </div>
+
+      <h3 style="border-left:8px double red; padding:4px;">Locations</h3>
+      
+        <img src="{% static 'img/maharashtra-map.png' %}" alt="" style="width:100%">
+  </div>   
+</section>
+      <!-- Other Links Stop  -->
+    
+
+
+<!-- FAQ Start-->
+
+<div class="container faq-container">
+
+<h1 class="mt-4 text-center">Frequently Asked Questions</h1>
+<div class="row">
+
+  <div class="col-lg-4 col-md-3 ">
+    <div class="faq-options mt-2"  onclick="faq_section_1()">
+            <span style="vertical-align: middle;">Ovierview</span>
+    </div>      
+  </div>
+
+  <div class="col-lg-4 col-md-3 ">
+    <div class="faq-options mt-2"  onclick="faq_section_2()">
+            <span style="vertical-align: middle;">Eligibility Criteria & Calculator</span>
+    </div>      
+  </div>
+
+  <div class="col-lg-4 col-md-3 ">
+    <div class="faq-options mt-2"  onclick="faq_section_3()">
+            <span style="vertical-align: middle;">EMI Calculator</span>
+    </div>      
+  </div>
+
+  <div class="col-lg-4 col-md-3 ">
+    <div class="faq-options mt-2"  onclick="faq_section_4()">
+            <span style="vertical-align: middle;">Interest Rate & Processing Fees</span>
+    </div>      
+  </div>
+
+  <div class="col-lg-4 col-md-3 ">
+    <div class="faq-options mt-2"  onclick="faq_section_5()">
+            <span style="vertical-align: middle;">Document Required</span>
+    </div>      
+  </div>
+
+  <div class="col-lg-4 col-md-3 ">
+    <div class="faq-options mt-2"  onclick="faq_section_6()">
+            <span style="vertical-align: middle;">Balance Transfer & Topup</span>
+    </div>      
+  </div>
+</div>
+
+<hr style="border:2px solid #CDBDBF">
+
+
+
+    <!-- accordion-section-1 Start  -->
+
+    <section id="accordion-section-1">
+      <h3 class="text-center" style="color:#0855AD">Overview</h3>
+      <div class="accordion-wrapper">
+        <div class="accordion">
+          <input type="radio" name="radio-a" id="check-1-1" checked>
+          <label class="accordion-label" for="check-1-1">What is a personal loan?</label>
+          <div class="accordion-content">
+            <p> An unsecured borrowing, the term Personal Loan implies an amount of money borrowed for a variety of
+              purposes. This multi-purpose loan has no end-usage restrictions, and can be used to consolidate debt, pay
+              for home renovation, organize a wedding, or any other purpose the borrower deems fit. The borrowing has to
+              be repaid over a period with interest along with other fees and charges. &#128522;</p>
+          </div>
+        </div>
+        <div class="accordion">
+          <input type="radio" name="radio-a" id="check-1-2">
+          <label class="accordion-label" for="check-1-2">Why do people take personal loans?</label>
+          <div class="accordion-content">
+            <p> Personal Loans are collateral-free unsecured loans offered by almost all Banks and NBFCs, and are
+              approved within 24 hours to 7 business days. These funds are multi-purpose loans without end-usage
+              restrictions, and thus can be used for varied purposes ranging from emergencies to vacations. Easy
+              documentation and quick approval makes these collateral-free loans easy to avail and hassle-free in times
+              of need.</p>
+          </div>
+        </div>
+        <div class="accordion">
+          <input type="radio" name="radio-a" id="check-1-3">
+          <label class="accordion-label" for="check-1-3">What is the maximum loan amount anyone can get?</label>
+          <div class="accordion-content">
+            <p>Most Banks and NBFCs offer you a personal loan amount to the tune of Rs. 25 Lakhs as an individual after
+              a check on your age, employment, income, and creditworthiness. In case, you are a salaried person, you may
+              be allowed to apply for a loan amount up to 20 times your monthly income at your lender's discretion.</p>
+          </div>
+        </div>
+        <div class="accordion">
+          <input type="radio" name="radio-a" id="check-1-4">
+          <label class="accordion-label" for="check-1-4">Are credit cards or home loans better the personal
+            loans?</label>
+          <div class="accordion-content">
+            <p>Experts recommend a credit card for short-term debt. On the other hand, a personal loan proves more
+              suitable for longer repayment tenures. Depending on your requirement, go for a home loan when you are
+              ready to buy a house. A personal loan proves useful when you require extra cash. Personal loans and Credit
+              Cards are unsecured forms of credit, while you mortgage your house when you avail a home loan. Depending
+              on your need, check your loan value, loan tenure, interest rate, processing fees, and hidden charges
+              offers before you decide on a Personal Loan, a Home Loan, or a Credit Card.</p>
+          </div>
+        </div>
+        <div class="accordion">
+          <input type="radio" name="radio-a" id="check-1-5">
+          <label class="accordion-label" for="check-1-5">How fast can my personal loan be sanctioned?</label>
+          <div class="accordion-content">
+            <p>Approval of your Personal Loan depends on your lender. You personal loan approval in terms of time
+              however depending on your lender may be approved instantly within 24 hours or may take up to 7 business
+              days based on your credit score.</p>
+          </div>
+        </div>
+        <div class="accordion">
+          <input type="radio" name="radio-a" id="check-1-6">
+          <label class="accordion-label" for="check-1-6">What is the procedure for applying for a personal loan?</label>
+          <div class="accordion-content">
+            <p>Apply for a personal loan in the following manner.</p>
+            <ul class="outer-li">
+              <li>Decide the Exact Amount to Borrow</li>
+              <li>Use a Personal Loan Eligibility Calculator</li>
+              <li>Calculate Your Credit Score</li>
+              <li>Check your Documentation</li>
+              <li>Fill out the Personal Loan Application Form</li>
+              <li>Submit Relevant Documents</li>
+              <li>Lender Verification of Documents</li>
+              <li>Assessment and Approval</li>
+              <li>Disbursal of Loan Amount into your Bank Account</li>
+            </ul>
+          </div>
+        </div>
+        <div class="accordion">
+          <input type="radio" name="radio-a" id="check-1-7">
+          <label class="accordion-label" for="check-1-7">Is there an option of co-applicants for personal loan? </label>
+          <div class="accordion-content">
+            <p>There are options from financial institutions for co-applications for Personal loans. However, just about
+              anyone cannot become a co-borrower. Depending on your lender, you can co-apply jointly with your spouse,
+              parents, or siblings.</p>
+          </div>
+        </div>
+        <div class="accordion">
+          <input type="radio" name="radio-a" id="check-1-8">
+          <label class="accordion-label" for="check-1-8">What will be the tenure of personal loan? </label>
+          <div class="accordion-content">
+            <p>MoneyTrust offers in association with well-known Banks and NBFCs Personal Loan tenures ranging from 1 to 5
+              years or 12 to 72 months. You choose your loan period according to your repayment capacities to suit your
+              needs.</p>
+          </div>
+        </div>
+        <div class="accordion">
+          <input type="radio" name="radio-a" id="check-1-9">
+          <label class="accordion-label" for="check-1-9">Can I apply my loan online?</label>
+          <div class="accordion-content">
+            <p> Yes, You can apply for personal loan online with MoneyTrust Easy Application Process. Apply for Instant
+              Personal Loan now [link]</p>
+          </div>
+        </div>
+        <div class="accordion">
+          <input type="radio" name="radio-a" id="check-1-10">
+          <label class="accordion-label" for="check-1-10"> What is the possibility of getting a personal loan from
+            banks? </label>
+          <div class="accordion-content">
+            <p>The possibility of getting personal loans from banks depends on eligibility criteria, and your
+              creditworthiness as decided by your lending banks. Should you prove your eligibility in accordance with
+              the terms and conditions of the bank, and should the bank find you worthy of credit, you will not be
+              denied a loan in the shortest period.</p>
+          </div>
+        </div>
+        <div class="accordion">
+          <input type="radio" name="radio-a" id="check-1-11">
+          <label class="accordion-label" for="check-1-11">Can I apply for personal loans through NBFC's? </label>
+          <div class="accordion-content">
+            <p>Other than banks, Non-Banking Financial Companies or NBFCs too offer personal loans at attractive rates
+              of interests additional incentives. Provided you fulfil eligibility criteria, you can apply for a personal
+              loan from any of MoneyTrust' Partner NBFCs.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- accordion-section-1 Stop  -->
+
+
+
+    <!-- accordion-section-2 Start  -->
+
+    <section id="accordion-section-2">
+      <h3 class="text-center" style="color:#0855AD">Eligibility Criteria & Calculator</h3>
+
+      <div class="accordion-wrapper">
+
+        <div class="accordion">
+          <input type="radio" name="radio-a" id="check-2-1" checked>
+          <label class="accordion-label" for="check-2-1">What is the age limit for personal loan?</label>
+          <div class="accordion-content">
+            <p>Ordinarily, a lending institution will offer you a personal loan if you are aged between 21 to 65 years
+              of age. Depending on the lender, a salaried person aged up to 60 years, and a self-employed person aged up
+              to 65 years may avail a personal loan. &#128522;</p>
+          </div>
+        </div>
+
+        <div class="accordion">
+          <input type="radio" name="radio-a" id="check-2-2" checked>
+          <label class="accordion-label" for="check-2-2">When will a bank reject my personal loan application? </label>
+          <div class="accordion-content">
+            <p>When you apply for a personal loan, lenders check your willingness and ability to repay in relation to
+              your credit history as a measure of your willingness to return the loan amount, and your income as a
+              benchmark for your ability to repay. Here are a few reasons for loan rejection.&#128522;</p>
+            <ul class="outer-li">
+              <li>Credit Score</li>
+              <li>FOIR</li>
+              <li>Income</li>
+              <li>Inaccuracies</li>
+
+            </ul>
+          </div>
+        </div>
+
+        <div class="accordion">
+          <input type="radio" name="radio-a" id="check-2-3" checked>
+          <label class="accordion-label" for="check-2-3">What credit score is required for a 50,000 personal
+            loan?</label>
+          <div class="accordion-content">
+            <p>A high credit score of 750 or more gives you the ability to avail any sort of loan. However, a credit of
+              lesser than 550, may lead to rejection or higher rates of interest on Personal Loan. Personal Loans are
+              unsecured forms of credit, and as such are more risk oriented than other types of loans. Low scores
+              indicate higher risks, and vice versa, depending on your lender's policy. &#128522;</p>
+          </div>
+        </div>
+
+        <div class="accordion">
+          <input type="radio" name="radio-a" id="check-2-4" checked>
+          <label class="accordion-label" for="check-2-4">What is the eligibility criteria to get personal loan from bank
+            or NBFC? </label>
+          <div class="accordion-content" style="text-align:none;">
+            Eligibility Criteria for Personal Loan
+            <ul class="outer-li">
+              <li>Age
+                <ul>
+                  <li>Salaried: 21 to 60 years</li>
+                  <li>Self Employed: 25 to 65 years</li>
+                </ul>
+
+              </li>
+              <li>Minimum Income
+                <ul>
+                  <li>Salaried: Rs. 15,000 Net per Month</li>
+                  <li>Self Employed: Rs. 5,00,000 Gross per Year</li>
+                </ul>
+
+              </li>
+              <li>Minimum Work / Business Experience
+                <ul>
+                  <li>Salaried: 2 years with at leat 2 years in Current Organization</li>
+                  <li>Self Employed: 1 years Business Vintage</li>
+                </ul>
+
+              </li>
+              <li>Credit Score
+                <ul>
+                  <li>Salaried: 750+</li>
+                  <li>Self Employed: 750+</li>
+                </ul>
+
+              </li>
+
+            </ul>
+            <p>For more details check Personal Loan Eligibility Criteria & Calculator[link]</p>
+          </div>
+        </div>
+
+        <div class="accordion">
+          <input type="radio" name="radio-a" id="check-2-5" checked>
+          <label class="accordion-label" for="check-2-5"> Which bank should I apply to if I want a personal
+            loan?</label>
+          <div class="accordion-content">
+            Moneytrust has many options to choose from, to avail a personal loan. Check out the offers by various banks
+            based on the below mentioned criteria, and select the best option according to tailor-make and suit your
+            needs. Check with your own bank however for the pre-approved offers, since a good relationship with your
+            bank will negotiate for you the best terms and conditions.
+            <ul class="outer-li">
+              <li>Loan Amount</li>
+              <li>Loan Tenure</li>
+              <li>Interest Rates</li>
+              <li>Minimal Documentation</li>
+              <li>Processing Fees</li>
+              <li>Hidden Charges</li>
+
+            </ul>
+          </div>
+        </div>
+
+        <div class="accordion">
+          <input type="radio" name="radio-a" id="check-2-6" checked>
+          <label class="accordion-label" for="check-2-6"> How does a Personal Loan impact my credit score?</label>
+          <div class="accordion-content">
+            <p>A personal loan can help raise your credit score when repaid in time. A personal loan may not be bad for
+              your credit score, but may affect your overall score over a short period in which obtaining a new loan may
+              be difficult until repayment. Paying of a personal loan in time helps build your credit score positively.
+              &#128522;</p>
+          </div>
+        </div>
+
+        <div class="accordion">
+          <input type="radio" name="radio-a" id="check-2-7" checked>
+          <label class="accordion-label" for="check-2-7">Do I require any guarantor to avail a personal loan? </label>
+          <div class="accordion-content">
+            <div class="accordion-body">
+              <p>When you avail a personal loan approved by a guarantor, you generally pay a higher rate of interest on
+                you loan due to the higher risk of lending. A lender will require a guarantor of you in the following
+                circumstances.&#128522;</p>
+              <ul class="outer-li">
+                <li>Poor Credit Score</li>
+                <li>Inconsistent Source of Income</li>
+                <li>High Risk Perception</li>
+
+              </ul>
+              <p>You need to satisfy your lender with the following conditions to be eligible for a personal loan
+                without a guarantor.</p>
+              <ul class="outer-li">
+                <li>Good Credit Score</li>
+                <li>Stable Income Source</li>
+                <li>Apply with a co-applicant</li>
+
+              </ul>
+              <p>Therefore, you should always aim for taking a personal loan without a guarantor.</p>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="accordion">
+          <input type="radio" name="radio-a" id="check-2-8" checked>
+          <label class="accordion-label" for="check-2-8">Can a person get personal loan if his credit score is not
+            proper?</label>
+          <div class="accordion-content">
+            <p>A low credit score does not guarantee approval of a personal loan. However, despite your low score you
+              may find a lend willing to offer you a personal loan for a higher rate of interest and restricted terms
+              and conditions. &#128522;</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- accordion-section-2 Stop  -->
+
+
+
+
+
+    <!-- accordion-section-3 Start  -->
+
+    <section id="accordion-section-3">
+      <h3 class="text-center" style="color:#0855AD">EMI Calculator</h3>
+
+      <div class="accordion-wrapper">
+
+        <div class="accordion">
+          <input type="radio" name="radio-a" id="check-3-1" checked>
+          <label class="accordion-label" for="check-3-1">What is an EMI (Equal Monthly Instalment)?</label>
+          <div class="accordion-content">
+            <p> The term Equated Monthly Income or EMI refers to a fixed amount of money paid by a borrower to a lender
+              at a pre-agreed date every month. An EMI includes both the interest and the principal amount payable each
+              month over a specified period until you pay off your Personal Loan completely. Other than Personal Loans,
+              Home Loans, Business Loans, Loans Against Property, Car and Auto Loans, and some other types of loans
+              accept this method of loan repayment. &#128522;</p>
+          </div>
+        </div>
+
+        <div class="accordion">
+          <input type="radio" name="radio-a" id="check-3-2" checked>
+          <label class="accordion-label" for="check-3-2">How is loan EMI Calculated?</label>
+          <div class="accordion-content">
+            <p>Your Loan EMI depends on three factors.
+
+              Loan Amount or Loan Value
+              Rate of Interest
+              Loan Tenure or Period of Loan
+              Use the following mathematical formula to calculate you EMI.
+
+              EMI = P x r x ( 1 + r ) n / [ ( 1 + r ) n - 1 ]
+              Where,
+
+              P = Loan Amount
+              R = Rate of Interest
+              N = Loan Tenure in Months &#128522;</p>
+          </div>
+        </div>
+
+        <div class="accordion">
+          <input type="radio" name="radio-a" id="check-3-3" checked>
+          <label class="accordion-label" for="check-3-3">How to use a personal loan EMI calculator?</label>
+          <div class="accordion-content">
+            <p>MoneyTrust' Personal Loan EMI Calculator has three form fields for you to enter the data required to
+              calculate your personal loan EMI. Personal Loan Amount, Rate of Interest, and Loan Tenure in Months. You
+              don't need to manually key in the day, simply move the slider to the preferred values. Three types of
+              numeric results will appear simultaneously as you move the sliders. The results are as follows.
+              Loan EMI
+              Total Interest Payable
+              Total Payment (Principal + Interest) &#128522;</p>
+          </div>
+        </div>
+
+        <div class="accordion">
+          <input type="radio" name="radio-a" id="check-3-4" checked>
+          <label class="accordion-label" for="check-3-4">What are the benifits of using personal loan EMI
+            calculator?</label>
+          <div class="accordion-content">
+            <p>Benefits of using MoneyTrust' Personal Loan EMI Calculator are as follows
+
+              Ease of Access
+              You have easy access to MoneyTrust' Personal Loan EMI Calculator online from almost anywhere provided you
+              have a desktop, laptop, tablet, or smart phone at your disposal.
+
+              Effortless Process
+              You don't have to key in the preferred numerical figures. The calculator has sliders that require to be
+              moved to the preferred figures from the given range to make the process of calculation an effortless
+              process in real time.
+
+              Saves Time
+              Using a calculator or calculating manually may turn out to be tiresome and time consuming process, and the
+              results may sometimes be erroneous. The MoneyTrust Calculator slider method saves you a lot of time.
+
+              Accurate Results
+              The MoneyTrust Calculator functions on proprietary computerised algorithms designed to give you accurate and
+              precise results simultaneously.
+
+              Helps Plan Better
+              With results in the form of Loan EMI, Total Interest Payable, Total Payment (Principal + Interest), you
+              have all the help in the world to plan your loan better. &#128522;</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- accordion-section-3 Stop  -->
+
+
+
+
+    <!-- accordion-section-4 Start  -->
+
+    <section id="accordion-section-4">
+      <h3 class="text-center" style="color:#0855AD">Interest Rate & Processing Fees</h3>
+
+      <div class="accordion-wrapper">
+
+        <div class="accordion">
+          <input type="radio" name="radio-a" id="check-4-1" checked>
+          <label class="accordion-label" for="check-4-1">What is the lowest interest rate available on personal
+            loans?</label>
+          <div class="accordion-content">
+            <p> You avail lowest interest rate of 10.40% on personal loans at Moneytrust. &#128522;</p>
+          </div>
+        </div>
+
+        <div class="accordion">
+          <input type="radio" name="radio-a" id="check-4-2" checked>
+          <label class="accordion-label" for="check-4-2">How to calculate Personal Loan interest rate?</label>
+          <div class="accordion-content">
+            <p>To get your Personal Loan approved, you need to have a good credit score. Credit scores denote your
+              creditworthiness. &#128522;</p>
+          </div>
+        </div>
+
+        <div class="accordion">
+          <input type="radio" name="radio-a" id="check-4-3" checked>
+          <label class="accordion-label" for="check-4-3">How to interest charged on my personal loan</label>
+          <div class="accordion-content">
+            <p>Your lender decides you rate of interest depending on credit history, income, loan amount, loan period,
+              and other factors. You repay your loan amount over the loan tenure by dividing the interest per annum over
+              the period of your loan payable monthly. A portion of each payment goes towards repaying the borrowed sum,
+              and another goes towards paying off the interest charge. &#128522;</p>
+          </div>
+        </div>
+
+        <div class="accordion">
+          <input type="radio" name="radio-a" id="check-4-4" checked>
+          <label class="accordion-label" for="check-4-4">How much will a customer have to pay in total while repaying a
+            personal loan?</label>
+          <div class="accordion-content">
+            <p>When you repay a total personal loan, you repay the entire personal loan amount along with interest
+              charges, processing fees, and other applicable charges. &#128522;</p>
+          </div>
+        </div>
+
+        <div class="accordion">
+          <input type="radio" name="radio-a" id="check-4-5" checked>
+          <label class="accordion-label" for="check-4-5">Employment Organization</label>
+          <div class="accordion-content">
+            <p>Employees of well-known MNCs, Public limited Companies, and companies of good standing may receive better
+              rates of interest compared to employees of lesser-known companies. &#128522;</p>
+          </div>
+        </div>
+        <div class="accordion">
+          <input type="radio" name="radio-a" id="check-4-6" checked>
+          <label class="accordion-label" for="check-4-6">Association with Lender</label>
+          <div class="accordion-content">
+            <p>Should you have a long-standing and good financial relationship with your lending organization, you are
+              likely to receive better rates of interest due to your lender's familiarity with your financial records.
+              &#128522;</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- accordion-section-4 Stop  -->
+
+
+
+
+    <!-- accordion-section-5 Start  -->
+
+    <section id="accordion-section-5">
+      <h3 class="text-center" style="color:#0855AD">Documents Required</h3>
+
+      <div class="accordion-wrapper">
+
+        <div class="accordion">
+          <input type="radio" name="radio-a" id="check-5-1" checked>
+          <label class="accordion-label" for="check-5-1">Do I need a PAN card to apply for personal loan? </label>
+          <div class="accordion-content">
+            <p> As a mandatory obligation by tax laws, most financial institutions will require you to submit your PAN
+              Card for a Personal Loan as per guidelines. Depending on your lender, this rule may be relaxed if you are
+              looking for a loan of lower than Rs. 50,000. &#128522;</p>
+          </div>
+        </div>
+
+        <div class="accordion">
+          <input type="radio" name="radio-a" id="check-5-3" checked>
+          <label class="accordion-label" for="check-5-3">What is the complete list of a Document required for personal
+            loan?</label>
+          <div class="accordion-content">
+            <p>Photo Identity Proof &#128522;</p>
+            <p>Proof of Residence or Address Proof &#128522;</p>
+            <p>Income Proof &#128522;</p>
+            <p>Employment Proof &#128522;</p>
+            <p>Form 16 &#128522;</p>
+            <p>Tax Return Certificates &#128522;</p>
+            <p>Passport-Size Photographs &#128522;</p>
+
+
+
+
+          </div>
+        </div>
+        <div class="accordion">
+          <input type="radio" name="radio-a" id="check-5-4" checked>
+          <label class="accordion-label" for="check-5-4">What is a Minimum work experience required to get a personal
+            loan? </label>
+          <div class="accordion-content">
+            <p> Generally, your personal loan will be sanctioned if you possess at least two years of work experience,
+              employed with the current employer for one year. Likewise, as a self-employed professional you will have
+              to show a minimum of 3 years of experience for personal loan approval. &#128522;</p>
+          </div>
+        </div>
+        <div class="accordion">
+          <input type="radio" name="radio-a" id="check-5-6" checked>
+          <label class="accordion-label" for="check-5-6">is Form 16 need to borrow a personal loan? </label>
+          <div class="accordion-content">
+            <p> While assessing your personal loan application, Form 16 gives your lender a complete breakup of your
+              salary and tax liabilities. You are required to submit this document when applying for a personal loan.
+              &#128522;</p>
+          </div>
+        </div>
+        <div class="accordion">
+          <input type="radio" name="radio-a" id="check-5-7" checked>
+          <label class="accordion-label" for="check-5-7">Does a personal loan require any sequirity? </label>
+          <div class="accordion-content">
+            <p> A personal loan happens to be multi-purpose loan without end-usage restrictions, and as such can be used
+              for varied financial purposes and needs. However, in terms of security, a personal loan by nature an
+              unsecured loan does not require any collateral or security of any kind. &#128522;</p>
+          </div>
+        </div>
+        <div class="accordion">
+          <input type="radio" name="radio-a" id="check-5-8" checked>
+          <label class="accordion-label" for="check-5-8">Do I need a Adhar card to apply for a personal loan? </label>
+          <div class="accordion-content">
+            <p> With the introduction of the digitalized Aadhaar Card in to the system, applying for a personal loan
+              online has become easier. Most Banks and NBFCs accept an Aadhaar Card as a proof of identity, birth,
+              address, and citizenship. &#128522;</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- accordion-section-5 Stop  -->
+
+
+
+    <!-- accordion-section-6 Stop  -->
+
+    <section id="accordion-section-6">
+      <h3 class="text-center" style="color:#0855AD">Balance Taransfer & Topup</h3>
+
+      <div class="accordion-wrapper">
+
+        <div class="accordion">
+          <input type="radio" name="radio-a" id="check-6-1" checked>
+          <label class="accordion-label" for="check-6-1">What is the benefit of personal loan balance transfer? </label>
+          <div class="accordion-content">
+            <div class="accordion-body">
+              A personal loan balance transfer features benefits such as
+              <ul class="outer-li">
+                <li>Lower Rate of Interest</li>
+                <li>Longer Repayment Tenure</li>
+                <li>Additional Features</li>
+                <li>Top-up Loan Facility</li>
+                <li>Better Services</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+    </section>
+    <!-- accordion-section-6 Stop  -->
+
+
+</div>
+
+<!-- FAQ Stop-->
+
+<script>
+  document.getElementById('accordion-section-1').style.display='block';
+  document.getElementById('accordion-section-2').style.display='none';
+  document.getElementById('accordion-section-3').style.display='none';
+  document.getElementById('accordion-section-4').style.display='none';
+  document.getElementById('accordion-section-5').style.display='none';
+  document.getElementById('accordion-section-6').style.display='none';
+ 
+  function faq_section_1()
+  {
+   document.getElementById('accordion-section-1').style.display='block';
+   document.getElementById('accordion-section-2').style.display='none';
+   document.getElementById('accordion-section-3').style.display='none';
+   document.getElementById('accordion-section-4').style.display='none';
+   document.getElementById('accordion-section-5').style.display='none';
+   document.getElementById('accordion-section-6').style.display='none';
+  }
+  function faq_section_2()
+ {
+   document.getElementById('accordion-section-1').style.display='none';
+  document.getElementById('accordion-section-2').style.display='block';
+  document.getElementById('accordion-section-3').style.display='none';
+  document.getElementById('accordion-section-4').style.display='none';
+  document.getElementById('accordion-section-5').style.display='none';
+  document.getElementById('accordion-section-6').style.display='none';
+ }
+     function faq_section_3()
+   {
+     document.getElementById('accordion-section-1').style.display='none';
+     document.getElementById('accordion-section-2').style.display='none';
+     document.getElementById('accordion-section-3').style.display='block';
+     document.getElementById('accordion-section-4').style.display='none';
+     document.getElementById('accordion-section-5').style.display='none';
+     document.getElementById('accordion-section-6').style.display='none';
+   }
+     function faq_section_4()
+   {
+     document.getElementById('accordion-section-1').style.display='none';
+     document.getElementById('accordion-section-2').style.display='none';
+     document.getElementById('accordion-section-3').style.display='none';
+     document.getElementById('accordion-section-4').style.display='block';
+     document.getElementById('accordion-section-5').style.display='none';
+     document.getElementById('accordion-section-6').style.display='none';
+   }
+   
+   function faq_section_5()
+   {
+     document.getElementById('accordion-section-1').style.display='none';
+     document.getElementById('accordion-section-2').style.display='none';
+     document.getElementById('accordion-section-3').style.display='none';
+     document.getElementById('accordion-section-4').style.display='none';
+     document.getElementById('accordion-section-5').style.display='block';
+     document.getElementById('accordion-section-6').style.display='none';
+   }
+ 
+   
+   function faq_section_6()
+   {
+     document.getElementById('accordion-section-1').style.display='none';
+     document.getElementById('accordion-section-2').style.display='none';
+     document.getElementById('accordion-section-3').style.display='none';
+     document.getElementById('accordion-section-4').style.display='none';
+     document.getElementById('accordion-section-5').style.display='none';
+     document.getElementById('accordion-section-6').style.display='block';
+   }
+ </script>
+ 
+{% endblock links_and_faq %}

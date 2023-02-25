@@ -1,0 +1,135 @@
+
+
+<!--note : if you want add new caluculator we need to replace all education_loan with new template name  
+            make sure all loan calculator id should be difirent 
+            total education_loan = 48 record found.
+        -->
+
+<div class="loan-calculator">
+    <br>
+
+    <div class="slidecontainer text-left" style="margin-bottom: 25px;" id="">
+        Loan Amount
+        <input type="range"  min="50000" max="100000000"  value="1500000" class="slider"
+            id="range_education_loan_amount" step="100"  >
+        <p style="display: none;">Value: <span id="lbl_education_loan_amount"></span></p>
+        <input type="text" id="txt_education_loan_amount" class="form-control" value="1500000"
+            placeholder="Enter amount from 1,00,000 to 10,00,00,000"
+            onchange="calculation_text_input_education_loan()">
+    </div>
+
+    <div class="row" id="">
+        <div class="col-sm-6">
+            <div class="slidecontainer text-left" style="margin-bottom: 5px;">
+                Rate of Interest
+                <input type="range" min="2" max="15" step="0.1" class="slider" value="13"
+                    id="range_education_loan_rate_of_interest">
+                <p style="display: none;">Value: <span
+                        id="lbl_education_loan_rate_of_interest"></span></p>
+                <input type="text" id="txt_education_loan_rate_of_interest" class="form-control" value="13"
+                      onchange="calculation_text_input_education_loan()">
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="slidecontainer text-left">
+                Loan Duration (year)
+                <input type="range" min="1" max="30"  class="slider" value="3"
+                    id="range_education_loan_tenure">
+                <p style="display: none;">Value: <span id="lbl_education_loan_tenure"></span>
+                </p>
+                <input type="text" id="txt_education_loan_tenure" class="form-control" value="3"
+                    value="5" onchange="calculation_text_input_education_loan()">
+            </div>
+        </div>
+    </div>
+</div>
+<center>
+    <div class="row alert alert-danger mt-4" style="width: 99%;"
+        id="calculator_output">
+        <div class="col-sm-4">
+            <p style="font-size: 15px;">Monthly EMI</p>
+            <span id="lbl_education_loan_monthly_emi"
+                style="font-size: 25px; font-weight: 1000;"><b>50,541</b></span>
+        </div>
+        <div class="col-sm-4">
+            <p style="font-size: 15px;">Total Interest Payable</p>
+            <span id="lbl_education_loan_total_interest_payable"
+                style="font-size: 25px; font-weight: 1000;"><b>3,19,473</b></span>
+        </div>
+        <div class="col-sm-4">
+            <p style="font-size: 15px;">TOTAL AMOUNT PAYABLE</p>
+            <span id="lbl_education_loan_total_amount_payable"
+                style="font-size: 25px; font-weight: 1000;"><b>18,19,473</b></span>
+        </div>
+    </div>
+</center>
+
+ 
+
+<script>
+    
+var var_range_home_loan_amount = document.getElementById("range_education_loan_amount");
+var_range_home_loan_amount.oninput = function () {
+var value1 = document.getElementById("lbl_education_loan_amount").innerHTML = this.value;
+document.getElementById('txt_education_loan_amount').value = value1
+ 
+
+var var_txt_loan_amount = Number(document.getElementById('txt_education_loan_amount').value = value1)
+var var_txt_rate_of_interest = Number(document.getElementById('txt_education_loan_rate_of_interest').value)
+var var_txt_loan_tenure = Number(document.getElementById('txt_education_loan_tenure').value)
+
+var rate_of_interest = (var_txt_loan_amount * var_txt_rate_of_interest * var_txt_loan_tenure ) / 100
+document.getElementById('lbl_education_loan_total_interest_payable').textContent = rate_of_interest
+document.getElementById('lbl_education_loan_total_amount_payable').textContent = rate_of_interest + var_txt_loan_amount
+document.getElementById('lbl_education_loan_monthly_emi').textContent = (rate_of_interest + var_txt_loan_amount) / (var_txt_loan_tenure * 12) ^ 0
+}
+
+var var_rate_of_interest = document.getElementById("range_education_loan_rate_of_interest");
+var_rate_of_interest.oninput = function () {
+var value2 = document.getElementById("lbl_education_loan_rate_of_interest").innerHTML = this.value;
+document.getElementById('txt_education_loan_rate_of_interest').value = value2
+
+var var_txt_loan_amount = Number(document.getElementById('txt_education_loan_amount').value)
+var var_txt_rate_of_interest = Number(document.getElementById('txt_education_loan_rate_of_interest').value = value2)
+var var_txt_loan_tenure = Number(document.getElementById('txt_education_loan_tenure').value)
+
+var rate_of_interest = (var_txt_loan_amount * var_txt_rate_of_interest * var_txt_loan_tenure ) / 100
+document.getElementById('lbl_education_loan_total_interest_payable').textContent = rate_of_interest
+document.getElementById('lbl_education_loan_total_amount_payable').textContent = rate_of_interest + var_txt_loan_amount
+document.getElementById('lbl_education_loan_monthly_emi').textContent = (rate_of_interest + var_txt_loan_amount) / (var_txt_loan_tenure * 12) ^ 0
+
+}
+
+var var_range_loan_tenure = document.getElementById("range_education_loan_tenure");
+var_range_loan_tenure.oninput = function () {
+var value3 = document.getElementById("lbl_education_loan_tenure").innerHTML = this.value;
+document.getElementById('txt_education_loan_tenure').value = value3
+
+var var_txt_loan_amount = Number(document.getElementById('txt_education_loan_amount').value ^ 0)
+var var_txt_rate_of_interest = Number(document.getElementById('txt_education_loan_rate_of_interest').value ^ 0)
+var var_txt_loan_tenure = Number(document.getElementById('txt_education_loan_tenure').value = value3 ^ 0)
+
+var rate_of_interest = (var_txt_loan_amount * var_txt_rate_of_interest * var_txt_loan_tenure ) / 100
+document.getElementById('lbl_education_loan_total_interest_payable').textContent = rate_of_interest
+document.getElementById('lbl_education_loan_total_amount_payable').textContent = rate_of_interest + var_txt_loan_amount
+document.getElementById('lbl_education_loan_monthly_emi').textContent = (rate_of_interest + var_txt_loan_amount) / (var_txt_loan_tenure * 12) ^ 0
+
+}
+
+function calculation_text_input_education_loan() {
+
+var var_txt_loan_amount = Number(document.getElementById('txt_education_loan_amount').value)
+var var_txt_rate_of_interest = Number(document.getElementById('txt_education_loan_rate_of_interest').value)
+var var_txt_loan_tenure = Number(document.getElementById('txt_education_loan_tenure').value)
+
+var rate_of_interest = (var_txt_loan_amount * var_txt_rate_of_interest * var_txt_loan_tenure ) / 100
+document.getElementById('lbl_education_loan_total_interest_payable').textContent = rate_of_interest
+document.getElementById('lbl_education_loan_total_amount_payable').textContent = rate_of_interest + var_txt_loan_amount
+document.getElementById('lbl_education_loan_monthly_emi').textContent = (rate_of_interest + var_txt_loan_amount) / (var_txt_loan_tenure * 12) ^ 0
+
+}
+// document.getElementById('lbl_education_loan_monthly_emi').textContent="15"
+
+
+
+</script>

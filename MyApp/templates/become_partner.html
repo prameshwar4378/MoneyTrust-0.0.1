@@ -1,0 +1,964 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block custom_style %}
+<style>
+   
+.banner{
+    background:url("{% static 'img/became-a-partner-banner.jpg' %}");
+    background-size:100% 100%;
+    background-repeat:no-repeat;
+    height:90vh;
+}
+
+.banner .title{
+    position:relative;
+    left:20px;
+    top:70px;
+    font-weight:500;
+}
+.banner .title h1{
+    font-size:30px;
+}
+.banner .title .br{
+    display:none;
+}
+@media screen and (max-width:600px){
+    .banner .title .br{
+        display:block;
+    }
+}
+
+.banner img{
+width:300px;
+}
+
+@media screen and (max-width:600px){
+    .banner .title .br{
+        display:block;
+    }
+    
+.banner img{
+    width:90%;
+    }
+    
+}
+
+    .pic-ctn {
+        width: 50vw;
+        height: 200px;
+        position:relative;
+        left:50px;
+    }
+
+    @keyframes display {
+        0% {
+            transform: translateX(200px);
+            opacity: 0;
+        }
+
+        10% {
+            transform: translateX(0);
+            opacity: 1;
+        }
+
+        20% {
+            transform: translateX(0);
+            opacity: 1;
+        }
+
+        30% {
+            transform: translateX(-200px);
+            opacity: 0;
+        }
+
+        100% {
+            transform: translateX(-200px);
+            opacity: 0;
+        }
+    }
+
+    .pic-ctn {
+        position: relative;
+
+            {
+            % comment %
+        }
+
+        width: 100vw;
+        height: 300px;
+
+            {
+            % endcomment %
+        }
+
+    }
+
+    .pic-ctn>img {
+        position: absolute;
+
+        opacity: 0;
+        animation: display 10s infinite;
+    }
+
+    img:nth-child(2) {
+        animation-delay: 2s;
+    }
+
+    img:nth-child(3) {
+        animation-delay: 4s;
+    }
+
+    img:nth-child(4) {
+        animation-delay: 6s;
+    }
+
+    img:nth-child(5) {
+        animation-delay: 8s;
+    }
+
+
+
+    .images_form_row {
+        background: #fff;
+        position: relative;
+        top: -60px;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px;
+    }
+
+    .images_form_row .col-sm-8 {
+        border-left: 4px solid gray;
+    }
+
+    @media screen and (max-width:600px){
+        .images_form_row .col-sm-8 {
+            border-left: none;
+        }
+    }
+    
+
+<!--================= 
+    Who become partner start 
+=========================-->
+
+
+    .section-wbp {
+        background:url("{% static 'img/wbp-bg.jpg' %}");
+        background-repeat: no-repeat;  background-size: 100% 100%;
+    }
+
+    .who-become-partner-container {
+        border-radius: 8px;
+        border: 2px solid white;
+        box-shadow: 0px 0px 10px -2px;
+        padding: 8px;
+    }
+
+    .who-become-partner-container p {
+        text-align: justify;
+    }
+
+    .who-become-partner-container .right-border {
+        border-right: 5px solid gray;
+    }
+
+    .who-become-partner-option {
+        padding: 7px;
+        border: 2px solid white;
+        border-radius: 5px;
+        color: white;
+    }
+
+    .who-become-partner-option:hover {
+        cursor: pointer;
+        transition: 0.3s;
+        background-color: #FED2D6;
+    }
+
+
+    @keyframes fadeEffect {
+        0% {
+            opacity: 0;
+            transform: translateX(100px);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+
+    <!--================= 
+        Who become partner End 
+    =========================-->
+
+
+
+    .eligibility-img{
+        width:50%;
+    }
+    .eligibility-criteria .card{
+        padding:7px;
+        text-align:center;
+        border:2px solid #FF7676;
+    }
+    .eligibility-criteria .card-title{
+        background:#B40018;
+        color:white;
+        text-align:center;
+        border-radius:4px;
+        padding:4px;
+    }
+
+    .eligibility-criteria .left-div .card-1{
+        position:relative;
+        left:70px;
+        top:5px;
+        z-index:1;
+    }
+    
+    .eligibility-criteria .right-div .card-1{
+        position:relative;
+        left:-70px;
+        top:5px;
+        z-index:1;
+    }
+
+    
+    .eligibility-criteria .left-div .card-2{
+        position:relative;
+        left:70px;
+        top:35px;
+        z-index:1;
+    }
+    
+    .eligibility-criteria .right-div .card-2{
+        position:relative;
+        left:-70px;
+        top:35px;
+        z-index:1;
+    }
+
+
+    @media screen and (max-width:600px){
+      
+    .eligibility-criteria .left-div .card-1{
+        position:none;
+        left:0px;
+        top:0px;
+        z-index:1;
+    }
+    
+    .eligibility-criteria .right-div .card-1{
+        position:none;
+        left:-0;
+        top:0;
+        z-index:1;
+    }
+
+    
+    .eligibility-criteria .left-div .card-2{
+        position:relative;
+        left:0;
+        top:0;
+        z-index:1;
+    }
+    
+    .eligibility-criteria .right-div .card-2{
+        position:relative;
+        left:0;
+        top:0;
+        z-index:1;
+    }
+  
+    .eligibility-criteria img{
+        display:none;
+    }
+    }
+
+
+    
+
+
+.Services-box .fa{
+    position:relative;
+    top:-55px;
+    margin-bottom:-40px;
+    font-size:50px;
+    color:#B40018;
+    
+    }
+    
+    .Services .Services-box:hover {
+    background: #fff;
+    transition: ease-in all 0.5s;
+    cursor: pointer;
+    
+    }
+    
+</style>
+{% endblock custom_style %}
+
+
+
+
+{% block content %}
+<div class="container-fluid">
+    <div class="banner">
+        <div class="title">
+            <h1 class="text-light" style="font-weight:bold;">Become a <br class="br">
+                <a href="" class="typewrite text-danger" data-period="2000" data-type='[ "MoneyTrust Family", "MoneyTrust Family"]'>
+                  <span class="wrap"></span>
+                </a>
+              </h1>
+              <img src="{% static 'img/became-a-partner-banner-title.png' %}" alt="" class="mt-4">
+        </div>
+    </div>
+</div>
+
+<div class="container" style="width:90%;">
+    <div class="row images_form_row">
+        <div class="col-sm-4 mt-2">
+            <div class="pic-ctn ">
+                <img src="{% static 'img/become-a-partner-slide-1.jpg' %}" alt="" class="pic">
+                <img src="{% static 'img/become-a-partner-slide-1.jpg' %}" alt="" class="pic">
+                <img src="{% static 'img/become-a-partner-slide-2.jpg' %}" alt="" class="pic">
+                <img src="{% static 'img/become-a-partner-slide-3.jpg' %}" alt="" class="pic">
+                <img src="{% static 'img/become-a-partner-slide-1.jpg' %}" alt="" class="pic">
+                <img src="{% static 'img/become-a-partner-slide-2.jpg' %}" alt="" class="pic">
+            </div>
+        </div>
+        <div class="col-sm-8 mt-2" id="become_partner_form">
+            <center>
+                <h4>Earning Opportunity for All Existing Agents with MoneyTrust Loan Partner Program</h4>
+            </center>
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1"><i class="fa fa-user"></i></span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="First Name" aria-label="Username"
+                            aria-describedby="basic-addon1">
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1"><i class="fa fa-user"></i></span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Last Name" aria-label="Username"
+                            aria-describedby="basic-addon1">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1"><i class="fa fa-user"></i></span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Mobile Number" aria-label="Username"
+                            aria-describedby="basic-addon1">
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1"><i class="fa fa-user"></i></span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Email Address" aria-label="Username"
+                            aria-describedby="basic-addon1">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1"><i class="fa fa-user"></i></span>
+                        </div>
+                        <select name="" id="" class="form-control">
+                            <option value="">--Select City---</option>
+                            <option value="">Aurangabad</option>
+                            <option value="">Pune</option>
+                            <option value="">Mumbai</option>
+                            <option value="">Nashik</option>
+                            <option value="">Nagpur</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1"><i class="fa fa-user"></i></span>
+                        </div>
+                        <select name="" id="" class="form-control">
+                            <option value="">--Select Profession---</option>
+                            <option value="">Builder</option>
+                            <option value="">Ex.Banker</option>
+                            <option value="">Freelancer</option>
+                            <option value="">Loan Advisor</option>
+                            <option value="">Other</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1"><i class="fa fa-user"></i></span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Pan Number" aria-label="Username"
+                            aria-describedby="basic-addon1">
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn btn-danger">become a partner</a>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<!--==============
+Who Become Partner Start 
+==================-->
+
+
+<section class="section-wbp  p-5" style="background:url({% static 'img/wbp-bg.jpg' %});background-repeat: no-repeat;  background-size: 100% 100%;">
+
+    <div class="container who-become-partner-container" style=" background: rgba(255, 255, 255, 0.6)">
+        <div class="row">
+            <div class="col-sm-3 right-border">
+                <h4 class="alert alert-danger text-center mt-2">Select Option</h4>
+                <div class="bg-danger who-become-partner-option" onclick="wbp_1()"><i class="fa fa-instagram"></i> Loan
+                    Agent</div>
+                <div class="bg-danger who-become-partner-option" onclick="wbp_2()"><i class="fa fa-instagram"></i>
+                    Ex-Banker</div>
+                <div class="bg-danger who-become-partner-option" onclick="wbp_3()"><i class="fa fa-instagram"></i>
+                    Financial Analyst</div>
+                <div class="bg-danger who-become-partner-option" onclick="wbp_4()"><i class="fa fa-instagram"></i>
+                    Mutual Fund Agent</div>
+                <div class="bg-danger who-become-partner-option" onclick="wbp_5()"><i class="fa fa-instagram"></i>
+                    Chartered accountant</div>
+                <div class="bg-danger who-become-partner-option" onclick="wbp_6()"><i class="fa fa-instagram"></i>
+                    Builder</div>
+            </div>
+
+
+
+            <!--++++++++++++++   Section 01 start   ++++++++++++++++-->
+
+            <div class="col-sm-9" id="wbp-1">
+                <h4 class="alert alert-danger text-center mt-2">About Loan Agent Partner</h4>
+                <p>You're a Loan Agent, knowledgeable about all types of loans offered by the financial institutions you
+                    represent and can advise people on the best options. Get your MoneyTrust Loan Agent Partner Advantage
+                    now,
+                    and advise people how to finance their dreams!</p>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="who-become-partner-content">
+                            <h5>Help finance your clients' futures now</h5>
+                            <li style=" margin-left:10px; list-style:none;"><i
+                                    class="fa fa-arrow-circle-right text-danger"></i>&nbsp; Personal Loans </li>
+                            <li style=" margin-left:10px; list-style:none;"><i
+                                    class="fa fa-arrow-circle-right text-danger"></i>&nbsp; Home Loans </li>
+                            <li style=" margin-left:10px; list-style:none;"><i
+                                    class="fa fa-arrow-circle-right text-danger"></i>&nbsp; Business Loans </li>
+                            <li style=" margin-left:10px; list-style:none;"><i
+                                    class="fa fa-arrow-circle-right text-danger"></i>&nbsp; Auto Loans and more </li>
+                            <a href="#become_partner_form" class="btn btn-danger mt-2">Become a Partner</a>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 pt-4 text-center  ">
+                        <img src="{% static 'img/sample.png' %}" alt=""
+                            style="height:auto; width:80%; border-radius:5px; border:2px solid white; box-shadow:0px 0px 10px -3px;">
+                    </div>
+                </div>
+            </div>
+            <!--++++++++++++++   Section 01 End   ++++++++++++++++-->
+
+
+
+
+
+            <!--++++++++++++++   Section 02 start   ++++++++++++++++-->
+
+            <div class="col-sm-9" id="wbp-2">
+                <h4 class="alert alert-danger text-center">About Ex-Banker Partner</h4>
+                <p>You're an Ex-Banker who was engaged in the business of receiving other peoples' money in deposits, to
+                    be
+                    returned on demand discounting other persons' notes, etc, to make lives easy for people. Get your
+                    MoneyTrust Ex-Banker Partner Advantage now, and help finance their ideas!</p>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="who-become-partner-content">
+                            <h5>Help finance your clients' futures now</h5>
+                            <li style=" margin-left:10px; list-style:none;"><i
+                                    class="fa fa-arrow-circle-right text-danger"></i>&nbsp; Personal Loans </li>
+                            <li style=" margin-left:10px; list-style:none;"><i
+                                    class="fa fa-arrow-circle-right text-danger"></i>&nbsp; Home Loans </li>
+                            <li style=" margin-left:10px; list-style:none;"><i
+                                    class="fa fa-arrow-circle-right text-danger"></i>&nbsp; Business Loans </li>
+                            <li style=" margin-left:10px; list-style:none;"><i
+                                    class="fa fa-arrow-circle-right text-danger"></i>&nbsp; Auto Loans and more </li>
+                            <a href="#become_partner_form" class="btn btn-danger mt-2">Become a Partner</a>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 pt-4 text-center">
+                        <img src="{% static 'img/sample.png' %}" alt=""
+                            style="height:auto; width:80%; border-radius:5px; border:2px solid white; box-shadow:0px 0px 10px -3px;">
+                    </div>
+                </div>
+            </div>
+            <!--++++++++++++++   Section 02 End   ++++++++++++++++-->
+
+
+
+
+            <!--++++++++++++++   Section 03 start   ++++++++++++++++-->
+
+            <div class="col-sm-9" id="wbp-3">
+                <h4 class="alert alert-danger text-center">About Financial Agent Partner</h4>
+                <p>You're a Financial Analyst, a professional who collects, monitors, and evaluates information to make
+                    forecasts and recommendations relevant to their sectors for people. Get your MoneyTrust Financial
+                    Analyst
+                    Partner Advantage now, and help their financial futures!</p>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="who-become-partner-content">
+                            <h5>Help finance your clients' futures now</h5>
+                            <li style=" margin-left:10px; list-style:none;"><i
+                                    class="fa fa-arrow-circle-right text-danger"></i>&nbsp; Personal Loans </li>
+                            <li style=" margin-left:10px; list-style:none;"><i
+                                    class="fa fa-arrow-circle-right text-danger"></i>&nbsp; Home Loans </li>
+                            <li style=" margin-left:10px; list-style:none;"><i
+                                    class="fa fa-arrow-circle-right text-danger"></i>&nbsp; Business Loans </li>
+                            <li style=" margin-left:10px; list-style:none;"><i
+                                    class="fa fa-arrow-circle-right text-danger"></i>&nbsp; Auto Loans and more </li>
+                            <a href="#become_partner_form" class="btn btn-danger mt-2">Become a Partner</a>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 pt-4 text-center">
+                        <img src="{% static 'img/sample.png' %}" alt=""
+                            style="height:auto; width:80%; border-radius:5px; border:2px solid white; box-shadow:0px 0px 10px -3px;">
+                    </div>
+                </div>
+            </div>
+            <!--++++++++++++++   Section 03 End   ++++++++++++++++-->
+
+
+
+
+            <!--++++++++++++++   Section 04 start   ++++++++++++++++-->
+
+            <div class="col-sm-9" id="wbp-4">
+                <h4 class="alert alert-danger text-center">About Mutual Fund Agent Partner</h4>
+                <p>You're a Mutual Fund Agent, a qualified professional who advises and assists investors on investing
+                    in
+                    mutual fund schemes that make money for people. Get your MoneyTrust Mutual Fund Agent Partner Advantage
+                    now, and help their funding needs for mutual benefit!</p>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="who-become-partner-content">
+                            <h5>Help finance your clients' funding needs now</h5>
+                            <li style=" margin-left:10px; list-style:none;"><i
+                                    class="fa fa-arrow-circle-right text-danger"></i>&nbsp; Personal Loans </li>
+                            <li style=" margin-left:10px; list-style:none;"><i
+                                    class="fa fa-arrow-circle-right text-danger"></i>&nbsp; Home Loans </li>
+                            <li style=" margin-left:10px; list-style:none;"><i
+                                    class="fa fa-arrow-circle-right text-danger"></i>&nbsp; Business Loans </li>
+                            <li style=" margin-left:10px; list-style:none;"><i
+                                    class="fa fa-arrow-circle-right text-danger"></i>&nbsp; Auto Loans and more </li>
+                            <a href="#become_partner_form" class="btn btn-danger mt-2">Become a Partner</a>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 pt-4 text-center">
+                        <img src="{% static 'img/sample.png' %}" alt=""
+                            style="height:auto; width:80%; border-radius:5px; border:2px solid white; box-shadow:0px 0px 10px -3px;">
+                    </div>
+                </div>
+            </div>
+            <!--++++++++++++++   Section 04 End   ++++++++++++++++-->
+
+
+
+
+            <!--++++++++++++++   Section 05 start   ++++++++++++++++-->
+
+            <div class="col-sm-9" id="wbp-5">
+                <h4 class="alert alert-danger text-center">About Chartered Accountant Partner</h4>
+                <p>You're a Chartered Accountant (CA) who gives advice, audits accounts, and provides trustworthy
+                    information about financial records. More importantly, you're involved in accounting systems and
+                    processes to better peoples lives. Get your MoneyTrust CA Partner Advantage now, and help finance their
+                    dreams!</p>
+                <div class="row">
+                    <div class="col-sm-6 pt-4">
+                        <div class="who-become-partner-content">
+                            <h5>Help finance your client's dreams now</h5>
+                            <li style=" margin-left:10px; list-style:none;"><i
+                                    class="fa fa-arrow-circle-right text-danger"></i>&nbsp; Personal Loans </li>
+                            <li style=" margin-left:10px; list-style:none;"><i
+                                    class="fa fa-arrow-circle-right text-danger"></i>&nbsp; Home Loans </li>
+                            <li style=" margin-left:10px; list-style:none;"><i
+                                    class="fa fa-arrow-circle-right text-danger"></i>&nbsp; Business Loans </li>
+                            <li style=" margin-left:10px; list-style:none;"><i
+                                    class="fa fa-arrow-circle-right text-danger"></i>&nbsp; Auto Loans and more </li>
+                            <a href="#become_partner_form" class="btn btn-danger mt-2">Become a Partner</a>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 pt-4 text-center">
+                        <img src="{% static 'img/sample.png' %}" alt=""
+                            style="height:auto; width:80%; border-radius:5px; border:2px solid white; box-shadow:0px 0px 10px -3px;">
+                    </div>
+                </div>
+            </div>
+            <!--++++++++++++++   Section 05 End   ++++++++++++++++-->
+
+
+
+
+            <!--++++++++++++++   Section 06 start   ++++++++++++++++-->
+
+            <div class="col-sm-9" id="wbp-6">
+                <h4 class="alert alert-danger text-center">About Builder Partner</h4>
+                <p>You're a Builder who builds homes, commercial, and industrial buildings. You also renovate, excavate,
+                    and
+                    demolish. More specifically, you're a builder who undertakes tasks to build dream homes for people
+                    to
+                    live in. Get your MoneyTrust Builder Partner Advantage now, and help finance their dream homes!</p>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="who-become-partner-content">
+                            <h5>Help finance your customer's needs now</h5>
+                            <li style=" margin-left:10px; list-style:none;"><i
+                                    class="fa fa-arrow-circle-right text-danger"></i>&nbsp; New home </li>
+                            <li style=" margin-left:10px; list-style:none;"><i
+                                    class="fa fa-arrow-circle-right text-danger"></i>&nbsp; Home Improvement loans</li>
+                            <li style=" margin-left:10px; list-style:none;"><i
+                                    class="fa fa-arrow-circle-right text-danger"></i>&nbsp; Home Renovation Loans </li>
+                            <li style=" margin-left:10px; list-style:none;"><i
+                                    class="fa fa-arrow-circle-right text-danger"></i>&nbsp; Land Purchase Loan </li>
+                            <a href="#become_partner_form" class="btn btn-danger mt-2">Become a Partner</a>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 pt-4 text-center">
+                        <img src="{% static 'img/sample.png' %}" alt=""
+                            style="height:auto; width:80%; border-radius:5px; border:2px solid white; box-shadow:0px 0px 10px -3px;">
+                    </div>
+                </div>
+            </div>
+            <!--++++++++++++++   Section 06 End   ++++++++++++++++-->
+
+
+
+        </div>
+    </div>
+</section>
+
+<!--==============
+Who Become Partner End 
+==================-->
+
+
+
+
+<!--==============
+Eligibility Criteri End 
+==================-->
+<section class="eligibility-criteria mt-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <h3>What Are The Eligibility Criteria For The MoneyTrust DSA Registration Process?</h3>
+                <p class="text-justify">MoneyTrust Distribution Services Private Limited (RDSPL), a registered DSA has partnerships with more than 150 leading Banks and NBFCs to offer loans in more than 1600+ cities in India. MoneyTrust retail portfolio includes Personal Loans, Business Loans, Home Loans, Loan against Property or Mortgage Loans, New Car Loan, Used Car Loan & Car Refinance, Credit Cards, and more. Eligibility Criteria to operate as a Loan DSA Partner or Loan DSA Franchise are as follows.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4 left-div">
+                <!--Card one -->
+                <div class="card card-1 mt-2"  style="vertical-align:top;">
+                    <div class="card-title">
+                        <h5>Age</h5>
+                    </div>
+                    <p>
+                        You must be over 25 years of age.
+                    </p>
+                </div>
+
+                <!--Card Two -->
+                <div class="card card-2 mt-2" style="vertical-align:bottom;">
+                    <div class="card-title">
+                        <h5>Education Qualifications</h5>
+                    </div>
+                    <p>
+                        There are no educational requirements to qualify as a MoneyTrust Loan DSA Partner
+                    </p>
+                </div>
+
+            </div>
+            <div class="col-sm-4">
+                <img src="{% static 'img/become-partner-criteria.jpg' %}" alt="" style="width:100%; border-radius:50%;">
+            </div>
+            <div class="col-sm-4 right-div">
+                  <!--Card one -->
+                  <div class="card card-1 mt-2">
+                   
+                    <div class="card-title">
+                        <h5>Nationality</h5>
+                    </div>
+                    <p>
+                        You must be a Resident Citizen of India
+                    </p>
+                </div>
+
+                <!--Card Two -->
+                <div class="card card-2 mt-2">
+                    <div class="card-title">
+                        <h5>Professional Qualifications</h5>
+                    </div>
+                    <p>
+                        Whether you are a working professional, or a business owner, you are welcome to register as a MoneyTrust Loan DSA Franchise
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+<!--==============
+Eligibility Criteri End 
+==================-->
+
+
+
+
+
+
+
+
+<!--==============
+Process Of ManeyTrust DSA Registration End 
+==================-->
+
+
+
+<!--Factors that Affect Personal Loan  -->
+<div id="service" class="Services " style="background:none; margin-top:20px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="titlepage">
+                    <h2>Process Of MoneyTrust DSA Registration</h2>
+                    <p>Registering to partner with MoneyTrust makes for a good start to a successful DSA career. 
+                  This guide will walk you each step through the Online Loan DSA Registration as you begin and grow your business.</p>
+                    <br>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 mt-5 bg-light ">
+                <div class="Services-box " style="height: 92%;" data-aos="zoom-in" data-aos-delay="100"
+                    data-aos-duration="1500">
+                    <i class="fa  " aria-hidden="true">1</i>
+                    <h3 style="background:#B40018;color:white; border-radius:5px;">Apply</h3>
+                    <p>Click on 'Apply Now' and fill in the Loan DSA Partner registration details, and submit along with documents.</p>
+                </div>
+            </div> 
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 mt-5 bg-light ">
+                <div class="Services-box " style="height: 92%;" data-aos="zoom-in" data-aos-delay="100"
+                    data-aos-duration="1500">
+                    <i class="fa  " aria-hidden="true">2</i>
+                    <h3 style="background:#B40018;color:white; border-radius:5px;">Expect a Call</h3>
+                    <p>The MoneyTrust support team will call you to guide, and co-ordinate a meeting with you.</p>
+                </div>
+            </div> 
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 mt-5 bg-light ">
+                <div class="Services-box " style="height: 92%;" data-aos="zoom-in" data-aos-delay="100"
+                    data-aos-duration="1500">
+                    <i class="fa " aria-hidden="true">3</i>
+                    <h3 style="background:#B40018;color:white; border-radius:5px;">Meet</h3>
+                    <p>At the meeting, a MoneyTrust Manager will explain to you all you need to know including the process to follow while generating leads.</p>
+                </div>
+            </div> 
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 mt-5 bg-light ">
+                <div class="Services-box " style="height: 92%;" data-aos="zoom-in" data-aos-delay="100"
+                    data-aos-duration="1500">
+                    <i class="fa  " aria-hidden="true">4</i>
+                    <h3 style="background:#B40018;color:white; border-radius:5px;">Sign DSA Agreement</h3>
+                    <p>Click on 'Apply Now' and fill in the Loan DSA Partner registration details, and submit along with documents.</p>
+                </div>
+            </div> 
+            <!-- <a class="read_more" href="#">Read More</a> -->
+        </div>
+    </div>
+</div>
+<!-- Factors that Affect Personal Loan us -->
+
+
+
+
+<!--==============
+Process Of ManeyTrust DSA Registration End 
+==================-->
+
+
+
+
+<script>
+    document.getElementById('loading').style.display = 'none';
+
+
+    document.getElementById('wbp-1').style.display = 'block';
+    document.getElementById('wbp-2').style.display = 'none';
+    document.getElementById('wbp-3').style.display = 'none';
+    document.getElementById('wbp-4').style.display = 'none';
+    document.getElementById('wbp-5').style.display = 'none';
+    document.getElementById('wbp-6').style.display = 'none';
+
+    function wbp_1() {
+        document.getElementById('wbp-1').style.animation = 'fadeEffect 1s';
+
+        document.getElementById('wbp-1').style.display = 'block';
+        document.getElementById('wbp-2').style.display = 'none';
+        document.getElementById('wbp-3').style.display = 'none';
+        document.getElementById('wbp-4').style.display = 'none';
+        document.getElementById('wbp-5').style.display = 'none';
+        document.getElementById('wbp-6').style.display = 'none';
+    }
+
+    function wbp_2() {
+        document.getElementById('wbp-2').style.animation = 'fadeEffect 1s';
+
+        document.getElementById('wbp-1').style.display = 'none';
+        document.getElementById('wbp-2').style.display = 'block';
+        document.getElementById('wbp-3').style.display = 'none';
+        document.getElementById('wbp-4').style.display = 'none';
+        document.getElementById('wbp-5').style.display = 'none';
+        document.getElementById('wbp-6').style.display = 'none';
+    }
+
+    function wbp_3() {
+        document.getElementById('wbp-3').style.animation = 'fadeEffect 1s';
+
+        document.getElementById('wbp-1').style.display = 'none';
+        document.getElementById('wbp-2').style.display = 'none';
+        document.getElementById('wbp-3').style.display = 'block';
+        document.getElementById('wbp-4').style.display = 'none';
+        document.getElementById('wbp-5').style.display = 'none';
+        document.getElementById('wbp-6').style.display = 'none';
+    }
+
+    function wbp_4() {
+        document.getElementById('wbp-4').style.animation = 'fadeEffect 1s';
+
+        document.getElementById('wbp-1').style.display = 'none';
+        document.getElementById('wbp-2').style.display = 'none';
+        document.getElementById('wbp-3').style.display = 'none';
+        document.getElementById('wbp-4').style.display = 'block';
+        document.getElementById('wbp-5').style.display = 'none';
+        document.getElementById('wbp-6').style.display = 'none';
+    }
+
+    function wbp_5() {
+        document.getElementById('wbp-5').style.animation = 'fadeEffect 1s';
+
+        document.getElementById('wbp-1').style.display = 'none';
+        document.getElementById('wbp-2').style.display = 'none';
+        document.getElementById('wbp-3').style.display = 'none';
+        document.getElementById('wbp-4').style.display = 'none';
+        document.getElementById('wbp-5').style.display = 'block';
+        document.getElementById('wbp-6').style.display = 'none';
+    }
+
+    function wbp_6() {
+        document.getElementById('wbp-6').style.animation = 'fadeEffect 1s';
+
+        document.getElementById('wbp-1').style.display = 'none';
+        document.getElementById('wbp-2').style.display = 'none';
+        document.getElementById('wbp-3').style.display = 'none';
+        document.getElementById('wbp-4').style.display = 'none';
+        document.getElementById('wbp-5').style.display = 'none';
+        document.getElementById('wbp-6').style.display = 'block';
+    }
+</script>
+
+
+
+<!--Script for Text TYping Animation-->
+
+<script>
+    var TxtType = function(el, toRotate, period) {
+        this.toRotate = toRotate;
+        this.el = el;
+        this.loopNum = 0;
+        this.period = parseInt(period, 10) || 2000;
+        this.txt = '';
+        this.tick();
+        this.isDeleting = false;
+    };
+
+    TxtType.prototype.tick = function() {
+        var i = this.loopNum % this.toRotate.length;
+        var fullTxt = this.toRotate[i];
+
+        if (this.isDeleting) {
+        this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+        this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
+
+        this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+        var that = this;
+        var delta = 200 - Math.random() * 100;
+
+        if (this.isDeleting) { delta /= 2; }
+
+        if (!this.isDeleting && this.txt === fullTxt) {
+        delta = this.period;
+        this.isDeleting = true;
+        } else if (this.isDeleting && this.txt === '') {
+        this.isDeleting = false;
+        this.loopNum++;
+        delta = 500;
+        }
+
+        setTimeout(function() {
+        that.tick();
+        }, delta);
+    };
+
+    window.onload = function() {
+        var elements = document.getElementsByClassName('typewrite');
+        for (var i=0; i<elements.length; i++) {
+            var toRotate = elements[i].getAttribute('data-type');
+            var period = elements[i].getAttribute('data-period');
+            if (toRotate) {
+              new TxtType(elements[i], JSON.parse(toRotate), period);
+            }
+        }
+        // INJECT CSS
+        var css = document.createElement("style");
+        css.type = "text/css";
+        css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+        document.body.appendChild(css);
+    };
+</script>
+
+
+{% endblock content %}

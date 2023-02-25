@@ -1,0 +1,834 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block style %}
+.links {
+  width: 100%;
+  background-color: #07043f;
+  color: white;
+  padding: 15px;
+}
+
+.links a {
+  text-decoration: none;
+}
+
+.titlepage{
+text-align: center;
+margin-top: 30px;
+}
+.titlepage h2{
+color: #275da9;
+}
+/* Header Links Section Start */
+
+.header-links {
+  height: auto;
+  width: 98%;
+  background:#07043f;
+  margin-top: 8px;
+  padding-bottom: 8px;
+  border-radius: 10px;
+}
+
+
+
+.banner-btn a {
+  border-radius: 8px;
+  width: 170px;
+  text-decoration: none;
+  display: inline-block;
+  margin: 0 10px;
+  padding: 12px 0;
+  color: #fff;
+  background-color: #07043f;
+  border: 1px solid rgb(255, 255, 255);
+  position: relative;
+  z-index: 1;
+  transition: color 0.5s;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.banner-btn a span {
+  width: 0%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to right, #1C53D9, #07043f);
+  z-index: -1;
+  transition: 0.5s;
+}
+
+.banner-btn a:hover span {
+  border-radius: 8px;
+  width: 100%
+}
+
+.banner-btn a:hover {
+  color: rgb(255, 255, 255);
+}
+
+
+@media screen and (max-width: 770px) {
+  .banner-btn a {
+
+    width: 40%;
+
+  }
+}
+
+/* Header Link Section Stop */
+
+
+
+
+
+
+  /*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+  #hero {
+    width: 100%;
+    height: 75vh;
+    background: url("{% static 'img/hero-bg.jpg' %}") top left;
+    background-size: cover;
+    position: relative;
+  }
+
+  #hero:before {
+    content: "";
+    background: rgba(255, 255, 255, 0.6);
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  #hero .container {
+    position: relative;
+  }
+
+  #hero h1 {
+    margin: 0;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 56px;
+    color: #222222;
+    font-family: "Poppins", sans-serif;
+  }
+
+  #hero h1 span {
+    color: #106eea;
+  }
+
+  #hero h2 {
+    color: #555555;
+    margin: 5px 0 30px 0;
+    font-size: 24px;
+    font-weight: 400;
+  }
+
+  #hero .btn-get-started {
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 10px 28px;
+    border-radius: 4px;
+    transition: 0.5s;
+    color: #fff;
+    background: #106eea;
+  }
+
+  #hero .btn-get-started:hover {
+    background: #247cf0;
+  }
+
+  #hero .btn-watch-video {
+    font-size: 16px;
+    transition: 0.5s;
+    margin-left: 25px;
+    color: #222222;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+  }
+
+  #hero .btn-watch-video i {
+    color: #106eea;
+    font-size: 32px;
+    transition: 0.3s;
+    line-height: 0;
+    margin-right: 8px;
+  }
+
+  #hero .btn-watch-video:hover {
+    color: #106eea;
+  }
+
+  #hero .btn-watch-video:hover i {
+    color: #3b8af2;
+  }
+
+  @media (min-width: 1024px) {
+    #hero {
+      background-attachment: fixed;
+    }
+  }
+
+  @media (max-width: 768px) {
+    #hero {
+      height: 100vh;
+    }
+
+    #hero h1 {
+      font-size: 28px;
+      line-height: 36px;
+    }
+
+    #hero h2 {
+      font-size: 18px;
+      line-height: 24px;
+      margin-bottom: 30px;
+    }
+
+    #hero .btn-get-started,
+    #hero .btn-watch-video {
+      font-size: 13px;
+    }
+  }
+
+  @media (max-height: 500px) {
+    #hero {
+      height: 120vh;
+    }
+  }
+
+  /* Document List Table  */
+  .tbl-document-list {
+    position: relative;
+    transform: translateY(-5rem);
+    background-color: white;
+    border-radius: 25px;
+    box-shadow: 0px 0px 10px -2px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+  }
+
+  /* Document List Table  */
+
+
+
+  /* Document Table Start  */
+
+
+  .table_scroll {
+    height: 420px;
+    overflow-x: scroll;
+    overflow-y: scroll;
+  }
+
+  .table {
+    min-width: max-content;
+  }
+
+  th {
+    background-color: #0098D7;
+    text-align: center;
+  }
+
+  tr,
+  td {
+    text-align: center;
+  }
+
+  .border {
+    border: 2px solid black;
+  }
+
+  /* Document Table Stop  */
+
+  /* Eligibility Start  */
+  .eligibility {
+    background-color: white;
+    border-radius: 25px;
+    box-shadow: 0px 0px 10px -2px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+  }
+
+  .eligibility .eligibility-option {
+    padding: 10px;
+    background-color: #0057c5;
+    margin: 1px;
+    cursor: pointer;
+    color: white;
+  }
+
+  .eligibility .eligibility-description {
+    width: 95%;
+    background-color: #FCDEDE;
+    border-radius: 6px;
+    padding: 10px;
+    border: 2px solid rgb(179, 178, 178);
+
+
+  }
+
+
+  
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+
+  /* Eligibility Stop  */
+{% endblock style %}
+
+{% block content %}
+
+
+<center>
+    <div class="header-links">
+      <div class="banner-btn">
+        <a href="{% url 'personal_loan_overview' %}" data-aos="fade-down" data-aos-delay="100"
+          data-aos-duration="1000"> <span></span> Overview </a>
+        <a href="{% url 'personal_loan_eligibility_criteria' %}" data-aos="fade-down" data-aos-delay="150"
+          data-aos-duration="1000"> <span></span> Eligibility Criteria </a>
+        <a href="#" data-aos="fade-down" data-aos-delay="150" data-aos-duration="1000" data-toggle="modal" data-target="#exampleModal">
+          <span></span> EMI Calculator </a>
+          <a href="{% url 'personal_loan_interest_rate_and_fees' %}"   data-aos="fade-down" data-aos-delay="150"
+          data-aos-duration="1000"  > <span></span> Interest Rate & Processing Fees </a>
+        <a href="{% url 'personal_loan_document_required' %}" style=" color: #07043f; background: #fff;"
+          data-aos="fade-down" data-aos-delay="150" data-aos-duration="1000"> <span></span> Document Required </a>
+      </div>
+    </div>
+    <div class="waves_img"></div>
+  </center>
+
+  <div class="links mt-3">
+    <a href="../index.html" class="text-light">Home/</a>
+    <a href="#" class="text-light">Personal Loan/</a>
+    <a href="#" class="text-warning"> Required Documents</a>
+  </div>
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+    <div class="container" data-aos="zoom-out" data-aos-delay="100">
+      <h1  class="text-dark">Personal Loan <span  class="text-danger">Documents</span></h1>
+      <h4 style="font-weight: 500;">What Document Required for Personal Loan?</h4>
+
+
+    </div>
+  </section><!-- End Hero -->
+
+
+
+
+  <!-- Document Table Start  -->
+
+  <div class="container tbl-document-list">
+    <div class="row">
+      <div class="col-sm-12 text-center ">
+        <h2>List of Documents Required for Personal Loan</h2>
+
+      </div>
+    </div>
+    <div class="row row-1" id="XI_AND_XII" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+      <div class="col-sm-12"><br>
+        <br>
+        <div class="table_scroll" style="height:500px;">
+          <center>
+            <h3>Required Documents</h3>
+            <p>=======================</p>
+          </center>
+          <table class="table table-hover">
+            <thead>
+
+              <tr>
+                <th scope="col" class="text-center bg-danger text-white border">SR.No</th>
+                <th scope="col" class="text-center bg-danger text-white border">Document Name</th>
+                <th scope="col" class="text-center bg-danger text-white border">Document Option</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="  text-left">
+                <td class="text-center border">01</td>
+                <td class="text-center border">Photo Identity Proof</td>
+                <td class="text-center border  ">
+                  <h6 style="text-align: left; margin: -5px;"><i class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp; PAN
+                    Card</h6><br>
+                  <h6 style="text-align: left; margin: -5px;"><i class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp; Voter
+                    ID</h6><br>
+                  <h6 style="text-align: left; margin: -5px;"><i class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp;
+                    Aadhaar Card</h6><br>
+                  <h6 style="text-align: left; margin: -5px;"><i class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp;
+                    Passport</h6><br>
+                  <h6 style="text-align: left; margin: -5px;"><i class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp;
+                    Driving License</h6><br>
+                </td>
+              </tr>
+
+              <tr class="  text-left">
+                <td class="text-center border">02</td>
+                <td class="text-center border">Proof of Residence or Address Proof</td>
+                <td class="text-center border  ">
+                  <h6 style="text-align: left; margin: -5px;"><i class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp; PAN
+                    Card</h6><br>
+                  <h6 style="text-align: left; margin: -5px;"><i class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp; Voter
+                    ID</h6><br>
+                  <h6 style="text-align: left; margin: -5px;"><i class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp;
+                    Aadhaar Card</h6><br>
+                  <h6 style="text-align: left; margin: -5px;"><i class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp;
+                    Passport</h6><br>
+                  <h6 style="text-align: left; margin: -5px;"><i class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp;
+                    Driving License</h6><br>
+                  <h6 style="text-align: left; margin: -5px;"><i class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp;
+                    Electricity Bill</h6><br>
+                  <h6 style="text-align: left; margin: -5px;"><i class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp;
+                    Telephone Bill</h6><br>
+                  <h6 style="text-align: left; margin: -5px;"><i class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp;
+                    Ration Card</h6><br>
+                </td>
+              </tr>
+
+              <tr class="  text-left">
+                <td class="text-center border">03</td>
+                <td class="text-center border">Age Proof</td>
+                <td class="text-center border  ">
+                  <h6 style="text-align: left; margin: -5px;"><i class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp; PAN
+                    Card</h6><br>
+                  <h6 style="text-align: left; margin: -5px;"><i class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp; Voter
+                    ID</h6><br>
+                  <h6 style="text-align: left; margin: -5px;"><i class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp;
+                    Aadhaar Card</h6><br>
+                  <h6 style="text-align: left; margin: -5px;"><i class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp;
+                    Passport</h6><br>
+                  <h6 style="text-align: left; margin: -5px;"><i class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp;
+                    Driving License</h6><br>
+                </td>
+              </tr>
+
+              <tr class="  text-left">
+                <td class="text-center border">04</td>
+                <td class="text-center border">Income Proof</td>
+                <td class="text-center border  ">
+                  <h6 style="text-align: left; margin: -5px;"><i class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp; 6
+                    months Bank statement</h6><br>
+                  <h6 style="text-align: left; margin: -5px;"><i class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp; 3
+                    months Salary Slips</h6><br>
+                </td>
+              </tr>
+
+
+              <tr class="  text-left">
+                <td class="text-center border">05</td>
+                <td class="text-center border">Employment Proof</td>
+                <td class="text-center border  ">
+                  <h6 style="text-align: left; margin: -5px;"><i class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp;
+                    Employment Certificate</h6><br>
+                </td>
+              </tr>
+
+
+              <tr class="  text-left">
+                <td class="text-center border">06</td>
+                <td class="text-center border">Employment Proof</td>
+                <td class="text-center border  ">
+                  <h6 style="text-align: left; margin: -5px;"><i class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp;
+                    Employment Certificate</h6><br>
+                </td>
+              </tr>
+
+
+              <tr class="  text-left">
+                <td class="text-center border">07</td>
+                <td class="text-center border">Office Address Proof</td>
+                <td class="text-center border  ">
+                  <h6 style="text-align: left; margin: -5px;"><i class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp;
+                    Electricity Bill</h6><br>
+                  <h6 style="text-align: left; margin: -5px;"><i class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp;
+                    Telephone Landline Bill</h6><br>
+                  <h6 style="text-align: left; margin: -5px;"><i class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp; GST
+                    or VAT Registration for Self-employed</h6><br>
+                </td>
+              </tr>
+
+              <tr class="  text-left">
+                <td class="text-center border">08</td>
+                <td class="text-center border">Tax</td>
+                <td class="text-center border  ">
+                  <h6 style="text-align: left; margin: -5px;"><i class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp; Form
+                    16</h6><br>
+                  <h6 style="text-align: left; margin: -5px;"><i class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp;
+                    Latest Income Tax Returns</h6><br>
+                </td>
+              </tr>
+
+              <tr class="  text-left">
+                <td class="text-center border">09</td>
+                <td class="text-center border">Tax</td>
+                <td class="text-center border  ">
+                  <h6 style="text-align: left; margin: -5px;"><i class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp;
+                    Photograph</h6><br>
+                  <h6 style="text-align: left; margin: -5px;"><i class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp;
+                    Passport-Size Photographs</h6><br>
+                </td>
+              </tr>
+
+
+            </tbody>
+          </table>
+        </div>
+        <br>
+      </div>
+    </div>
+  </div>
+  <!-- Document Table Stop -->
+
+
+
+  <div class="container eligibility" style="margin-top: -50px;">
+    <div class="row">
+      <div class="col-sm-12 text-center ">
+        <h2>Eligibility Criteria and Documentation</h2>
+      </div>
+    </div>
+    <div class="row mt-3 ">
+      <div class="col-sm-3 text-center" onclick="required_document_section_01()">
+        <div class="bg-danger eligibility-option"><i class="fa fa-instagram"></i> Salaried Individuals</div>
+      </div>
+      <div class="col-sm-3 text-center" onclick="required_document_section_02()">
+        <div class="bg-danger eligibility-option"><i class="fa fa-instagram"></i> Self-Employed Individuals</div>
+      </div>
+      <div class="col-sm-3 text-center" onclick="required_document_section_03()">
+        <div class="bg-danger eligibility-option"><i class="fa fa-instagram"></i> NRI Applicants</div>
+      </div>
+      <div class="col-sm-3 text-center" onclick="required_document_section_04()">
+        <div class="bg-danger eligibility-option"><i class="fa fa-instagram"></i> Pensioners</div>
+      </div>
+    </div>
+
+    <hr style="border: 2px solid gray;">
+
+
+    <!-- ================ 
+    Section 1
+    ================ -->
+    <section id="01">
+      <div class="row">
+        <div class="col-sm-12 text-center ">
+          <h4>What's the Eligibility Criteria and Documents Required for
+            Salaried Individuals?</h4>
+          <p>If you're a salaried person and want to apply for a Personal Loan, you must meet the following criteria.
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-6 text-center" style="height: 100%;">
+          <center>
+            <div class="eligibility-description" style="text-align: left; height: 100%">
+              <h5 class="text-center bg-danger" style="padding: 10px; border-radius: 5px; height: 100%">Eligibility
+                Criteria</h5>
+              <li style="text-align: left; margin-left: 15px; list-style:none;"><i class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp; You must be Resident Citizen of India</li><br>
+              <li style="text-align: left; margin-left: 15px; list-style:none;"><i
+                  class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp; You must be Salaried Individual Employed with an
+                MNC, Public Limited, or Private Limited Company</li><br>
+              <li style="text-align: left; margin-left: 15px; list-style:none;"><i
+                  class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp; You must have a monthly income of at least Rs.15,000
+              </li><br>
+              <li style="text-align: left; margin-left: 15px; list-style:none;"><i
+                  class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp; You must have at least 1 to 3 years of work
+                experience</li><br>
+              <li style="text-align: left; margin-left: 15px; list-style:none;"><i
+                  class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp; You must have a Minimum Credit Score of 750</li><br>
+            </div>
+          </center>
+        </div>
+        <div class="col-sm-6 text-center" style="height: 100%;">
+          <center>
+            <div class="eligibility-description" style="text-align: left; height: 100%">
+              <h5 class="text-center bg-danger" style="padding: 10px; border-radius: 5px; height: 100%">Documentation
+              </h5>
+              <li style="text-align: left; margin-left: 15px; list-style:none;"><i
+                  class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp; Photo Identity Proof</li><br>
+              <li style="text-align: left; margin-left: 15px; list-style:none;"><i
+                  class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp; Proof of Residence or Address Proof</li><br>
+              <li style="text-align: left; margin-left: 15px; list-style:none;"><i
+                  class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp; Income Proof</li><br>
+              <li style="text-align: left; margin-left: 15px; list-style:none;"><i
+                  class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp; Employment Proof</li><br>
+              <li style="text-align: left; margin-left: 15px; list-style:none;"><i
+                  class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp; Form 16</li><br>
+              <li style="text-align: left; margin-left: 15px; list-style:none;"><i
+                  class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp; Tax Return Certificates</li><br>
+              <li style="text-align: left; margin-left: 15px; list-style:none;"><i
+                  class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp; Passport-Size Photographs</li><br>
+            </div>
+          </center>
+        </div>
+      </div>
+    </section>
+
+
+
+
+    <!-- ================ 
+ Section 2
+ ================ -->
+    <section id="02">
+      <div class="row">
+        <div class="col-sm-12 text-center ">
+          <h4>What's the Eligibility Criteria and Documents Required for
+            Self-Employed Individuals?</h4>
+          <p>If you're a Self-Employed person and want to apply for a Personal Loan, you must meet the following
+            criteria.</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-6 text-center">
+          <center>
+            <div class="eligibility-description" style="text-align: left;">
+              <h5 class="text-center bg-danger" style="padding: 10px; border-radius: 5px;">Eligibility Criteria</h5>
+              <li style="text-align: left; margin-left: 15px; list-style:none;"><i
+                  class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp; You must be a Self- Employed Individual</li><br>
+              <li style="text-align: left; margin-left: 15px; list-style:none;"><i
+                  class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp; You must be at least 21 Years of Age</li><br>
+              <li style="text-align: left; margin-left: 15px; list-style:none;"><i
+                  class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp; Your Annual Income should match the Eligibility
+                Criteria set by the Bank</li><br>
+              <li style="text-align: left; margin-left: 15px; list-style:none;"><i
+                  class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp; Your Business must be running for at least 2 years
+              </li><br>
+            </div>
+          </center>
+        </div>
+        <div class="col-sm-6 text-center">
+          <center>
+            <div class="eligibility-description" style="text-align: left;">
+              <h5 class="text-center bg-danger" style="padding: 10px; border-radius: 5px;">Documentation</h5>
+              <li style="text-align: left; margin-left: 15px; list-style:none;"><i
+                  class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp; Photo Identity Proof</li><br>
+              <li style="text-align: left; margin-left: 15px; list-style:none;"><i
+                  class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp; Proof of Business - Certificate of Incorporation,
+                Certificate of Registration with Appropriate Registration Body</li><br>
+              <li style="text-align: left; margin-left: 15px; list-style:none;"><i
+                  class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp; Income Proof - 2 years Income Tax Returns, Certified
+                Profit And Loss Statement</li><br>
+              <li style="text-align: left; margin-left: 15px; list-style:none;"><i
+                  class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp; Passport-Size Photographs</li><br>
+            </div>
+          </center>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- ================ 
+ Section 3
+ ================ -->
+    <section id="03">
+      <div class="row">
+        <div class="col-sm-12 text-center ">
+          <h4>What's the Eligibility Criteria and Documents Required for
+            NRI Applicants?</h4>
+          <p>If you're a Non-Resident Indian and want to apply for a Personal Loan, you must meet the following
+            criteria.</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-6 text-center">
+          <center>
+            <div class="eligibility-description" style="text-align: left;">
+              <h5 class="text-center bg-danger" style="padding: 10px; border-radius: 5px;">Eligibility Criteria</h5>
+              <li style="text-align: left; margin-left: 15px; list-style:none;"><i
+                  class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp; Age 
+                  <ul>
+                  <li><i class="fa fa-circle" aria-hidden="true"
+                      style="margin-left:15px ; font-size:10px; margin-right: 3px;"></i>Employed - 21 to 60 Years</li>
+                  <li><i class="fa fa-circle" aria-hidden="true"
+                      style="margin-left:15px ; font-size:10px; margin-right: 3px;"></i>Self-Employed - 21 to 68 Years
+                  </li>
+                </ul>
+              </li><br>
+              <li style="text-align: left; margin-left: 15px; list-style:none;"><i
+                  class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp; Work Experience 
+                  <ul>
+                  <li><i class="fa fa-circle" aria-hidden="true"
+                      style="margin-left:15px ; font-size:10px; margin-right: 3px;"></i>Employed - 2 Years with at least
+                    1 Year in Current Organisation</li>
+                  <li><i class="fa fa-circle" aria-hidden="true"
+                      style="margin-left:15px ; font-size:10px; margin-right: 3px;"></i>Self-Employed - Minimum 2 years
+                    in Current Business</li>
+                </ul>
+              </li><br>
+              <li style="text-align: left; margin-left: 15px; list-style:none;"><i
+                  class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp; Required - Co-Applicant must be a Direct Close
+                Relative</li><br>
+            </div>
+          </center>
+        </div>
+        <div class="col-sm-6 text-center">
+          <center>
+            <div class="eligibility-description" style="text-align: left;">
+              <h5 class="text-center bg-danger" style="padding: 10px; border-radius: 5px;">Eligibility Criteria</h5>
+              <li style="text-align: left; margin-left: 15px; list-style:none;"><i
+                  class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp; Photocopy of Passport and Visa of NRI</li><br>
+              <li style="text-align: left; margin-left: 15px; list-style:none;"><i
+                  class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp; Yours and Co-Applicant's Proof of Identity</li><br>
+              <li style="text-align: left; margin-left: 15px; list-style:none;"><i
+                  class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp; Yours and Co-Applicant's Address Proof</li><br>
+              <li style="text-align: left; margin-left: 15px; list-style:none;"><i
+                  class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp; Income Proof
+                <ul>
+                  <li><i class="fa fa-circle" aria-hidden="true" style="margin-left:15px ; font-size:10px; margin-right: 3px;"></i>6 Months Indian and International Bank Account Statement for last 6 months</li>
+                  <li><i class="fa fa-circle" aria-hidden="true" style="margin-left:15px ; font-size:10px; margin-right: 3px;"></i>Salary Certificate in English or 6 Months Salary Slips</li>
+                </ul></li><br>
+              <li style="text-align: left; margin-left: 15px; list-style:none;"><i
+                  class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp; Employment Proof
+                <ul>
+                  <li><i class="fa fa-circle" aria-hidden="true" style="margin-left:15px ; font-size:10px; margin-right: 3px;"></i>Appointment Letter</li>
+                  <li><i class="fa fa-circle" aria-hidden="true" style="margin-left:15px ; font-size:10px; margin-right: 3px;"></i>Job contract</li>
+                  <li><i class="fa fa-circle" aria-hidden="true" style="margin-left:15px ; font-size:10px; margin-right: 3px;"></i>HR's email ID or official email ID</li>
+                  <li><i class="fa fa-circle" aria-hidden="true" style="margin-left:15px ; font-size:10px; margin-right: 3px;"></i>Labour | Identity card | CDC for NRIs working in the Middle East or employed in Merchant Navy</li>
+                </ul>
+                </li><br>
+              <li style="text-align: left; margin-left: 15px; list-style:none;"><i
+                  class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp; If present in India during the application, and you will have to provide Power of Attorney attested or notarized locally. In case away, you will have to provide the Power of Attorney attested by the Indian Consulate of NRI's Resident Country.</li><br>
+              <li style="text-align: left; margin-left: 15px; list-style:none;"><i
+                  class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp; Passport-Size Photographs</li><br>
+            </div>
+          </center>
+        </div>
+      </div>
+    </section>
+
+
+
+
+    <!-- ================ 
+ Section 4
+ ================ -->
+    <section id="04">
+      <div class="row">
+        <div class="col-sm-12 text-center ">
+          <h4>What's the Eligibility Criteria and Documents for Pensioners?</h4>
+          <p>If you're a Pensioner and want to apply for a Personal Loan, you must meet the following criteria.
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-6 text-center">
+          <center>
+            <div class="eligibility-description" style="text-align: left;">
+              <h5 class="text-center bg-danger" style="padding: 10px; border-radius: 5px; ;">Eligibility Criteria</h5>
+              <li style="text-align: left; margin-left: 15px; list-style:none;"><i
+                  class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp; You must be Under the Age of 76 years</li><br>
+              <li style="text-align: left; margin-left: 15px; list-style:none;"><i
+                  class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp; You must provide a Third-Party Guarantee</li><br>
+            </div>
+          </center>
+        </div>
+        <div class="col-sm-6 text-center">
+          <center>
+            <div class="eligibility-description" style="text-align: left;">
+              <h5 class="text-center bg-danger" style="padding: 10px; border-radius: 5px; ;">Eligibility Criteria</h5>
+              <li style="text-align: left; margin-left: 15px; list-style:none;"><i
+                  class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp; Photo Identity Proof</li><br>
+              <li style="text-align: left; margin-left: 15px; list-style:none;"><i
+                  class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp; Proof of Residence or Address Proof</li><br>
+              <li style="text-align: left; margin-left: 15px; list-style:none;"><i
+                  class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp; Income Proof</li><br> 
+              <li style="text-align: left; margin-left: 15px; list-style:none;"><i
+                  class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp; Form 16</li><br>
+              <li style="text-align: left; margin-left: 15px; list-style:none;"><i
+                  class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp; Tax Return Certificates</li><br>
+              <li style="text-align: left; margin-left: 15px; list-style:none;"><i
+                  class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp; Passport-Size Photographs</li><br>
+            </div>
+          </center>
+        </div>
+      </div>
+    </section>
+
+
+  </div>
+
+<br>
+  {% include "links_and_faq.html" %}
+
+
+  
+  <script>
+    // Document default 
+    document.getElementById('01').style.display = 'block';
+    document.getElementById('02').style.display = 'none';
+    document.getElementById('03').style.display = 'none';
+    document.getElementById('04').style.display = 'none';
+
+    function required_document_section_01() {
+      document.getElementById('01').style.display = 'block';
+      document.getElementById('02').style.display = 'none';
+      document.getElementById('03').style.display = 'none';
+      document.getElementById('04').style.display = 'none';
+    }
+    function required_document_section_02() {
+      document.getElementById('01').style.display = 'none';
+      document.getElementById('02').style.display = 'block';
+      document.getElementById('03').style.display = 'none';
+      document.getElementById('04').style.display = 'none';
+    }
+    function required_document_section_03() {
+      document.getElementById('01').style.display = 'none';
+      document.getElementById('02').style.display = 'none';
+      document.getElementById('03').style.display = 'block';
+      document.getElementById('04').style.display = 'none';
+    }
+    function required_document_section_04() {
+      document.getElementById('01').style.display = 'none';
+      document.getElementById('02').style.display = 'none';
+      document.getElementById('03').style.display = 'none';
+      document.getElementById('04').style.display = 'block';
+    }
+
+
+  </script>
+
+  <!-- scrolling animation    -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init(); {
+      duration: 2000;
+    }
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+{% endblock content %}

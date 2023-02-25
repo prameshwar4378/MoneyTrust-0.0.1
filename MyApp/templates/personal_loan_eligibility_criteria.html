@@ -1,0 +1,689 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block style %}
+.links {
+  width: 100%;
+  background-color: #07043f;
+  color: white;
+  padding: 15px;
+}
+
+.links a {
+  text-decoration: none;
+}
+
+.titlepage{
+text-align: center;
+margin-top: 30px;
+}
+.titlepage h2{
+color: #275da9;
+}
+/* Header Links Section Start */
+
+.header-links {
+  height: auto;
+  width: 98%;
+  background:#07043f;
+  margin-top: 8px;
+  padding-bottom: 8px;
+  border-radius: 10px;
+}
+
+
+
+.banner-btn a {
+  border-radius: 8px;
+  width: 170px;
+  text-decoration: none;
+  display: inline-block;
+  margin: 0 10px;
+  padding: 12px 0;
+  color: #fff;
+  background-color: #07043f;
+  border: 1px solid rgb(255, 255, 255);
+  position: relative;
+  z-index: 1;
+  transition: color 0.5s;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.banner-btn a span {
+  width: 0%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to right, #1C53D9, #07043f);
+  z-index: -1;
+  transition: 0.5s;
+}
+
+.banner-btn a:hover span {
+  border-radius: 8px;
+  width: 100%
+}
+
+.banner-btn a:hover {
+  color: rgb(255, 255, 255);
+}
+
+
+@media screen and (max-width: 770px) {
+  .banner-btn a {
+
+    width: 40%;
+
+  }
+}
+
+/* Header Link Section Stop */
+
+
+
+
+  /*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+  #hero {
+    width: 100%;
+    height: 75vh;
+    background: url("{% static 'img/hero-bg.jpg' %}") top left;
+    background-size: cover;
+    position: relative;
+  }
+
+  #hero:before {
+    content: "";
+    background: rgba(255, 255, 255, 0.6);
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  #hero .container {
+    position: relative;
+  }
+
+  #hero h1 {
+    margin: 0;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 56px;
+    color: #222222;
+    font-family: "Poppins", sans-serif;
+  }
+
+  #hero h1 span {
+    color: #106eea;
+  }
+
+  #hero h2 {
+    color: #555555;
+    margin: 5px 0 30px 0;
+    font-size: 24px;
+    font-weight: 400;
+  }
+
+  #hero .btn-get-started {
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 10px 28px;
+    border-radius: 4px;
+    transition: 0.5s;
+    color: #fff;
+    background: #106eea;
+  }
+
+  #hero .btn-get-started:hover {
+    background: #247cf0;
+  }
+
+  #hero .btn-watch-video {
+    font-size: 16px;
+    transition: 0.5s;
+    margin-left: 25px;
+    color: #222222;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+  }
+
+  #hero .btn-watch-video i {
+    color: #106eea;
+    font-size: 32px;
+    transition: 0.3s;
+    line-height: 0;
+    margin-right: 8px;
+  }
+
+  #hero .btn-watch-video:hover {
+    color: #106eea;
+  }
+
+  #hero .btn-watch-video:hover i {
+    color: #3b8af2;
+  }
+
+  @media (min-width: 1024px) {
+    #hero {
+      background-attachment: fixed;
+    }
+  }
+
+  @media (max-width: 768px) {
+    #hero {
+      height: 100vh;
+    }
+
+    #hero h1 {
+      font-size: 28px;
+      line-height: 36px;
+    }
+
+    #hero h2 {
+      font-size: 18px;
+      line-height: 24px;
+      margin-bottom: 30px;
+    }
+
+    #hero .btn-get-started,
+    #hero .btn-watch-video {
+      font-size: 13px;
+    }
+  }
+
+  @media (max-height: 500px) {
+    #hero {
+      height: 120vh;
+    }
+  }
+
+  /*--------------------------------------------------------------
+# Sections General
+--------------------------------------------------------------*/
+  section {
+    padding: 20px 0;
+    overflow: hidden;
+  }
+
+  .section-bg {
+    background-color: #f6f9fe;
+  }
+
+  .section-title {
+    text-align: center;
+    padding-bottom: 30px;
+  }
+
+  .section-title h2 {
+    font-size: 13px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    padding: 8px 20px;
+    margin: 0;
+    background: #e7f1fd;
+    color: #106eea;
+    display: inline-block;
+    text-transform: uppercase;
+    border-radius: 50px;
+  }
+
+  .section-title h3 {
+    margin: 15px 0 0 0;
+    font-size: 32px;
+    font-weight: 700;
+  }
+
+  .section-title h3 span {
+    color: #106eea;
+  }
+
+  .section-title p {
+    margin: 15px auto 0 auto;
+    font-weight: 600;
+  }
+
+  @media (min-width: 1024px) {
+    .section-title p {
+      width: 50%;
+    }
+  }
+
+  /*--------------------------------------------------------------
+# Breadcrumbs
+--------------------------------------------------------------*/
+  .breadcrumbs {
+    padding: 20px 0;
+    background-color: #f1f6fe;
+    min-height: 40px;
+  }
+
+  .breadcrumbs h2 {
+    font-size: 24px;
+    font-weight: 300;
+    margin: 0;
+  }
+
+  @media (max-width: 992px) {
+    .breadcrumbs h2 {
+      margin: 0 0 10px 0;
+    }
+  }
+
+  .breadcrumbs ol {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+  }
+
+  .breadcrumbs ol li+li {
+    padding-left: 10px;
+  }
+
+  .breadcrumbs ol li+li::before {
+    display: inline-block;
+    padding-right: 10px;
+    color: #6c757d;
+    content: "/";
+  }
+
+  @media (max-width: 768px) {
+    .breadcrumbs .d-flex {
+      display: block !important;
+    }
+
+    .breadcrumbs ol {
+      display: block;
+    }
+
+    .breadcrumbs ol li {
+      display: inline-block;
+    }
+  }
+
+  /*--------------------------------------------------------------
+# Featured Services and Mejor Factor
+--------------------------------------------------------------*/
+  .featured-services .icon-box {
+    padding: 8px;
+    position: relative;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0px 0px 10px -3px;
+    transition: all 0.3s ease-in-out;
+    border-radius: 8px;
+    z-index: 1;
+  }
+
+  .featured-services .icon-box::before {
+    content: "";
+    position: absolute;
+    background: #cbe0fb;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 100%;
+    transition: all 0.3s;
+    z-index: -1;
+  }
+
+  .featured-services .icon-box:hover::before {
+    background: #db022e;
+    top: 0;
+    border-radius: 0px;
+  }
+
+  .featured-services .icon {
+    margin-bottom: 15px;
+  }
+
+  .featured-services .icon i {
+    font-size: 48px;
+    line-height: 1;
+    color: #106eea;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .featured-services .title {
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 18px;
+  }
+
+  .featured-services .title a {
+    color: #111;
+  }
+
+  .featured-services .description {
+    font-size: 15px;
+    line-height: 28px;
+    margin-bottom: 0;
+  }
+
+  .featured-services .icon-box:hover .title ,
+  .featured-services .icon-box:hover .description {
+    color: #fff;
+  }
+
+  .featured-services .icon-box:hover .icon i {
+    color: #fff;
+  }
+
+.icon-box .header-img{
+  background: linear-gradient(to right,#fa4e65,#db022e);
+  width: 100%;
+  height: 50px;
+  border-radius: 5px;
+}
+.icon-box h4{
+  text-align: center;
+ 
+}
+.icon-box h4 a{
+  background-color: white;
+  padding: 10px;
+  border: 0.5px solid rgb(195, 191, 191);
+  border-radius: 6px;
+  box-shadow: 0px 0px 10px;
+}
+  /*--------------------------------------------------------------
+# Features Section
+--------------------------------------------------------------*/
+  .features {
+    padding-top: 80px;
+  }
+
+  .features .features-item+.features-item {
+    margin-top: 100px;
+  }
+
+  @media (max-width: 640px) {
+    .features .features-item+.features-item {
+      margin-top: 40px;
+    }
+  }
+
+  .features .features-item h3 {
+    font-weight: 600;
+    font-size: 26px;
+    color: #001973;
+  }
+
+  .features .features-item ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .features .features-item ul li {
+    padding-bottom: 10px;
+  }
+
+  .features .features-item ul li:last-child {
+    padding-bottom: 0;
+  }
+
+  .features .features-item ul i {
+    font-size: 20px;
+    padding-right: 4px;
+    color: var(--color-primary);
+  }
+
+  .features .features-item p:last-child {
+    margin-bottom: 0;
+  }
+
+
+
+{% endblock style %}
+
+
+{% block content %}
+
+
+
+<center>
+  <div class="header-links">
+    <div class="banner-btn">
+      <a href="{% url 'personal_loan_overview' %}" data-aos="fade-down" data-aos-delay="100"
+        data-aos-duration="1000"> <span></span> Overview </a>
+      <a href="{% url 'personal_loan_eligibility_criteria' %}" data-aos="fade-down" data-aos-delay="150"
+        data-aos-duration="1000" style="color: #07043f; background: #fff;"> <span></span> Eligibility Criteria </a>
+      <a href="#" data-aos="fade-down" data-aos-delay="150" data-aos-duration="1000" data-toggle="modal" data-target="#exampleModal">
+        <span></span> EMI Calculator </a>
+        <a href="{% url 'personal_loan_interest_rate_and_fees' %}"  data-aos="fade-down" data-aos-delay="150"
+        data-aos-duration="1000"  > <span></span> Interest Rate & Processing Fees </a>
+      <a href="{% url 'personal_loan_document_required' %}"  
+        data-aos="fade-down" data-aos-delay="150" data-aos-duration="1000"> <span></span> Document Required </a>
+    </div>
+  </div>
+  <div class="waves_img"></div>
+</center>
+
+  
+    <div class="links mt-3">
+      <a href="../index.html" class="text-light">Home/</a>
+      <a href="#" class="text-light">Personal Loan/</a>
+      <a href="#" class="text-warning">Eligibility Criteria</a>
+    </div>
+    <!-- ======= Hero Section ======= -->
+    <section id="hero" class="d-flex align-items-center">
+      <div class="container" data-aos="zoom-out" data-aos-delay="100">
+        <h1 class="text-dark" >Personal Loan <span class="text-danger">Criteria</span></h1>
+      </div>
+    </section><!-- End Hero -->
+  
+  
+    <!-- ======= Featured Services Section ======= -->
+    <section id="featured-services" class="featured-services">
+      <div class="container" data-aos="fade-up">
+  
+        <div class="text-center">
+              <h1>Personal Loan Eligibility  Criteria</h1>
+          <p>Personal Loans are an unsecured form of multipurpose credit, which may be used to cover a number of personal
+            expenses. You can acquire a personal loan by qualifying with preset eligibility criteria, which are minimal.
+            The basic eligibility criteria are as follows.</p>
+        </div>
+  
+        <div class="row">
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box text-center" data-aos="fade-up" data-aos-delay="100">
+              <div
+                style="background-color: #db022e; width: 100%; color:white;padding: 5px; border-radius: 5px; margin-bottom: 10px; font-family: 'Teko', sans-serif; text-align: center;">
+                <i class="fa fa-user" style="margin-right: 5px; font-size: 25px;"></i> <a href=""
+                  style="font-size: 25px; color:white; ">Age</a> </div>
+              <p class="description" style="text-align: justify;">Your age becomes an important criterion as a measure of
+                your ability to repay a Personal Loan. As a rule, you will not be denied a loan if you are a salaried
+                person aged between 21 to 58 years. On the other hand, if you are a self-employed professional, your age
+                must be between 25 to 65 years.</p>
+            </div>
+          </div>
+  
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box text-center" data-aos="fade-up" data-aos-delay="200">
+              <div
+                style="background-color: #db022e; width: 100%; color:white;padding: 5px; border-radius: 5px; margin-bottom: 10px; font-family: 'Teko', sans-serif; text-align: center;">
+                <i class="fa fa-user" style="margin-right: 5px; font-size: 25px;"></i> <a href=""
+                  style="font-size: 25px; color:white; ">Employeement</a> </div>
+              <p class="description" style="text-align: justify;">Your term or period of employment becomes a measure of
+                your reliability to repay a loan in time. Personal loans for salaried employees' criterion dictates that
+                you must be working for an MNC or a Private or Public Limited Company with a minimum work experience of 2
+                to 3 years. Likewise, self-employed professionals must have a minimum of 3 years of experience for
+                personal loan eligibility.</p>
+            </div>
+          </div>
+  
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box text-center" data-aos="fade-up" data-aos-delay="300">
+              <div
+                style="background-color: #db022e; width: 100%; color:white;padding: 5px; border-radius: 5px; margin-bottom: 10px; font-family: 'Teko', sans-serif; text-align: center;">
+                <i class="fa fa-user" style="margin-right: 5px; font-size: 25px;"></i> <a href=""
+                  style="font-size: 25px; color:white; ">Income</a> </div>
+              <p class="description" style="text-align: justify;">The minimum salary required for a personal loan as an
+                income criterion for eligibility differs from lender to lender. Your personal loan minimum salary starts
+                from Rs. 20,000 per month.</p>
+            </div>
+          </div>
+  
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box text-center" data-aos="fade-up" data-aos-delay="400">
+              <div
+                style="background-color: #db022e; width: 100%; color:white;padding: 5px; border-radius: 5px; margin-bottom: 10px; font-family: 'Teko', sans-serif; text-align: center;">
+                <i class="fa fa-user" style="margin-right: 5px; font-size: 25px;"></i> <a href="" style="font-size: 25px; color:white; ">Credit Score</a> </div>
+              <p class="description" style="text-align: justify;">Lenders assess your creditworthiness or ability to repay
+                a personal loan by accessing your credit score, which derives from your credit history in your credit
+                report. Your credit score affects the loan amount, period of credit, interest rate, and terms that you are
+                offered.</p>
+            </div>
+          </div>
+  
+        </div>
+  
+      </div>
+    </section><!-- End Featured Services Section -->
+  
+  
+  
+  
+    <!-- ======= Major Factor Section ======= -->
+    <section id="featured-services" class="featured-services">
+      <div class="container" data-aos="fade-up">
+  
+        <div class=" text-center">
+              <h1>Major Factor</h1>
+              <p>Factors That Affect Personal Loan Eligibility</p>
+        </div>
+  
+  
+        <div class="row">
+          <div class="col-md-6 col-lg-6 d-flex align-items-stretch mb-2 mb-lg-0 mt-3">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+              <div class="header-img"></div>
+              <h4 class="title"><a href="">Income</a></h4>
+              <p class="description">Your bank loan eligibility depends heavily on your income. Higher the income, higher
+                are chances of you getting a Personal Loan at low interest rate.</p>
+            </div>
+          </div>
+  
+          <div class="col-md-6 col-lg-6 d-flex align-items-stretch mb-2 mb-lg-0 mt-3">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
+              <div class="header-img"></div>
+              <h4 class="title"><a href="">Credit and Repayment History</a></h4>
+              <p class="description">Banks and NBFCs at all times consider the credit profile of a borrower before
+                sanctioning a loan. Lenders may reject your loan application, or charge you a higher rate of interest if
+                your repayment history shows that you have not been good at repaying credit. A good credit score helps to
+                increase your chances of loan approval.</p>
+            </div>
+          </div>
+  
+          <div class="col-md-6 col-lg-6 d-flex align-items-stretch mb-2 mb-lg-0 mt-3">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
+              <div class="header-img"></div>
+              <h4 class="title"><a href="">Banking Relationship</a></h4>
+              <p class="description">A good banking relationship helps in loan approvals. If you have a salary account or
+                a savings account with the lending bank, the chances of loan approval are higher, and the terms and
+                conditions offered along with the interest rate are favourable as well.</p>
+            </div>
+          </div>
+  
+          <div class="col-md-6 col-lg-6 d-flex align-items-stretch mb-2 mb-lg-0 mt-3">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
+              <div class="header-img"></div>
+              <h4 class="title"><a href="">Ability to Negotiate</a></h4>
+              <p class="description">Personal loan eligibility factors such as income, credit history, and a strong
+                banking relationship ensure good scope for negotiating better terms and conditions, better interest rates,
+                and better loan tenures for your borrowings. Special offers are part of your package if you negotiate
+                well.</p>
+            </div>
+          </div>
+  
+        </div>
+  
+      </div>
+    </section><!-- End Major Factor Section -->
+  
+  
+  
+  
+    <!-- ======= Features Section ======= -->
+    <section id="features" class="features">
+      <div class="container">
+  
+        <div class="row text-center" style="text-align: center;">
+          <h2><b>What's the Personal Loan Eligibility for Salaried Employees?</b></h2>
+          <p>If you are a salaried employee, you can avail a Personal Loan if you fulfil the following eligibility
+            criteria.</p>
+        </div>
+        <div class="row gy-4 align-items-center features-item" data-aos="fade-up">
+  
+          <div class="col-md-5">
+            <img src="{% static 'img/eligibility-criteria-employee.jpg' %}" class="img-fluid" alt="" style="border-radius: 10px;">
+          </div>
+          <div class="col-md-7">
+  
+            <ul>
+              <li><i class="bi bi-check text-primary"></i>You should be a Resident Citizen of India </li>
+              <li><i class="bi bi-check text-primary"></i>Your age should be between 21 to 68 years </li>
+              <li><i class="bi bi-check text-primary"></i>You should be an employee of a Private Limited Company, Public
+                Limited Company, or an MNC, or Government Sector which may be a Public Sector Undertaking, or a Central or
+                Local Body </li>
+              <li><i class="bi bi-check text-primary"></i>Your work experience should be from 1 to 3 years and above </li>
+              <li><i class="bi bi-check text-primary"></i>Your minimum Credit Score should be 750 </li>
+              <li><i class="bi bi-check text-primary"></i>Your salary should be Rs. 15,000 for a Non-Metro City, and Rs
+                20,000 for a Metro City </li>
+            </ul>
+          </div>
+        </div><!-- Features Item -->
+  
+  
+  
+        <div class="row text-center mt-5">
+          <h2><b>How do you qualify for a Personal Loan?</b></h2>
+          <p>The eligibility criteria for a personal loan are quite simple, and your qualification depends on the
+            following criteria.</p>
+        </div>
+        <div class="row gy-4 align-items-center features-item" data-aos="fade-up">
+          <div class="col-md-5 order-1 order-md-2">
+            <img src="{% static 'img/eligibility-criteria-personal-loan.jpg' %}" class="img-fluid" alt=""
+              style="border-radius: 10px;">
+          </div>
+          <div class="col-md-7 order-2 order-md-1">
+            <ul>
+              <li><i class="bi bi-check text-primary"></i>You must be a Resident Citizen of India</li>
+              <li><i class="bi bi-check text-primary"></i>Your age must be between 21 to 68 years </li>
+              <li><i class="bi bi-check text-primary"></i>You must be an employee of a Private Limited Company, Public
+                Limited Company, or an MNC if you are a salaried employee. If you are a self-employed person, or a
+                professional, you too are eligible to apply for a personal loan. </li>
+              <li><i class="bi bi-check text-primary"></i>You should have a minimum Credit Score of 750 </li>
+              <li><i class="bi bi-check text-primary"></i>Your KYC Documents should be in order </li>
+              <li><i class="bi bi-check text-primary"></i>You should have an Employee ID Card </li>
+              <li><i class="bi bi-check text-primary"></i>Must be able to provide last 3 Months Salary Slips</li>
+              <li><i class="bi bi-check text-primary"></i>You should have 3 months' Salary Bank Account Statement </li>
+            </ul>
+          </div>
+        </div><!-- Features Item -->
+  
+      </div>
+    </section><!-- End Features Section -->
+  
+  
+  <br>
+  {% include "links_and_faq.html" %}
+
+  
+    
+  
+{% endblock content %}
+
+

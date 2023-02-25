@@ -1,0 +1,8 @@
+colors codes 
+
+
+light red for background : #FED2D6
+dark red for hover :#B40018
+
+
+default blue : #07043f

@@ -1,0 +1,873 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block style %}
+.links {
+width: 100%;
+background-color: #07043f;
+color: white;
+padding: 15px;
+}
+
+.links a {
+text-decoration: none;
+}
+
+.titlepage{
+text-align: center;
+margin-top: 30px;
+}
+.titlepage h2{
+color: #275da9;
+}
+/* Header Links Section Start */
+
+.header-links {
+height: auto;
+width: 98%;
+background:#07043f;
+margin-top: 8px;
+padding-bottom: 8px;
+border-radius: 10px;
+}
+
+
+
+.banner-btn a {
+border-radius: 8px;
+width: 170px;
+text-decoration: none;
+display: inline-block;
+margin: 0 10px;
+padding: 12px 0;
+color: #fff;
+background-color: #07043f;
+border: 1px solid rgb(255, 255, 255);
+position: relative;
+z-index: 1;
+transition: color 0.5s;
+margin-top: 10px;
+font-weight: bold;
+}
+
+.banner-btn a span {
+width: 0%;
+height: 100%;
+position: absolute;
+top: 0;
+left: 0;
+background: linear-gradient(to right, #1C53D9, #07043f);
+z-index: -1;
+transition: 0.5s;
+}
+
+.banner-btn a:hover span {
+border-radius: 8px;
+width: 100%
+}
+
+.banner-btn a:hover {
+color: rgb(255, 255, 255);
+}
+
+
+@media screen and (max-width: 770px) {
+.banner-btn a {
+
+width: 40%;
+
+}
+}
+
+/* Header Link Section Stop */
+
+
+
+
+
+
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+#hero {
+width: 100%;
+height: 75vh;
+background: url("{% static 'img/hero-bg.jpg' %}") top left;
+background-size: cover;
+position: relative;
+}
+
+#hero:before {
+content: "";
+background: rgba(255, 255, 255, 0.6);
+position: absolute;
+bottom: 0;
+top: 0;
+left: 0;
+right: 0;
+}
+
+#hero .container {
+position: relative;
+}
+
+#hero h1 {
+margin: 0;
+font-size: 48px;
+font-weight: 700;
+line-height: 56px;
+color: #222222;
+font-family: "Poppins", sans-serif;
+}
+
+#hero h1 span {
+color: #106eea;
+}
+
+#hero h2 {
+color: #555555;
+margin: 5px 0 30px 0;
+font-size: 24px;
+font-weight: 400;
+}
+
+#hero .btn-get-started {
+font-family: "Roboto", sans-serif;
+text-transform: uppercase;
+font-weight: 500;
+font-size: 14px;
+letter-spacing: 1px;
+display: inline-block;
+padding: 10px 28px;
+border-radius: 4px;
+transition: 0.5s;
+color: #fff;
+background: #106eea;
+}
+
+#hero .btn-get-started:hover {
+background: #247cf0;
+}
+
+#hero .btn-watch-video {
+font-size: 16px;
+transition: 0.5s;
+margin-left: 25px;
+color: #222222;
+font-weight: 600;
+display: flex;
+align-items: center;
+}
+
+#hero .btn-watch-video i {
+color: #106eea;
+font-size: 32px;
+transition: 0.3s;
+line-height: 0;
+margin-right: 8px;
+}
+
+#hero .btn-watch-video:hover {
+color: #106eea;
+}
+
+#hero .btn-watch-video:hover i {
+color: #3b8af2;
+}
+
+@media (min-width: 1024px) {
+#hero {
+background-attachment: fixed;
+}
+}
+
+@media (max-width: 768px) {
+#hero {
+height: 100vh;
+}
+
+#hero h1 {
+font-size: 28px;
+line-height: 36px;
+}
+
+#hero h2 {
+font-size: 18px;
+line-height: 24px;
+margin-bottom: 30px;
+}
+
+#hero .btn-get-started,
+#hero .btn-watch-video {
+font-size: 13px;
+}
+}
+
+@media (max-height: 500px) {
+#hero {
+height: 120vh;
+}
+}
+
+/* Bank List Table */
+.tbl-bank-list {
+margin-top:20px;
+background-color: white;
+border-radius: 15px;
+box-shadow: 0px 0px 10px -2px;
+padding-bottom: 20px;
+padding-top: 20px;
+}
+
+/* Bank List Table */
+
+
+
+/* Bank Table Start */
+.table-bg-color{
+background-color:#FED2D6;
+}
+
+.table_scroll {
+{% comment %} height: 420px; {% endcomment %}
+overflow-x: scroll;
+{% comment %} overflow-y: scroll; {% endcomment %}
+}
+
+.table {
+min-width: max-content;
+}
+
+th {
+background-color: #0098D7;
+text-align: center;
+}
+
+tr,
+td {
+text-align: left;
+}
+
+.border {
+border: 2px solid black;
+}
+
+/* Bank Table Stop */
+
+
+
+}
+
+.header-section p{
+{% comment %} text-align:justify; {% endcomment %}
+}
+
+.header_section_description{
+margin-top:15px;
+width:100%;
+position:relative;
+top:50px;
+right:70px;
+background:white;
+border:2px solid gray;
+border-radius:10px;
+padding:10px;
+box-shadow:0px 0px 10px -2px;
+}
+
+@media screen and (max-width: 600px) {
+.header_section_description{
+margin-top:15px;
+width:100%;
+position:relative;
+top:0px;
+right:0px;
+background:white;
+border:2px solid gray;
+border-radius:10px;
+padding:10px;
+box-shadow:0px 0px 10px -2px;
+}
+}
+
+
+.factors .card{
+height:90%;
+background:red;
+border-radius:5px;
+}
+
+
+
+
+
+.Services-box .fa{
+position:relative;
+top:-55px;
+margin-bottom:-40px;
+font-size:50px;
+color:#B40018;
+}
+
+.Services .Services-box:hover {
+background: #fff;
+transition: ease-in all 0.5s;
+cursor: pointer;
+
+}
+
+
+.other_charges .col-sm-6 {
+padding-left:30px;
+padding-right:30px;
+}
+.other_charges .col-sm-4 {
+    padding-left:30px;
+    padding-right:30px;
+}
+{% endblock style %}
+
+{% block content %}
+
+
+<center>
+    <div class="header-links">
+        <div class="banner-btn">
+            <a href="{% url 'personal_loan_overview' %}" data-aos="fade-down" data-aos-delay="100"
+                data-aos-duration="1000"> <span></span> Overview </a>
+            <a href="{% url 'personal_loan_eligibility_criteria' %}" data-aos="fade-down" data-aos-delay="150"
+                data-aos-duration="1000"> <span></span> Eligibility Criteria </a>
+            <a href="#" data-aos="fade-down" data-aos-delay="150" data-aos-duration="1000" data-toggle="modal"
+                data-target="#exampleModal">
+                <span></span> EMI Calculator </a>
+            <a href="#" style=" color: #07043f; background: #fff;" data-aos="fade-down" data-aos-delay="150"
+                data-aos-duration="1000"> <span></span> Interest Rate & Processing Fees </a>
+            <a href="{% url 'personal_loan_document_required' %}" data-aos="fade-down" data-aos-delay="150"
+                data-aos-duration="1000"> <span></span> Document Required </a>
+        </div>
+    </div>
+    <div class="waves_img"></div>
+</center>
+
+<div class="links mt-3">
+    <a href="../index.html" class="text-light">Home/</a>
+    <a href="#" class="text-light">Personal Loan/</a>
+    <a href="#" class="text-warning"> Interest Rate & Processing Fees</a>
+</div>
+
+
+<!-- ======= Hero Section ======= -->
+<section id="hero" class="d-flex align-items-center">
+    <div class="container" data-aos="zoom-out" data-aos-delay="100">
+        <h1 class="text-dark"> <span class="text-danger">Interest Rate & Processing Fees</span></h1>
+        <h4 style="font-weight: 500;">How much Interest Rate & Processing Fees?</h4>
+    </div>
+</section><!-- End Hero -->
+
+<div class="container header-serction">
+    <center>
+        <h2 class="mt-2">Rate of Interest</h2>
+    </center>
+    <div class="row mt-2">
+        <div class="col-sm-7">
+            <img src="{% static 'img/interest_rate_heading.jpg' %}" alt="" style="width:100%; height:auto;">
+        </div>
+        <div class="col-sm-5">
+            <div class="header_section_description">
+                <h5 class="text-danger">Personal Loan Interest Rates</h5>
+                <p style="text-align:justify;">Personal loans offered by MoneyTrust are multi-purpose loans that you can use according to your needs
+                    and discretion. You may choose from an array of loan options that offer varying interest rates based
+                    on the value of the loan you choose to apply for, and the term of your loan. Interest rates depend
+                    on your eligibility, income, credit score, and other such criteria.</p>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="container tbl-bank-list">
+    <div class="row">
+        <div class="col-sm-12 text-center ">
+            <h2>List of Banks, interest rate and processing fees</h2>
+            <p>=======================</p>
+        </div>
+    </div>
+    <div class="row row-1" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+        <div class="col-sm-12"><br>
+            <br>
+            <div class="table_scroll">
+
+                <table class="table table-hover">
+                    <thead>
+
+                        <tr>
+                            <th scope="col" class="text-center bg-danger text-white border">SR.No</th>
+                            <th scope="col" class="text-center bg-danger text-white border">Bank Name</th>
+                            <th scope="col" class="text-center bg-danger text-white border">Interest Rate</th>
+                            <th scope="col" class="text-center bg-danger text-white border">Processing Fees</th>
+                        </tr>
+                    </thead>
+                    <tbody style="text-align:left;">
+                        <tr class=" text-left">
+                            <td class="text-start border">01</td>
+                            <td class="text-start border">HDFC Bank Ltd </td>
+                            <td class="text-start border">10.25% </td>
+                            <td class="text-start border">Upto 2.50% Min Rs. 999 </td>
+                        </tr>
+
+
+                        <tr class=" table-bg-color text-left">
+                            <td class="text-start border">02</td>
+                            <td class="text-start border">Shinhan Bank </td>
+                            <td class="text-start border">10.4% </td>
+                            <td class="text-start border">0.01 </td>
+                        </tr>
+
+
+                        <tr class="  text-left">
+                            <td class="text-start border">03</td>
+                            <td class="text-start border">IDFC FIRST Bank Ltd </td>
+                            <td class="text-start border">10.49% </td>
+                            <td class="text-start border">Upto 2.00% </td>
+                        </tr>
+
+
+                        <tr class="table-bg-color table-bg-color text-left">
+                            <td class="text-start border">04</td>
+                            <td class="text-start border">ICICI Bank </td>
+                            <td class="text-start border"> 10.5% </td>
+                            <td class="text-start border">"Upto 2.25% of Loan Amount </td>
+                        </tr>
+
+
+                        <tr class="  text-left">
+                            <td class="text-start border">05</td>
+                            <td class="text-start border">Axis Bank Ltd </td>
+                            <td class="text-start border">10.5% </td>
+                            <td class="text-start border">Rs.4999 </td>
+                        </tr>
+
+
+                        <tr class="table-bg-color table-bg-color text-left">
+                            <td class="text-start border">06</td>
+                            <td class="text-start border">IndusInd Bank </td>
+                            <td class="text-start border">10.5% </td>
+                            <td class="text-start border">Min 0.75% to Max 1.75% </td>
+                        </tr>
+
+
+                        <tr class="  text-left">
+                            <td class="text-start border">07</td>
+                            <td class="text-start border">Tata Capital </td>
+                            <td class="text-start border">10.99% </td>
+                            <td class="text-start border">Upto 2.50% of Loan Amount </td>
+                        </tr>
+
+
+                        <tr class=" table-bg-color text-left">
+                            <td class="text-start border">08</td>
+                            <td class="text-start border">IndusInd Bank </td>
+                            <td class="text-start border">10.99% </td>
+                            <td class="text-start border">Min 0.75% to Max 1.75% </td>
+                        </tr>
+
+
+                        <tr class="  text-left">
+                            <td class="text-start border">09</td>
+                            <td class="text-start border">Yes Bank </td>
+                            <td class="text-start border">10.99% </td>
+                            <td class="text-start border">0.01 </td>
+                        </tr>
+
+
+                        <tr class=" table-bg-color text-left">
+                            <td class="text-start border">10</td>
+                            <td class="text-start border">Standard Chartered Bank </td>
+                            <td class="text-start border">11% </td>
+                            <td class="text-start border">0.01 </td>
+                        </tr>
+
+
+                        <tr class="  text-left">
+                            <td class="text-start border">11</td>
+                            <td class="text-start border">Kotak Mahindra Bank Ltd </td>
+                            <td class="text-start border">11.15% </td>
+                            <td class="text-start border">Starting from Rs.3999 </td>
+                        </tr>
+
+
+                        <tr class=" table-bg-color text-left">
+                            <td class="text-start border">12</td>
+                            <td class="text-start border">Axis Finance Ltd </td>
+                            <td class="text-start border">11.5% </td>
+                            <td class="text-start border">0.02 </td>
+                        </tr>
+
+                        <tr class="  text-left">
+                            <td class="text-start border">13</td>
+                            <td class="text-start border">RFSPL </td>
+                            <td class="text-start border">12.75% </td>
+                            <td class="text-start border">0.02 </td>
+                        </tr>
+
+                        <tr class=" table-bg-color text-left">
+                            <td class="text-start border">14</td>
+                            <td class="text-start border">Bajaj Finance Ltd </td>
+                            <td class="text-start border">12.99% </td>
+                            <td class="text-start border"> Starting from 1.50% - Up to 3% </td>
+                        </tr>
+
+                        <tr class="  text-left">
+                            <td class="text-start border">15</td>
+                            <td class="text-start border">Upwards </td>
+                            <td class="text-start border">13% </td>
+                            <td class="text-start border">0.02 </td>
+                        </tr>
+
+                        <tr class=" table-bg-color text-left">
+                            <td class="text-start border">16</td>
+                            <td class="text-start border">Aditya Birla Finance Limited </td>
+                            <td class="text-start border">13% </td>
+                            <td class="text-start border">0.01 </td>
+                        </tr>
+
+                        <tr class="  text-left">
+                            <td class="text-start border">17</td>
+                            <td class="text-start border">Fullerton </td>
+                            <td class="text-start border">13.99% </td>
+                            <td class="text-start border">0.02 </td>
+                        </tr>
+
+                        <tr class=" table-bg-color text-left">
+                            <td class="text-start border">18</td>
+                            <td class="text-start border">HDB </td>
+                            <td class="text-start border">14% </td>
+                            <td class="text-start border">Upto 3.5% </td>
+                        </tr>
+
+                        <tr class="  text-left">
+                            <td class="text-start border">19</td>
+                            <td class="text-start border">Hero </td>
+                            <td class="text-start border">14% </td>
+                            <td class="text-start border">0.025 </td>
+                        </tr>
+
+                        <tr class=" table-bg-color text-left">
+                            <td class="text-start border">20</td>
+                            <td class="text-start border">Loantap </td>
+                            <td class="text-start border">15% </td>
+                            <td class="text-start border">0.015 </td>
+                        </tr>
+
+                        <tr class="  text-left">
+                            <td class="text-start border">21</td>
+                            <td class="text-start border">Muthoot </td>
+                            <td class="text-start border">15% </td>
+                            <td class="text-start border"> 0.035 </td>
+                        </tr>
+
+                        <tr class="table-bg-color  text-left">
+                            <td class="text-start border">22</td>
+                            <td class="text-start border">Incred Finance </td>
+                            <td class="text-start border">16% </td>
+                            <td class="text-start border">0.03 </td>
+                        </tr>
+
+                        <tr class="  text-left">
+                            <td class="text-start border">23</td>
+                            <td class="text-start border">Finnable </td>
+                            <td class="text-start border">18% </td>
+                            <td class="text-start border">Upto 3% of Loan Amount </td>
+                        </tr>
+
+                        <tr class=" table-bg-color text-left">
+                            <td class="text-start border">24</td>
+                            <td class="text-start border">Paysense </td>
+                            <td class="text-start border">18% </td>
+                            <td class="text-start border">Upto 3% of Loan Amount </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+            <br>
+        </div>
+    </div>
+</div>
+<!-- Bank Table Stop -->
+
+
+
+
+
+<div class="container-fluid mt-4 text-center" style="background-color:#FED2D6; padding:10px;">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-sm-12">
+                <h2>Types of Personal Loan Interest Rate</h2>
+            </div>
+        </div>
+        <div class="row">
+            <p>Personal Loans offered by MoneyTrust Partner Banks and NBFCs are typically at a Fixed Rate of Interest.
+                Fixed interest rates are rates that remain constant throughout the period of the loan no matter how
+                market interest rates fluctuate. This results in EMIs being constant throughout the entire loan tenure,
+                unlike floating interest rates. For your choice of current personal loan interest rates, use MoneyTrust EMI
+                Calculator.</p>
+        </div>
+    </div>
+</div>
+
+
+<!--Factors that Affect Personal Loan  -->
+<div id="service" class="Services " style="background:none; margin-top:-20px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="titlepage">
+                    <h2>What are the Factors that Affect Personal Loan Interest Rates?</h2>
+                    <br>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 mt-5 bg-light ">
+                <div class="Services-box " style="height: 92%;" data-aos="zoom-in" data-aos-delay="100"
+                    data-aos-duration="1500">
+                    <i class="fa fa-signal" aria-hidden="true"></i>
+                    <h3>Credit Score</h3>
+                    <p>To get your Personal Loan approved, you need to have a good credit score. Credit scores denote
+                        your creditworthiness.</p>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 mt-5 bg-light">
+                <div class="Services-box" style="height: 92%;" data-aos="zoom-in" data-aos-delay="100"
+                    data-aos-duration="1500">
+                    <i class="fa fa-briefcase" aria-hidden="true"></i>
+                    <h3>Occupation</h3>
+                    <p>Interest rates differ from occupation to occupation. A lender generally offers different interest
+                        rates for salaried employees, different rates for self-employed loan seekers to mitigate as a
+                        risk factor.
+                    </p>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 mt-5 bg-light">
+                <div class="Services-box" style="height: 92%;" data-aos="zoom-in" data-aos-delay="100"
+                    data-aos-duration="1500">
+                    <i class="fa" aria-hidden="true">&#8377;</i>
+                    <h3>Income</h3>
+                    <p>Your income becomes a factor for repayment when you apply for a personal loan. If you have high
+                        income, you are likely to be charged a lower rate of interest due to lesser risk of default in
+                        repayment.</p>
+                </div>
+            </div>
+
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 mt-5 bg-light ">
+                <div class="Services-box " style="height: 92%;" data-aos="zoom-in" data-aos-delay="100"
+                    data-aos-duration="1500">
+                    <i class="fa fa-user"></i>
+                    <h3>Age</h3>
+                    <p>Age turns out to be another factor that dictates interest rate on your personal loan. A younger
+                        applicant may be perceived as lesser risky, while an older applicant may be considered of higher
+                        risk; thus the interest rates will differ accordingly.</p>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 mt-5 bg-light">
+                <div class="Services-box" style="height: 92%;" data-aos="zoom-in" data-aos-delay="100"
+                    data-aos-duration="1500">
+                    <i class="fa fa-building" aria-hidden="true"></i>
+                    <h3>Employment Organization</h3>
+                    <p>Employees of well-known MNCs, Public limited Companies, and companies of good standing may
+                        receive better rates of interest compared to employees of lesser-known companies.
+                    </p>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 mt-5 bg-light">
+                <div class="Services-box" style="height: 92%;" data-aos="zoom-in" data-aos-delay="100"
+                    data-aos-duration="1500">
+                    <i class="fa fa-handshake" aria-hidden="true"></i>
+                    <h3>Association with Lender</h3>
+                    <p>Should you have a long-standing and good financial relationship with your lending organization,
+                        you are likely to receive better rates of interest due to your lender's familiarity with your
+                        financial records.</p>
+                </div>
+            </div>
+            <!-- <a class="read_more" href="#">Read More</a> -->
+        </div>
+    </div>
+</div>
+<!-- Factors that Affect Personal Loan us -->
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 text-center">
+            <h3>Other Charges</h3>
+            <p>Apart from personal loan interest rates, there are several other fees and charges that have to be paid
+                and may be classified as under.</p>
+            <ul>
+                <li><i class="fa fa-arrow-circle-right text-danger"></i>&nbsp;General Charges</li>
+                <li><i class="fa fa-arrow-circle-right text-danger"></i>&nbsp; Miscellaneous Charges</li>
+                <li><i class="fa fa-arrow-circle-right text-danger"></i>&nbsp; Foreclosure Charges</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<div class="container-fluid other_charges">
+
+
+    <div class="row text-center mt-4">
+        <div class="col-sm-12">
+            <h3>Classification of Other Charges</h3>
+            <h5>General Charges</h5>
+        </div>
+    </div>
+    <div class="row mt-3">
+
+        <div class="col-sm-6 ">
+            <h5 class="text-danger"><i class="fa fa-check-circle" aria-hidden="true"></i> &nbsp; Processing Fee</h5>
+            <p class="text-justify">A one-time fee levied during the processing of your personal loan application may be
+                known as a processing fee. This kind of fee will be a non-refundable fee, whether your lender approves
+                your loan or rejects your loan.</p>
+        </div>
+
+        <div class="col-sm-6 ">
+            <h5 class="text-danger"><i class="fa fa-check-circle" aria-hidden="true"></i> &nbsp; Gap Interest or Pre-EMI
+                Interest</h5>
+            <p class="text-justify">When you avail only a part of the personal loan, you are required to pay interest
+                only on the amount disbursed until you avail the full loan. Pre-EMI interest or PEMI, or Gap Interest
+                will be payable monthly until the final disbursement, after which EMIs commence.</p>
+        </div>
+    </div>
+
+
+
+    <div class="row text-center mt-4">
+        <div class="col-sm-12">
+            <h3>Miscellaneous Charges Post Disbursement</h3>
+        </div>
+    </div>
+
+    <div class="row mt-3">
+        <div class="col-sm-4  ">
+            <h5 class="text-danger"><i class="fa fa-check-circle" aria-hidden="true"></i> &nbsp; Penal Interest</h5>
+            <p class="text-justify">A lender will charge you a penal interest rate will be charged when you delay a
+                monthly instalment. Your regular interest rate along with a delayed interest rate will make up the penal
+                interest chargeable in such a case.</p>
+        </div>
+
+        <div class="col-sm-4  ">
+            <h5 class="text-danger"><i class="fa fa-check-circle" aria-hidden="true"></i> &nbsp; Bounce Charges</h5>
+            <p class="text-justify">Charges levied when an EMI bounces are known as Bounce Charges. When inadequate
+                funds in your bank account cause your EMI to bounce, the lender charges you a bounce charge.</p>
+        </div>
+
+        <div class="col-sm-4  ">
+            <h5 class="text-danger"><i class="fa fa-check-circle" aria-hidden="true"></i> &nbsp; Mandate Rejection
+                Service Charges</h5>
+            <p class="text-justify">Rejection of services rendered by your lender causes a levy of a mandate rejection
+                service charge.</p>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-sm-4  ">
+            <h5 class="text-danger"><i class="fa fa-check-circle" aria-hidden="true"></i> &nbsp; CCOD Annual Maintenance
+                Charges</h5>
+            <p class="text-justify">If you choose a flexible funding option such as Cash Credit or Overdraft, CCOD
+                Annual Maintenance Charges are levied. These charges are a fee charged for the maintenance of Overdraft.
+            </p>
+        </div>
+
+        <div class="col-sm-4  ">
+            <h5 class="text-danger"><i class="fa fa-check-circle" aria-hidden="true"></i> &nbsp; Outstation Collection
+                Charges</h5>
+            <p class="text-justify">Issuing a cheque from a non-local branch will cause the levy of an outstation
+                collection charge. The collection of such outstation cheques causes the lender to charge you an
+                Outstation Collection Charge.</p>
+        </div>
+
+        <div class="col-sm-4  ">
+            <h5 class="text-danger"><i class="fa fa-check-circle" aria-hidden="true"></i> &nbsp; Statement of Accounts
+            </h5>
+            <p class="text-justify">Issue of a hardcopy of your bank statement consisting of a list of all bank
+                transactions during a given period known as Statement of Accounts will attract a charge. Such a charge
+                will not be levied for obtaining a soft copy of the Statement of Accounts.</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-4  ">
+            <h5 class="text-danger"><i class="fa fa-check-circle" aria-hidden="true"></i> &nbsp; Loan Cancellation
+                Charges</h5>
+            <p class="text-justify">In the event of the cancellation of your personal loan after the processing of your
+                loan disbursal will be the reason for a Loan Cancellation Charge to be levied by your lender.</p>
+        </div>
+
+        <div class="col-sm-4  ">
+            <h5 class="text-danger"><i class="fa fa-check-circle" aria-hidden="true"></i> &nbsp; Instrument Swap Charges
+            </h5>
+            <p class="text-justify">When you swap or exchange your personal loan liability or the cash flow for a
+                different financial instrument, you will be charged an Instrument Swap Charge. The swap will only take
+                place after you pay the charge.</p>
+        </div>
+
+        <div class="col-sm-4  ">
+            <h5 class="text-danger"><i class="fa fa-check-circle" aria-hidden="true"></i> &nbsp; Duplicate Repayment
+                Schedule</h5>
+            <p class="text-justify">When you ask for a duplicate table that contains details of your loan repayment,
+                known as an Amortization Schedule or a Repayment Schedule, you will be charged a fee for a hardcopy, and
+                this charge will be known as a Duplicate Repayment Schedule charged. No such charges will apply for a
+                soft copy of the same.</p>
+        </div>
+    </div>
+
+
+
+
+    <div class="row text-center mt-4">
+        <div class="col-sm-12">
+            <h3>Foreclosure Charges:</h3>
+            <p class="text-justify">When you plan for pre-payment of your personal loan, whether in part or in full,
+                your lender will charge you a Foreclosure Charge or a Pre-Payment Charge. No charges will apply for
+                loans taken on a floating rate of interest.</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-4  text-center ">
+            <h5 class="text-danger"><i class="fa fa-check-circle" aria-hidden="true"></i> &nbsp; Foreclosure Charges for
+                Top-Up</h5>
+            <p class="text-justify">When you pre-pay a personal loan where you pay a new interest rate higher than the
+                old existing lower interest rate applicable, your lender will charge you a Top-Up Foreclosure Charge.
+                This charge does not apply when you pay a new interest rate higher than the existing rate.</p>
+        </div>
+
+        <div class="col-sm-4  text-center">
+            <h5 class="text-danger"><i class="fa fa-check-circle" aria-hidden="true"></i> &nbsp; Foreclosure Charges on
+                CCOD Cases</h5>
+            <p class="text-justify">Your lender will levy a CCOD Foreclosure Charge when you choose to pre-pay your
+                personal loan in part or in full taken in the form of Credit or Overdraft.</p>
+        </div>
+
+        <div class="col-sm-4  text-center">
+            <h5 class="text-danger"><i class="fa fa-check-circle" aria-hidden="true"></i> &nbsp; Foreclosure Letter
+                Charge</h5>
+            <p class="text-justify">Delay in your EMI payments will cause the lender to issue you a Foreclosure Notice
+                to notify you about the delay in payment. While the issue of a hardcopy of such a notice will attract
+                Foreclosure Letter Charge, a soft copy will not.</p>
+        </div>
+    </div>
+
+</div>
+
+
+<br>
+{% include "links_and_faq.html" %}
+
+
+
+{% endblock content %}
