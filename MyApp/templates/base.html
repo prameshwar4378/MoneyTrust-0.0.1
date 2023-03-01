@@ -22,11 +22,21 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
     <link href="lib/flaticon/font/flaticon.css" rel="stylesheet">
 
-    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+    <link href="{% static 'fontawesomefree/css/fontawesome.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'fontawesomefree/css/brands.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'fontawesomefree/css/solid.css' %}" rel="stylesheet" type="text/css">
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
+
+ <!-- our parners slides -->
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+ <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+ 
+ <!-- for play button -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.2.0/css/glightbox.min.css">
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.2.0/js/glightbox.min.js"></script>
 
     <!-- animation link -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -48,6 +58,8 @@
     {% endblock links %}
 </head>
 <style>
+
+ 
 
   #loading{
     position: fixed;
@@ -220,6 +232,80 @@
                     
                   </div>
                  
+                  <div class="list-item" >
+                    <img src="{% static 'img/personal_loan/header_overview.jpg' %}"  class="menu-option-img">
+                  </div>
+
+                </div>
+              </li>
+
+
+
+
+
+              
+
+              <li class="menu-item-has-children">
+                <a href="#">Business Loan <i class="fa fa-angle-down"></i></a>
+                <div class="sub-menu mega-menu mega-menu-column-4">
+                  <div class="list-item">
+                    <h4 class="title">Business Loan Options</h4>
+                    <ul>
+                      <li><a href="{% url 'business_loan_overview' %}">Overview</a> </li>
+                      <li><a href="{% url 'business_loan_eligibility_criteria' %}">Eligibility
+                          Criteria</a></li>
+                      <li><a href="#"  data-toggle="modal" data-target="#exampleModal">EMI Calculator</a>
+                      </li>
+                      <li><a href="{% url 'business_loan_interest_rate_and_fees' %}">Interest rate & Processing Fees</a></li>
+                      <li><a href="{% url 'business_loan_document_required' %}">Document Required</a></li>
+                    </ul>
+                  </div>
+                  <div class="list-item">
+                    <h4 class="title">Links Options </h4>
+                    <ul>
+                      <li><a href="#">Links List</a></li>
+                      <li><a href="#">Links List</a></li>
+                      <li><a href="#">Links List</a></li>
+                      <li><a href="#">Links List</a></li>
+                    </ul>
+                    
+                  </div>
+                 
+                  <div class="list-item">
+                    <img src="{% static 'img/business_loan/header_criteria.jpg' %}" alt="shop" style="width: 100%;">
+                  </div>
+
+                </div>
+              </li>
+
+
+
+              <li class="menu-item-has-children">
+                <a href="#">Doctor Loan <i class="fa fa-angle-down"></i></a>
+                <div class="sub-menu mega-menu mega-menu-column-4">
+                  <div class="list-item">
+                    <h4 class="title">Doctor Loan Options</h4>
+                    <ul>
+                      <li><a href="{% url 'doctor_loan_overview' %}">Overview</a> </li>
+                      <li><a href="{% url 'doctor_loan_eligibility_criteria' %}">Eligibility
+                          Criteria</a></li>
+                      <li><a href="#"  data-toggle="modal" data-target="#exampleModal">EMI Calculator</a>
+                      </li>
+                      <li><a href="{% url 'doctor_loan_interest_rate_and_fees' %}">Interest rate & Processing Fees</a></li>
+                      <li><a href="{% url 'doctor_loan_document_required' %}">Document Required</a></li>
+                    </ul>
+                  </div>
+                  <div class="list-item">
+                    <h4 class="title">Links Options </h4>
+                    <ul>
+                      <li><a href="#">Links List</a></li>
+                      <li><a href="#">Links List</a></li>
+                      <li><a href="#">Links List</a></li>
+                      <li><a href="#">Links List</a></li>
+                    </ul>
+                    
+                  </div>
+                 
                   <div class="list-item">
                     <img src="{% static 'img/sample.png' %}" alt="shop" style="width: 100%;">
                   </div>
@@ -228,13 +314,27 @@
               </li>
 
 
+
+
+
               <li class="menu-item-has-children">
                 <a href="#">Home Loan <i class="fa fa-angle-down"></i></a>
                 <div class="sub-menu mega-menu mega-menu-column-4">
                   <div class="list-item">
-                    <h4 class="title">Link Optios</h4>
+                    <h4 class="title">Home Loan Options</h4>
                     <ul>
-                      <li><a href="#">Links List 1</a></li>
+                      <li><a href="{% url 'home_loan_overview' %}">Overview</a> </li>
+                      <li><a href="{% url 'home_loan_eligibility_criteria' %}">Eligibility
+                          Criteria</a></li>
+                      <li><a href="#"  data-toggle="modal" data-target="#exampleModal">EMI Calculator</a>
+                      </li>
+                      <li><a href="{% url 'home_loan_interest_rate_and_fees' %}">Interest rate & Processing Fees</a></li>
+                      <li><a href="{% url 'home_loan_document_required' %}">Document Required</a></li>
+                    </ul>
+                  </div>
+                  <div class="list-item">
+                    <h4 class="title">Links Options </h4>
+                    <ul>
                       <li><a href="#">Links List</a></li>
                       <li><a href="#">Links List</a></li>
                       <li><a href="#">Links List</a></li>
@@ -242,108 +342,11 @@
                     </ul>
                     
                   </div>
+                 
                   <div class="list-item">
-                    <h4 class="title">Links Options 3</h4>
-                    <ul>
-                      <li><a href="#">Links List</a></li>
-                      <li><a href="#">Links List</a></li>
-                      <li><a href="#">Links List</a></li>
-                      <li><a href="#">Links List</a></li>
-                    </ul>
-                    
+                    <img src="{% static 'img/home_loan/header_interest_rate.jpg' %}" alt="shop" style="width: 100%;">
                   </div>
-                  
-                  <div class="list-item">
-                    <img src="img/sample.png" alt="shop">
-                  </div>
-                </div>
-              </li>
 
-              <li class="menu-item-has-children">
-                <a href="#">Doctors Loan <i class="fa fa-angle-down"></i></a>
-                <div class="sub-menu mega-menu mega-menu-column-4">
-                  <div class="list-item">
-                    <h4 class="title">Link Optios</h4>
-                    <ul>
-                      <li><a href="#">Links List 1</a></li>
-                      <li><a href="#">Links List</a></li>
-                      <li><a href="#">Links List</a></li>
-                      <li><a href="#">Links List</a></li>
-                      <li><a href="#">Links List</a></li>
-                    </ul>
-                    
-                  </div>
-                  <div class="list-item">
-                    <h4 class="title">Links Options 3</h4>
-                    <ul>
-                      <li><a href="#">Links List</a></li>
-                      <li><a href="#">Links List</a></li>
-                      <li><a href="#">Links List</a></li>
-                      <li><a href="#">Links List</a></li>
-                    </ul>
-                   
-                  </div>
-                  
-                  <div class="list-item">
-                    <img src="img/sample.png" alt="shop">
-                  </div>
-                </div>
-              </li>
-
-
-
-              <li class="menu-item-has-children">
-                <a href="#">Business Loan <i class="fa fa-angle-down"></i></a>
-                <div class="sub-menu mega-menu mega-menu-column-4">
-                  <div class="list-item">
-                    <h4 class="title">Link Optios</h4>
-                    <ul>
-                      <li><a href="#">Links List 1</a></li>
-                      <li><a href="#">Links List</a></li>
-                      <li><a href="#">Links List</a></li>
-                      <li><a href="#">Links List</a></li>
-                      <li><a href="#">Links List</a></li>
-                    </ul>
-                    <h4 class="title">Links Options 2</h4>
-                    <ul>
-                      <li><a href="#">Links List</a></li>
-                      <li><a href="#">Links List</a></li>
-                      <li><a href="#">Links List</a></li>
-                    </ul>
-                  </div>
-                  <div class="list-item">
-                    <h4 class="title">Links Options 3</h4>
-                    <ul>
-                      <li><a href="#">Links List</a></li>
-                      <li><a href="#">Links List</a></li>
-                      <li><a href="#">Links List</a></li>
-                      <li><a href="#">Links List</a></li>
-                    </ul>
-                    <h4 class="title">Links Options 4</h4>
-                    <ul>
-                      <li><a href="#">Links List</a></li>
-                      <li><a href="#">Links List</a></li>
-                      <li><a href="#">Links List</a></li>
-                      <li><a href="#">Links List</a></li>
-                    </ul>
-                  </div>
-                  <div class="list-item">
-                    <h4 class="title">Links Options 3</h4>
-                    <ul>
-                      <li><a href="#">Links List</a></li>
-                      <li><a href="#">Links List</a></li>
-                      <li><a href="#">Links List</a></li>
-                      <li><a href="#">Links List</a></li>
-                      <li><a href="#">Links List</a></li>
-                      <li><a href="#">Links List</a></li>
-                      <li><a href="#">Links List</a></li>
-                      <li><a href="#">Links List</a></li>
-                      <li><a href="#">Links List</a></li>
-                    </ul>
-                  </div>
-                  <div class="list-item">
-                    <img src="img/sample.png" alt="shop">
-                  </div>
                 </div>
               </li>
 

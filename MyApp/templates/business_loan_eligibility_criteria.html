@@ -1,0 +1,431 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block style %}
+.links {
+width: 100%;
+background-color: #07043f;
+color: white;
+padding: 15px;
+}
+
+.links a {
+text-decoration: none;
+}
+
+.titlepage{
+text-align: center;
+margin-top: 30px;
+}
+.titlepage h2{
+color: #275da9;
+}
+/* Header Links Section Start */
+
+.header-links {
+height: auto;
+width: 98%;
+background:#07043f;
+margin-top: 8px;
+padding-bottom: 8px;
+border-radius: 10px;
+}
+
+
+
+.banner-btn a {
+border-radius: 8px;
+width: 170px;
+text-decoration: none;
+display: inline-block;
+margin: 0 10px;
+padding: 12px 0;
+color: #fff;
+background-color: #07043f;
+border: 1px solid rgb(255, 255, 255);
+position: relative;
+z-index: 1;
+transition: color 0.5s;
+margin-top: 10px;
+font-weight: bold;
+}
+
+.banner-btn a span {
+width: 0%;
+height: 100%;
+position: absolute;
+top: 0;
+left: 0;
+background: linear-gradient(to right, #1C53D9, #07043f);
+z-index: -1;
+transition: 0.5s;
+}
+
+.banner-btn a:hover span {
+border-radius: 8px;
+width: 100%
+}
+
+.banner-btn a:hover {
+color: rgb(255, 255, 255);
+}
+
+
+@media screen and (max-width: 770px) {
+.banner-btn a {
+
+width: 40%;
+
+}
+}
+
+/* Header Link Section Stop */
+
+
+
+
+
+
+
+
+
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+#hero {
+height:60vh;
+background:url({% static 'img/hero-bg.jpg' %});
+background-repeat:no-repeat;
+background-size:100% 100%;
+}
+
+#hero h1{
+font-size:4rem;
+font-weight:1000;
+color:white;
+}
+
+
+#hero h3{
+font-size:2rem;
+font-weight:500;
+}
+
+#hero .hero-content{
+position:relative;
+top:50px;
+}
+
+.hero-footer{
+padding:10px;
+}
+.hero-footer .container{
+border-radius:15px;
+box-shadow:0px 0px 10px;
+position:relative;
+top:-110px;
+z-index:1;
+border:2px solid white;
+padding:20px;
+background:white;
+margin-bottom:-110px;
+}
+
+.hero-footer .container .left{
+border-right:5px solid #B40018;
+}
+
+@media screen and (max-width: 770px) {
+
+.hero-footer .container{
+border-radius:15px;
+box-shadow:0px 0px 10px;
+position:relative;
+top: 0px;
+z-index:1;
+border:2px solid white;
+padding:20px;
+background:white;
+margin-bottom:0px;
+}
+
+.hero-footer .container .left{
+border-right:none;
+margin-bottom:10px;
+}
+
+}
+
+
+/*--------------------------------------------------------------
+# Hero Section End
+--------------------------------------------------------------*/
+
+
+
+
+
+{% endblock style %}
+
+
+{% block content %}
+
+
+
+<center>
+  <div class="header-links">
+    <div class="banner-btn">
+      <a href="{% url 'business_loan_overview' %}" data-aos="fade-down" data-aos-delay="100" data-aos-duration="1000">
+        <span></span> Overview </a>
+      <a href="{% url 'business_loan_eligibility_criteria' %}" data-aos="fade-down" data-aos-delay="150"
+        data-aos-duration="1000" style="color: #07043f; background: #fff;"> <span></span> Eligibility Criteria </a>
+      <a href="#" data-aos="fade-down" data-aos-delay="150" data-aos-duration="1000" data-toggle="modal"
+        data-target="#exampleModal">
+        <span></span> EMI Calculator </a>
+      <a href="{% url 'business_loan_interest_rate_and_fees' %}" data-aos="fade-down" data-aos-delay="150"
+        data-aos-duration="1000"> <span></span> Interest Rate & Processing Fees </a>
+      <a href="{% url 'business_loan_document_required' %}" data-aos="fade-down" data-aos-delay="150"
+        data-aos-duration="1000"> <span></span> Document Required </a>
+    </div>
+  </div>
+  <div class="waves_img"></div>
+</center>
+
+
+<div class="links mt-3">
+  <a href="../index.html" class="text-light">Home/</a>
+  <a href="#" class="text-light">Business Loan/</a>
+  <a href="#" class="text-warning">Eligibility Criteria</a>
+</div>
+
+
+
+
+
+<!-- ======= Hero Section ======= -->
+<section id="hero">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-sm-12 hero-content">
+        <h3 class="text-danger">Business Loan</h3>
+        <h1 class=" ">Eligibility Criteria</h1>
+        <a href="#" class="btn btn-danger px-5 py-2 mt-4">Apply Now</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="hero-footer" style="z-index:1">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 left">
+        <img src="{% static 'img/business_loan/header_criteria.jpg' %}" alt="" style="width:100%">
+      </div>
+      <div class="col-sm-6 right">
+        <p class="text-justify">Primarily an unsecured loan, a Business Loan empowers you to avail funds without collateral for infusion into your enterprise for purposes that you deem fit.
+
+          However, to avail such a facility, you need to fulfil certain eligibility criteria laid down by our Partner Banks and NBFCs.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- End Hero -->
+
+
+
+
+ <!--============================
+Business Loan Eligibility Criteria start
+=================================-->
+<section>
+  <div class="container px-3 py-3" style="max-width:1400px;">
+    <div class="row">
+      <div class="col-sm-12 text-center">
+        <h2>What Makes You Choose Us</h2>
+      </div>
+    </div>
+
+    <div class="row px-2 py-2 mt-2" style="background:rgba(0, 108, 255, .1);border-radius:10px; margin:10px;">
+      <div class="col-sm-6 mt-2" style="display:flex; flex-direction:row;  ">
+        <div style="width:60px; height:100%; ">
+          <i class="fa-solid fa-user text-danger" style="font-size:40px; position:relative;top:20px;"></i>
+        </div>
+        <div class="px-3">
+          <h4>Age</h4>
+          <p>
+            <ul style="bullet:none;">
+              <li><i class="fa fa-arrow-circle-right text-danger"></i>&nbsp; Minimum 18 years</li>
+              <li><i class="fa fa-arrow-circle-right text-danger"></i>&nbsp; Maximum 65 years a time of Loan Maturity</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-sm-6 mt-2" style="display:flex; flex-direction:row;  ">
+        <div style="width:60px; height:100%; ">
+          <i class="fa-solid fa-earth text-danger" style="font-size:40px; position:relative;top:20px;"></i>
+        </div>
+        <div class="px-3">
+          <h4>Nationality</h4>
+          <p>
+            <ul style="bullet:none;">
+              <li><i class="fa fa-arrow-circle-right text-danger"></i>&nbsp; Resident Citizen of India with no Criminal Record</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+
+
+    
+    <div class="row px-2 py-2 mt-2" style="background:rgba(0, 108, 255, .1);border-radius:10px; margin:10px;">
+      <div class="col-sm-6 mt-2" style="display:flex; flex-direction:row;  ">
+        <div style="width:60px; height:100%; ">
+          <i class="fa-solid fa-briefcase text-danger" style="font-size:40px; position:relative;top:20px;"></i>
+        </div>
+        <div class="px-3">
+          <h4>Business</h4>
+          <p>
+            <ul style="bullet:none;">
+              <li><i class="fa fa-arrow-circle-right text-danger"></i>&nbsp; Minimum 3 years Own Business Vintage</li>
+              <li><i class="fa fa-arrow-circle-right text-danger"></i>&nbsp; Minimum Annual Turnover and Profit at Lender's Discretion</li>
+              <li><i class="fa fa-arrow-circle-right text-danger"></i>&nbsp; Registered Chartered Accountant Audited Balance Sheet Compulsory</li>
+              <li><i class="fa fa-arrow-circle-right text-danger"></i>&nbsp; No Previous Default with any Financial Institution</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+
+      <div class="col-sm-6 mt-2" style="display:flex; flex-direction:row;  ">
+        <div style="width:60px; height:100%; ">
+          <i class="fa-solid fa-gauge text-danger" style="font-size:40px; position:relative;top:20px;"></i>
+        </div>
+        <div class="px-3">
+          <h4>Credit Score</h4>
+          <p>
+            <ul style="bullet:none;">
+              <li><i class="fa fa-arrow-circle-right text-danger"></i>&nbsp; Credit Score of 700 & More</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+
+    </div>
+    
+  </div>
+</section>
+
+
+ <!--============================
+Business Loan Eligibility Criteria End
+=================================-->
+
+
+
+
+
+<div class="container mt-3">
+  <div class="row">
+    <div class="col-sm-12 text-center">
+      <h2>Business Loan Eligible Entities</h2>
+      <p>The following entities may avail Business Loans at Ruloans</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-4 px-3 py-3 ">
+      <div style="border-radius:5px;  text-align:center; padding:8px; box-shadow:2px 2px 10px -3px;">
+        Resident Individuals
+      </div>
+    </div>
+    
+    <div class="col-sm-4 px-3 py-3 ">
+      <div style="border-radius:5px;  text-align:center; padding:8px; box-shadow:2px 2px 10px -3px;">
+        Self-employed Professionals
+      </div>
+    </div>
+    
+    <div class="col-sm-4 px-3 py-3 ">
+      <div style="border-radius:5px;  text-align:center; padding:8px; box-shadow:2px 2px 10px -3px;">
+        Companies
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="row">
+    <div class="col-sm-4 px-3 py-3 ">
+      <div style="border-radius:5px;  text-align:center; padding:8px; box-shadow:2px 2px 10px -3px;">
+        Private Limited Companies
+      </div>
+    </div>
+    
+    <div class="col-sm-4 px-3 py-3 ">
+      <div style="border-radius:5px;  text-align:center; padding:8px; box-shadow:2px 2px 10px -3px;">
+        Public Limited Companies
+      </div>
+    </div>
+    
+    <div class="col-sm-4 px-3 py-3 ">
+      <div style="border-radius:5px;  text-align:center; padding:8px; box-shadow:2px 2px 10px -3px;">
+        Sole Proprietors
+      </div>
+    </div>
+  </div>
+  <br>
+  <center><h5>Enterprises</h5></center>
+
+  <div class="row">
+    <div class="col-sm-4 px-3 py-3 ">
+      <div style="border-radius:5px;  text-align:center; padding:8px; box-shadow:2px 2px 10px -3px;">
+        Small and Medium Enterprises
+      </div>
+    </div>
+    
+    <div class="col-sm-4 px-3 py-3 ">
+      <div style="border-radius:5px;  text-align:center; padding:8px; box-shadow:2px 2px 10px -3px;">
+        Artisans & Traders
+      </div>
+    </div>
+    
+    <div class="col-sm-4 px-3 py-3 ">
+      <div style="border-radius:5px;  text-align:center; padding:8px; box-shadow:2px 2px 10px -3px;">
+        Manufacturers
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="row">
+    <div class="col-sm-4 px-3 py-3 ">
+      <div style="border-radius:5px;  text-align:center; padding:8px; box-shadow:2px 2px 10px -3px;">
+        Shopkeepers
+      </div>
+    </div>
+    
+    <div class="col-sm-4 px-3 py-3 ">
+      <div style="border-radius:5px;  text-align:center; padding:8px; box-shadow:2px 2px 10px -3px;">
+        Small Vendors
+      </div>
+    </div>
+    
+    <div class="col-sm-4 px-3 py-3 ">
+      <div style="border-radius:5px;  text-align:center; padding:8px; box-shadow:2px 2px 10px -3px;">
+        Retailers
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+<br>
+{% include "personal_loan_post_clients.html" %}
+
+
+
+
+{% endblock content %}

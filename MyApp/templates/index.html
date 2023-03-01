@@ -79,183 +79,6 @@ font-size:15px;
 
 
 
-{% comment %} Play Popup Video Start {% endcomment %}
-#fade {
-display: none;
-position: fixed;
-top: 0%;
-left: 0%;
-width: 100%;
-height: 100%;
-background-color: black;
-z-index: 1001;
--moz-opacity: 0.8;
-opacity: .80;
-filter: alpha(opacity=80);
-}
-
-#light {
-display: none;
-position: absolute;
-top: 50%;
-left: 50%;
-max-width: 800px;
-max-height: auto;
-margin-left: -420px;
-margin-top: -250px;
-border: 2px solid #FFF;
-background: red;
-z-index: 1002;
-overflow: visible;
-}
-
-video{
-width:800px;
-}
-
-@media screen and (max-width: 600px) {
-video{
-width:430px;
-}
-
-#light {
-display: none;
-position: absolute;
-top: 50%;
-left: 50%;
-max-width: 800px;
-max-height: auto;
-margin-left: -220px;
-margin-top: -250px;
-border: 2px solid #FFF;
-background: red;
-z-index: 1002;
-overflow: visible;
-}
-}
-
-
-
-#boxclose {
-float: right;
-cursor: pointer;
-color: #fff;
-border: 1px solid #AEAEAE;
-border-radius: 3px;
-background: #222222;
-font-size: 31px;
-font-weight: bold;
-display: inline-block;
-line-height: 0px;
-padding: 11px 3px;
-position: absolute;
-right: 2px;
-top: 2px;
-z-index: 1002;
-opacity: 0.9;
-}
-
-.boxclose:before {
-content: "×";
-}
-
-#fade:hover ~ #boxclose {
-display:none;
-}
-
-
-.play-btn {
-width: 70px;
-height: 70px;
-background: radial-gradient( rgba(255, 0, 128, 0.8) 60%, rgba(255, 255, 255, 1) 62%);
-border-radius: 50%;
-position: relative;
-display: block;
-margin: 0px auto;
-{% comment %} box-shadow: 0px 0px 25px 3px rgba(255, 0, 128, 0.8); {% endcomment %}
-}
-
-/* triangle */
-.play-btn::after {
-content: "";
-position: absolute;
-left: 50%;
-top: 50%;
--webkit-transform: translateX(-40%) translateY(-50%);
-transform: translateX(-40%) translateY(-50%);
-transform-origin: center center;
-width: 0;
-height: 0;
-border-top: 15px solid transparent;
-border-bottom: 15px solid transparent;
-border-left: 25px solid #fff;
-z-index: 100;
--webkit-transition: all 400ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
-transition: all 400ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
-}
-
-/* pulse wave */
-.play-btn:before {
-content: "";
-position: absolute;
-width: 150%;
-height: 150%;
--webkit-animation-delay: 0s;
-animation-delay: 0s;
--webkit-animation: pulsate1 2s;
-animation: pulsate1 2s;
--webkit-animation-direction: forwards;
-animation-direction: forwards;
--webkit-animation-iteration-count: infinite;
-animation-iteration-count: infinite;
--webkit-animation-timing-function: steps;
-animation-timing-function: steps;
-opacity: 1;
-border-radius: 50%;
-border: 5px solid rgba(255, 255, 255, .75);
-top: -25%;
-left: -25%;
-background: rgba(198, 16, 0, 0);
-}
-
-@-webkit-keyframes pulsate1 {
-0% {
--webkit-transform: scale(0.6);
-transform: scale(0.6);
-opacity: 1;
-box-shadow: inset 0px 0px 25px 3px rgba(255, 255, 255, 0.75), 0px 0px 25px 10px rgba(255, 255, 255, 0.75);
-}
-100% {
--webkit-transform: scale(1);
-transform: scale(1);
-opacity: 0;
-box-shadow: none;
-
-}
-}
-
-@keyframes pulsate1 {
-0% {
--webkit-transform: scale(0.6);
-transform: scale(0.6);
-opacity: 1;
-box-shadow: inset 0px 0px 25px 3px rgba(255, 255, 255, 0.75), 0px 0px 25px 10px rgba(255, 255, 255, 0.75);
-}
-100% {
--webkit-transform: scale(1, 1);
-transform: scale(1);
-opacity: 0;
-box-shadow: none;
-
-}
-}
-
-.play-video{
-position: relative;
-transform: translateY(-10rem);
-{% comment %} transform: translateX(-3rem); {% endcomment %}
-}
-
 
 
 {% comment %} Play Popup Video Stop {% endcomment %}
@@ -407,6 +230,29 @@ background-color: #B40018;
 {% comment %} Our Clients Logo Slider Start {% endcomment %}
 
 
+
+
+/*--------------------------------------------------------------
+# Call To Action Section
+--------------------------------------------------------------*/
+.call-to-action .container {
+  background: linear-gradient(rgba(0,0,0,  0.5), rgba(0, 0, 0, 0.5)), url("https://www.stream-perfect.com/wp-content/uploads/2019/12/Arabic-Call-Centre-Services-India.jpg") center center;
+  background-size: cover;
+  padding: 100px 60px;
+  overflow: hidden;
+}
+
+.call-to-action h3 {
+  color: #fff;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.call-to-action p {
+  color: #fff;
+  margin-bottom: 20px;
+}
 
 {% endblock style %}
 
@@ -694,10 +540,10 @@ background-color: #B40018;
                         <div class="loan-card">
                             <br>
                             <div class="loan-card-header-banner">
-                                <i class="fa fa-car text-danger" style=""></i>
+                                <i class="fa fa-user text-danger" style=""></i>
                             </div>
                             <h4 class="text-danger mt-2 ">Personal Loan</h4>
-                            <p style="text-align: justify; margin: 15px;">A Car loan is a secured loan product where the
+                            <p style="text-align: justify; margin: 15px;">A Personal loan is a secured loan product where the
                                 procured vehicle acts as customary security or collateral.</p>
                             <br>
                             <ul>
@@ -722,7 +568,7 @@ background-color: #B40018;
 
                         <div class="tab-menu">
                             <button class="tablinks" onclick="OpenTabDecription(event, 'personal_loan_tab_1')"
-                                id="personal_loan_defaultOpen">Car Loan</button>
+                                id="personal_loan_defaultOpen">Personal Loan</button>
                             <button class="tablinks"
                                 onclick="OpenTabDecription(event, 'personal_loan_tab_2')">other</button>
                         </div>
@@ -760,10 +606,10 @@ background-color: #B40018;
                         <div class="loan-card">
                             <br>
                             <div class="loan-card-header-banner">
-                                <i class="fa fa-car text-danger" style=""></i>
+                                <i class="fa fa-briefcase text-danger" style=""></i>
                             </div>
                             <h4 class="text-danger mt-2 ">Business Loan</h4>
-                            <p style="text-align: justify; margin: 15px;">A Car loan is a secured loan product where the
+                            <p style="text-align: justify; margin: 15px;">A Business loan is a secured loan product where the
                                 procured vehicle acts as customary security or collateral.</p>
                             <br>
                             <ul>
@@ -788,7 +634,7 @@ background-color: #B40018;
 
                         <div class="tab-menu">
                             <button class="tablinks" onclick="OpenTabDecription(event, 'business_loan_tab_1')"
-                                id="business_loan_defaultOpen">Car Loan</button>
+                                id="business_loan_defaultOpen">Business Loan</button>
                             <button class="tablinks"
                                 onclick="OpenTabDecription(event, 'business_loan_tab_2')">other</button>
                         </div>
@@ -827,10 +673,10 @@ background-color: #B40018;
                         <div class="loan-card">
                             <br>
                             <div class="loan-card-header-banner">
-                                <i class="fa fa-car text-danger" style=""></i>
+                                <i class="fa fa-user-md text-danger" style=""></i>
                             </div>
                             <h4 class="text-danger mt-2 ">Doctor Loan</h4>
-                            <p style="text-align: justify; margin: 15px;">A Car loan is a secured loan product where the
+                            <p style="text-align: justify; margin: 15px;">A Doctor loan is a secured loan product where the
                                 procured vehicle acts as customary security or collateral.</p>
                             <br>
                             <ul>
@@ -855,7 +701,7 @@ background-color: #B40018;
 
                         <div class="tab-menu">
                             <button class="tablinks" onclick="OpenTabDecription(event, 'doctor_loan_tab_1')"
-                                id="doctor_loan_defaultOpen">Car Loan</button>
+                                id="doctor_loan_defaultOpen">Doctor Loan</button>
                             <button class="tablinks"
                                 onclick="OpenTabDecription(event, 'doctor_loan_tab_2')">other</button>
                         </div>
@@ -1907,6 +1753,21 @@ background-color: #B40018;
 
 
 
+    <!-- ======= Call To Action Section ======= -->
+    <section id="call-to-action" class="call-to-action">
+
+        <div class="container text-center " data-aos="zoom-out" style="max-width:100%;"><br><br>
+          <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox play-btn " style="left:42%;top:10%"></a>
+          <h3>Call To Action</h3>
+          <p> Hi Sir/Mam if you dont have time to read whole think then click on Call to Action Button for direct connect with us and batter cobversation </p>
+          <a class="btn btn-danger px-3 py-2" href="#">Call To Action</a>
+        </div>
+      </section><!-- End Call To Action Section -->
+  
+
+
+
+
 <!-- Blog Start -->
 <div class="blog">
     <div class="container ">
@@ -1962,19 +1823,7 @@ background-color: #B40018;
 <!-- Blog End -->
 
 
-
-{% comment %} Video List Play For What our client says section {% endcomment %}
-<div id="light">
-    <h2 class="boxclose" id="boxclose" onclick="lightbox_close();"></h2>
-    <video id="VisaChipCardVideo" controls>
-        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-    </video>
-</div>
-
-<div id="fade" onClick="lightbox_close();"></div>
-{% comment %} Video List Play For What our client says section {% endcomment %}
-
-
+ 
 
 
 
@@ -1996,7 +1845,8 @@ background-color: #B40018;
                         <p>this is a client feedback </p>
                         <h4>Client Name</h4>
 
-                        <div class="play-video" onclick="lightbox_open();"> <a class="play-btn" href="#"></a> </div>
+                        <center><a href="https://www.youtube.com/watch?v=LXb3EKWsInQ"
+                            class="glightbox play-btn client-play-button"></a></center>
 
                     </div>
                 </div>
@@ -2005,9 +1855,8 @@ background-color: #B40018;
                         <img src="{% static 'img/sample.png' %}" class="img-circle img-responsive" />
                         <p>this is a client feedback </p>
                         <h4>Client Name</h4>
-                        <div class="play-video" onclick="lightbox_open();">
-                            <h6 class="play-btn" href="#"></h6>
-                        </div>
+                        <center><a href="https://www.youtube.com/watch?v=LXb3EKWsInQ"
+                            class="glightbox play-btn client-play-button"></a></center>
                     </div>
                 </div>
                 <div class="carousel-item">
@@ -2015,9 +1864,8 @@ background-color: #B40018;
                         <img src="{% static 'img/sample.png' %}" class="img-circle img-responsive" />
                         <p>this is a client feedback </p>
                         <h4>Client Name</h4>
-                        <div class="play-video" onclick="lightbox_open();">
-                            <h6 class="play-btn" href="#"></h6>
-                        </div>
+                        <center><a href="https://www.youtube.com/watch?v=LXb3EKWsInQ"
+                            class="glightbox play-btn client-play-button"></a></center>
                     </div>
                 </div>
             </div>
@@ -2124,52 +1972,15 @@ background-color: #B40018;
         })
     });
 </script>
+ 
 
-<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<!--Code for play Button -->
 <script>
-    $(document).ready(function () {
-        $('.counter-value').each(function () {
-            $(this).prop('Counter', 0).animate({
-                Counter: $(this).text()
-            }, {
-                duration: 3500,
-                easing: 'swing',
-                step: function (now) {
-                    $(this).text(Math.ceil(now));
-                }
-            });
-        });
-    });
+    
+const glightbox = GLightbox({
+    selector: '.glightbox'
+});
 </script>
-
-
-{% comment %} this script for play video {% endcomment %}
-<script>
-    window.document.onkeydown = function (e) {
-        if (!e) {
-            e = event;
-        }
-        if (e.keyCode == 27) {
-            lightbox_close();
-        }
-    }
-
-    function lightbox_open() {
-        var lightBoxVideo = document.getElementById("VisaChipCardVideo");
-        window.scrollTo(0, 0);
-        document.getElementById('light').style.display = 'block';
-        document.getElementById('fade').style.display = 'block';
-        lightBoxVideo.play();
-    }
-
-    function lightbox_close() {
-        var lightBoxVideo = document.getElementById("VisaChipCardVideo");
-        document.getElementById('light').style.display = 'none';
-        document.getElementById('fade').style.display = 'none';
-        lightBoxVideo.pause();
-    }
-</script>
-
 
 <!--Script for Tab Menu-->
 <script>
@@ -2406,6 +2217,8 @@ background-color: #B40018;
         // default tab open 
         document.getElementById("car_loan_defaultOpen").click();
     }
+
+  
 </script>
 
 

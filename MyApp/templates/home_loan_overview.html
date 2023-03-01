@@ -1,0 +1,753 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block style %}
+.links {
+width: 100%;
+background-color: #07043f;
+color: white;
+padding: 15px;
+}
+
+.links a {
+text-decoration: none;
+}
+
+.titlepage{
+text-align: center;
+margin-top: 30px;
+}
+.titlepage h2{
+color: #275da9;
+}
+/* Header Links Section Start */
+
+.header-links {
+height: auto;
+width: 98%;
+background:#07043f;
+margin-top: 8px;
+padding-bottom: 8px;
+border-radius: 10px;
+}
+
+
+
+.banner-btn a {
+border-radius: 8px;
+width: 170px;
+text-decoration: none;
+display: inline-block;
+margin: 0 10px;
+padding: 12px 0;
+color: #fff;
+background-color: #07043f;
+border: 1px solid rgb(255, 255, 255);
+position: relative;
+z-index: 1;
+transition: color 0.5s;
+margin-top: 10px;
+font-weight: bold;
+}
+
+.banner-btn a span {
+width: 0%;
+height: 100%;
+position: absolute;
+top: 0;
+left: 0;
+background: linear-gradient(to right, #1C53D9, #07043f);
+z-index: -1;
+transition: 0.5s;
+}
+
+.banner-btn a:hover span {
+border-radius: 8px;
+width: 100%
+}
+
+.banner-btn a:hover {
+color: rgb(255, 255, 255);
+}
+
+
+@media screen and (max-width: 770px) {
+.banner-btn a {
+
+width: 40%;
+
+}
+}
+
+/* Header Link Section Stop */
+
+
+
+
+
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+#hero {
+height:60vh;
+background:url({% static 'img/hero-bg.jpg' %});
+background-repeat:no-repeat;
+background-size:100% 100%;
+}
+
+#hero h1{
+font-size:4rem;
+font-weight:1000;
+color:white;
+}
+
+
+#hero h3{
+font-size:2rem;
+font-weight:500;
+}
+
+#hero .hero-content{
+position:relative;
+top:50px;
+}
+
+.hero-footer{
+padding:10px;
+}
+.hero-footer .container{
+border-radius:15px;
+box-shadow:0px 0px 10px;
+position:relative;
+top:-110px;
+z-index:1;
+border:2px solid white;
+padding:20px;
+background:white;
+margin-bottom:-90px;
+}
+
+.hero-footer .container .left{
+border-right:5px solid #B40018;
+}
+
+@media screen and (max-width: 770px) {
+
+.hero-footer .container{
+border-radius:15px;
+box-shadow:0px 0px 10px;
+position:relative;
+top: 0px;
+z-index:1;
+border:2px solid white;
+padding:20px;
+background:white;
+margin-bottom:0px;
+}
+
+.hero-footer .container .left{
+border-right:none;
+margin-bottom:10px;
+}
+
+}
+
+
+/*--------------------------------------------------------------
+# Hero Section End
+--------------------------------------------------------------*/
+
+
+
+/* Home Loan Type Start */
+
+.timeline {
+border-left: 3px solid red;
+padding: 1rem 0;
+
+}
+
+.timeline-card {
+position: relative;
+margin-left: 31px;
+border-left: 10px solid;
+margin-bottom: 2rem;
+}
+
+.timeline-card:last-child {
+margin-bottom: 1rem; }
+
+.timeline-card:before {
+content: '';
+display: inline-block;
+position: absolute;
+background-color: #fff;
+border-radius: 10px;
+width: 12px;
+height: 12px;
+top: 20px;
+left: -41px;
+border: 2px solid;
+z-index: 2;
+}
+
+.timeline-card:after {
+content: '';
+display: inline-block;
+position: absolute;
+background-color: currentColor;
+width: 29px;
+height: 2px;
+top: 25px;
+left: -29px;
+z-index: 1; }
+
+.timeline-card-primary {
+border-left-color: #4A89DC; }
+
+.timeline-card-primary:before {
+border-color: #4A89DC; }
+
+.timeline-card-primary:after {
+background-color: #4A89DC; }
+
+.timeline-card-success {
+border-left-color: #37BC9B; }
+
+.timeline-card-success:before {
+border-color: #37BC9B; }
+
+.timeline-card-success:after {
+background-color: #37BC9B; }
+
+
+.card-body{
+display:flex;
+}
+.card-body .content{
+margin-left:20px;
+}
+.fa-solid{
+font-size:35px;
+}
+/* Home Loan Type End */
+
+
+
+
+/** Features of Personal Loan section **/
+
+.Services {
+margin-top: 10px;
+padding: 60px 0;
+font-family: Poppins;
+background-color: #abccfe;
+background-repeat: no-repeat;
+background-size: 100%;
+}
+
+@media screen and (max-width:990px){
+.Services {
+margin-top: 10px;
+padding: 60px 0;
+font-family: Poppins;
+background: none;
+background-repeat: no-repeat;
+background-size: 100%;
+}
+}
+
+.service-icon{
+  box-shadow:none;
+}
+.Services .titlepage {
+text-align: center;
+}
+
+.Services .titlepage h2 {
+color: #0057c5;
+padding-bottom: 20px;
+}
+
+.Services .titlepage p {
+color: black;
+}
+
+.Services .Services-box i {
+background: white;
+width: 100px;
+height: 100px;
+border-radius: 50px;
+display: inline-block;
+padding-top: 19px;
+box-shadow: 3px 3px 10px;
+}
+
+.Services .Services-box i:hover {
+background: #ddd;
+}
+
+.Services .Services-box h3 {
+padding: 20px 0px 20px 0px;
+font-size: 20px;
+line-height: 25px;
+color: black;
+display: block;
+font-weight: 500;
+}
+
+.Services .Services-box {
+text-align: center;
+background-color: transparent;
+border-radius: 20px;
+border: #cecfd7 solid 2px;
+padding: 10px;
+transition: ease-in all 0.5s;
+margin-bottom: 30px;
+box-shadow: 0px 0px 10px;
+}
+
+.Services .Services-box:hover {
+background: #fd264f;
+transition: ease-in all 0.5s;
+cursor: pointer;
+}
+
+.Services .Services-box p {
+font-size: 16px;
+line-height: 24px;
+color: black;
+text-align: justify;
+}
+
+
+}
+
+/** end Features of Personal Loan **/
+
+
+
+/* Stepper Start */
+
+.step-content{
+  background:yellow;
+  padding:10px;
+}
+/* Stepper Stop */
+
+
+{% endblock style %}
+
+{% block content %}
+
+
+<center>
+  <div class="header-links">
+    <div class="banner-btn">
+      <a href="{% url 'home_loan_overview' %}" data-aos="fade-down" data-aos-delay="100" data-aos-duration="1000"
+        style=" color: #07043f; background: #fff;"> <span></span> Overview </a>
+      <a href="{% url 'home_loan_eligibility_criteria' %}" data-aos="fade-down" data-aos-delay="150"
+        data-aos-duration="1000"> <span></span> Eligibility Criteria </a>
+      <a href="#" data-aos="fade-down" data-aos-delay="150" data-aos-duration="1000" data-toggle="modal"
+        data-target="#exampleModal">
+        <span></span> EMI Calculator </a>
+      <a href="{% url 'home_loan_interest_rate_and_fees' %}" data-aos="fade-down" data-aos-delay="150"
+        data-aos-duration="1000"> <span></span> Interest Rate & Processing Fees </a>
+      <a href="{% url 'home_loan_document_required' %}" data-aos="fade-down" data-aos-delay="150"
+        data-aos-duration="1000"> <span></span> Document Required </a>
+    </div>
+  </div>
+  <div class="waves_img"></div>
+</center>
+
+
+
+<div class="links mt-3">
+  <a href="../index.html" class="text-light">Home/</a>
+  <a href="#" class="text-light">Home Loan/</a>
+  <a href="#" class="text-warning"> Overview</a>
+</div>
+
+
+<!-- ======= Hero Section ======= -->
+<section id="hero">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-sm-12 hero-content">
+        <h3 class="text-danger"></h3>
+        <h1 class=" ">Home Loan</h1>
+        <a href="#" class="btn btn-danger px-5 py-2 mt-4">Apply Now</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="hero-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 left">
+        <img src="{% static 'img/home_loan/header_overview.jpg' %}" alt="" style="width:100%">
+      </div>
+      <div class="col-sm-6 right">
+        <h4>What is Home Loan ?</h4>
+        <p class="text-justify">
+          Any amount of money borrowed from a bank or an NBFC for the purchase, expansion, or construction of a home at
+          a certain fixed or floating rate of interest, payable in EMI or Equated Monthly Instalment over an agreed
+          period, is termed as a Home Loan. The property remains as security with the lender for the term or period of
+          the loan. You may avail a home loan for purposes such as:
+        </p>
+        <ul style="bullet:none;">
+          <li><i class="fa fa-arrow-circle-right text-danger"></i>&nbsp;&nbsp; Purchase of Residential Property</li>
+          <li><i class="fa fa-arrow-circle-right text-danger"></i>&nbsp;&nbsp; Acquisition of Land</li>
+          <li><i class="fa fa-arrow-circle-right text-danger"></i>&nbsp;&nbsp; Home Construction</li>
+          <li><i class="fa fa-arrow-circle-right text-danger"></i>&nbsp;&nbsp; Home Expansion</li>
+          <li><i class="fa fa-arrow-circle-right text-danger"></i>&nbsp;&nbsp; Home Renovation</li>
+          <li><i class="fa fa-arrow-circle-right text-danger"></i>&nbsp;&nbsp; Balance Transfer</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- End Hero -->
+
+
+
+<!--=========== Home Loan Types Start ============-->
+<section class="alert alert-danger">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 text-center">
+        <h2>Different Types of Home Loan for Your Varied Needs</h2>
+        <p>A vast array of institutions offer you the best home loan rates at the most competitive rates and affordable
+          EMIs.
+          Types of mortgage and home finance are discussed in brief below</p>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container mt-4" style="max-width:1400px;">
+
+    <div class="work-experience-section px-3 px-lg-4">
+      <div class="timeline" style="border-left:2px solid #D8D8D8;">
+
+        <div class="timeline-card timeline-card-primary card shadow-sm">
+          <div class="card-body">
+            <div style="width:60px;">
+              <i class="fa-solid fa-house"></i>
+            </div>
+            <div class="content">
+              <div class="h5 mb-1">Home Loan</div>
+              <div>
+                <p class="text-justify">A Home loan happens to be the most common type of loan wherein the house is held
+                  as collateral until you repay the loan. Numerous housing finance companies, public and private banks
+                  make such offerings with a choice of repayment options.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-card timeline-card-primary card shadow-sm">
+          <div class="card-body">
+            <div style="width:60px;">
+              <i class="fa-sharp fa-solid fa-pen-ruler"></i>
+            </div>
+            <div class="content">
+              <div class="h5 mb-1">Home Construction Loan</div>
+              <div>
+                <p class="text-justify">If you have a plot of land and lack financial support to construct a home on
+                  that piece of property, you may choose a house construction loan. Such borrowing is mainly made to
+                  construct or repair a major part of your home.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-card timeline-card-primary card shadow-sm">
+          <div class="card-body">
+            <div style="width:60px;">
+              <i class="fa-sharp fa-solid fa-code-branch"></i>
+            </div>
+            <div class="content">
+              <div class="h5 mb-1">Home Extension Loan</div>
+              <div>
+                <p class="text-justify">Should you already own a home, and feel the need to extend the building, add an
+                  annexe, or build another floor, etc., Home Extension Loan is your go-to option that finances such
+                  needs.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-card timeline-card-primary card shadow-sm">
+          <div class="card-body">
+            <div style="width:60px;">
+              <i class="fa-solid fa-chart-line"></i>
+            </div>
+            <div class="content">
+              <div class="h5 mb-1">Home Improvement Loan</div>
+              <div>
+                <p class="text-justify">All of us wish to improve and upgrade our homes for a better life. From your
+                  old-age furniture, fixtures to faulty lightning systems, Home Improvement Loan funds all your plans.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-card timeline-card-primary card shadow-sm">
+          <div class="card-body">
+            <div style="width:60px;">
+              <i class="fa-solid fa-money-bill-transfer"></i>
+            </div>
+            <div class="content">
+              <div class="h5 mb-1">Home Loan Balance Transfer </div>
+              <div>
+                <p class="text-justify">Burdened with high-interest rate debt on your current home loan? Home Loan
+                  Balance Transfer lets you transfer your debt to a low-interest rate charging plan to lower your burden
+                  and improve your paying capacity.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-card timeline-card-primary card shadow-sm">
+          <div class="card-body">
+            <div style="width:60px;">
+              <i class="fa-solid fa-minimize"></i>
+            </div>
+            <div class="content">
+              <div class="h5 mb-1">Composite Home Loan </div>
+              <div>
+                <p class="text-justify">A Composite Home Loan empowers you to purchase a plot and construct a house as
+                  well on the acquired land; both with a single loan and within a stipulated time mentioned by your
+                  Bank.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-card timeline-card-primary card shadow-sm">
+          <div class="card-body">
+            <div style="width:60px;">
+              <i class="fa-solid fa-arrows-spin"></i>
+            </div>
+            <div class="content">
+              <div class="h5 mb-1">Home Conversion Loan </div>
+              <div>
+                <p class="text-justify">Should you want to move from your present dwelling place to a new dwelling due
+                  to professional or personal reasons, you may opt for a Home Conversion Loan. A home conversion loan
+                  facilitates the smooth conversion of your current loan from your old home to your new home.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-card timeline-card-primary card shadow-sm">
+          <div class="card-body">
+            <div style="width:60px;">
+              <i class="fa-solid fa-house-user"></i>
+            </div>
+            <div class="content">
+              <div class="h5 mb-1">Pradhan Mantri Awas Yojna </div>
+              <div>
+                <p class="text-justify">The plan of the Government of India to allow every Indian Citizen an opportunity
+                  to own a home in India via the drafting of the Credit Linked Subsidy Scheme or CLSS is known as
+                  Pradhan Mantri Awas Yojna. Under the PMAY, a citizen can avail Home Loan from almost all banks allied
+                  with this scheme.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-card timeline-card-primary card shadow-sm">
+          <div class="card-body">
+            <div style="width:60px;">
+              <i class="fa-solid fa-user-tie"></i>
+            </div>
+            <div class="content">
+              <div class="h5 mb-1">NRI Home Loan </div>
+              <div>
+                <p class="text-justify">If you are a patriot, a Non-Resident Indian, and wish to own residential
+                  property in India, NRI Home Loan is your choice. Though the formalities for application may be a
+                  little different, you can still get a loan up to a certain percentage of your property value.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+</section>
+<!--=========== Home Loan Types Stop ============-->
+
+
+<!--=========== Home Loan Service Start ============-->
+
+<div id="service" class="Services">
+  <div class="container" style="max-width:1500px;">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="titlepage">
+          <h2 class="text-dark">Characteristics of a Home Loan</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+
+      <div class="col-xl-4 col-lg-4 col-md-3 col-sm-12">
+        <div class="Services-box" style="height: 92%;" data-aos="fade-down" data-aos-delay="50"
+          data-aos-duration="1500">
+          <h3><i class="fa-solid fa-star text-warning" style="box-shadow:none;width:50px; height:50px; font-size:30px; background:none; "></i></h3>
+          <p>Home Loans are Secured Advances, which can be availed by mortgaging the property you seek to purchase. Existing property can also as collateral.</p>
+        </div>
+      </div>
+
+      <div class="col-xl-4 col-lg-4 col-md-3 col-sm-12">
+        <div class="Services-box" style="height: 92%;" data-aos="fade-down" data-aos-delay="50"
+          data-aos-duration="1500">
+          <h3><i class="fa-solid fa-star text-warning" style="box-shadow:none;width:50px; height:50px; font-size:30px; background:none; "></i></h3>
+          <p>Lenders offer a Minimum Home Loan Value of Rs. 2,00,000 payable in Equated Monthly Instalments (EMIs)</p>
+        </div>
+      </div>
+
+      <div class="col-xl-4 col-lg-4 col-md-3 col-sm-12">
+        <div class="Services-box" style="height: 92%;" data-aos="fade-down" data-aos-delay="50"
+          data-aos-duration="1500">
+          <h3><i class="fa-solid fa-star text-warning" style="box-shadow:none;width:50px; height:50px; font-size:30px; background:none; "></i></h3>
+          <p>Lenders offer a Maximum Home Loan up to 100% of the Value of your Property</p>
+        </div>
+      </div>
+
+      <div class="col-xl-4 col-lg-4 col-md-3 col-sm-12">
+        <div class="Services-box" style="height: 92%;" data-aos="fade-down" data-aos-delay="50"
+          data-aos-duration="1500">
+          <h3><i class="fa-solid fa-star text-warning" style="box-shadow:none;width:50px; height:50px; font-size:30px; background:none; "></i></h3>
+          <p>You are offered a Home Loan subject to your income, employment type, credit history, the location of your property, and other factors.</p>
+        </div>
+      </div>
+
+      <div class="col-xl-4 col-lg-4 col-md-3 col-sm-12">
+        <div class="Services-box" style="height: 92%;" data-aos="fade-down" data-aos-delay="50"
+          data-aos-duration="1500">
+          <h3><i class="fa-solid fa-star text-warning" style="box-shadow:none;width:50px; height:50px; font-size:30px; background:none; "></i></h3>
+          <p>Interest Rates available on Home Loan are of three kinds. Fixed Rate, Floating Rate, Marginal Combination of Fixed and Floating</p>
+        </div>
+      </div>
+
+      <div class="col-xl-4 col-lg-4 col-md-3 col-sm-12">
+        <div class="Services-box" style="height: 92%;" data-aos="fade-down" data-aos-delay="50"
+          data-aos-duration="1500">
+          <h3><i class="fa-solid fa-star text-warning" style="box-shadow:none;width:50px; height:50px; font-size:30px; background:none; "></i></h3>
+          <p>Lenders offer you a Minimum Home Loan Repayment Period or Tenure of 5 years & a Maximum of 30 years.</p>
+        </div>
+      </div>
+
+      <div class="col-xl-4 col-lg-4 col-md-3 col-sm-12">
+        <div class="Services-box" style="height: 92%;" data-aos="fade-down" data-aos-delay="50"
+          data-aos-duration="1500">
+          <h3><i class="fa-solid fa-star text-warning" style="box-shadow:none;width:50px; height:50px; font-size:30px; background:none; "></i></h3>
+          <p>Registration charges, processing fees, prepayment penalty, commitment charge, and miscellaneous charges for documentation and consultation, may apply on your home loan.</p>
+        </div>
+      </div>
+
+      <div class="col-xl-4 col-lg-4 col-md-3 col-sm-12">
+        <div class="Services-box" style="height: 92%;" data-aos="fade-down" data-aos-delay="50"
+          data-aos-duration="1500">
+          <h3><i class="fa-solid fa-star text-warning" style="box-shadow:none;width:50px; height:50px; font-size:30px; background:none; "></i></h3>
+          <p>Depending on the lender you select, you may be offered a home loan pre-payment facility with or without a prepayment charge.</p>
+        </div>
+      </div>
+
+      <div class="col-xl-4 col-lg-4 col-md-3 col-sm-12">
+        <div class="Services-box" style="height: 92%;" data-aos="fade-down" data-aos-delay="50"
+          data-aos-duration="1500">
+          <h3><i class="fa-solid fa-star text-warning" style="box-shadow:none;width:50px; height:50px; font-size:30px; background:none; "></i></h3>
+          <p>You may avail a home loan with your spouse or parent as a co-applicant or a joint applicant, for which you can avail tax benefits too.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--=========== Home Loan Service Stop ============-->
+
+
+<!--=========== Steps Start ============-->
+<section>
+<div class="container mt-3 mb-3" style="max-width:1400px;">
+
+  <div class="row">
+    <div class="col-sm-12 text-center">
+      <h2>Steps To Acquire A Home Loan</h2>
+    </div>
+  </div>
+  <div class="row" style="padding:10px;">
+
+    <div class="col-sm-3 mt-3" style="display:flex;flex-direction:row; border-radius:5px;">
+      <div class="step-content" style="padding:20px; background:#B40018;text-align:center; font-weight:bold; color:white;width:18%;"><h3>1</h3></div>
+      <div class="step-content border" style="padding:10px; width:82%;">Enter your details in the Home Loan Application Form</div>
+    </div>
+    
+    <div class="col-sm-3 mt-3" style="display:flex;flex-direction:row; border-radius:5px;">
+      <div class="step-content" style="padding:20px; background:#B40018;text-align:center; font-weight:bold; color:white;width:18%;"><h3>2</h3></div>
+      <div class="step-content border" style="padding:10px; width:82%;">Furnish your essential documents as asked to further the process</div>
+    </div>
+    
+    <div class="col-sm-3 mt-3" style="display:flex;flex-direction:row; border-radius:5px;">
+      <div class="step-content" style="padding:20px; background:#B40018;text-align:center; font-weight:bold; color:white;width:18%;"><h3>3</h3></div>
+      <div class="step-content border" style="padding:10px; width:82%;">Pay Home Loan Processing Fee</div>
+    </div>
+    
+    <div class="col-sm-3 mt-3" style="display:flex;flex-direction:row; border-radius:5px;">
+      <div class="step-content" style="padding:20px; background:#B40018;text-align:center; font-weight:bold; color:white;width:18%;"><h3>4</h3></div>
+      <div class="step-content border" style="padding:10px; width:82%;">Your Home Loan Application and Documents will be inspected and verified</div>
+    </div>
+    
+  </div>
+
+  
+  <div class="row" style="padding:10px;">
+
+    <div class="col-sm-4 mt-3" style="display:flex;flex-direction:row; border-radius:5px;">
+      <div class="step-content" style="padding:20px; background:#B40018;text-align:center; font-weight:bold; color:white;width:18%;"><h3>5</h3></div>
+      <div class="step-content border" style="padding:10px; width:82%;">Your Home Loan Application will be queued and sent for approval or sanction</div>
+    </div>
+    
+    <div class="col-sm-4 mt-3" style="display:flex;flex-direction:row; border-radius:5px;">
+      <div class="step-content" style="padding:20px; background:#B40018;text-align:center; font-weight:bold; color:white;width:18%;"><h3>6</h3></div>
+      <div class="step-content border" style="padding:10px; width:82%;">Your lender will visit the property you intend to purchase for a legal check</div>
+    </div>
+    
+    <div class="col-sm-4 mt-3" style="display:flex;flex-direction:row; border-radius:5px;">
+      <div class="step-content" style="padding:20px; background:#B40018;text-align:center; font-weight:bold; color:white;width:18%;"><h3>7</h3></div>
+      <div class="step-content border" style="padding:10px; width:82%;">After approval, your Home Loan Amount will be disbursed to your Bank Account</div>
+    </div>
+ 
+  </div>
+</div>
+</section>
+<!--=========== Steps Stop ============-->
+
+{% include "personal_loan_post_clients.html" %}
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+  integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+  integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+  integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+{% endblock content %}

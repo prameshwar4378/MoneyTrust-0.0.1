@@ -1,0 +1,679 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block style %}
+.links {
+  width: 100%;
+  background-color: #07043f;
+  color: white;
+  padding: 15px;
+}
+
+.links a {
+  text-decoration: none;
+}
+
+.titlepage{
+text-align: center;
+margin-top: 30px;
+}
+.titlepage h2{
+color: #275da9;
+}
+/* Header Links Section Start */
+
+.header-links {
+  height: auto;
+  width: 98%;
+  background:#07043f;
+  margin-top: 8px;
+  padding-bottom: 8px;
+  border-radius: 10px;
+}
+
+
+
+.banner-btn a {
+  border-radius: 8px;
+  width: 170px;
+  text-decoration: none;
+  display: inline-block;
+  margin: 0 10px;
+  padding: 12px 0;
+  color: #fff;
+  background-color: #07043f;
+  border: 1px solid rgb(255, 255, 255);
+  position: relative;
+  z-index: 1;
+  transition: color 0.5s;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.banner-btn a span {
+  width: 0%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to right, #1C53D9, #07043f);
+  z-index: -1;
+  transition: 0.5s;
+}
+
+.banner-btn a:hover span {
+  border-radius: 8px;
+  width: 100%
+}
+
+.banner-btn a:hover {
+  color: rgb(255, 255, 255);
+}
+
+
+@media screen and (max-width: 770px) {
+  .banner-btn a {
+
+    width: 40%;
+
+  }
+}
+
+/* Header Link Section Stop */
+
+
+
+
+
+
+
+
+
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+#hero {
+height:60vh;
+background:url({% static 'img/hero-bg.jpg' %});
+background-repeat:no-repeat;
+background-size:100% 100%;
+}
+
+#hero h1{
+font-size:4rem;
+font-weight:1000;
+color:white;
+}
+
+
+#hero h3{
+font-size:2rem;
+font-weight:500;
+}
+
+#hero .hero-content{
+position:relative;
+top:50px;
+}
+
+.hero-footer{
+  padding:10px;
+}
+.hero-footer .container{
+  border-radius:15px;
+  box-shadow:0px 0px 10px;
+  position:relative;
+  top:-110px;
+  z-index:1;
+  border:2px solid white;
+  padding:20px;
+  background:white;
+  margin-bottom:-110px;
+}
+
+.hero-footer .container .left{
+border-right:5px solid #B40018;
+}
+
+@media screen and (max-width: 770px) {
+
+  .hero-footer .container{
+    border-radius:15px;
+    box-shadow:0px 0px 10px;
+    position:relative;
+    top: 0px;
+    z-index:1;
+    border:2px solid white;
+    padding:20px;
+    background:white;
+    margin-bottom:0px;
+    }
+    
+    .hero-footer .container .left{
+    border-right:none;
+    margin-bottom:10px;
+    }
+    
+}
+
+
+
+/*--------------------------------------------------------------
+# Hero Section End
+--------------------------------------------------------------*/
+
+
+
+
+
+
+/* Bank List Table */
+.tbl-bank-list {
+margin-top:20px;
+background-color: white;
+border-radius: 15px;
+box-shadow: 0px 0px 10px -2px;
+padding-bottom: 20px;
+padding-top: 20px;
+}
+
+/* Bank List Table */
+
+
+
+.table-bg-color{
+background-color:#FED2D6;
+}
+
+.table_scroll {
+{% comment %} height: 420px; {% endcomment %}
+overflow-x: scroll;
+{% comment %} overflow-y: scroll; {% endcomment %}
+}
+
+.table {
+min-width: max-content;
+}
+
+th {
+background-color: #0098D7;
+text-align: center;
+}
+
+tr,
+td {
+text-align: left;
+}
+
+.border {
+border: 2px solid black;
+}
+
+/* Bank Table Stop */
+
+
+
+
+
+/* Type section start */ 
+.type img{
+  width:100%;
+  border-radius:50%;
+}
+.type .content{
+  background:rgba(255, 255, 255, 0.7);
+  position:relative;
+  top:-60px;
+  padding:15px;
+  border-radius:5px;
+  box-shadow:0px 0px 10px -3px;
+  text-align:justify;
+  margin-bottom:20px;
+}
+/* Type section stop */ 
+
+
+
+{% endblock style %}
+
+
+{% block content %}
+
+
+
+<center>
+  <div class="header-links">
+    <div class="banner-btn">
+      <a href="{% url 'business_loan_overview' %}" data-aos="fade-down" data-aos-delay="100"
+        data-aos-duration="1000"> <span></span> Overview </a>
+      <a href="{% url 'business_loan_eligibility_criteria' %}" data-aos="fade-down" data-aos-delay="150"
+        data-aos-duration="1000" > <span></span> Eligibility Criteria </a>
+      <a href="#" data-aos="fade-down" data-aos-delay="150" data-aos-duration="1000" data-toggle="modal" data-target="#exampleModal">
+        <span></span> EMI Calculator </a>
+        <a href="{% url 'business_loan_interest_rate_and_fees' %}" style="color: #07043f; background: #fff;" data-aos="fade-down" data-aos-delay="150"
+        data-aos-duration="1000"  > <span></span> Interest Rate & Processing Fees </a>
+      <a href="{% url 'business_loan_document_required' %}"  
+        data-aos="fade-down" data-aos-delay="150" data-aos-duration="1000"> <span></span> Document Required </a>
+    </div>
+  </div>
+  <div class="waves_img"></div>
+</center>
+
+  
+    <div class="links mt-3">
+      <a href="../index.html" class="text-light">Home/</a>
+      <a href="#" class="text-light">Business Loan/</a>
+      <a href="#" class="text-warning">Interest rate & Processing Fees</a>
+    </div>
+   
+    
+
+
+
+<!-- ======= Hero Section ======= -->
+<section id="hero">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-sm-12 hero-content">
+        <h3 class="text-danger">Business Loan</h3>
+        <h1 class=" ">Interest rate & Processing Fees</h1>
+        <a href="#" class="btn btn-danger px-5 py-2 mt-4">Apply Now</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="hero-footer" style="z-index:1">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 left">
+        <img src="{% static 'img/business_loan/header_interest_rate.jpg' %}" alt="" style="width:100%">
+      </div>
+      <div class="col-sm-6 right">
+        <p class="text-justify">Interest Rate is a percentage of the Principal Business Loan amount payable to the lender as charges for borrowing. This Rate of Interest typically applies on the principal amount on an annual basis, which may be known as the Annual Percentage Rate or APR.</p>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- End Hero -->
+
+
+
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-sm-12 text-center">
+      <h2>Business Loan Rate of Interest</h2>
+      <p>Interest Rate is a percentage of the Principal Business Loan amount payable to the lender as charges for borrowing. This Rate of Interest typically applies on the principal amount on an annual basis, which may be known as the Annual Percentage Rate or APR.</p>
+    </div>
+  </div>
+</div>
+
+<div class="container tbl-bank-list">
+    <div class="row">
+        <div class="col-sm-12 text-center ">
+            <h2>List of Banks, interest rate and processing fees</h2>
+            <p>=======================</p>
+        </div>
+    </div>
+    <div class="row row-1" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+        <div class="col-sm-12"><br>
+            <br>
+            <div class="table_scroll">
+
+                <table class="table table-hover">
+                    <thead>
+
+                        <tr>
+                            <th scope="col" class="text-center bg-danger text-white border">SR.No</th>
+                            <th scope="col" class="text-center bg-danger text-white border">Bank Name</th>
+                            <th scope="col" class="text-center bg-danger text-white border">Interest Rate</th>
+                            <th scope="col" class="text-center bg-danger text-white border">Processing Fees</th>
+                        </tr>
+                    </thead>
+                    <tbody style="text-align:left;">
+                      
+                      <tr class=" text-left">
+                        <td class="text-start border">01</td>
+                        <td class="text-start border">HDFC Bank Ltd </td>
+                        <td class="text-start border">15%% </td>
+                        <td class="text-start border">0.01 </td>
+                    </tr>
+                      
+                    <tr class="table-bg-color  text-left">
+                      <td class="text-start border">02</td>
+                      <td class="text-start border">IDFC First Bank</td>
+                      <td class="text-start border">16%</td>
+                      <td class="text-start border">0.015</td>
+                    </tr>
+                      
+                    <tr class=" text-left">
+                      <td class="text-start border">03</td>
+                      <td class="text-start border">ICICI Bank</td>
+                      <td class="text-start border">16%</td>
+                      <td class="text-start border">0.015</td>
+                    </tr>
+                      
+                    <tr class="table-bg-color  text-left">
+                      <td class="text-start border">04</td>
+                      <td class="text-start border">Axis Bank Ltd</td>
+                      <td class="text-start border">17%</td>
+                      <td class="text-start border">0.015</td>
+                    </tr>
+                      
+                    <tr class=" text-left">
+                      <td class="text-start border">05</td>
+                      <td class="text-start border">Bajaj Finance Ltd</td>
+                      <td class="text-start border">17%</td>
+                      <td class="text-start border">0.02</td>
+                    </tr>
+                      
+                    <tr class="table-bg-color  text-left">
+                      <td class="text-start border">06</td>
+                      <td class="text-start border">Fedfina</td>
+                      <td class="text-start border">17%</td>
+                      <td class="text-start border">0.02</td>
+                    </tr>
+                      
+                    <tr class=" text-left">
+                      <td class="text-start border">07</td>
+                      <td class="text-start border">Fullerton</td>
+                      <td class="text-start border">17%</td>
+                      <td class="text-start border">0.02</td>
+                    </tr>
+                      
+                    <tr class="table-bg-color  text-left">
+                      <td class="text-start border">08</td>
+                      <td class="text-start border">Poonawala</td>
+                      <td class="text-start border">18%</td>
+                      <td class="text-start border">0.02</td>
+                    </tr>
+                      
+                    <tr class=" text-left">
+                      <td class="text-start border">09</td>
+                      <td class="text-start border">Tata</td>
+                      <td class="text-start border">18%</td>
+                      <td class="text-start border">0.02</td>
+                    </tr>
+                      
+                    <tr class="table-bg-color  text-left">
+                      <td class="text-start border">10</td>
+                      <td class="text-start border">SMC Finance</td>
+                      <td class="text-start border">19%</td>
+                      <td class="text-start border">0.02</td>
+                    </tr>
+                      
+                    <tr class=" text-left">
+                      <td class="text-start border">10</td>
+                      <td class="text-start border">Indifi</td>
+                      <td class="text-start border">20%</td>
+                      <td class="text-start border">0.03</td>
+                    </tr>
+                      
+                    <tr class="table-bg-color  text-left">
+                      <td class="text-start border">11</td>
+                      <td class="text-start border">Lendingkart</td>
+                      <td class="text-start border">19%</td>
+                      <td class="text-start border">0.025</td>
+                    </tr>
+                      
+                    <tr class=" text-left">
+                      <td class="text-start border">12</td>
+                      <td class="text-start border">Dhanvarsha Finvest Limited</td>
+                      <td class="text-start border">21%</td>
+                      <td class="text-start border">0.02</td>
+                    </tr>
+                      
+                    <tr class="table-bg-color  text-left">
+                      <td class="text-start border">13</td>
+                      <td class="text-start border">Loantap</td>
+                      <td class="text-start border">21%</td>
+                      <td class="text-start border">0.02</td>
+                    </tr>
+                      
+                    <tr class=" text-left">
+                      <td class="text-start border">14</td>
+                      <td class="text-start border">Neogrowth</td>
+                      <td class="text-start border">24%</td>
+                      <td class="text-start border">0.03</td>
+                    </tr>
+                      
+                    <tr class="table-bg-color  text-left">
+                      <td class="text-start border">15</td>
+                      <td class="text-start border">Aditya Birla Finance Ltd</td>
+                      <td class="text-start border">18%</td>
+                      <td class="text-start border">0.02</td>
+                    </tr>
+                      
+                    <tr class=" text-left">
+                      <td class="text-start border">16</td>
+                      <td class="text-start border">Hero Fincorp</td>
+                      <td class="text-start border">18%</td>
+                      <td class="text-start border">0.03</td>
+                    </tr>
+                      
+                    <tr class="table-bg-color  text-left">
+                      <td class="text-start border">17</td>
+                      <td class="text-start border">Loan Frame</td>
+                      <td class="text-start border">18%</td>
+                      <td class="text-start border">0.02</td>
+                    </tr>
+                      
+                    <tr class=" text-left">
+                      <td class="text-start border">18</td>
+                      <td class="text-start border">Growthsource</td>
+                      <td class="text-start border">24%</td>
+                      <td class="text-start border">0.02</td>
+                    </tr>
+                      
+                    <tr class="table-bg-color  text-left">
+                      <td class="text-start border">19</td>
+                      <td class="text-start border">IndusInd Bank</td>
+                      <td class="text-start border">18%</td>
+                      <td class="text-start border">0.02</td>
+                    </tr>
+                      
+                    <tr class=" text-left">
+                      <td class="text-start border">20</td>
+                      <td class="text-start border">Kotak Mahindra Bank Ltd</td>
+                      <td class="text-start border">15%</td>
+                      <td class="text-start border">0.02</td>
+                    </tr>
+                      
+                    <tr class="table-bg-color  text-left">
+                      <td class="text-start border">21</td>
+                      <td class="text-start border">Standard Chartered Bank</td>
+                      <td class="text-start border">16%</td>
+                      <td class="text-start border">0.02</td>
+                    </tr>
+                      
+                    <tr class=" text-left">
+                      <td class="text-start border">22</td>
+                      <td class="text-start border">UGRO</td>
+                      <td class="text-start border">18%</td>
+                      <td class="text-start border">0.02</td>
+                    </tr>
+                      
+                    <tr class="table-bg-color  text-left">
+                      <td class="text-start border">22</td>
+                      <td class="text-start border">Yes Bank</td>
+                      <td class="text-start border">16%</td>
+                      <td class="text-start border">0.02</td>
+                    </tr>
+                      
+                    <tr class=" text-left">
+                      <td class="text-start border">23</td>
+                      <td class="text-start border">Edelweiss</td>
+                      <td class="text-start border">18%</td>
+                      <td class="text-start border">0.02</td>
+                    </tr>
+                      
+                    <tr class="table-bg-color  text-left">
+                      <td class="text-start border">24</td>
+                      <td class="text-start border">Axis Finance</td>
+                      <td class="text-start border">18%</td>
+                      <td class="text-start border">0.02</td>
+                    </tr>
+
+
+                    </tbody>
+                </table>
+            </div>
+            <br>
+        </div>
+    </div>
+</div>
+<!-- Bank Table Stop -->
+
+
+<div class="container mt-4 type">
+  <div class="row">
+    <div class="col-sm-12 text-center">
+      <h2>Business Loan Interest Rate Types</h2>
+      <p>Banks and NBFCs offer two types of interest rates, namely fixed and floating. The EMI amount changes according to the type of interest rate a borrower chooses.</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6">
+      <img src="{% static 'img/sample.jpg' %}" alt="" >
+      <p class="content">
+        <span style="font-size:25px; font-weight:600;">Fixed-Rate of Interest <br></span>
+        When you opt for a Fixed Rate of Interest, the interest rate on your Business Loan remains constant throughout your loan period, and this allows you the freedom to plan your finances.
+      </p>
+    </div>
+    <div class="col-sm-6">
+      <img src="{% static 'img/sample.jpg' %}" alt="" >
+      <p class="content">
+        <span style="font-size:25px; font-weight:600;">Floating Rate of Interest <br></span>
+        Floating Rate of Interest changes according to the RBI lending benchmark, namely Repo Rate. This means, that although your EMI remain constant, your loan tenure may extend due to rate adjustments.
+      </p>
+    </div>
+  </div>
+</div>
+  
+
+
+
+
+
+
+
+
+ <!--============================
+Business Loan Factors  start
+=================================-->
+<section>
+  <div class="container px-3 py-3 mt-4" style="max-width:1400px;">
+    <div class="row">
+      <div class="col-sm-12 text-center">
+        <h2>What are the Factors Affecting Business Loan Interest Rates</h2>
+      </div>
+    </div>
+
+    <div class="row px-2 py-2 mt-2" style="background:rgba(0, 108, 255, .1);border-radius:10px; margin:10px;">
+      <div class="col-sm-6 mt-2" style="display:flex; flex-direction:row;  ">
+        <div style="width:60px; height:100%; ">
+          <i class="fa-solid fa-user text-danger" style="font-size:40px; position:relative;top:20px;"></i>
+        </div>
+        <div class="px-3">
+          <h4>Nature of Business</h4>
+          <p>Your lender will requires you to state the nature of your business to comprehend the profitability of your enterprise and decide the interest rate chargeable to you.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-sm-6 mt-2" style="display:flex; flex-direction:row;  ">
+        <div style="width:60px; height:100%; ">
+          <i class="fa-solid fa-earth text-danger" style="font-size:40px; position:relative;top:20px;"></i>
+        </div>
+        <div class="px-3">
+          <h4>Business Vintage</h4>
+          <p>
+            Well-Established businesses operating for a long time are like to receive better terms and conditions in by way of lower rates of interest.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+
+
+    
+    <div class="row px-2 py-2 mt-2" style="background:rgba(0, 108, 255, .1);border-radius:10px; margin:10px;">
+      <div class="col-sm-6 mt-2" style="display:flex; flex-direction:row;  ">
+        <div style="width:60px; height:100%; ">
+          <i class="fa-solid fa-briefcase text-danger" style="font-size:40px; position:relative;top:20px;"></i>
+        </div>
+        <div class="px-3">
+          <h4>Turnover</h4>
+          <p>
+            High turnover reflects the state and health of your business, which in turn secures you a better and affordable Business Loan with better rates of interest.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-sm-6 mt-2" style="display:flex; flex-direction:row;  ">
+        <div style="width:60px; height:100%; ">
+          <i class="fa-solid fa-gauge text-danger" style="font-size:40px; position:relative;top:20px;"></i>
+        </div>
+        <div class="px-3">
+          <h4>Credit Score</h4>
+          <p>
+            Your Credit Score reflects your financial health, and the future of your finances. Therefore, a high credit score naturally deserves better rates of interest.
+          </p>
+        </div>
+      </div>
+
+    </div>
+    
+  </div>
+</section>
+
+
+ <!--============================
+Business Loan Factors  End
+=================================-->
+
+
+
+
+
+ <!--============================
+Business Loan Formula  start
+=================================-->
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 text-center">
+      <h2>How to Calculate Interest on Business Loans</h2>
+      <p>You may calculate Annual Interest on your Business Loans by using the following formula for calculating Simple Interest</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-6" style="padding:15px;">
+      <h4><i class="fa fa-arrow-circle-right text-danger" style="font-size:15px; vertical-align:middle;"></i>&nbsp; P = Principal Amount, or Loan Amount</h4>
+      <h4><i class="fa fa-arrow-circle-right text-danger" style="font-size:15px; vertical-align:middle;"></i>&nbsp; R = Rate of Interest or ROI</h4>
+      <h4><i class="fa fa-arrow-circle-right text-danger" style="font-size:15px; vertical-align:middle;"></i>&nbsp; T = Time Period of the Loan</h4>
+      <h4><i class="fa fa-arrow-circle-right text-danger" style="font-size:15px; vertical-align:middle;"></i>&nbsp; SI = Simple Interest</h4>
+      <p>To calculate Monthly Interest on your Business Loan when the loan period indicates months, use the following formula</p>
+    </div>
+    <div class="col-sm-6" style="padding:15px;">
+      <h4><i class="fa fa-arrow-circle-right text-danger" style="font-size:15px; vertical-align:middle;"></i>&nbsp; SI = P x R x T / 100</h4>
+      <p>To calculate the Amount Payable with Interest Rate at the end of tenure the end of the maturity period, use the formula mentioned below</p>
+      <center><h4 class="btn btn-danger px-3 py-2">Total Amount Value = P x [1 + (R x T)]</h4></center>
+    </div>
+  </div>
+</div>
+ <!--============================
+Business Loan Formula  End
+=================================-->
+  <br>
+  {% include "personal_loan_post_clients.html" %}
+
+  
+    
+  
+{% endblock content %}
+
+

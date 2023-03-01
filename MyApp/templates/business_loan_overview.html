@@ -1,0 +1,680 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block style %}
+.links {
+width: 100%;
+background-color: #07043f;
+color: white;
+padding: 15px;
+}
+
+.links a {
+text-decoration: none;
+}
+
+.titlepage{
+text-align: center;
+margin-top: 30px;
+}
+.titlepage h2{
+color: #275da9;
+}
+/* Header Links Section Start */
+
+.header-links {
+height: auto;
+width: 98%;
+background:#07043f;
+margin-top: 8px;
+padding-bottom: 8px;
+border-radius: 10px;
+}
+
+
+
+.banner-btn a {
+border-radius: 8px;
+width: 170px;
+text-decoration: none;
+display: inline-block;
+margin: 0 10px;
+padding: 12px 0;
+color: #fff;
+background-color: #07043f;
+border: 1px solid rgb(255, 255, 255);
+position: relative;
+z-index: 1;
+transition: color 0.5s;
+margin-top: 10px;
+font-weight: bold;
+}
+
+.banner-btn a span {
+width: 0%;
+height: 100%;
+position: absolute;
+top: 0;
+left: 0;
+background: linear-gradient(to right, #1C53D9, #07043f);
+z-index: -1;
+transition: 0.5s;
+}
+
+.banner-btn a:hover span {
+border-radius: 8px;
+width: 100%
+}
+
+.banner-btn a:hover {
+color: rgb(255, 255, 255);
+}
+
+
+@media screen and (max-width: 770px) {
+.banner-btn a {
+
+width: 40%;
+
+}
+}
+
+/* Header Link Section Stop */
+
+
+
+
+
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+#hero {
+height:60vh;
+background:url({% static 'img/hero-bg.jpg' %});
+background-repeat:no-repeat;
+background-size:100% 100%;
+}
+
+#hero h1{
+font-size:4rem;
+font-weight:1000;
+color:white;
+}
+
+
+#hero h3{
+font-size:2rem;
+font-weight:500;
+}
+
+#hero .hero-content{
+position:relative;
+top:50px;
+}
+
+.hero-footer{
+padding:10px;
+}
+.hero-footer .container{
+border-radius:15px;
+box-shadow:0px 0px 10px;
+position:relative;
+top:-110px;
+z-index:1;
+border:2px solid white;
+padding:20px;
+background:white;
+margin-bottom:-160px;
+}
+
+.hero-footer .container .left{
+border-right:5px solid #B40018;
+}
+
+@media screen and (max-width: 770px) {
+
+.hero-footer .container{
+border-radius:15px;
+box-shadow:0px 0px 10px;
+position:relative;
+top: 0px;
+z-index:1;
+border:2px solid white;
+padding:20px;
+background:white;
+margin-bottom:0px;
+}
+
+.hero-footer .container .left{
+border-right:none;
+margin-bottom:10px;
+}
+
+}
+
+
+/*--------------------------------------------------------------
+# Hero Section End
+--------------------------------------------------------------*/
+
+
+/** Features of Personal Loan section **/
+
+.Services {
+margin-top: 90px;
+padding: 60px 0;
+font-family: Poppins;
+background-color: #abccfe;
+background-repeat: no-repeat;
+background-size: 100%;
+}
+
+@media screen and (max-width:990px){
+.Services {
+margin-top: 90px;
+padding: 60px 0;
+font-family: Poppins;
+background: none;
+background-repeat: no-repeat;
+background-size: 100%;
+}
+}
+
+.Services .titlepage {
+text-align: center;
+}
+
+.Services .titlepage h2 {
+color: #0057c5;
+padding-bottom: 20px;
+}
+
+.Services .titlepage p {
+color: black;
+}
+
+.Services .Services-box i {
+background: white;
+width: 100px;
+height: 100px;
+border-radius: 50px;
+display: inline-block;
+padding-top: 19px;
+box-shadow: 3px 3px 10px;
+}
+
+.Services .Services-box i:hover {
+background: #ddd;
+}
+
+.Services .Services-box h3 {
+padding: 20px 0px 20px 0px;
+font-size: 20px;
+line-height: 25px;
+color: black;
+display: block;
+font-weight: 500;
+}
+
+.Services .Services-box {
+text-align: center;
+background-color: transparent;
+border-radius: 20px;
+border: #cecfd7 solid 2px;
+padding: 10px;
+transition: ease-in all 0.5s;
+margin-bottom: 30px;
+box-shadow: 0px 0px 10px;
+}
+
+.Services .Services-box:hover {
+background: #fd264f;
+transition: ease-in all 0.5s;
+cursor: pointer;
+}
+
+.Services .Services-box p {
+font-size: 16px;
+line-height: 24px;
+color: black;
+text-align: justify;
+}
+
+
+}
+
+/** end Features of Personal Loan **/
+
+
+/* step section start */
+
+.timeline {
+border-left: 3px solid #E6E9ED;
+padding: 1rem 0; }
+
+.timeline-card {
+position: relative;
+margin-left: 31px;
+border-left: 5px solid;
+margin-bottom: 2rem; }
+
+.timeline-card:last-child {
+margin-bottom: 1rem; }
+
+.timeline-card:before {
+content: '';
+display: inline-block;
+position: absolute;
+background-color: #fff;
+border-radius: 10px;
+width: 12px;
+height: 12px;
+top: 20px;
+left: -41px;
+border: 2px solid;
+z-index: 2; }
+
+.timeline-card:after {
+content: '';
+display: inline-block;
+position: absolute;
+background-color: currentColor;
+width: 29px;
+height: 2px;
+top: 25px;
+left: -29px;
+z-index: 1; }
+
+.timeline-card-primary {
+border-left-color: #4A89DC; }
+
+.timeline-card-primary:before {
+border-color: #4A89DC; }
+
+.timeline-card-primary:after {
+background-color: #4A89DC; }
+
+.timeline-card-success {
+border-left-color: #37BC9B; }
+
+.timeline-card-success:before {
+border-color: #37BC9B; }
+
+.timeline-card-success:after {
+background-color: #37BC9B; }
+
+/* step section stop */
+
+
+
+
+
+
+{% endblock style %}
+
+{% block content %}
+
+
+<center>
+  <div class="header-links">
+    <div class="banner-btn">
+      <a href="{% url 'business_loan_overview' %}" data-aos="fade-down" data-aos-delay="100" data-aos-duration="1000"
+        style=" color: #07043f; background: #fff;"> <span></span> Overview </a>
+      <a href="{% url 'business_loan_eligibility_criteria' %}" data-aos="fade-down" data-aos-delay="150"
+        data-aos-duration="1000"> <span></span> Eligibility Criteria </a>
+      <a href="#" data-aos="fade-down" data-aos-delay="150" data-aos-duration="1000" data-toggle="modal"
+        data-target="#exampleModal">
+        <span></span> EMI Calculator </a>
+      <a href="{% url 'business_loan_interest_rate_and_fees' %}" data-aos="fade-down" data-aos-delay="150"
+        data-aos-duration="1000"> <span></span> Interest Rate & Processing Fees </a>
+      <a href="{% url 'business_loan_document_required' %}" data-aos="fade-down" data-aos-delay="150"
+        data-aos-duration="1000"> <span></span> Document Required </a>
+    </div>
+  </div>
+  <div class="waves_img"></div>
+</center>
+
+
+
+<div class="links mt-3">
+  <a href="../index.html" class="text-light">Home/</a>
+  <a href="#" class="text-light">Business Loan/</a>
+  <a href="#" class="text-warning"> Overview</a>
+</div>
+
+
+<!-- ======= Hero Section ======= -->
+<section id="hero">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-sm-12 hero-content">
+        <h1 class=" ">Business Loan</h1>
+        <p></p>
+        <a href="#" class="btn btn-danger px-5 py-2 mt-4">Apply Now</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="hero-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 left">
+        <img src="{% static 'img/business_loan/header_overview.jpeg' %}" alt="" style="width:100%">
+      </div>
+      <div class="col-sm-6 right">
+        <p class="text-justify">
+          <h3>What is Business Loan ?</h3>
+          <p class="text-justify">Volatile market trends and increasing business needs cause demand for urgent immediate
+            cash-in-hand. A Business Loan designed for this purpose gives you the advantage to avail unsecured credit at
+            competitive interest rates.</p>
+          <p class="text-justify">Whether you plan to invest in infrastructure investment or upgrade plant and
+            machinery, a Business Loan caters to all your commercial needs.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- End Hero -->
+
+
+
+
+<!-- Features of Personal Loan  -->
+<div id="service" class="Services">
+  <div class="container" style="max-width:1500px;">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="titlepage">
+          <h2 class="text-dark">Business Loan Features and Benefits</h2>
+          <p>What makes Business Loan a Perfect Choice!</p><br>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+
+      <div class="col-xl-4 col-lg-4 col-md-3 col-sm-12">
+        <div class="Services-box" style="height: 92%;" data-aos="fade-down" data-aos-delay="50"
+          data-aos-duration="1500">
+          <h3>Affordable High-Value Capital</h3>
+          <p>Well-known banks and NBFCs offer easy and quick short-term, medium-term, and long-term business loans as an
+            ideal finance solution for your enterprise.</p>
+        </div>
+      </div>
+
+      <div class="col-xl-4 col-lg-4 col-md-3 col-sm-12">
+        <div class="Services-box" style="height: 92%;" data-aos="fade-down" data-aos-delay="200"
+          data-aos-duration="1500">
+          <h3>Flexi Loans</h3>
+          <p>Withdraw only what you need and repay to suit your business fund flows at nil or low prepayment charges.
+            You only pay interest on EMIs for the initial period of the loan and interest is charged only on the amount
+            withdrawn.</p>
+        </div>
+      </div>
+
+      <div class="col-xl-4 col-lg-4 col-md-3 col-sm-12">
+        <div class="Services-box" style="height: 92%;" data-aos="fade-down" data-aos-delay="350"
+          data-aos-duration="1500">
+          <h3>Hassle-Free Quick Unsecured Loans</h3>
+          <p>Business Loans are unsecured loans approved in 24 hours, which come to you with easy eligibility, and just
+            a few documents.</p>
+        </div>
+      </div>
+
+      <div class="col-xl-4 col-lg-4 col-md-3 col-sm-12">
+        <div class="Services-box" style="height: 92%;" data-aos="fade-down" data-aos-delay="50"
+          data-aos-duration="1500">
+          <h3>Multi-Purpose End-Usage</h3>
+          <p>Whether you're looking for investment in infrastructure, expansion in operations, purchase of equipment or
+            inventory, or working capital needs, you have the advantage to seek a multi-purpose business loan, all in
+            one place.</p>
+        </div>
+      </div>
+
+      <div class="col-xl-4 col-lg-4 col-md-3 col-sm-12">
+        <div class="Services-box" style="height: 92%;" data-aos="fade-down" data-aos-delay="200"
+          data-aos-duration="1500">
+          <h3>Online Account Access</h3>
+          <p>You're simply free with the convenience of access to your business loan account for your loan statements
+            and other details so that you can manage your loan from anywhere at any time.</p>
+        </div>
+      </div>
+
+      <div class="col-xl-4 col-lg-4 col-md-3 col-sm-12">
+        <div class="Services-box" style="height: 92%;" data-aos="fade-down" data-aos-delay="350"
+          data-aos-duration="1500">
+          <h3>Collateral-Free</h3>
+          <p>Business Loans are collateral-free, for which your personal or business assets are not put to risk, and
+            since this means no appraisals of assets for valuation, you have the quick approval and disbursal advantage.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- end Features of Personal Loan -->
+
+
+
+
+
+
+
+<!-- Features of Personal Loan  -->
+<div>
+  <div class="container" style="max-width:1500px;">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="titlepage">
+          <h2 class="text-dark">Different Types of Business Loans for Your Varied Needs</h2><br>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-3">
+        <img src="{% static 'img/become-a-partner-slide-2.jpg' %}" alt="" width="100%">
+      </div>
+      <div class="col-sm-9">
+        <div class="row">
+          <div class="col-sm-4 text-center">
+            <h5 class="text-danger">Working Capital Loan</h5>
+            <p style="text-align:justify;">Working Capital Loans are finance designed to maintain healthy cash flows
+              with unsecured finance to strengthen and grow your business without disruptions.</p>
+          </div>
+          <div class="col-sm-4 text-center">
+            <h5 class="text-danger">Plant and Machinery Loan</h5>
+            <p style="text-align:justify;">You can install and upgrade your business plant and machinery to the latest
+              standards to meet your growing business needs with plant and machinery or equipment loans.</p>
+
+          </div>
+          <div class="col-sm-4 text-center">
+            <h5 class="text-danger">SME and MSME Loan</h5>
+            <p style="text-align:justify;">Small and Medium Enterprises are now in a position to expand operations, and
+              scale business heights easily with SME and MSME Loans.</p>
+
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-4 text-center">
+            <h5 class="text-danger">Business Loan for Women</h5>
+            <p style="text-align:justify;">Especially designed for the women entrepreneurs, Business Loans for Women
+              offer high-value finance to support growing business needs of women.</p>
+
+          </div>
+          <div class="col-sm-4 text-center">
+            <h5 class="text-danger">Self Employed Professional Loan</h5>
+            <p style="text-align:justify;">Professionals such as Doctors, Chartered Accountants, and Architects are
+              people who have little time at hand to attend to their professional finance needs. Hence, Self Employed
+              Professional Loans are loans designed suit such a Professional's financial requirements.</p>
+
+          </div>
+          <div class="col-sm-4 text-center">
+            <h5 class="text-danger">Micro Business Loan</h5>
+            <p style="text-align:justify;">Small business loans are a way to finance small requirements, and as such are
+              designed to be repaid in shorter loans periods to suit your needs.</p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end Features of Personal Loan -->
+
+
+
+<section class="why_choose" style="background:#FED2D6">
+  <div class="container px-3 py-3">
+    <div class="row">
+      <div class="col-sm-12 text-center">
+        <h2>What Makes You Choose Us</h2>
+      </div>
+    </div>
+
+    <div class="row px-2 py-2 mt-2" style="background:rgba(0, 108, 255, .1);border-radius:10px; margin:10px;">
+      <div class="col-sm-12" style="display:flex; flex-direction:row;  ">
+        <div style="width:60px; height:100%; ">
+          <i class="fa-solid fa-mobile-screen" style="font-size:40px; position:relative;top:20px;"></i>
+        </div>
+        <div class="px-3">
+          <h4>Easy Availability</h4>
+          <p class="text-justify">Ruloans along with significant 100+ partner Banks across India spread over 1000+
+            locations extend Business Loan to all eligible individuals across India.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row px-2 py-2 mt-2" style="background:rgba(0, 108, 255, .1);border-radius:10px; margin:10px;">
+      <div class="col-sm-12" style="display:flex; flex-direction:row;  ">
+        <div style="width:60px; height:100%; ">
+          <i class="fa-solid fa-gauge-high" style="font-size:40px; position:relative;top:20px;"></i>
+        </div>
+        <div class="px-3">
+          <h4>High-Speed Process</h4>
+          <p class="text-justify">At Ruloans, Adhaar based e-KYC speeds up the documentation process by eliminating
+            physical paperwork. You can obtain a Business Loan with minimal documentation in no time.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row px-2 py-2 mt-2" style="background:rgba(0, 108, 255, .1);border-radius:10px; margin:10px;">
+      <div class="col-sm-12" style="display:flex; flex-direction:row;  ">
+        <div style="width:60px; height:100%; ">
+          <i class="fa-solid fa-computer" style="font-size:40px; position:relative;top:20px;"></i>
+        </div>
+        <div class="px-3">
+          <h4>Ruloans Digital Resources Advantage</h4>
+          <p class="text-justify">You can think about loan costs, offers, and online services on our digital platform.
+            Our online resources will direct you to settle on the right decision, and pick the right bank for your
+            advance according to your financial plan and assumptions.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row px-2 py-2 mt-2" style="background:rgba(0, 108, 255, .1);border-radius:10px; margin:10px;">
+      <div class="col-sm-12" style="display:flex; flex-direction:row;  ">
+        <div style="width:60px; height:100%; ">
+          <i class="fa-sharp fa-solid fa-user-tie" style="font-size:40px; position:relative;top:20px;"></i>
+        </div>
+        <div class="px-3">
+          <h4>Professional Guidance and Advice</h4>
+          <p class="text-justify">Experts at Ruloans know the ins and outs of the business. Our committed group of
+            individual specialists will guide you to pick the right lender.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row px-2 py-2 mt-2" style="background:rgba(0, 108, 255, .1);border-radius:10px; margin:10px;">
+      <div class="col-sm-12" style="display:flex; flex-direction:row;  ">
+        <div style="width:60px; height:100%; padding:8px; ">
+          <i class="fa-solid fa-gift" style="font-size:40px; position:relative;top:20px;"></i>
+        </div>
+        <div class="px-3">
+          <h4>Profit from Best Offers</h4>
+          <p class="text-justify">We esteem our clients and are consistently on our toes to give them advantages of our
+            abilities. Applying for Business Loan through us gives you an opportunity to benefit from the best offers
+            and agreements our Partner Banks and NBFCs have on offer.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+{% comment %} Stepper Start {% endcomment %}
+
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-sm-12 text-center">
+      <p>How to Apply for a Business Loan </p>
+      <h3>Avail business finance quickly with Ruloans easy application process</h3>
+      <p>The process to access funds in the form of a Loan Against Property will involve the following steps, which are
+        explained in brief below:</p>
+    </div>
+  </div>
+  <div class="work-experience-section px-3 px-lg-4">
+    <div class="timeline" style="border-left:2px solid #D8D8D8;">
+      
+      <div class="timeline-card timeline-card-primary card shadow-sm">
+        <div class="card-body">
+          <div class="h5 mb-1">Online Application</div>
+          <div>Fill out your 'Basic Details'</div>
+        </div>
+      </div>
+            
+      <div class="timeline-card timeline-card-primary card shadow-sm">
+        <div class="card-body">
+          <div class="h5 mb-1">Document Submission</div>
+          <div>After you receive your 'Loan Eligibility', choose your 'Financial Institution', and upload 'Required Documents'</div>
+        </div>
+      </div>
+            
+      <div class="timeline-card timeline-card-primary card shadow-sm">
+        <div class="card-body">
+          <div class="h5 mb-1">Verification</div>
+          <div>The Institutions will 'Verify' your Business Loan application, and submitted documents</div>
+        </div>
+      </div>
+            
+      <div class="timeline-card timeline-card-primary card shadow-sm">
+        <div class="card-body">
+          <div class="h5 mb-1">Approval</div>
+          <div>Your Business Loan will be 'Sanctioned'</div>
+        </div>
+      </div>
+            
+      <div class="timeline-card timeline-card-primary card shadow-sm">
+        <div class="card-body">
+          <div class="h5 mb-1">Disbursal</div>
+          <div>Receive your 'Business Loan Amount' in your Bank Account - Simply Efficient!</div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<!-- Stepper End-->
+
+
+
+{% include "personal_loan_post_clients.html" %}
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+  integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+  integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+  integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+{% endblock content %}

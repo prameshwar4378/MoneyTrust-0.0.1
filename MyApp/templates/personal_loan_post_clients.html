@@ -1,0 +1,262 @@
+{% load static %}
+<style>
+    /*--------------------------------------------------------------
+# Testimonials Section
+--------------------------------------------------------------*/
+    .testimonials .testimonial-wrap {
+        padding-left: 50px;
+    }
+
+    .testimonials .testimonials-carousel,
+    .testimonials .testimonials-slider {
+        overflow: hidden;
+    }
+
+    .testimonials .testimonial-item {
+        box-sizing: content-box;
+        padding: 30px 30px 30px 60px;
+        margin: 0 15px 30px 0;
+        min-height: 200px;
+        box-shadow: 0px 2px 20px rgba(82, 86, 94, 0.1);
+        position: relative;
+        background: #fff;
+    }
+
+    .testimonials .testimonial-item .testimonial-img {
+        width: 90px;
+        border-radius: 10px;
+        border: 6px solid #fff;
+        position: absolute;
+        left: -45px;
+    }
+
+    .testimonials .testimonial-item h3 {
+        font-size: 18px;
+        font-weight: bold;
+        margin: 10px 0 5px 0;
+        color: #000;
+    }
+
+    .testimonials .testimonial-item h4 {
+        font-size: 14px;
+        color: #999;
+        margin: 0;
+    }
+
+    .testimonials .testimonial-item .stars {
+        margin: 10px 0;
+    }
+
+    .testimonials .testimonial-item .stars i {
+        color: #ffc107;
+        margin: 0 1px;
+    }
+
+    .testimonials .testimonial-item .quote-icon-left,
+    .testimonials .testimonial-item .quote-icon-right {
+        color: #ffd565;
+        font-size: 26px;
+        line-height: 0;
+    }
+
+    .testimonials .testimonial-item .quote-icon-left {
+        display: inline-block;
+        left: -5px;
+        position: relative;
+    }
+
+    .testimonials .testimonial-item .quote-icon-right {
+        display: inline-block;
+        right: -5px;
+        position: relative;
+        top: 10px;
+        transform: scale(-1, -1);
+    }
+
+    .testimonials .testimonial-item p {
+        font-style: italic;
+        margin: 15px auto 15px auto;
+    }
+
+    .testimonials .swiper-pagination {
+        margin-top: 20px;
+        position: relative;
+    }
+
+    .testimonials .swiper-pagination .swiper-pagination-bullet {
+        width: 12px;
+        height: 12px;
+        background-color: #d5d7da;
+        opacity: 1;
+    }
+
+    .testimonials .swiper-pagination .swiper-pagination-bullet-active {
+        background-color: blue;
+    }
+
+    @media (max-width: 767px) {
+        .testimonials .testimonial-wrap {
+            padding-left: 0;
+        }
+
+        .testimonials .testimonials-carousel,
+        .testimonials .testimonials-slider {
+            overflow: hidden;
+        }
+
+        .testimonials .testimonial-item {
+            padding: 30px;
+            margin: 15px;
+        }
+
+        .testimonials .testimonial-item .testimonial-img {
+            position: static;
+            left: auto;
+        }
+    }
+</style>
+
+<!-- ======= Testimonials Section ======= -->
+<section id="testimonials " class="testimonials section-bg mt-4 py-5 " style="background:#ECECEC">
+    <div class="container" data-aos="fade-up">
+
+        <div class="section-header text-center">
+            <h2>What our client say</h2>
+            <br><br>
+        </div>
+
+        <div class="slides-2 swiper">
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                    <div class="testimonial-wrap">
+                        <div class="testimonial-item">
+                            <img src="{% static 'img/profile.jpg' %}" class="testimonial-img" alt="">
+                            <h3>Client Name</h3>
+                            <h4>Ceo &amp; Founder</h4>
+                            <div class="stars">
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                    class="bi bi-star-fill"></i>
+                            </div>
+                            <p>
+                                <i class="bi bi-quote quote-icon-left"></i>
+                                this is the Client Feedback for MoneyTrust this is the Client Feedback for MoneyTrust
+                                this is the Client Feedback for MoneyTrust
+                                <i class="bi bi-quote quote-icon-right"></i>
+                            </p>
+                        </div>
+                    </div>
+                </div><!-- End testimonial item -->
+
+                <div class="swiper-slide">
+                    <div class="testimonial-wrap">
+                        <div class="testimonial-item">
+                            <img src="{% static 'img/profile.jpg' %}" class="testimonial-img" alt="">
+                            <h3>Client Name</h3>
+                            <h4>Ceo &amp; Founder</h4>
+                            <div class="stars">
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                    class="bi bi-star-fill"></i>
+                            </div>
+                            <p>
+                                <i class="bi bi-quote quote-icon-left"></i>
+                                this is the Client Feedback for MoneyTrust this is the Client Feedback for MoneyTrust
+                                this is the Client Feedback for MoneyTrust
+                                <i class="bi bi-quote quote-icon-right"></i>
+                            </p>
+                        </div>
+                    </div>
+                </div><!-- End testimonial item -->
+
+                <div class="swiper-slide">
+                    <div class="testimonial-wrap">
+                        <div class="testimonial-item">
+                            <img src="{% static 'img/profile.jpg' %}" class="testimonial-img" alt="">
+                            <h3>Client Name</h3>
+                            <h4>Ceo &amp; Founder</h4>
+                            <div class="stars">
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                    class="bi bi-star-fill"></i>
+                            </div>
+                            <p>
+                                <i class="bi bi-quote quote-icon-left"></i>
+                                this is the Client Feedback for MoneyTrust this is the Client Feedback for MoneyTrust
+                                this is the Client Feedback for MoneyTrust
+                                <i class="bi bi-quote quote-icon-right"></i>
+                            </p>
+                        </div>
+                    </div>
+                </div><!-- End testimonial item -->
+
+                <div class="swiper-slide">
+                    <div class="testimonial-wrap">
+                        <div class="testimonial-item">
+                            <img src="{% static 'img/profile.jpg' %}" class="testimonial-img" alt="">
+                            <h3>Client Name</h3>
+                            <h4>Ceo &amp; Founder</h4>
+                            <div class="stars">
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                    class="bi bi-star-fill"></i>
+                            </div>
+                            <p>
+                                <i class="bi bi-quote quote-icon-left"></i>
+                                this is the Client Feedback for MoneyTrust this is the Client Feedback for MoneyTrust
+                                this is the Client Feedback for MoneyTrust
+                                <i class="bi bi-quote quote-icon-right"></i>
+                            </p>
+                        </div>
+                    </div>
+                </div><!-- End testimonial item -->
+
+                <div class="swiper-slide">
+                    <div class="testimonial-wrap">
+                        <div class="testimonial-item">
+                            <img src="{% static 'img/profile.jpg' %}" class="testimonial-img" alt="">
+                            <h3>Client Name</h3>
+                            <h4>Ceo &amp; Founder</h4>
+                            <div class="stars">
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                    class="bi bi-star-fill"></i>
+                            </div>
+                            <p>
+                                <i class="bi bi-quote quote-icon-left"></i>
+                                this is the Client Feedback for MoneyTrust this is the Client Feedback for MoneyTrust
+                                this is the Client Feedback for MoneyTrust
+                                <i class="bi bi-quote quote-icon-right"></i>
+                            </p>
+                        </div>
+                    </div>
+                </div><!-- End testimonial item -->
+
+                <div class="swiper-slide">
+                    <div class="testimonial-wrap">
+                        <div class="testimonial-item">
+                            <img src="{% static 'img/profile.jpg' %}" class="testimonial-img" alt="">
+                            <h3>Client Name</h3>
+                            <h4>Ceo &amp; Founder</h4>
+                            <div class="stars">
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                    class="bi bi-star-fill"></i>
+                            </div>
+                            <p>
+                                <i class="bi bi-quote quote-icon-left"></i>
+                                this is the Client Feedback for MoneyTrust this is the Client Feedback for MoneyTrust
+                                this is the Client Feedback for MoneyTrust
+                                <i class="bi bi-quote quote-icon-right"></i>
+                            </p>
+                        </div>
+                    </div>
+                </div><!-- End testimonial item -->
+
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+
+    </div>
+</section><!-- End Testimonials Section -->

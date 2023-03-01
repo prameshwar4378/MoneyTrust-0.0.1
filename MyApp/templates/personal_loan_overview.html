@@ -3,371 +3,499 @@
 
 
 {% block style %}
-.links {
-    width: 100%;
-    background-color: #07043f;
-    color: white;
-    padding: 15px;
-  }
 
-  .links a {
-    text-decoration: none;
-  }
+
+
+
+
+
+.links {
+width: 100%;
+background-color: #07043f;
+color: white;
+padding: 15px;
+}
+
+.links a {
+text-decoration: none;
+}
 
 .titlepage{
-  text-align: center;
-  margin-top: 30px;
+text-align: center;
+margin-top: 30px;
 }
 .titlepage h2{
-  color: #275da9;
+color: #275da9;
 }
-  /* Header Links Section Start */
+/* Header Links Section Start */
 
-  .header-links {
-    height: auto;
-    width: 98%;
-    background:#07043f;
-    margin-top: 8px;
-    padding-bottom: 8px;
-    border-radius: 10px;
-  }
-
-  
-
-  .banner-btn a {
-    border-radius: 8px;
-    width: 170px;
-    text-decoration: none;
-    display: inline-block;
-    margin: 0 10px;
-    padding: 12px 0;
-    color: #fff;
-    background-color: #07043f;
-    border: 1px solid rgb(255, 255, 255);
-    position: relative;
-    z-index: 1;
-    transition: color 0.5s;
-    margin-top: 10px;
-    font-weight: bold;
-  }
-
-  .banner-btn a span {
-    width: 0%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: linear-gradient(to right, #1C53D9, #07043f);
-    z-index: -1;
-    transition: 0.5s;
-  }
-
-  .banner-btn a:hover span {
-    border-radius: 8px;
-    width: 100%
-  }
-
-  .banner-btn a:hover {
-    color: rgb(255, 255, 255);
-  }
-
-
-  @media screen and (max-width: 770px) {
-    .banner-btn a {
-
-      width: 40%;
-
-    }
-  }
-
-  /* Header Link Section Stop */
+.header-links {
+height: auto;
+width: 98%;
+background:#07043f;
+margin-top: 8px;
+padding-bottom: 8px;
+border-radius: 10px;
+}
 
 
 
+.banner-btn a {
+border-radius: 8px;
+width: 170px;
+text-decoration: none;
+display: inline-block;
+margin: 0 10px;
+padding: 12px 0;
+color: #fff;
+background-color: #07043f;
+border: 1px solid rgb(255, 255, 255);
+position: relative;
+z-index: 1;
+transition: color 0.5s;
+margin-top: 10px;
+font-weight: bold;
+}
+
+.banner-btn a span {
+width: 0%;
+height: 100%;
+position: absolute;
+top: 0;
+left: 0;
+background: linear-gradient(to right, #1C53D9, #07043f);
+z-index: -1;
+transition: 0.5s;
+}
+
+.banner-btn a:hover span {
+border-radius: 8px;
+width: 100%
+}
+
+.banner-btn a:hover {
+color: rgb(255, 255, 255);
+}
 
 
-  /*--------------------------------------------------------------
+@media screen and (max-width: 770px) {
+.banner-btn a {
+
+width: 40%;
+
+}
+}
+
+/* Header Link Section Stop */
+
+
+
+
+
+/*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
-  #hero {
-    width: 100%;
-    height: 75vh;
-    background: url("{% static 'img/hero-bg.jpg' %}") top left;
-    background-size: cover;
-    position: relative;
-  }
+#hero {
+height:60vh;
+background:url({% static 'img/hero-bg.jpg' %});
+background-repeat:no-repeat;
+background-size:100% 100%;
+}
 
-  @media screen and (max-width: 770px) {
-    #hero p{
-      text-align:justify;
+#hero h1{
+font-size:4rem;
+font-weight:1000;
+color:white;
+}
+
+
+#hero h3{
+font-size:2rem;
+font-weight:500;
+}
+
+#hero .hero-content{
+position:relative;
+top:50px;
+}
+
+.hero-footer{
+  padding:10px;
+}
+.hero-footer .container{
+border-radius:15px;
+box-shadow:0px 0px 10px;
+position:relative;
+top:-110px;
+z-index:1;
+border:2px solid white;
+padding:20px;
+background:white;
+margin-bottom:-80px;
+}
+
+.hero-footer .container .left{
+border-right:5px solid #B40018;
+}
+
+@media screen and (max-width: 770px) {
+
+  .hero-footer .container{
+    border-radius:15px;
+    box-shadow:0px 0px 10px;
+    position:relative;
+    top: 0px;
+    z-index:1;
+    border:2px solid white;
+    padding:20px;
+    background:white;
+    margin-bottom:0px;
     }
-  }
-  #hero:before {
-    content: "";
-    background: rgba(255, 255, 255, 0.6);
-    position: absolute;
-    bottom: 0;
-    top: 0;
-    left: 0;
-    right: 0;
-  }
-
-  #hero .container {
-    position: relative;
-  }
-
-  #hero h1 {
-    margin: 0;
-    font-size: 48px;
-    font-weight: 700;
-    line-height: 56px;
-    color: #222222;
-    font-family: "Poppins", sans-serif;
-  }
-
-  #hero h1 span {
-    color: #106eea;
-  }
-
-  #hero h2 {
-    color: #555555;
-    margin: 5px 0 30px 0;
-    font-size: 24px;
-    font-weight: 400;
-  }
-
-  #hero .btn-get-started {
-    font-family: "Roboto", sans-serif;
-    text-transform: uppercase;
-    font-weight: 500;
-    font-size: 14px;
-    letter-spacing: 1px;
-    display: inline-block;
-    padding: 10px 28px;
-    border-radius: 4px;
-    transition: 0.5s;
-    color: #fff;
-    background: #106eea;
-  }
-
-  #hero .btn-get-started:hover {
-    background: #247cf0;
-  }
-
-  #hero .btn-watch-video {
-    font-size: 16px;
-    transition: 0.5s;
-    margin-left: 25px;
-    color: #222222;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-  }
-
-  #hero .btn-watch-video i {
-    color: #106eea;
-    font-size: 32px;
-    transition: 0.3s;
-    line-height: 0;
-    margin-right: 8px;
-  }
-
-  #hero .btn-watch-video:hover {
-    color: #106eea;
-  }
-
-  #hero .btn-watch-video:hover i {
-    color: #3b8af2;
-  }
-
-  @media (min-width: 1024px) {
-    #hero {
-      background-attachment: fixed;
+    
+    .hero-footer .container .left{
+    border-right:none;
+    margin-bottom:10px;
     }
-  }
+    
+}
 
-  @media (max-width: 768px) {
-    #hero {
-      height: 100vh;
-    }
 
-    #hero h1 {
-      font-size: 28px;
-      line-height: 36px;
-    }
-
-    #hero h2 {
-      font-size: 18px;
-      line-height: 24px;
-      margin-bottom: 30px;
-    }
-
-    #hero .btn-get-started,
-    #hero .btn-watch-video {
-      font-size: 13px;
-    }
-  }
-
-  @media (max-height: 500px) {
-    #hero {
-      height: 120vh;
-    }
-  }
+/*--------------------------------------------------------------
+# Hero Section End
+--------------------------------------------------------------*/
 
 
 
-
-
-  
 
 /** Features of Personal Loan section **/
 
 .Services {
-	margin-top: 90px;
-	padding: 60px 0;
-	font-family: Poppins;
-	background-color: #abccfe; 
-	background-repeat: no-repeat; 
-	background-size: 100%;
+margin-top: 90px;
+padding: 60px 0;
+font-family: Poppins;
+background-color: #abccfe;
+background-repeat: no-repeat;
+background-size: 100%;
 }
 
 @media screen and (max-width:990px){
-	.Services {
-		margin-top: 90px;
-		padding: 60px 0;
-		font-family: Poppins;
-		background: none; 
-		background-repeat: no-repeat; 
-		background-size: 100%;
-	}
-} 
+.Services {
+margin-top: 90px;
+padding: 60px 0;
+font-family: Poppins;
+background: none;
+background-repeat: no-repeat;
+background-size: 100%;
+}
+}
 
 .Services .titlepage {
-	text-align: center;
+text-align: center;
 }
 
 .Services .titlepage h2 {
-	color: #0057c5;
-	padding-bottom: 20px;
+color: #0057c5;
+padding-bottom: 20px;
 }
 
 .Services .titlepage p {
-	color: black;
+color: black;
 }
 
 .Services .Services-box i {
-	background: white;
-	width: 100px;
-	height: 100px;
-	border-radius: 50px;
-	display: inline-block;
-	padding-top: 19px;
-	box-shadow: 3px 3px 10px;
+background: white;
+width: 100px;
+height: 100px;
+border-radius: 50px;
+display: inline-block;
+padding-top: 19px;
+box-shadow: 3px 3px 10px;
 }
 
 .Services .Services-box i:hover {
-	background: #ddd;
+background: #ddd;
 }
 
 .Services .Services-box h3 {
-	padding: 20px 0px 20px 0px;
-	font-size: 20px;
-	line-height: 25px;
-	color: black;
-	display: block;
-	font-weight: 500;
+padding: 20px 0px 20px 0px;
+font-size: 20px;
+line-height: 25px;
+color: black;
+display: block;
+font-weight: 500;
 }
 
 .Services .Services-box {
-	text-align: center;
-	background-color: transparent;
-	border-radius: 20px;
-	border: #cecfd7 solid 2px;
-	padding: 10px;
-	transition: ease-in all 0.5s;
-	margin-bottom: 30px;
-	box-shadow: 0px 0px 10px;
+text-align: center;
+background-color: transparent;
+border-radius: 20px;
+border: #cecfd7 solid 2px;
+padding: 10px;
+transition: ease-in all 0.5s;
+margin-bottom: 30px;
+box-shadow: 0px 0px 10px;
 }
 
 .Services .Services-box:hover {
-	background: #fd264f;
-	transition: ease-in all 0.5s;
-	cursor: pointer;
+background: #fd264f;
+transition: ease-in all 0.5s;
+cursor: pointer;
 }
 
 .Services .Services-box p {
-	font-size: 16px;
-	line-height: 24px;
-	color: black;
-	text-align: justify;
+font-size: 16px;
+line-height: 24px;
+color: black;
+text-align: justify;
 }
 
 .read_more {
-	font-size: 16px;
-	background-color: #fff;
-	color: #000;
-	padding: 10px 0px;
-	width: 100%;
-	max-width: 190px;
-	display: flex;
-	justify-content: center;
-	text-align: center;
-	margin: 0 auto;
-	margin-top: 20px;
-	border-radius:5px;
-	transition: 0.5s;
+font-size: 16px;
+background-color: #fff;
+color: #000;
+padding: 10px 0px;
+width: 100%;
+max-width: 190px;
+display: flex;
+justify-content: center;
+text-align: center;
+margin: 0 auto;
+margin-top: 20px;
+border-radius:5px;
+transition: 0.5s;
 }
 
 .read_more:hover {
-	background: #8308eb;
-	color: #fff;
+background: #8308eb;
+color: #fff;
 
 }
 
 /** end Features of Personal Loan **/
 
 
-/* step section start  */
+/* step section start */
 
 .stepper{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  text-align: center;
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+align-items: center;
+text-align: center;
 }
 .stepper .step{
-  width: 16%;
+width: 16%;
 }
 .stepper .step-arrow-main{
-  width: 5%;
-  /* height:200px */
+width: 5%;
+/* height:200px */
 }
 .stepper .step-arrow{
-  width: 100%;
-  /* background: url(../img/right-arrow.gif); */
-  height:100%;
+width: 100%;
+/* background: url(../img/right-arrow.gif); */
+height:100%;
 }
 
 @media screen and (max-width: 770px) {
- 
 
-  .stepper{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  text-align: center;
+
+.stepper{
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+align-items: center;
+text-align: center;
 }
 .stepper .step{
-  width: 100%;
+width: 100%;
 }
 .stepper .step-arrow-main{
-  width: 100%;
-  /* height:200px */
+width: 100%;
+/* height:200px */
 }
 }
-/* step section stop  */
+/* step section stop */
+
+
+
+
+
+
+/* Personal Loan Why Trust Start */
+
+.timeline {
+border-left: 3px solid red;
+padding: 1rem 0;
+
+}
+
+.timeline-card {
+position: relative;
+margin-left: 31px;
+border-left: 10px solid;
+margin-bottom: 2rem;
+}
+
+.timeline-card:last-child {
+margin-bottom: 1rem; }
+
+.timeline-card:before {
+content: '';
+display: inline-block;
+position: absolute;
+background-color: #fff;
+border-radius: 10px;
+width: 12px;
+height: 12px;
+top: 20px;
+left: -41px;
+border: 2px solid;
+z-index: 2;
+}
+
+.timeline-card:after {
+content: '';
+display: inline-block;
+position: absolute;
+background-color: currentColor;
+width: 29px;
+height: 2px;
+top: 25px;
+left: -29px;
+z-index: 1; }
+
+.timeline-card-primary {
+border-left-color: #4A89DC; }
+
+.timeline-card-primary:before {
+border-color: #4A89DC; }
+
+.timeline-card-primary:after {
+background-color: #4A89DC; }
+
+.timeline-card-success {
+border-left-color: #37BC9B; }
+
+.timeline-card-success:before {
+border-color: #37BC9B; }
+
+.timeline-card-success:after {
+background-color: #37BC9B; }
+
+
+.card-body{
+display:flex;
+}
+.card-body .content{
+margin-left:20px;
+}
+.fa-solid{
+font-size:35px;
+}
+/* Personal Loan Why Trust End */
+
+
+
+
+
+/*--------------------------------------------------------------
+# difirent_loan_type Section
+--------------------------------------------------------------*/
+.difirent_loan_type .nav-tabs {
+  border: 0;
+}
+
+.difirent_loan_type .nav-link {
+  border: 0;
+  padding: 25px 20px;
+  color: var(--color-secondary);
+  box-shadow: 5px 5px 25px rgba(var(--color-secondary-rgb), 0.5);
+  border-radius: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: 0s;
+  cursor: pointer;
+  height: 100%;
+}
+
+.difirent_loan_type .nav-link fa-solid {
+  font-size: 32px;
+  line-height: 0;
+}
+
+.difirent_loan_type .nav-link h4 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 10px 0 0 0;
+  color: var(--color-secondary);
+}
+
+.difirent_loan_type .nav-link:hover {
+  color: var(--color-primary);
+}
+
+.difirent_loan_type .nav-link.active {
+  transition: 0.3s;
+  background: #DF0328;
+  border-color: var(--color-primary);
+  border-radius:5px;
+}
+
+.difirent_loan_type .nav-link.active h6 {
+  color: var(--color-white);
+}
+
+.difirent_loan_type .nav-link.active i {
+  color: var(--color-white) !important;
+}
+
+.difirent_loan_type .tab-content {
+  margin-top: 30px;
+}
+
+.difirent_loan_type .tab-pane.active {
+  -webkit-animation: fadeIn 0.5s ease-out;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.difirent_loan_type .tab-pane h3 {
+  font-weight: 600;
+  font-size: 36px;
+  color: var(--color-secondary);
+}
+
+.difirent_loan_type .tab-pane ul {
+  list-style: none;
+  padding: 0;
+}
+
+.difirent_loan_type .tab-pane ul li {
+  padding-bottom: 10px;
+}
+
+.difirent_loan_type .tab-pane ul i {
+  font-size: 24px;
+  margin-right: 4px;
+  color: var(--color-primary);
+}
+
+.difirent_loan_type .tab-pane p:last-child {
+  margin-bottom: 0;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
 
 
 
@@ -379,226 +507,495 @@
 <center>
   <div class="header-links">
     <div class="banner-btn">
-      <a href="{% url 'personal_loan_overview' %}" data-aos="fade-down" data-aos-delay="100"
-        data-aos-duration="1000" style=" color: #07043f; background: #fff;"> <span></span> Overview </a>
+      <a href="{% url 'personal_loan_overview' %}" data-aos="fade-down" data-aos-delay="100" data-aos-duration="1000"
+        style=" color: #07043f; background: #fff;"> <span></span> Overview </a>
       <a href="{% url 'personal_loan_eligibility_criteria' %}" data-aos="fade-down" data-aos-delay="150"
-        data-aos-duration="1000" > <span></span> Eligibility Criteria </a>
-      <a href="#" data-aos="fade-down" data-aos-delay="150" data-aos-duration="1000" data-toggle="modal" data-target="#exampleModal">
+        data-aos-duration="1000"> <span></span> Eligibility Criteria </a>
+      <a href="#" data-aos="fade-down" data-aos-delay="150" data-aos-duration="1000" data-toggle="modal"
+        data-target="#exampleModal">
         <span></span> EMI Calculator </a>
-        <a href="{% url 'personal_loan_interest_rate_and_fees' %}"   data-aos="fade-down" data-aos-delay="150"
-        data-aos-duration="1000"  > <span></span> Interest Rate & Processing Fees </a>
-      <a href="{% url 'personal_loan_document_required' %}" 
-        data-aos="fade-down" data-aos-delay="150" data-aos-duration="1000"> <span></span> Document Required </a>
+      <a href="{% url 'personal_loan_interest_rate_and_fees' %}" data-aos="fade-down" data-aos-delay="150"
+        data-aos-duration="1000"> <span></span> Interest Rate & Processing Fees </a>
+      <a href="{% url 'personal_loan_document_required' %}" data-aos="fade-down" data-aos-delay="150"
+        data-aos-duration="1000"> <span></span> Document Required </a>
     </div>
   </div>
   <div class="waves_img"></div>
 </center>
 
-  
-
-  <div class="links mt-3">
-    <a href="../index.html" class="text-light">Home/</a>
-    <a href="#" class="text-light">Personal Loan/</a>
-    <a href="#" class="text-warning"> Overview</a>
-  </div>
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex align-items-center">
-    <div class="container" data-aos="zoom-out" data-aos-delay="100">
-      <h1>Personal Loan <span class="text-danger">Overview</span></h1>
-      <h4 style="font-weight: 1000;">What is a Personal Loan?</h4>
-      <p>By virtue of being an unsecured form of credit, you can avail a Personal Loan without pledging any collateral
-        with minimal documentation, and easy eligibility criteria. This kind of instant loan does not have any end-usage
-        restrictions, which means you could finance a royal wedding, a trip to your dream destination, renovate your
-        home, deal with a medical emergency, or finance the expansion of your business.</p>
-      <p>MoneyTrust will connect you to a lending partner of your choice, and our team will take you through the process
-        quickly with ease. Choose from our catalog of Personal Loan Partners of Banks and NBFCs according to your needs
-        and convenience for rapid approval and swift disbursal of your personal loan.</p>
-    </div>
-  </section><!-- End Hero -->
 
 
+<div class="links mt-3">
+  <a href="../index.html" class="text-light">Home/</a>
+  <a href="#" class="text-light">Personal Loan/</a>
+  <a href="#" class="text-warning"> Overview</a>
+</div>
 
 
+<!-- ======= Hero Section ======= -->
+<section id="hero">
   <div class="container">
-    <div class="text-center mt-4">
-      <h2>Different Types of Personal Loans for your
-        Special Needs</h2>
-      <p>Our lending partners will be more than pleased to offer you a personal loan for your urgent upfront needs. At
-        MoneyTrust, you can opt for online personal loans or loans offline when you need money for expenses</p>
-    </div>
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-      <ol class="carousel-indicators text-primary">
-        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"  style="border: 5px solid gray;border-radius: 5px; position: relative; transform: translateY(3rem); "></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="1"  style="border: 5px solid gray;border-radius: 5px; position: relative; transform: translateY(3rem); "></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="2"  style="border: 5px solid gray;border-radius: 5px; position: relative; transform: translateY(3rem); "></li>
-    </ol>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <div class="row w-100 text-center">
-            <div class="col-sm-6 text-center"><img src="{% static 'img/marriage_loan.jpg' %}" alt=""></div>
-            <div class="col-sm-6">
-              <h4>Marriage Loan
-              </h4>
-              <p style="text-align: justify;">Have you placed your wedding in the shopping cart with exquisite location
-                and dreamy décor? If yes then you need not worry about ready funds to drive your wedding. MoneyTrust
-                Personal Loan is tailor-made to host all your financial needs. A picture-perfect wedding demands
-                expenses of various kinds including- caterer, venue, décor and more. To fund all your wedding needs,
-                MoneyTrust assists you in meeting the right lender and borrow right!</p>
-              <ul style="text-align: left;">
-                <li><i class="fa fa-arrow-circle-right text-danger" aria-hidden="true"></i> Up to Rs. 25 lakhs Instant
-                  Marriage Loan</li>
-                <li><i class="fa fa-arrow-circle-right text-danger" aria-hidden="true"></i> Up to 72 Months Repayment
-                  Period</li>
-                <li><i class="fa fa-arrow-circle-right text-danger" aria-hidden="true"></i> Flexible EMIS</li>
-                <li><i class="fa fa-arrow-circle-right text-danger" aria-hidden="true"></i> Attractive Interest Rates
-                </li>
-                <li><i class="fa fa-arrow-circle-right text-danger" aria-hidden="true"></i> Easy documentation</li>
-              </ul>
-            </div>
+    <div class="row text-center">
+      <div class="col-sm-12 hero-content">
+        <h1 class=" ">Personal Loan</h1>
+        <p class="text-light">Charity beginner for your little dreams</p>
+        <a href="#" class="btn btn-danger px-5 py-2 mt-4">Apply Now</a>
+      </div>
 
+    </div>
+  </div>
+</section>
+
+<section class="hero-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 left">
+        <img src="{% static 'img/personal_loan/header_overview.jpg' %}" alt="" style="width:100%">
+      </div>
+      <div class="col-sm-6 right">
+        <p class="text-justify">By virtue of being an unsecured form of credit, you can avail a Personal Loan without pledging any collateral
+          with minimal documentation, and easy eligibility criteria. This kind of instant loan does not have any end-usage
+          restrictions, which means you could finance a royal wedding, a trip to your dream destination, renovate your
+          home, deal with a medical emergency, or finance the expansion of your business.</p>
+          <p class="text-justify">MoneyTrust will connect you to a lending partner of your choice, and our team will take you through the process
+            quickly with ease. Choose from our catalog of Personal Loan Partners of Banks and NBFCs according to your needs
+            and convenience for rapid approval and swift disbursal of your personal loan.</p>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- End Hero -->
+
+
+<!--==================
+Types of personal loan 
+=====================-->
+
+<section id="difirent_loan_type" class="difirent_loan_type mt-3">
+  <div class="container" data-aos="fade-up"  style="max-width:1400px;">
+    <div class="row">
+      <div class="col-sm-12 text-center">
+        <h2>Different Types of Personal Loans for your Special Needs</h2>
+        <p >Our lending partners will be more than pleased to offer you a personal loan for your urgent upfront needs. At Ruloans, you can opt for online personal loans or loans offline when you need money for expenses</p>
+      </div>
+    </div>
+
+    <ul class="nav nav-tabs row gy-4 d-flex">
+
+      <li class="nav-item col-6 col-md-4 col-lg-2">
+        <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#tab-1">
+          <i class="fa-solid fa-graduation-cap color-cyan"></i>
+          <h6 class="mt-4">Education</h6>
+        </a>
+      </li><!-- End Tab 1 Nav -->
+
+      <li class="nav-item col-6 col-md-4 col-lg-2">
+        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-2">
+          <i class="fa-solid fa-notes-medical color-indigo"></i>
+          <h6 class="mt-4">Medical Emergency</h6>
+        </a>
+      </li><!-- End Tab 2 Nav -->
+
+      <li class="nav-item col-6 col-md-4 col-lg-2">
+        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-3">
+          <i class="fa-solid fa-ring color-teal"></i>
+          <h6 class="mt-4">Marriage</h6>
+        </a>
+      </li><!-- End Tab 3 Nav -->
+
+      <li class="nav-item col-6 col-md-4 col-lg-2">
+        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-4">
+          <i class="fa-solid fa-plane color-red"></i>
+          <h6 class="mt-4">Travel</h6>
+        </a>
+      </li><!-- End Tab 4 Nav -->
+
+      <li class="nav-item col-6 col-md-4 col-lg-2">
+        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-5">
+          <i class="fa-solid fa-house-circle-check color-blue"></i>
+          <h6 class="mt-4">Home Renovation</h6>
+        </a>
+      </li><!-- End Tab 5 Nav -->
+
+      <li class="nav-item col-6 col-md-4 col-lg-2">
+        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-6">
+          <i class="fa-solid fa-star-of-david color-orange"></i> 
+          <h6 class="mt-4">Festival</h6>
+        </a>
+      </li><!-- End Tab 6 Nav -->
+
+    </ul>
+
+    <div class="tab-content">
+
+      <div class="tab-pane active show" id="tab-1">
+        <div class="row gy-4">
+          <div class="col-lg-8 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="100">
+            <h3>Education Loan</h3>
+            <p class="fst-italic text-justify">
+              Getting a degree or honing your skills demand a considerable amount of money especially when you aim for overseas. While the cost of education continues to soar, it is imperative to plan your finances ahead of admission. Education is a tool to change the world and money must not be an obstacle to knowledge. With Ruloans, fulfil your dream of studying in a world-class university in India or overseas. Once your application in the college or university you envisioned gets accepted, Ruloans assists you in acquiring the right Personal Loan at the best available rate to fund your dream. 
+            </p>
+            <ul>
+              <li><i class="fa fa-arrow-circle-right text-danger" style="font-size:17px;"></i>&nbsp;&nbsp;Up to Rs. 25 lakhs Instant Education Loan</li>
+              <li><i class="fa fa-arrow-circle-right text-danger" style="font-size:17px;"></i>&nbsp;&nbsp;Up to 72 Months Repayment Period </li>
+              <li><i class="fa fa-arrow-circle-right text-danger" style="font-size:17px;"></i>&nbsp;&nbsp;Flexible  EMIs</li>
+              <li><i class="fa fa-arrow-circle-right text-danger" style="font-size:17px;"></i>&nbsp;&nbsp;Attractive Interest Rates</li>
+              <li><i class="fa fa-arrow-circle-right text-danger" style="font-size:17px;"></i>&nbsp;&nbsp;Easy documentation</li>
+            </ul>
+            
+          </div>
+          <div class="col-lg-4 order-1 order-lg-2 text-center" data-aos="fade-up" data-aos-delay="200">
+            <img src="{% static 'img/personal_loan/education.jpg' %}" alt="" class="img-fluid">
           </div>
         </div>
-        <div class="carousel-item">
-          <div class="row w-100 text-center">
-            <div class="col-sm-6 text-center"><img src="{% static 'img/medical_loan.jpg' %}" alt=""></div>
-            <div class="col-sm-6">
-              <h4>Mediacal Emergency Loan
-              </h4>
-              <p style="text-align: justify;">A medical emergency can knock on your door when you least expect it. Unfortunately, most of us aren't prepared enough and face the turmoil it brings along. No warning situation can land you in trouble as these unforeseen expenses are unthought and unplanned. MoneyTrust stands tall with you in need of an hour. With multiple Personal loan options and quick disbursals, you can claim a hassle-free loan to attend your contingency.</p>
-              <ul style="text-align: left;">
-                <li><i class="fa fa-arrow-circle-right text-danger" aria-hidden="true"></i> Up to Rs. 25 lakhs Medical Emergency Loan</li>
-                <li><i class="fa fa-arrow-circle-right text-danger" aria-hidden="true"></i> Up to 72 Months Repayment Period</li>
-                <li><i class="fa fa-arrow-circle-right text-danger" aria-hidden="true"></i> Flexible EMIS</li>
-                <li><i class="fa fa-arrow-circle-right text-danger" aria-hidden="true"></i> Attractive Interest Rates</li>
-                <li><i class="fa fa-arrow-circle-right text-danger" aria-hidden="true"></i> Easy documentation</li>
-              </ul>
-            </div>
+      </div><!-- End Tab Content 1 -->
+
+      <div class="tab-pane" id="tab-2">
+        <div class="row gy-4">
+          <div class="col-lg-8 order-2 order-lg-1">
+            <h3>Medical Emergency Loan</h3>
+            <p class="fst-italic text-justify">
+              A medical emergency can knock on your door when you least expect it. Unfortunately, most of us aren't prepared enough and face the turmoil it brings along. No warning situation can land you in trouble as these unforeseen expenses are unthought and unplanned. Ruloans stands tall with you in need of an hour. With multiple Personal loan options and quick disbursals, you can claim a hassle-free loan to attend your contingency.
+            </p>
+            <p class="fst-italic text-justify">
+              Deal with your medical expenses without having to pledge any asset or investment as collateral. Experts at Ruloans provide you with the right guidance ensuring that you receive the personal loan amount for your emergency at the most competitive rate.
+            </p>
+            <ul>
+              <li><i class="fa fa-arrow-circle-right text-danger" style="font-size:17px;"></i>&nbsp;&nbsp;Up to Rs. 25 lakhs Medical Emergency Loan</li>
+              <li><i class="fa fa-arrow-circle-right text-danger" style="font-size:17px;"></i>&nbsp;&nbsp;Up to 72 Months Repayment Period </li>
+              <li><i class="fa fa-arrow-circle-right text-danger" style="font-size:17px;"></i>&nbsp;&nbsp;Flexible  EMIs</li>
+              <li><i class="fa fa-arrow-circle-right text-danger" style="font-size:17px;"></i>&nbsp;&nbsp;Attractive Interest Rates</li>
+              <li><i class="fa fa-arrow-circle-right text-danger" style="font-size:17px;"></i>&nbsp;&nbsp;Easy documentation</li>
+          </ul>
+          </div>
+          <div class="col-lg-4 order-1 order-lg-2 text-center">
+            <img src="{% static 'img/personal_loan/medical.jpg' %}" alt="" class="img-fluid">
           </div>
         </div>
-        <div class="carousel-item">
-          <div class="row w-100 text-center">
-            <div class="col-sm-6 text-center"><img src="{% static 'img/education-loan.jpg' %}" alt=""></div>
-            <div class="col-sm-6">
-              <h4>Education Loan</h4>
-              <p style="text-align: justify;">Getting a degree or honing your skills demand a considerable amount of money especially when you aim for overseas. While the cost of education continues to soar, it is imperative to plan your finances ahead of admission. Education is a tool to change the world and money must not be an obstacle to knowledge. With MoneyTrust, fulfil your dream of studying in a world-class university in India or overseas. Once your application in the college or university you envisioned gets accepted, MoneyTrust assists you in acquiring the right Personal Loan at the best available rate to fund your dream.</p>
-              <ul style="text-align: left;">
-                <li><i class="fa fa-arrow-circle-right text-danger" aria-hidden="true"></i> Up to Rs. 25 lakhs Instant Education Loan</li>
-                <li><i class="fa fa-arrow-circle-right text-danger" aria-hidden="true"></i> Up to 72 Months Repayment Period</li>
-                <li><i class="fa fa-arrow-circle-right text-danger" aria-hidden="true"></i>Flexible EMIS</li>
-                <li><i class="fa fa-arrow-circle-right text-danger" aria-hidden="true"></i> Attractive Interest Rates</li>
-                <li><i class="fa fa-arrow-circle-right text-danger" aria-hidden="true"></i> Easy documentation</li>
-              </ul>
-            </div>
+      </div><!-- End Tab Content 2 -->
+
+      <div class="tab-pane" id="tab-3">
+        <div class="row gy-4">
+          <div class="col-lg-8 order-2 order-lg-1">
+            <h3>Marriage Loan</h3>
+            <p class="text-justify">
+              Have you placed your wedding in the shopping cart with exquisite location and dreamy décor? If yes then you need not worry about ready funds to drive your wedding. Ruloans Personal Loan is tailor-made to host all your financial needs. A picture-perfect wedding demands expenses of various kinds including- caterer, venue, décor and more. To fund all your wedding needs, Ruloans assists you in meeting the right lender and borrow right!
+            </p>
+            <ul>
+              <li><i class="fa fa-arrow-circle-right text-danger" style="font-size:17px;"></i>&nbsp;&nbsp;Up to Rs. 25 lakhs Instant Marriage Loan</li>
+              <li><i class="fa fa-arrow-circle-right text-danger" style="font-size:17px;"></i>&nbsp;&nbsp;Up to 72 Months Repayment Period </li>
+              <li><i class="fa fa-arrow-circle-right text-danger" style="font-size:17px;"></i>&nbsp;&nbsp;Flexible  EMIs</li>
+              <li><i class="fa fa-arrow-circle-right text-danger" style="font-size:17px;"></i>&nbsp;&nbsp;Attractive Interest Rates</li>
+              <li><i class="fa fa-arrow-circle-right text-danger" style="font-size:17px;"></i>&nbsp;&nbsp;Easy documentation</li>
+          </ul>
+            
           </div>
+          <div class="col-lg-4 order-1 order-lg-2 text-center">
+            <img src="{% static 'img/personal_loan/marriage.jpeg' %}" alt="" class="img-fluid">
+          </div>
+        </div>
+      </div><!-- End Tab Content 3 -->
+
+      <div class="tab-pane" id="tab-4">
+        <div class="row gy-4">
+          <div class="col-lg-8 order-2 order-lg-1">
+            <h3>Travel Loan</h3>
+            <p class="text-justify">
+              Has the global pandemic shelved all your travel plans to the snow-covered ranges, beautiful hills or dreamy beaches? Well, it's time to redeem and travel back! Get Set & Go to your dream destinations without worrying about your budget. Avail a holiday loan product to ease your travel and add good memories with us. Ruloans offer you the best and helps you borrow right. A measure of budget, planning of dates and a holiday loan that fits the best is all you need to set some astounding travel goals.
+            </p>
+            <ul>
+              <li><i class="fa fa-arrow-circle-right text-danger" style="font-size:17px;"></i>&nbsp;&nbsp;Up to Rs. 25 lakhs Instant Travel Loan</li>
+              <li><i class="fa fa-arrow-circle-right text-danger" style="font-size:17px;"></i>&nbsp;&nbsp;Up to 72 Months Repayment Period </li>
+              <li><i class="fa fa-arrow-circle-right text-danger" style="font-size:17px;"></i>&nbsp;&nbsp;Flexible  EMIs</li>
+              <li><i class="fa fa-arrow-circle-right text-danger" style="font-size:17px;"></i>&nbsp;&nbsp;Attractive Interest Rates</li>
+              <li><i class="fa fa-arrow-circle-right text-danger" style="font-size:17px;"></i>&nbsp;&nbsp;Easy documentation</li>
+          </ul>
+          </div>
+          <div class="col-lg-4 order-1 order-lg-2 text-center">
+            <img src="{% static 'img/personal_loan/travel.jpeg' %}" alt="" class="img-fluid">
+          </div>
+        </div>
+      </div><!-- End Tab Content 4 -->
+
+      <div class="tab-pane" id="tab-5">
+        <div class="row gy-4">
+          <div class="col-lg-8 order-2 order-lg-1">
+            <h3>Home Renovation Loan</h3>
+            <p class="text-justify">
+              Feel like sprucing up your nest? Look around, maybe that age-old furniture, bathroom fittings or electricals around need some do-up. Home Renovation can cost you arm and a leg especially when changes are substantial. Take a Personal loan for a much-needed makeover to glam up your nest and hike up its worth.
+            </p>
+            
+            <ul>
+              <li><i class="fa fa-arrow-circle-right text-danger" style="font-size:17px;"></i>&nbsp;&nbsp;Up to Rs. 25 lakhs Instant Home Renovation Loan</li>
+              <li><i class="fa fa-arrow-circle-right text-danger" style="font-size:17px;"></i>&nbsp;&nbsp;Up to 72 Months Repayment Period </li>
+              <li><i class="fa fa-arrow-circle-right text-danger" style="font-size:17px;"></i>&nbsp;&nbsp;Flexible  EMIs</li>
+              <li><i class="fa fa-arrow-circle-right text-danger" style="font-size:17px;"></i>&nbsp;&nbsp;Attractive Interest Rates</li>
+              <li><i class="fa fa-arrow-circle-right text-danger" style="font-size:17px;"></i>&nbsp;&nbsp;Easy documentation</li>
+            </ul>
+          </div>
+          <div class="col-lg-4 order-1 order-lg-2 text-center">
+            <img src="{% static 'img/personal_loan/home.jpeg' %}" alt="" class="img-fluid">
+          </div>
+        </div>
+      </div><!-- End Tab Content 5 -->
+
+      <div class="tab-pane" id="tab-6">
+        <div class="row gy-4">
+          <div class="col-lg-8 order-2 order-lg-1">
+            <h3>Festival Loan</h3>
+            <p class="text-justify">
+              Bring the lights and grand celebrations & festivities in your home without worrying about your finances. Festival Loan product helps you celebrate your God, Hope & faith in a fulfilling way. Are you in a festive mood? Bring home joy and happiness with our Loan and make your festival bigger & brighter.
+            </p>
+            
+            <ul>
+              <li><i class="fa fa-arrow-circle-right text-danger" style="font-size:17px;"></i>&nbsp;&nbsp;Up to Rs. 25 lakhs Instant Festive Loan</li>
+              <li><i class="fa fa-arrow-circle-right text-danger" style="font-size:17px;"></i>&nbsp;&nbsp;Up to 72 Months Repayment Period </li>
+              <li><i class="fa fa-arrow-circle-right text-danger" style="font-size:17px;"></i>&nbsp;&nbsp;Flexible  EMIs</li>
+              <li><i class="fa fa-arrow-circle-right text-danger" style="font-size:17px;"></i>&nbsp;&nbsp;Attractive Interest Rates</li>
+              <li><i class="fa fa-arrow-circle-right text-danger" style="font-size:17px;"></i>&nbsp;&nbsp;Easy documentation</li>
+            </ul>
+          </div>
+          <div class="col-lg-4 order-1 order-lg-2 text-center">
+            <img src="{% static 'img/personal_loan/festivel.png' %}" alt="" class="img-fluid">
+          </div>
+        </div>
+      </div><!-- End Tab Content 6 -->
+
+    </div>
+
+  </div>
+</section>
+
+<!--============== 
+  Types of personal loan 
+  ================-->
+
+
+
+
+
+
+<!-- Features of Personal Loan  -->
+<div id="service" class="Services">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="titlepage">
+          <h2 class="text-dark">Features of Personal Loan</h2>
+          <p>What makes Personal Loan a Perfect Choice!</p><br>
         </div>
       </div>
-      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
+    </div>
+    <div class="row">
+
+      <div class="col-xl-4 col-lg-4 col-md-3 col-sm-12">
+        <div class="Services-box" style="height: 92%;" data-aos="fade-down" data-aos-delay="50"
+          data-aos-duration="1500">
+          <h3>No Collateral or Security</h3>
+          <p>No collateral or mortgage to avail a personal loan. Loan approval is based on your credit score, credit
+            report, repayment history, and other criteria.</p>
+        </div>
+      </div>
+
+      <div class="col-xl-4 col-lg-4 col-md-3 col-sm-12">
+        <div class="Services-box" style="height: 92%;" data-aos="fade-down" data-aos-delay="200"
+          data-aos-duration="1500">
+          <h3>End-Usage-Flexible</h3>
+          <p>No end-usage restrictions on a Personal Loan gives you the liberty to meet multiple purposes including
+            medical emergencies, holidays, business, or debt consolidation.</p>
+        </div>
+      </div>
+
+      <div class="col-xl-4 col-lg-4 col-md-3 col-sm-12">
+        <div class="Services-box" style="height: 92%;" data-aos="fade-down" data-aos-delay="350"
+          data-aos-duration="1500">
+          <h3>Flexible Tenure</h3>
+          <p>You may avail a loan for a flexible period ranging from 12 months and 72 months.</p>
+        </div>
+      </div>
+
+      <div class="col-xl-4 col-lg-4 col-md-3 col-sm-12">
+        <div class="Services-box" style="height: 92%;" data-aos="fade-down" data-aos-delay="50"
+          data-aos-duration="1500">
+          <h3>Minimal Documentation</h3>
+          <p>Identity proof, proof of residence or address, and income proof are the only requirement for a personal
+            loan.</p>
+        </div>
+      </div>
+
+      <div class="col-xl-4 col-lg-4 col-md-3 col-sm-12">
+        <div class="Services-box" style="height: 92%;" data-aos="fade-down" data-aos-delay="200"
+          data-aos-duration="1500">
+          <h3>Quick Disbursal</h3>
+          <p>Once approved, disbursal of your personal loan happens within a few hours. If you avail a pre-approved
+            personal loan, the disbursal would be as short as a few minutes.</p>
+        </div>
+      </div>
+
+      <div class="col-xl-4 col-lg-4 col-md-3 col-sm-12">
+        <div class="Services-box" style="height: 92%;" data-aos="fade-down" data-aos-delay="350"
+          data-aos-duration="1500">
+          <h3>Flexible Loan Amount</h3>
+          <p>Factors determining your loan value are repayment history, monthly income, age, profession, employer
+            reputation, etc.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- end Features of Personal Loan -->
+
+
+
+<!--=========== Why Trust Money Trust Start ============-->
+<section class="alert alert-danger">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 text-center">
+        <h2>Why Trust Ruloans</h2> 
+      </div>
     </div>
   </div>
 
 
+  <div class="container mt-4" style="max-width:1400px;">
 
+    <div class="work-experience-section px-3 px-lg-4">
+      <div class="timeline" style="border-left:2px solid #D8D8D8;">
 
-
-  
-
-      <!-- Features of Personal Loan  -->
-      <div id="service" class="Services"  >
-        <div class="container">
-           <div class="row">
-              <div class="col-md-12">
-                 <div class="titlepage">
-                    <h2 class="text-dark">Features of Personal Loan</h2>
-                    <p>What makes Personal Loan a Perfect Choice!</p><br>
-                 </div>
+        <div class="timeline-card timeline-card-primary card shadow-sm">
+          <div class="card-body">
+            <div style="width:60px;">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div class="content">
+              <div class="h5 mb-1">Easy Availability Across Maharashtra</div>
+              <div>
+                <p class="text-justify">Ruloans along with significant partner Banks extend Instant Online Personal Loan up to Rs. 25 lakhs to virtually all salaried individuals in Maharashtra.</p>
               </div>
-           </div>
-           <div class="row">
-
-              <div class="col-xl-4 col-lg-4 col-md-3 col-sm-12" >
-                 <div class="Services-box" style="height: 92%;"  data-aos="fade-down" data-aos-delay="50" data-aos-duration="1500">
-                    <h3>No Collateral or Security</h3>
-                    <p>No collateral or mortgage to avail a personal loan. Loan approval is based on your credit score, credit report, repayment history, and other criteria.</p>
-                 </div>
-              </div>
-
-              <div class="col-xl-4 col-lg-4 col-md-3 col-sm-12" >
-                 <div class="Services-box" style="height: 92%;"  data-aos="fade-down" data-aos-delay="200" data-aos-duration="1500">
-                    <h3>End-Usage-Flexible</h3>
-                    <p>No end-usage restrictions on a Personal Loan gives you the liberty to meet multiple purposes including medical emergencies, holidays, business, or debt consolidation.</p>
-                 </div>
-              </div>
-
-              <div class="col-xl-4 col-lg-4 col-md-3 col-sm-12" >
-                <div class="Services-box" style="height: 92%;"  data-aos="fade-down" data-aos-delay="350" data-aos-duration="1500">
-                   <h3>Flexible Tenure</h3>
-                   <p>You may avail a loan for a flexible period ranging from 12 months and 72 months.</p>
-                </div>
-             </div>
-
-             <div class="col-xl-4 col-lg-4 col-md-3 col-sm-12" >
-                <div class="Services-box" style="height: 92%;"  data-aos="fade-down" data-aos-delay="50" data-aos-duration="1500">
-                   <h3>Minimal Documentation</h3>
-                   <p>Identity proof, proof of residence or address, and income proof are the only requirement for a personal loan.</p>
-                </div>
-             </div>
-             
-             <div class="col-xl-4 col-lg-4 col-md-3 col-sm-12" >
-              <div class="Services-box" style="height: 92%;"  data-aos="fade-down" data-aos-delay="200" data-aos-duration="1500">
-                 <h3>Quick Disbursal</h3>
-                 <p>Once approved, disbursal of your personal loan happens within a few hours. If you avail a pre-approved personal loan, the disbursal would be as short as a few minutes.</p>
-              </div>
-           </div>
-
-           <div class="col-xl-4 col-lg-4 col-md-3 col-sm-12" >
-              <div class="Services-box" style="height: 92%;"  data-aos="fade-down" data-aos-delay="350" data-aos-duration="1500">
-                 <h3>Flexible Loan Amount</h3>
-                 <p>Factors determining your loan value are repayment history, monthly income, age, profession, employer reputation, etc.</p>
-              </div>
-           </div>
-           
-           </div>
+            </div>
+          </div>
         </div>
-     </div>
-     <!-- end Features of Personal Loan -->
- 
+
+        <div class="timeline-card timeline-card-primary card shadow-sm">
+          <div class="card-body">
+            <div style="width:60px;">
+              <i class="fa-solid fa-gauge-high"></i>
+            </div>
+            <div class="content">
+              <div class="h5 mb-1">High-Speed Process</div>
+              <div>
+                <p class="text-justify">At Ruloans, Adhaar based e-KYC speeds up the documentation process by eliminating physical paperwork. You can obtain a personal loan at the least financing costs within 24 to 48 hours.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-card timeline-card-primary card shadow-sm">
+          <div class="card-body">
+            <div style="width:60px;">
+              <i class="fa-solid fa-tachograph-digital"></i>
+            </div>
+            <div class="content">
+              <div class="h5 mb-1">Ruloans Digital Resources Advantage</div>
+              <div>
+                <p class="text-justify">You can think about loan costs, offers, and online services on our digital platform. Our online resources will direct you to settle on the right decision, and pick the right bank for your advance according to your financial plan and assumptions. You can pick the moneylender contrasting different key components of a credit like loan fee, tenure, processing fees, etc.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-card timeline-card-primary card shadow-sm">
+          <div class="card-body">
+            <div style="width:60px;">
+              <i class="fa-solid fa-user-tie"></i>
+            </div>
+            <div class="content">
+              <div class="h5 mb-1">Professional Guidance and Advice</div>
+              <div>
+                <p class="text-justify">Experts at Ruloans know the ins and outs of the business. Our committed group of individual specialists will guide you to pick the right credit fee.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-card timeline-card-primary card shadow-sm">
+          <div class="card-body">
+            <div style="width:60px;">
+              <i class="fa-solid fa-folder-open"></i>
+            </div>
+            <div class="content">
+              <div class="h5 mb-1">Minimum Documentation Requirements </div>
+              <div>
+                <p class="text-justify">As mentioned earlier, the bulk of the paperwork are easy to obtain KYC connected papers and evidence. Hence, individual personal loans are authorized and disbursed speedily without issues. Ruloans handles this loan eligibility criterion for you with ease.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-card timeline-card-primary card shadow-sm">
+          <div class="card-body">
+            <div style="width:60px;">
+              <i class="fa-solid fa-gift"></i>
+            </div>
+            <div class="content">
+              <div class="h5 mb-1">Profit from Best Offers</div>
+              <div>
+                <p class="text-justify">We esteem our clients and are consistently on our toes to give them advantages of our abilities. Applying for any advance or loans through us, allows you an opportunity to benefit from the best offers and agreements our Partner Banks and NBFCs have to offer.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+</section>
+<!--=========== Why Trust Money Trust Stop ============-->
+
+
+
 
 <!-- Stepper Start -->
 <div class="container">
   <div class="row  mt-4">
     <div class="col-md-12">
-       <div class="text-center">
-          <h2>How to apply for a Personal Loan</h2>
-          <p>Get Personal Loan in no time with these easy steps!</p><br>
-       </div>
+      <div class="text-center">
+        <h2>How to apply for a Personal Loan</h2>
+        <p>Get Personal Loan in no time with these easy steps!</p><br>
+      </div>
     </div>
- </div>
-  <div class="stepper" >
+  </div>
+  <div class="stepper">
     <div class="step">
       <div style="width: 90%; margin: 10px; border-radius: 10px; background: gray;">
         <h5 class="alert alert-danger">Check</h5>
       </div>
     </div>
-    <div class="step-arrow-main"><div class="step-arrow"><i class="fa fa-arrow-circle-right"></i></div></div>
+    <div class="step-arrow-main">
+      <div class="step-arrow"><i class="fa fa-arrow-circle-right"></i></div>
+    </div>
     <div class="step">
       <div style="width: 90%; margin: 10px; border-radius: 10px; background: gray;">
         <h5 class="alert alert-danger">Apply</h5>
       </div>
     </div>
-    <div class="step-arrow-main"><div class="step-arrow"><i class="fa fa-arrow-circle-right"></i></div></div>
+    <div class="step-arrow-main">
+      <div class="step-arrow"><i class="fa fa-arrow-circle-right"></i></div>
+    </div>
     <div class="step">
       <div style="width: 90%; margin: 10px; border-radius: 10px; background: gray;">
         <h5 class="alert alert-danger">Fill</h5>
       </div>
     </div>
-    <div class="step-arrow-main"><div class="step-arrow"><i class="fa fa-arrow-circle-right"></i></div></div>
+    <div class="step-arrow-main">
+      <div class="step-arrow"><i class="fa fa-arrow-circle-right"></i></div>
+    </div>
     <div class="step">
       <div style="width: 90%; margin: 10px; border-radius: 10px; background: gray;">
         <h5 class="alert alert-danger">Submit</h5>
@@ -612,17 +1009,16 @@
 {% include "links_and_faq.html" %}
 
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+  integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+  integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+  integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 {% endblock content %}
-

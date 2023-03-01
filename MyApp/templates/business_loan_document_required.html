@@ -1,0 +1,484 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block style %}
+.links {
+width: 100%;
+background-color: #07043f;
+color: white;
+padding: 15px;
+}
+
+.links a {
+text-decoration: none;
+}
+
+.titlepage{
+text-align: center;
+margin-top: 30px;
+}
+.titlepage h2{
+color: #275da9;
+}
+/* Header Links Section Start */
+
+.header-links {
+height: auto;
+width: 98%;
+background:#07043f;
+margin-top: 8px;
+padding-bottom: 8px;
+border-radius: 10px;
+}
+
+
+
+.banner-btn a {
+border-radius: 8px;
+width: 170px;
+text-decoration: none;
+display: inline-block;
+margin: 0 10px;
+padding: 12px 0;
+color: #fff;
+background-color: #07043f;
+border: 1px solid rgb(255, 255, 255);
+position: relative;
+z-index: 1;
+transition: color 0.5s;
+margin-top: 10px;
+font-weight: bold;
+}
+
+.banner-btn a span {
+width: 0%;
+height: 100%;
+position: absolute;
+top: 0;
+left: 0;
+background: linear-gradient(to right, #1C53D9, #07043f);
+z-index: -1;
+transition: 0.5s;
+}
+
+.banner-btn a:hover span {
+border-radius: 8px;
+width: 100%
+}
+
+.banner-btn a:hover {
+color: rgb(255, 255, 255);
+}
+
+
+@media screen and (max-width: 770px) {
+.banner-btn a {
+
+width: 40%;
+
+}
+}
+
+/* Header Link Section Stop */
+
+
+
+
+
+
+
+
+
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+#hero {
+height:60vh;
+background:url({% static 'img/hero-bg.jpg' %});
+background-repeat:no-repeat;
+background-size:100% 100%;
+}
+
+#hero h1{
+font-size:4rem;
+font-weight:1000;
+color:white;
+}
+
+
+#hero h3{
+font-size:2rem;
+font-weight:500;
+}
+
+#hero .hero-content{
+position:relative;
+top:50px;
+}
+
+.hero-footer{
+padding:10px;
+}
+.hero-footer .container{
+border-radius:15px;
+box-shadow:0px 0px 10px;
+position:relative;
+top:-110px;
+z-index:1;
+border:2px solid white;
+padding:20px;
+background:white;
+margin-bottom:-110px;
+}
+
+.hero-footer .container .left{
+border-right:5px solid #B40018;
+}
+
+@media screen and (max-width: 770px) {
+
+.hero-footer .container{
+border-radius:15px;
+box-shadow:0px 0px 10px;
+position:relative;
+top: 0px;
+z-index:1;
+border:2px solid white;
+padding:20px;
+background:white;
+margin-bottom:0px;
+}
+
+.hero-footer .container .left{
+border-right:none;
+margin-bottom:10px;
+}
+
+}
+
+
+/*--------------------------------------------------------------
+# Hero Section End
+--------------------------------------------------------------*/
+
+
+
+
+
+<!--Document section start-->
+.tbl-document{
+border-radius:7px;
+box-shadow:0px 0px 10px black;
+border:2px solid Black;
+}
+
+.table-bg-color{
+background-color:#FED2D6;
+}
+
+.table_scroll {
+{% comment %} height: 420px; {% endcomment %}
+overflow-x: scroll;
+{% comment %} overflow-y: scroll; {% endcomment %}
+}
+
+.table {
+min-width: max-content;
+}
+
+th {
+background-color: #0098D7;
+text-align: center;
+}
+
+tr,
+td {
+text-align: left;
+}
+
+.border {
+border: 2px solid black;
+}
+
+/* Document section Stop */
+
+
+
+{% endblock style %}
+
+
+{% block content %}
+
+
+
+<center>
+  <div class="header-links">
+    <div class="banner-btn">
+      <a href="{% url 'business_loan_overview' %}" data-aos="fade-down" data-aos-delay="100" data-aos-duration="1000">
+        <span></span> Overview </a>
+      <a href="{% url 'business_loan_eligibility_criteria' %}" data-aos="fade-down" data-aos-delay="150"
+        data-aos-duration="1000"> <span></span> Eligibility Criteria </a>
+      <a href="#" data-aos="fade-down" data-aos-delay="150" data-aos-duration="1000" data-toggle="modal"
+        data-target="#exampleModal">
+        <span></span> EMI Calculator </a>
+      <a href="{% url 'business_loan_interest_rate_and_fees' %}" data-aos="fade-down" data-aos-delay="150"
+        data-aos-duration="1000"> <span></span> Interest Rate & Processing Fees </a>
+      <a href="{% url 'business_loan_document_required' %}" data-aos="fade-down" data-aos-delay="150"
+        data-aos-duration="1000" style="color: #07043f; background: #fff;"> <span></span> Document Required </a>
+    </div>
+  </div>
+  <div class="waves_img"></div>
+</center>
+
+
+<div class="links mt-3">
+  <a href="../index.html" class="text-light">Home/</a>
+  <a href="#" class="text-light">Business Loan/</a>
+  <a href="#" class="text-warning">Document Required</a>
+</div>
+
+
+
+
+
+<!-- ======= Hero Section ======= -->
+<section id="hero">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-sm-12 hero-content">
+        <h3 class="text-danger">Business Loan</h3>
+        <h1 class=" ">Document Required</h1>
+        <a href="#" class="btn btn-danger px-5 py-2 mt-4">Apply Now</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="hero-footer" style="z-index:1">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 left">
+        <img src="{% static 'img/business_loan/header_document.jpg' %}" alt="" style="width:100%">
+      </div>
+      <div class="col-sm-6 right">
+        <p class="text-justify">To prove your eligibility for a Business Loan, you will have to furnish documents with regards to each eligibility criteria.
+
+          To initiate the loans process, the following Documents you will require at hand to avail a Business Loan at the earliest.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- End Hero -->
+
+
+
+
+
+<!-- Document Table Start  -->
+
+<div class="container tbl-document mt-5" style="border-radius:5px; box-shadow:0px 0px 10px; padding:10px;">
+  <div class="row">
+    <div class="col-sm-12 text-center ">
+      <h2>List of Documents Required for Personal Loan</h2>
+
+    </div>
+  </div>
+  <div class="row" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+    <div class="col-sm-12"><br>
+      <div class="table_scroll">
+        <center>
+          <h3>Required Documents</h3>
+          <p>=======================</p>
+        </center>
+        <table class="table table-hover">
+          <thead>
+
+            <tr>
+              <th scope="col" class="text-center bg-danger text-white border">SR.No</th>
+              <th scope="col" class="text-center bg-danger text-white border">Document Name</th>
+              <th scope="col" class="text-center bg-danger text-white border">Document Option</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="  text-left">
+              <td class="text-center border">01</td>
+              <td class="text-center border">Photo Identity Proof</td>
+              <td class="text-center border  ">
+                <h6 style="text-align: left; margin: -5px;"><i class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp; PAN
+                  Card</h6><br>
+                <h6 style="text-align: left; margin: -5px;"><i class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp; Voter
+                  ID</h6><br>
+                <h6 style="text-align: left; margin: -5px;"><i class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp;
+                  Aadhaar Card</h6><br>
+                <h6 style="text-align: left; margin: -5px;"><i class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp;
+                  Passport</h6><br>
+                <h6 style="text-align: left; margin: -5px;"><i class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp;
+                  Driving License</h6><br>
+              </td>
+            </tr>
+
+            <tr class="  text-left">
+              <td class="text-center border">02</td>
+              <td class="text-center border">Address Proof</td>
+              <td class="text-center border  ">
+                <h6 style="text-align: left; margin: -5px;"><i class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp; Rent
+                  Agreement</h6><br>
+                <h6 style="text-align: left; margin: -5px;"><i class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp; Bank
+                  Statement</h6><br>
+                <h6 style="text-align: left; margin: -5px;"><i class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp;
+                  Property Tax Receipt</h6><br>
+                <h6 style="text-align: left; margin: -5px;"><i class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp;
+                  Passport</h6><br>
+                <h6 style="text-align: left; margin: -5px;"><i class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp;
+                  Driving License</h6><br>
+                <h6 style="text-align: left; margin: -5px;"><i class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp;
+                  Electricity Bill</h6><br>
+                <h6 style="text-align: left; margin: -5px;"><i class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp;
+                  Telephone Bill</h6><br>
+                <h6 style="text-align: left; margin: -5px;"><i class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp;
+                  Water Bill</h6><br>
+                <h6 style="text-align: left; margin: -5px;"><i class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp;
+                  Credit Card Bill</h6><br>
+                <h6 style="text-align: left; margin: -5px;"><i class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp;
+                  Ration Card</h6><br>
+              </td>
+            </tr>
+
+            <tr class="  text-left">
+              <td class="text-center border">03</td>
+              <td class="text-center border">Age Proof</td>
+              <td class="text-center border  ">
+                <h6 style="text-align: left; margin: -5px;"><i class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp; Voter
+                  ID</h6><br>
+                <h6 style="text-align: left; margin: -5px;"><i class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp;
+                  Aadhaar Card</h6><br>
+                <h6 style="text-align: left; margin: -5px;"><i class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp;
+                  Passport</h6><br>
+                <h6 style="text-align: left; margin: -5px;"><i class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp;
+                  Driving License</h6><br>
+                <h6 style="text-align: left; margin: -5px;"><i class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp;
+                  Birth Certificate</h6><br>
+                <h6 style="text-align: left; margin: -5px;"><i class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp;
+                  Secondary School Leaving Certificate</h6><br>
+                <h6 style="text-align: left; margin: -5px;"><i class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp;
+                  Pension Payment Order or Receipt</h6><br>
+                <h6 style="text-align: left; margin: -5px;"><i class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp;
+                  LIC Policy</h6><br>
+              </td>
+            </tr>
+
+            <tr class="  text-left">
+              <td class="text-center border">04</td>
+              <td class="text-center border">Income Proof</td>
+              <td class="text-center border  ">
+                <h6 style="text-align: left; margin: -5px;"><i class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp; 6
+                  months Bank statement</h6><br>
+                <h6 style="text-align: left; margin: -5px;"><i class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp; 3
+                  months Salary Slips</h6><br>
+              </td>
+            </tr>
+
+
+
+            <tr class="  text-left">
+              <td class="text-center border">05</td>
+              <td class="text-center border">Tax</td>
+              <td class="text-center border  ">
+                <h6 style="text-align: left; margin: -5px;"><i class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp;
+                  Form 16</h6><br>
+              </td>
+            </tr>
+
+            <tr class="  text-left">
+              <td class="text-center border">06</td>
+              <td class="text-center border">Employment Proof</td>
+              <td class="text-center border  ">
+                <h6 style="text-align: left; margin: -5px;"><i class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp;
+                  Employers Letter</h6><br>
+                <h6 style="text-align: left; margin: -5px;"><i class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp;
+                  Identification Card</h6><br>
+              </td>
+            </tr>
+
+
+          </tbody>
+        </table>
+      </div>
+      <br>
+    </div>
+  </div>
+</div>
+<!-- Document Table Stop -->
+
+
+
+<section class="alert">
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-sm-12 text-center">
+      <h2>Business Loans for Self-Employed, Non-Salaried, MSMEs, and SMEs</h2>
+      <p>Self-Employed, Non-Salaried and SMEs seeking funds as Business Loan will have to furnish additional documents
+        listed below to start the loans process.</p>
+    </div>
+  </div>
+
+<div class="row alert alert-danger">
+  <div class="col-sm-6 text-center mt-3" style="height: 100%;">
+    <center>
+      <div class="eligibility-description" style="text-align: left; height: 100%">
+        <h5 class="text-center bg-danger" style="padding: 10px; border-radius: 5px; height: 100%">Eligibility
+          Criteria</h5>
+        <li style="text-align: left; margin-left: 15px; list-style:none;"><i
+            class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp; You must be Resident Citizen of India</li><br>
+        <li style="text-align: left; margin-left: 15px; list-style:none;"><i
+            class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp; You must be Salaried Individual Employed with an
+          MNC, Public Limited, or Private Limited Company</li><br>
+        <li style="text-align: left; margin-left: 15px; list-style:none;"><i
+            class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp; You must have a monthly income of at least Rs.15,000
+        </li><br>
+        <li style="text-align: left; margin-left: 15px; list-style:none;"><i
+            class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp; You must have at least 1 to 3 years of work
+          experience</li><br>
+        <li style="text-align: left; margin-left: 15px; list-style:none;"><i
+            class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp; You must have a Minimum Credit Score of 750</li><br>
+      </div>
+    </center>
+  </div>
+  <div class="col-sm-6 text-center mt-3" style="height: 100%;">
+    <center>
+      <div class="eligibility-description" style="text-align: left; height: 100%">
+        <h5 class="text-center bg-danger" style="padding: 10px; border-radius: 5px; height: 100%">Documentation
+        </h5>
+        <li style="text-align: left; margin-left: 15px; list-style:none;"><i
+            class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp; Photo Identity Proof</li><br>
+        <li style="text-align: left; margin-left: 15px; list-style:none;"><i
+            class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp; Proof of Residence or Address Proof</li><br>
+        <li style="text-align: left; margin-left: 15px; list-style:none;"><i
+            class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp; Income Proof</li><br>
+        <li style="text-align: left; margin-left: 15px; list-style:none;"><i
+            class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp; Employment Proof</li><br>
+        <li style="text-align: left; margin-left: 15px; list-style:none;"><i
+            class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp; Form 16</li><br>
+        <li style="text-align: left; margin-left: 15px; list-style:none;"><i
+            class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp; Tax Return Certificates</li><br>
+        <li style="text-align: left; margin-left: 15px; list-style:none;"><i
+            class="fa fa-arrow-circle-right"></i>&nbsp;&nbsp; Passport-Size Photographs</li><br>
+      </div>
+    </center>
+  </div>
+</div>
+
+</div>
+</section>
+
+
+
+<br>
+{% include "personal_loan_post_clients.html" %}
+
+
+
+
+{% endblock content %}
