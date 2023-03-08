@@ -308,12 +308,12 @@ width:300px;
 <div class="container-fluid">
     <div class="banner">
         <div class="title">
-            <h1 class="text-light" style="font-weight:bold;">Become a <br class="br">
+            <h1 class="text-light" style="font-weight:bold;"  data-aos="zoom-in"   data-aos-easing="linear"   data-aos-delay="100" data-aos-duration="1000" >Become a <br class="br">
                 <a href="" class="typewrite text-danger" data-period="2000" data-type='[ "MoneyTrust Family", "MoneyTrust Family"]'>
                   <span class="wrap"></span>
                 </a>
               </h1>
-              <img src="{% static 'img/became-a-partner-banner-title.png' %}" alt="" class="mt-4">
+              <img src="{% static 'img/became-a-partner-banner-title.png' %}" alt="" class="mt-4"  data-aos="zoom-in"   data-aos-easing="linear"   data-aos-delay="100" data-aos-duration="1000">
         </div>
     </div>
 </div>
@@ -334,15 +334,14 @@ width:300px;
             <center>
                 <h4>Earning Opportunity for All Existing Agents with MoneyTrust Loan Partner Program</h4>
             </center>
-
+<form action="" method="POST">{% csrf_token %}
             <div class="row">
                 <div class="col-sm-6">
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="basic-addon1"><i class="fa fa-user"></i></span>
                         </div>
-                        <input type="text" class="form-control" placeholder="First Name" aria-label="Username"
-                            aria-describedby="basic-addon1">
+                        {{fm.first_name}}
                     </div>
                 </div>
                 <div class="col-sm-6">
@@ -350,8 +349,7 @@ width:300px;
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="basic-addon1"><i class="fa fa-user"></i></span>
                         </div>
-                        <input type="text" class="form-control" placeholder="Last Name" aria-label="Username"
-                            aria-describedby="basic-addon1">
+                        {{fm.last_name}}
                     </div>
                 </div>
             </div>
@@ -362,8 +360,7 @@ width:300px;
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="basic-addon1"><i class="fa fa-user"></i></span>
                         </div>
-                        <input type="text" class="form-control" placeholder="Mobile Number" aria-label="Username"
-                            aria-describedby="basic-addon1">
+                        {{fm.mobile}}
                     </div>
                 </div>
                 <div class="col-sm-6">
@@ -371,8 +368,7 @@ width:300px;
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="basic-addon1"><i class="fa fa-user"></i></span>
                         </div>
-                        <input type="text" class="form-control" placeholder="Email Address" aria-label="Username"
-                            aria-describedby="basic-addon1">
+                        {{fm.email}}
                     </div>
                 </div>
             </div>
@@ -384,14 +380,7 @@ width:300px;
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="basic-addon1"><i class="fa fa-user"></i></span>
                         </div>
-                        <select name="" id="" class="form-control">
-                            <option value="">--Select City---</option>
-                            <option value="">Aurangabad</option>
-                            <option value="">Pune</option>
-                            <option value="">Mumbai</option>
-                            <option value="">Nashik</option>
-                            <option value="">Nagpur</option>
-                        </select>
+                        {{fm.city}}
                     </div>
                 </div>
                 <div class="col-sm-6">
@@ -399,14 +388,7 @@ width:300px;
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="basic-addon1"><i class="fa fa-user"></i></span>
                         </div>
-                        <select name="" id="" class="form-control">
-                            <option value="">--Select Profession---</option>
-                            <option value="">Builder</option>
-                            <option value="">Ex.Banker</option>
-                            <option value="">Freelancer</option>
-                            <option value="">Loan Advisor</option>
-                            <option value="">Other</option>
-                        </select>
+                        {{fm.profession}}
                     </div>
                 </div>
             </div>
@@ -417,12 +399,12 @@ width:300px;
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="basic-addon1"><i class="fa fa-user"></i></span>
                         </div>
-                        <input type="text" class="form-control" placeholder="Pan Number" aria-label="Username"
-                            aria-describedby="basic-addon1">
+                        {{fm.pan}}
                     </div>
                 </div>
             </div>
-            <a href="#" class="btn btn-danger">become a partner</a>
+            <center><input type="submit" class="btn btn-danger px-3 py-2" value="Become a partner"></center>
+        </form>
         </div>
     </div>
 </div>
@@ -437,7 +419,7 @@ Who Become Partner Start
 ==================-->
 
 
-<section class="section-wbp  p-5" style="background:url({% static 'img/wbp-bg.jpg' %});background-repeat: no-repeat;  background-size: 100% 100%;">
+<section class="section-wbp  p-5" style="background:url({% static 'img/wbp-bg.jpg' %});background-repeat: no-repeat;  background-size: 100% 100%;"  data-aos="zoom-in"   data-aos-easing="linear"   data-aos-delay="100" data-aos-duration="1000">
 
     <div class="container who-become-partner-container" style=" background: rgba(255, 255, 255, 0.6)">
         <div class="row">
@@ -689,7 +671,7 @@ Eligibility Criteri End
         <div class="row">
             <div class="col-sm-4 left-div">
                 <!--Card one -->
-                <div class="card card-1 mt-2"  style="vertical-align:top;">
+                <div class="card card-1 mt-2"  style="vertical-align:top;"  data-aos="zoom-in"   data-aos-easing="linear"   data-aos-delay="100" data-aos-duration="1000">
                     <div class="card-title">
                         <h5>Age</h5>
                     </div>
@@ -699,7 +681,7 @@ Eligibility Criteri End
                 </div>
 
                 <!--Card Two -->
-                <div class="card card-2 mt-2" style="vertical-align:bottom;">
+                <div class="card card-2 mt-2" style="vertical-align:bottom;"  data-aos="zoom-in"   data-aos-easing="linear"   data-aos-delay="100" data-aos-duration="1000">
                     <div class="card-title">
                         <h5>Education Qualifications</h5>
                     </div>
@@ -712,7 +694,7 @@ Eligibility Criteri End
             <div class="col-sm-4">
                 <img src="{% static 'img/become-partner-criteria.jpg' %}" alt="" style="width:100%; border-radius:50%;">
             </div>
-            <div class="col-sm-4 right-div">
+            <div class="col-sm-4 right-div"  data-aos="zoom-in"   data-aos-easing="linear"   data-aos-delay="100" data-aos-duration="1000">
                   <!--Card one -->
                   <div class="card card-1 mt-2">
                    
@@ -725,7 +707,7 @@ Eligibility Criteri End
                 </div>
 
                 <!--Card Two -->
-                <div class="card card-2 mt-2">
+                <div class="card card-2 mt-2"  data-aos="zoom-in"   data-aos-easing="linear"   data-aos-delay="100" data-aos-duration="1000">
                     <div class="card-title">
                         <h5>Professional Qualifications</h5>
                     </div>
@@ -758,8 +740,8 @@ Process Of ManeyTrust DSA Registration End
 
 
 <!--Factors that Affect Personal Loan  -->
-<div id="service" class="Services " style="background:none; margin-top:20px;">
-    <div class="container">
+<div id="service" class="Services " style="background:#FED2D6; margin-top:20px;">
+    <div class="container ">
         <div class="row">
             <div class="col-md-12">
                 <div class="titlepage">
@@ -771,7 +753,7 @@ Process Of ManeyTrust DSA Registration End
             </div>
         </div>
         <div class="row">
-            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 mt-5 bg-light ">
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 mt-5 ">
                 <div class="Services-box " style="height: 92%;" data-aos="zoom-in" data-aos-delay="100"
                     data-aos-duration="1500">
                     <i class="fa  " aria-hidden="true">1</i>
@@ -779,7 +761,7 @@ Process Of ManeyTrust DSA Registration End
                     <p>Click on 'Apply Now' and fill in the Loan DSA Partner registration details, and submit along with documents.</p>
                 </div>
             </div> 
-            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 mt-5 bg-light ">
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 mt-5 ">
                 <div class="Services-box " style="height: 92%;" data-aos="zoom-in" data-aos-delay="100"
                     data-aos-duration="1500">
                     <i class="fa  " aria-hidden="true">2</i>
@@ -787,7 +769,7 @@ Process Of ManeyTrust DSA Registration End
                     <p>The MoneyTrust support team will call you to guide, and co-ordinate a meeting with you.</p>
                 </div>
             </div> 
-            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 mt-5 bg-light ">
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 mt-5 ">
                 <div class="Services-box " style="height: 92%;" data-aos="zoom-in" data-aos-delay="100"
                     data-aos-duration="1500">
                     <i class="fa " aria-hidden="true">3</i>
@@ -795,7 +777,7 @@ Process Of ManeyTrust DSA Registration End
                     <p>At the meeting, a MoneyTrust Manager will explain to you all you need to know including the process to follow while generating leads.</p>
                 </div>
             </div> 
-            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 mt-5 bg-light ">
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 mt-5 ">
                 <div class="Services-box " style="height: 92%;" data-aos="zoom-in" data-aos-delay="100"
                     data-aos-duration="1500">
                     <i class="fa  " aria-hidden="true">4</i>

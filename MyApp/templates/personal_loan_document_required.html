@@ -256,9 +256,9 @@ to {opacity: 1;}
         <span></span> Overview </a>
       <a href="{% url 'personal_loan_eligibility_criteria' %}" data-aos="fade-down" data-aos-delay="150"
         data-aos-duration="1000"> <span></span> Eligibility Criteria </a>
-      <a href="#" data-aos="fade-down" data-aos-delay="150" data-aos-duration="1000" data-toggle="modal"
+      <!--<a href="#" data-aos="fade-down" data-aos-delay="150" data-aos-duration="1000" data-toggle="modal"
         data-target="#exampleModal">
-        <span></span> EMI Calculator </a>
+        <span></span> EMI Calculator </a>--> 
       <a href="{% url 'personal_loan_interest_rate_and_fees' %}" data-aos="fade-down" data-aos-delay="150"
         data-aos-duration="1000"> <span></span> Interest Rate & Processing Fees </a>
       <a href="{% url 'personal_loan_document_required' %}" style=" color: #07043f; background: #fff;"
@@ -282,9 +282,9 @@ to {opacity: 1;}
   <div class="container">
     <div class="row text-center">
       <div class="col-sm-12 hero-content">
-        <h3 class="text-danger">Personal Loan</h3>
-        <h1 class=" ">Required Documents</h1>
-        <a href="#" class="btn btn-danger px-5 py-2 mt-4">Apply Now</a>
+        <h3 class="text-danger"  data-aos="zoom-in" data-aos-easing="linear"  data-aos-delay="100" data-aos-duration="1000">Personal Loan</h3>
+        <h1 class=" "  data-aos="zoom-in" data-aos-easing="linear"  data-aos-delay="100" data-aos-duration="1000">Required Documents</h1>
+        <a href="#" class="btn btn-danger px-5 py-2 mt-4"  data-aos="fade-down" data-aos-easing="linear"  data-aos-delay="400" data-aos-duration="1000">Apply Now</a>
       </div>
 
     </div>
@@ -321,14 +321,14 @@ to {opacity: 1;}
 
 <!-- Document Table Start  -->
 
-<div class="container tbl-document-list">
+<div class="container tbl-document-list"  data-aos="zoom-in" data-aos-easing="linear"  data-aos-delay="100" data-aos-duration="1000">
   <div class="row">
     <div class="col-sm-12 text-center ">
       <h2>List of Documents Required for Personal Loan</h2>
 
     </div>
   </div>
-  <div class="row row-1" id="XI_AND_XII" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+  <div class="row row-1" id="XI_AND_XII"  >
     <div class="col-sm-12"><br>
       <br>
       <div class="table_scroll" style="height:500px;">
@@ -482,23 +482,23 @@ to {opacity: 1;}
 
 
 
-<div class="container eligibility" style="margin-top: 30px;">
+<div class="container eligibility" style="margin-top: 30px;"  data-aos="zoom-in" data-aos-easing="linear"  data-aos-delay="100" data-aos-duration="1000">
   <div class="row">
     <div class="col-sm-12 text-center ">
       <h2>Eligibility Criteria and Documentation</h2>
     </div>
   </div>
   <div class="row mt-3 ">
-    <div class="col-sm-3 text-center" onclick="required_document_section_01()">
+    <div class="col-sm-3 text-center" onclick="required_document_section_01()"  data-aos="flip-right" data-aos-easing="linear"  data-aos-delay="500" data-aos-duration="1000">
       <div class="bg-danger eligibility-option"><i class="fa fa-instagram"></i> Salaried Individuals</div>
     </div>
-    <div class="col-sm-3 text-center" onclick="required_document_section_02()">
+    <div class="col-sm-3 text-center" onclick="required_document_section_02()"  data-aos="flip-right" data-aos-easing="linear"  data-aos-delay="500" data-aos-duration="1000">
       <div class="bg-danger eligibility-option"><i class="fa fa-instagram"></i> Self-Employed Individuals</div>
     </div>
-    <div class="col-sm-3 text-center" onclick="required_document_section_03()">
+    <div class="col-sm-3 text-center" onclick="required_document_section_03()"  data-aos="flip-right" data-aos-easing="linear"  data-aos-delay="500" data-aos-duration="1000">
       <div class="bg-danger eligibility-option"><i class="fa fa-instagram"></i> NRI Applicants</div>
     </div>
-    <div class="col-sm-3 text-center" onclick="required_document_section_04()">
+    <div class="col-sm-3 text-center" onclick="required_document_section_04()"  data-aos="flip-right" data-aos-easing="linear"  data-aos-delay="500" data-aos-duration="1000">
       <div class="bg-danger eligibility-option"><i class="fa fa-instagram"></i> Pensioners</div>
     </div>
   </div>
@@ -519,7 +519,7 @@ to {opacity: 1;}
       </div>
     </div>
 
-    <div class="row">
+    <div class="row"  data-aos="fade-down" data-aos-easing="linear"  data-aos-delay="600" data-aos-duration="1000">
       <div class="col-sm-6 text-center" style="height: 100%;">
         <center>
           <div class="eligibility-description" style="text-align: left; height: 100%">
@@ -768,7 +768,7 @@ to {opacity: 1;}
 </div>
 
 <br>
-{% include "links_and_faq.html" %}
+{% include "personal_loan_links_and_faq.html" %}
 {% include "personal_loan_post_clients.html" %}
 
 

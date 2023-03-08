@@ -1,0 +1,296 @@
+{% extends 'admin/admin_base.html' %}
+{% load static %}
+
+{% block content %}
+<style>
+    .table_scroll {
+        height: 250px;
+        overflow-x: scroll;
+        overflow-y: scroll;
+        scrollbar-gutter: stable both-edges;
+    }
+
+    .table {
+        min-width: max-content;
+    }
+
+    th {
+        background-color: rgb(3, 74, 116);
+    }
+
+    #id_city, #id_start_date, #id_end_date   {
+        width: 100%;
+        padding: 5px;
+    }
+</style>
+<!-- ======= Header ======= -->
+<header id="header" class="header fixed-top d-flex align-items-center">
+
+    <div class="d-flex align-items-center justify-content-between">
+        <a href="{% url 'index' %}" class="logo d-flex align-items-center">
+            <img src="{% static 'img/logo.jpeg' %}" alt="">
+            <!-- <span class="d-none d-lg-block">MoneyTrust</span> -->
+        </a>
+        <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div><!-- End Logo -->
+
+
+    <nav class="header-nav ms-auto">
+        <ul class="d-flex align-items-center">
+
+
+
+            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
+                <li class="dropdown-header">
+                    You have 4 new notifications
+                    <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a>
+                </li>
+                <li>
+                    <hr class="dropdown-divider">
+                </li>
+
+                <li class="notification-item">
+                    <i class="bi bi-exclamation-circle text-warning"></i>
+                    <div>
+                        <h4>Lorem Ipsum</h4>
+                        <p>Quae dolorem earum veritatis oditseno</p>
+                        <p>30 min. ago</p>
+                    </div>
+                </li>
+
+            </ul><!-- End Notification Dropdown Items -->
+
+            </li><!-- End Notification Nav -->
+
+
+
+            <li class="nav-item dropdown pe-3 text-center  ">
+
+                <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+                    <img src="{% static 'img/profile.jpg' %}" alt="Profile" class="rounded-circle">
+                    <span class="d-none d-md-block dropdown-toggle ps-2">{{user.username}}</span>
+                </a><!-- End Profile Iamge Icon -->
+
+                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+                    <li class="dropdown-header">
+                        <h6>{{user.username}}</h6>
+                        <span>CEO</span>
+                    </li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+
+                    <li>
+                        <a class="dropdown-item d-flex align-items-center" href="{% url 'logout' %}">
+                            <i class="bi bi-box-arrow-right"></i>
+                            <span>Sign Out</span>
+                        </a>
+                    </li>
+
+                </ul><!-- End Profile Dropdown Items -->
+            </li><!-- End Profile Nav -->
+
+        </ul>
+    </nav><!-- End Icons Navigation -->
+
+</header><!-- End Header -->
+
+<!-- ======= Sidebar ======= -->
+<aside id="sidebar" class="sidebar">
+
+    <ul class="sidebar-nav" id="sidebar-nav">
+
+        <li class="nav-item">
+            <a class="nav-link " href="{% url 'admin_dashboard' %}" style="background:#fff;">
+                <i class="bi bi-grid"></i>
+                <span>Dashboard</span>
+            </a>
+        </li><!-- End Dashboard Nav -->
+
+        <li class="nav-item">
+            <a class="nav-link " href="{% url 'loan_application_records' %}"style="background:#fff;">
+                <i class="bi bi-currency-exchange"></i>
+                <span>Loan Application</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link " href="{% url 'become_a_partner_records' %}" style="background:#fff;">
+                <i class="bi bi-bookmark-check-fill"></i>
+                <span>Become a Partner</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link " href="#" >
+                <i class="bi bi-telephone-fill"></i>
+                <span>Enquiry</span>
+            </a>
+        </li>
+    </ul>
+</aside><!--  End Sidebar-->
+
+<main id="main" class="main">
+
+    <div class="pagetitle">
+        {% comment %} <h1>Loan Application Records</h1> {% endcomment %}
+        <nav>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{% url 'admin_dashboard' %}">Home</a></li>
+                <li class="breadcrumb-item active">Loan Application Records</li>
+            </ol>
+        </nav>
+    </div><!-- End Page Title -->
+
+
+
+
+    <div class="container">
+        <h4 class="text-center alert alert-dark mt-2" style="font-weight:bold; background:#07043f; color:#fff;">Loan
+            Application Records</h4>
+
+        <form action="" method="get">{% csrf_token %}
+            <div class="row">
+                <div class="col-sm-3 mt-2 " data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000">
+                    <span>City</span>
+                    {{filter.form.city}}
+                </div>
+               
+                <div class="col-sm-3 mt-2" data-aos="zoom-in" data-aos-delay="400" data-aos-duration="1000">
+                    <span>Start Date</span>
+                    {{filter.form.start_date}}
+                </div>
+                <div class="col-sm-3 mt-2" data-aos="zoom-in" data-aos-delay="550" data-aos-duration="1000">
+                    <span>End Date</span>
+                    {{filter.form.end_date}}
+                </div>
+                <div class="col mt-2 text-center"  data-aos="zoom-in" data-aos-delay="700" data-aos-duration="1000">
+                    
+                    <input type="submit" class="btn btn-danger px-5 mt-4 mb-2" value=" Apply Filter " >
+                </div><br><br>
+        </form>
+
+        <div class="row mt-2">
+            <div class="col-md mt-2" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="1000">
+                <div class="card text-center">
+                    <div class="card-header alert-dark text-light" style="background:#4678A4;">
+                        <b>Total Records</b>
+                    </div>
+                    <div class="card-header  py-2" data-aos="fade-down" data-aos-easing="linear" data-aos-delay="800"
+                        data-aos-duration="1000">
+                        <h1 class="card-title" style="font-size:32px;"><b>{{count}}</b></h1>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md mt-2" data-aos="zoom-in" data-aos-delay="400" data-aos-duration="1000">
+                <div class="card text-center">
+                    <div class="card-header alert-dark text-light" style="background:#4678A4;">
+                        <b>Record Export </b>
+                    </div>
+                    <div class="card-header  py-2" data-aos="fade-down" data-aos-easing="linear" data-aos-delay="800"
+                        data-aos-duration="1000">
+                        <h2 class="card-title"><a href="{% url 'export_data_enquiry' %}" class="btn btn-danger px-4">Download </a></h2>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="container">
+        <div class=" " style=" height:450px; background:#F7FBFC; overflow:scroll; user-select: none; ">
+            <table class="table table-hover px-4 py-4" >
+                {% if rec %}
+                <thead>
+                    <tr style="background:#4678A4;">
+                        <th scope="col" class="text-center text-white" style="">Sr.No</th>
+                        <th scope="col" class="text-center text-white">First Name</th>
+                        <th scope="col" class="text-center text-white">Last Name</th>
+                        <th scope="col" class="text-center text-white">Mobile</th>
+                        <th scope="col" class="text-center text-white">Email</th>
+                        <th scope="col" class="text-center text-white">City</th>
+                        <th scope="col" class="text-center text-white">Reason</th>
+                        <th scope="col" class="text-center text-white">Subject</th>
+                        <th scope="col" class="text-center text-white">Message</th>
+                        <th scope="col" class="text-center text-white">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for r in rec %}
+                    <tr class="text-center">
+                        <td>{{forloop.counter}}</td>
+                        <td>{{r.first_name}}</td>
+                        <td>{{r.last_name}}</td>
+                        <td>{{r.mobile}}</td>
+                        <td>{{r.email}}</td>
+                        <td>{{r.city}}</td>
+                        <td>{{r.reason}}</td>
+                        <td>{{r.subject}}</td>
+                        <td>{{r.message}}</td>
+                        <td>
+                            <form action="{% url 'delete_enquiry' r.id %}" method='POST'
+                                class="d-inline" novalidate>
+                                {% csrf_token %}
+                                <input type="submit" value="Delete" class="btn btn-danger">
+                        </td>
+                        </form>
+                        </Td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+                {% else %}
+                <center>
+                    <h3>No Record Found</h3>
+                </center>
+                {% endif %}
+            </table>
+        </div>
+    </div>
+<br>
+    <nav aria-label="Page navigation example mt-2">
+        <ul class="pagination justify-content-center">
+            {% if rec.has_previous %}
+            <li class="page-item ">
+                <a class="page-link" href="/loan_application_records/?page={{rec.previous_page_number}}"
+                    tabindex="-1">Previous</a>
+            </li>
+            {% endif %}
+            {% for n in pagenumbers %}
+            <li class="page-item"><a class="page-link" href="/loan_application_records/?page={{n}}">{{n}}</a></li>
+            {% endfor %}
+            {% if rec.has_next %}
+            <li class="page-item">
+                <a class="page-link" href="/loan_application_records/?page={{rec.next_page_number}}">Next</a>
+            </li>
+            {% endif %}
+        </ul>
+    </nav>
+
+    </center>
+
+
+
+</main><!-- End #main -->
+
+
+
+ 
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer text-center" >
+    <div class="copyright">
+      &copy; Copyright <strong><span>MoneyTrust</span></strong>. All Rights Reserved
+    </div>
+    <div class="credits">
+      <!-- All the links in the footer should remain intact. -->
+      <!-- You can delete the links only if you purchased the pro version. -->
+      <!-- Licensing information: https://bootstrapmade.com/license/ -->
+      <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
+      Designed by <a href="#" style="text-decoration:none;">SyamTech Software Solution</a>
+    </div>
+  </footer><!-- End Footer -->
+
+ 
+
+
+{% endblock content %}

@@ -172,9 +172,9 @@ margin-bottom:10px;
         style=" color: #07043f; background: #fff;"> <span></span> Overview </a>
       <a href="{% url 'doctor_loan_eligibility_criteria' %}" data-aos="fade-down" data-aos-delay="150"
         data-aos-duration="1000"> <span></span> Eligibility Criteria </a>
-      <a href="#" data-aos="fade-down" data-aos-delay="150" data-aos-duration="1000" data-toggle="modal"
+      <!--<a href="#" data-aos="fade-down" data-aos-delay="150" data-aos-duration="1000" data-toggle="modal"
         data-target="#exampleModal">
-        <span></span> EMI Calculator </a>
+        <span></span> EMI Calculator </a>--> 
       <a href="{% url 'doctor_loan_interest_rate_and_fees' %}" data-aos="fade-down" data-aos-delay="150"
         data-aos-duration="1000"> <span></span> Interest Rate & Processing Fees </a>
       <a href="{% url 'doctor_loan_document_required' %}" data-aos="fade-down" data-aos-delay="150"
@@ -225,6 +225,18 @@ margin-bottom:10px;
 <!-- End Hero -->
 
 
+<!-- Stepper Start -->
+<section class="loan-steps-section mb-3">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 text-center text-light">
+        <h2>Get Doctor Loan with four easy steps</h2><br>
+      </div>
+    </div>
+  </div>
+{% include "apply_loan_steps.html" %}
+</section>
+<!-- Stepper Stop -->
 
 {% include "personal_loan_post_clients.html" %}
 

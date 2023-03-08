@@ -356,14 +356,52 @@
 
 
               <li class="menu-item-has-children">
-                <a href="#">Credit Card <i class="fas fa-angle-down"></i></a>
+                <a href="#">Car Loan <i class="fa fa-angle-down"></i></a>
+                <div class="sub-menu mega-menu mega-menu-column-4">
+                  <div class="list-item">
+                    <h4 class="title">Car Loan Options</h4>
+                    <ul>
+                      <li><a href="{% url 'car_loan_overview' %}">Overview</a> </li>
+                      <li><a href="{% url 'car_loan_eligibility_criteria' %}">Eligibility
+                          Criteria</a></li> 
+                      <li><a href="{% url 'car_loan_document_required' %}">Document Required</a></li>
+                    </ul>
+                  </div>
+                  <div class="list-item">
+                    <h4 class="title">Links Options </h4>
+                    <ul>
+                      <li><a href="#">Links List</a></li>
+                      <li><a href="#">Links List</a></li>
+                      <li><a href="#">Links List</a></li>
+                      <li><a href="#">Links List</a></li>
+                    </ul>
+                    
+                  </div>
+                 
+                  <div class="list-item">
+                    <img src="{% static 'img/car_loan/header_overview.jpg' %}" alt="shop" style="width: 100%;">
+                  </div>
+
+                </div>
+              </li>
+
+ 
+              <li class="menu-item-has-children">
+                <a href="#">More <i class="fas fa-angle-down"></i></a>
                 <div class="sub-menu single-column-menu">
                   <ul>
-                    <li><a href="#">Standard Layout</a></li>
-                    <li><a href="#">Grid Layout</a></li>
-                    <li><a href="#">single Post Layout</a></li>
+                    <li><a href="{% url 'contact_us' %}">Contact us</a></li>
                   </ul>
                 </div>
+              </li>
+              
+
+              <li class="menu-item-has-children">
+                {% if user.is_authenticated %}
+                <a href="{% url 'admin_dashboard' %}" class="btn btn-danger text-light">Dashboard</a>
+                {% else %}
+                <a href="{% url 'admin_login' %}" class="btn btn-danger text-light">login</a>
+                {% endif %}
               </li>
               
 
@@ -413,7 +451,7 @@
   
   
 {% block content %}{% endblock content %}
-{% block links_and_faq %}{% endblock links_and_faq %}
+{% block personal_loan_links_and_faq %}{% endblock personal_loan_links_and_faq %}
 
   <!-- Footer Start -->
   <div class="container-fluid  footer text-light mt-5 py-5">
@@ -548,6 +586,16 @@ $(document).ready(function(){
 
     <script src="{% static 'js/main.js' %}"></script>
     <script src="{% static 'js/nav_menu.js' %}"></script>
+    
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script>
+  {% for msg in messages %}
+  swal("Done", "{{msg}}", "success");
+{% endfor %}
+</script>
+
+
+
 </body>
 
 </html>

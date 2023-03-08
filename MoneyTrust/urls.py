@@ -19,9 +19,16 @@ from MyApp import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('admin_login', views.admin_login, name="admin_login"),
+    path('logout', views.admin_logout, name="logout"),
     path('test/', views.test),
     path('', views.index, name="index"),
     path('become_partner/', views.become_partner, name="become_partner"),
+    path('contact_us/', views.contact_us, name="contact_us"),
+
+
+
+
 
     # Personal Loan Start 
     path('personal_loan_overview/', views.personal_loan_overview, name="personal_loan_overview"),
@@ -51,5 +58,30 @@ urlpatterns = [
     path('home_loan_document_required/', views.home_loan_document_required, name="home_loan_document_required"),
     path('home_loan_interest_rate_and_fees/', views.home_loan_interest_rate_and_fees, name="home_loan_interest_rate_and_fees"),
     # Home Loan Stop
+
+    # Car Loan Start 
+    path('car_loan_overview/', views.car_loan_overview, name="car_loan_overview"), 
+    path('car_loan_eligibility_criteria/', views.car_loan_eligibility_criteria, name="car_loan_eligibility_criteria"),
+    path('car_loan_document_required/', views.car_loan_document_required, name="car_loan_document_required"),
+    # Car Loan Stop
+
+
+    #Admin Section Start
+    path('admin_dashboard/', views.admin_dashboard, name="admin_dashboard"),
+    path('become_a_partner_records/', views.become_a_partner_records, name="become_a_partner_records"),
+    path('enquiry_records/', views.enquiry_records, name="enquiry_records"),
+    path('loan_application_records/', views.loan_application_records, name="loan_application_records"),
+
+    path('delete_loan_application_record/<int:id>/',views.delete_loan_application_record, name='delete_loan_application_record'),
+    path('delete_become_partner/<int:id>/',views.delete_become_partner, name='delete_become_partner'),
+    path('delete_enquiry/<int:id>/',views.delete_enquiry, name='delete_enquiry'),
+
+    path('export_data_become_partner/',views.export_data_become_partner, name='export_data_become_partner'), 
+    path('export_data_enquiry/',views.export_data_enquiry, name='export_data_enquiry'), 
+    path('export_data_loan_application/',views.export_data_loan_application, name='export_data_loan_application'), 
+
+    #Admin Section Stop
+
+
 
 ]

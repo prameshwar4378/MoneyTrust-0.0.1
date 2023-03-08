@@ -248,8 +248,8 @@ border: 2px solid black;
         data-aos-duration="1000"> <span></span> Overview </a>
       <a href="{% url 'business_loan_eligibility_criteria' %}" data-aos="fade-down" data-aos-delay="150"
         data-aos-duration="1000" > <span></span> Eligibility Criteria </a>
-      <a href="#" data-aos="fade-down" data-aos-delay="150" data-aos-duration="1000" data-toggle="modal" data-target="#exampleModal">
-        <span></span> EMI Calculator </a>
+    <!--  <a href="#" data-aos="fade-down" data-aos-delay="150" data-aos-duration="1000" data-toggle="modal" data-target="#exampleModal">
+        <span></span> EMI Calculator </a>-->
         <a href="{% url 'business_loan_interest_rate_and_fees' %}" style="color: #07043f; background: #fff;" data-aos="fade-down" data-aos-delay="150"
         data-aos-duration="1000"  > <span></span> Interest Rate & Processing Fees </a>
       <a href="{% url 'business_loan_document_required' %}"  
@@ -275,16 +275,16 @@ border: 2px solid black;
   <div class="container">
     <div class="row text-center">
       <div class="col-sm-12 hero-content">
-        <h3 class="text-danger">Business Loan</h3>
-        <h1 class=" ">Interest rate & Processing Fees</h1>
-        <a href="#" class="btn btn-danger px-5 py-2 mt-4">Apply Now</a>
+        <h3 class="text-danger" data-aos="zoom-in"   data-aos-easing="linear"   data-aos-delay="100" data-aos-duration="1000">Business Loan</h3>
+        <h1 class=" " data-aos="zoom-in"   data-aos-easing="linear"   data-aos-delay="100" data-aos-duration="1000">Interest rate & Processing Fees</h1>
+        <a href="#" class="btn btn-danger px-5 py-2 mt-4" data-aos="fade-down"   data-aos-easing="linear"   data-aos-delay="400" data-aos-duration="1000">Apply Now</a>
       </div>
 
     </div>
   </div>
 </section>
 
-<section class="hero-footer" style="z-index:1">
+<section class="hero-footer" style="z-index:1" data-aos="zoom-in"   data-aos-easing="linear"   data-aos-delay="100" data-aos-duration="1000">
   <div class="container">
     <div class="row">
       <div class="col-sm-6 left">
@@ -526,33 +526,33 @@ border: 2px solid black;
 </div>
 <!-- Bank Table Stop -->
 
-
-<div class="container mt-4 type">
+<section style="background:#FED2D6">
+<div class="container mt-5 type ">
   <div class="row">
-    <div class="col-sm-12 text-center">
+    <div class="col-sm-12 mt-4 text-center">
       <h2>Business Loan Interest Rate Types</h2>
       <p>Banks and NBFCs offer two types of interest rates, namely fixed and floating. The EMI amount changes according to the type of interest rate a borrower chooses.</p>
     </div>
   </div>
   <div class="row">
-    <div class="col-sm-6">
+    <div class="col-sm-6"  data-aos="zoom-in"   data-aos-easing="linear"   data-aos-delay="100" data-aos-duration="1000">
       <img src="{% static 'img/sample.jpg' %}" alt="" >
-      <p class="content">
-        <span style="font-size:25px; font-weight:600;">Fixed-Rate of Interest <br></span>
+      <p class="content"  data-aos="fade-down"   data-aos-easing="linear"   data-aos-delay="400" data-aos-duration="1000">
+        <span style="font-size:25px; font-weight:600;" >Fixed-Rate of Interest <br></span>
         When you opt for a Fixed Rate of Interest, the interest rate on your Business Loan remains constant throughout your loan period, and this allows you the freedom to plan your finances.
       </p>
     </div>
-    <div class="col-sm-6">
+    <div class="col-sm-6"  data-aos="zoom-in"   data-aos-easing="linear"   data-aos-delay="100" data-aos-duration="1000">
       <img src="{% static 'img/sample.jpg' %}" alt="" >
-      <p class="content">
-        <span style="font-size:25px; font-weight:600;">Floating Rate of Interest <br></span>
+      <p class="content"  data-aos="fade-down"   data-aos-easing="linear"   data-aos-delay="400" data-aos-duration="1000">
+        <span style="font-size:25px; font-weight:600;" >Floating Rate of Interest <br></span>
         Floating Rate of Interest changes according to the RBI lending benchmark, namely Repo Rate. This means, that although your EMI remain constant, your loan tenure may extend due to rate adjustments.
       </p>
     </div>
   </div>
 </div>
   
-
+</section>
 
 
 
@@ -571,8 +571,8 @@ Business Loan Factors  start
       </div>
     </div>
 
-    <div class="row px-2 py-2 mt-2" style="background:rgba(0, 108, 255, .1);border-radius:10px; margin:10px;">
-      <div class="col-sm-6 mt-2" style="display:flex; flex-direction:row;  ">
+    <div class="row px-2 py-2 mt-2" style="background:rgba(0, 108, 255, .1);border-radius:10px; margin:10px;" >
+      <div class="col-sm-6 mt-2" style="display:flex; flex-direction:row;  "  data-aos="fade-down"   data-aos-easing="linear"   data-aos-delay="300" data-aos-duration="1000">
         <div style="width:60px; height:100%; ">
           <i class="fa-solid fa-user text-danger" style="font-size:40px; position:relative;top:20px;"></i>
         </div>
@@ -583,7 +583,7 @@ Business Loan Factors  start
         </div>
       </div>
 
-      <div class="col-sm-6 mt-2" style="display:flex; flex-direction:row;  ">
+      <div class="col-sm-6 mt-2" style="display:flex; flex-direction:row;  "   data-aos="fade-down"   data-aos-easing="linear"   data-aos-delay="300" data-aos-duration="1000">
         <div style="width:60px; height:100%; ">
           <i class="fa-solid fa-earth text-danger" style="font-size:40px; position:relative;top:20px;"></i>
         </div>
@@ -601,7 +601,7 @@ Business Loan Factors  start
 
     
     <div class="row px-2 py-2 mt-2" style="background:rgba(0, 108, 255, .1);border-radius:10px; margin:10px;">
-      <div class="col-sm-6 mt-2" style="display:flex; flex-direction:row;  ">
+      <div class="col-sm-6 mt-2" style="display:flex; flex-direction:row;  "  data-aos="fade-down"   data-aos-easing="linear"   data-aos-delay="300" data-aos-duration="1000">
         <div style="width:60px; height:100%; ">
           <i class="fa-solid fa-briefcase text-danger" style="font-size:40px; position:relative;top:20px;"></i>
         </div>
@@ -613,7 +613,7 @@ Business Loan Factors  start
         </div>
       </div>
 
-      <div class="col-sm-6 mt-2" style="display:flex; flex-direction:row;  ">
+      <div class="col-sm-6 mt-2" style="display:flex; flex-direction:row;  "  data-aos="fade-down"   data-aos-easing="linear"   data-aos-delay="300" data-aos-duration="1000">
         <div style="width:60px; height:100%; ">
           <i class="fa-solid fa-gauge text-danger" style="font-size:40px; position:relative;top:20px;"></i>
         </div>

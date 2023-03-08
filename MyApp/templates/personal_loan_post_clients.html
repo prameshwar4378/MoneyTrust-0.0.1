@@ -91,7 +91,7 @@
     }
 
     .testimonials .swiper-pagination .swiper-pagination-bullet-active {
-        background-color: blue;
+        background-color: #B40018;
     }
 
     @media (max-width: 767px) {
@@ -114,144 +114,114 @@
             left: auto;
         }
     }
+
+    .post-container{
+        width:100%;
+        height:auto;
+        border:1px solid gray;
+        padding:20px;
+        background:white;
+        border-radius:7px;
+        box-shadow:0px 0px 10px -4px;
+        margin-top:60px;
+    }
+    .post-footer{
+        width:100%;
+        position: relative;
+        top:50px;
+        z-index:1;
+        border-radius:7px;
+        box-shadow:0px 0px 15px -2px;
+        background:#B40018;
+        padding:30px 20px;
+        display:flex;
+    }
+    .post-container img{
+        width:100%;
+        position: relative;
+        top:-60px;
+        z-index:1;
+        border-radius:7px;
+        box-shadow:0px 0px 15px -2px;
+        margin-bottom:-30px;
+    }
 </style>
 
 
 
 <!-- ======= Testimonials Section ======= -->
-<section id="testimonials " class="testimonials section-bg mt-4 py-5 " style="background:#ECECEC">
+<section id="testimonials " class="testimonials section-bg mt-4 py-5 "  >
     <div class="container" data-aos="fade-up">
 
         <div class="section-header text-center">
-            <h2>What our client say</h2>
+            <h2>Letest Blogs</h2>
             <br><br>
         </div>
 
         <div class="slides-2 swiper">
             <div class="swiper-wrapper">
 
-                <div class="swiper-slide">
-                    <div class="testimonial-wrap">
-                        <div class="testimonial-item">
-                            <img src="{% static 'img/profile.jpg' %}" class="testimonial-img" alt="">
-                            <h3>Client Name</h3>
-                            <h4>Ceo &amp; Founder</h4>
-                            <div class="stars">
-                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                    class="bi bi-star-fill"></i>
-                            </div>
-                            <p>
-                                <i class="bi bi-quote quote-icon-left"></i>
-                                this is the Client Feedback for MoneyTrust this is the Client Feedback for MoneyTrust
-                                this is the Client Feedback for MoneyTrust
-                                <i class="bi bi-quote quote-icon-right"></i>
-                            </p>
+                <div class="swiper-slide px-2 py-2 mb-4">
+                    <div class="post-container">
+                        <img src="{% static 'img/sample.png' %}" alt="">
+                        <h4>this is heading</h4>
+                        <p class="text-justify">An unsecured borrowing, the term Personal Loan implies an amount of money borrowed for a variety of purposes. This multi-purpose loan has no end-usage restrictions, and can be used to consolidate debt, pay...</p>
+                        <a href="#" class="btn btn-danger px-4 py-2">Read More</a>
+                        <div class="post-footer" >
+                           <span style="width:50%;  color:white;"><i class="fa fa-user"></i>&nbsp;&nbsp;&nbsp;MoneyTrust</span>
+                           <span style="width:50%;text-align:center; color:white;"><i class="fa fa-calendar-days"></i>&nbsp;&nbsp;&nbsp;21-02-2023</span>
                         </div>
                     </div>
                 </div><!-- End testimonial item -->
 
-                <div class="swiper-slide">
-                    <div class="testimonial-wrap">
-                        <div class="testimonial-item">
-                            <img src="{% static 'img/profile.jpg' %}" class="testimonial-img" alt="">
-                            <h3>Client Name</h3>
-                            <h4>Ceo &amp; Founder</h4>
-                            <div class="stars">
-                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                    class="bi bi-star-fill"></i>
-                            </div>
-                            <p>
-                                <i class="bi bi-quote quote-icon-left"></i>
-                                this is the Client Feedback for MoneyTrust this is the Client Feedback for MoneyTrust
-                                this is the Client Feedback for MoneyTrust
-                                <i class="bi bi-quote quote-icon-right"></i>
-                            </p>
+                <div class="swiper-slide px-2 py-2 mb-4">
+                    <div class="post-container">
+                        <img src="{% static 'img/sample.png' %}" alt="">
+                        <h4>this is heading</h4>
+                        <p class="text-justify">An unsecured borrowing, the term Personal Loan implies an amount of money borrowed for a variety of purposes. This multi-purpose loan has no end-usage restrictions, and can be used to consolidate debt, pay...</p>
+                        <a href="#" class="btn btn-danger px-4 py-2">Read More</a>
+                        <div class="post-footer" >
+                           <span style="width:50%;  color:white;"><i class="fa fa-user"></i>&nbsp;&nbsp;&nbsp;MoneyTrust</span>
+                           <span style="width:50%;text-align:center; color:white;"><i class="fa fa-calendar-days"></i>&nbsp;&nbsp;&nbsp;21-02-2023</span>
                         </div>
                     </div>
                 </div><!-- End testimonial item -->
 
-                <div class="swiper-slide">
-                    <div class="testimonial-wrap">
-                        <div class="testimonial-item">
-                            <img src="{% static 'img/profile.jpg' %}" class="testimonial-img" alt="">
-                            <h3>Client Name</h3>
-                            <h4>Ceo &amp; Founder</h4>
-                            <div class="stars">
-                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                    class="bi bi-star-fill"></i>
-                            </div>
-                            <p>
-                                <i class="bi bi-quote quote-icon-left"></i>
-                                this is the Client Feedback for MoneyTrust this is the Client Feedback for MoneyTrust
-                                this is the Client Feedback for MoneyTrust
-                                <i class="bi bi-quote quote-icon-right"></i>
-                            </p>
+                <div class="swiper-slide px-2 py-2 mb-4">
+                    <div class="post-container">
+                        <img src="{% static 'img/sample.png' %}" alt="">
+                        <h4>this is heading</h4>
+                        <p class="text-justify">An unsecured borrowing, the term Personal Loan implies an amount of money borrowed for a variety of purposes. This multi-purpose loan has no end-usage restrictions, and can be used to consolidate debt, pay...</p>
+                        <a href="#" class="btn btn-danger px-4 py-2">Read More</a>
+                        <div class="post-footer" >
+                           <span style="width:50%;  color:white;"><i class="fa fa-user"></i>&nbsp;&nbsp;&nbsp;MoneyTrust</span>
+                           <span style="width:50%;text-align:center; color:white;"><i class="fa fa-calendar-days"></i>&nbsp;&nbsp;&nbsp;21-02-2023</span>
                         </div>
                     </div>
                 </div><!-- End testimonial item -->
 
-                <div class="swiper-slide">
-                    <div class="testimonial-wrap">
-                        <div class="testimonial-item">
-                            <img src="{% static 'img/profile.jpg' %}" class="testimonial-img" alt="">
-                            <h3>Client Name</h3>
-                            <h4>Ceo &amp; Founder</h4>
-                            <div class="stars">
-                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                    class="bi bi-star-fill"></i>
-                            </div>
-                            <p>
-                                <i class="bi bi-quote quote-icon-left"></i>
-                                this is the Client Feedback for MoneyTrust this is the Client Feedback for MoneyTrust
-                                this is the Client Feedback for MoneyTrust
-                                <i class="bi bi-quote quote-icon-right"></i>
-                            </p>
+                <div class="swiper-slide px-2 py-2 mb-4">
+                    <div class="post-container">
+                        <img src="{% static 'img/sample.png' %}" alt="">
+                        <h4>this is heading</h4>
+                        <p class="text-justify">An unsecured borrowing, the term Personal Loan implies an amount of money borrowed for a variety of purposes. This multi-purpose loan has no end-usage restrictions, and can be used to consolidate debt, pay...</p>
+                        <a href="#" class="btn btn-danger px-4 py-2">Read More</a>
+                        <div class="post-footer" >
+                           <span style="width:50%;  color:white;"><i class="fa fa-user"></i>&nbsp;&nbsp;&nbsp;MoneyTrust</span>
+                           <span style="width:50%;text-align:center; color:white;"><i class="fa fa-calendar-days"></i>&nbsp;&nbsp;&nbsp;21-02-2023</span>
                         </div>
                     </div>
                 </div><!-- End testimonial item -->
 
-                <div class="swiper-slide">
-                    <div class="testimonial-wrap">
-                        <div class="testimonial-item">
-                            <img src="{% static 'img/profile.jpg' %}" class="testimonial-img" alt="">
-                            <h3>Client Name</h3>
-                            <h4>Ceo &amp; Founder</h4>
-                            <div class="stars">
-                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                    class="bi bi-star-fill"></i>
-                            </div>
-                            <p>
-                                <i class="bi bi-quote quote-icon-left"></i>
-                                this is the Client Feedback for MoneyTrust this is the Client Feedback for MoneyTrust
-                                this is the Client Feedback for MoneyTrust
-                                <i class="bi bi-quote quote-icon-right"></i>
-                            </p>
-                        </div>
-                    </div>
-                </div><!-- End testimonial item -->
-
-                <div class="swiper-slide">
-                    <div class="testimonial-wrap">
-                        <div class="testimonial-item">
-                            <img src="{% static 'img/profile.jpg' %}" class="testimonial-img" alt="">
-                            <h3>Client Name</h3>
-                            <h4>Ceo &amp; Founder</h4>
-                            <div class="stars">
-                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                    class="bi bi-star-fill"></i>
-                            </div>
-                            <p>
-                                <i class="bi bi-quote quote-icon-left"></i>
-                                this is the Client Feedback for MoneyTrust this is the Client Feedback for MoneyTrust
-                                this is the Client Feedback for MoneyTrust
-                                <i class="bi bi-quote quote-icon-right"></i>
-                            </p>
+                <div class="swiper-slide px-2 py-2 mb-4">
+                    <div class="post-container">
+                        <img src="{% static 'img/sample.png' %}" alt="">
+                        <h4>this is heading</h4>
+                        <p class="text-justify">An unsecured borrowing, the term Personal Loan implies an amount of money borrowed for a variety of purposes. This multi-purpose loan has no end-usage restrictions, and can be used to consolidate debt, pay...</p>
+                        <a href="#" class="btn btn-danger px-4 py-2">Read More</a>
+                        <div class="post-footer" >
+                           <span style="width:50%;  color:white;"><i class="fa fa-user"></i>&nbsp;&nbsp;&nbsp;MoneyTrust</span>
+                           <span style="width:50%;text-align:center; color:white;"><i class="fa fa-calendar-days"></i>&nbsp;&nbsp;&nbsp;21-02-2023</span>
                         </div>
                     </div>
                 </div><!-- End testimonial item -->

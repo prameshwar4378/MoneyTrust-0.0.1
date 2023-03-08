@@ -1,0 +1,716 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block style %}
+.links {
+width: 100%;
+background-color: #07043f;
+color: white;
+padding: 15px;
+}
+
+.links a {
+text-decoration: none;
+}
+
+.titlepage{
+text-align: center;
+margin-top: 30px;
+}
+.titlepage h2{
+color: #275da9;
+}
+/* Header Links Section Start */
+
+.header-links {
+height: auto;
+width: 98%;
+background:#07043f;
+margin-top: 8px;
+padding-bottom: 8px;
+border-radius: 10px;
+}
+
+
+
+.banner-btn a {
+border-radius: 8px;
+width: 170px;
+text-decoration: none;
+display: inline-block;
+margin: 0 10px;
+padding: 12px 0;
+color: #fff;
+background-color: #07043f;
+border: 1px solid rgb(255, 255, 255);
+position: relative;
+z-index: 1;
+transition: color 0.5s;
+margin-top: 10px;
+font-weight: bold;
+}
+
+.banner-btn a span {
+width: 0%;
+height: 100%;
+position: absolute;
+top: 0;
+left: 0;
+background: linear-gradient(to right, #1C53D9, #07043f);
+z-index: -1;
+transition: 0.5s;
+}
+
+.banner-btn a:hover span {
+border-radius: 8px;
+width: 100%
+}
+
+.banner-btn a:hover {
+color: rgb(255, 255, 255);
+}
+
+
+@media screen and (max-width: 770px) {
+.banner-btn a {
+
+width: 40%;
+
+}
+}
+
+/* Header Link Section Stop */
+
+
+
+
+
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+#hero {
+height:60vh;
+background:url({% static 'img/hero-bg.jpg' %});
+background-repeat:no-repeat;
+background-size:100% 100%;
+}
+
+#hero h1{
+font-size:4rem;
+font-weight:1000;
+color:white;
+}
+
+
+#hero h3{
+font-size:2rem;
+font-weight:500;
+}
+
+#hero .hero-content{
+position:relative;
+top:50px;
+}
+
+.hero-footer{
+padding:10px;
+}
+.hero-footer .container{
+border-radius:15px;
+box-shadow:0px 0px 10px;
+position:relative;
+top:-110px;
+z-index:1;
+border:2px solid white;
+padding:20px;
+background:white;
+margin-bottom:-160px;
+}
+
+.hero-footer .container .left{
+border-right:5px solid #B40018;
+}
+
+@media screen and (max-width: 770px) {
+
+.hero-footer .container{
+border-radius:15px;
+box-shadow:0px 0px 10px;
+position:relative;
+top: 0px;
+z-index:1;
+border:2px solid white;
+padding:20px;
+background:white;
+margin-bottom:0px;
+}
+
+.hero-footer .container .left{
+border-right:none;
+margin-bottom:10px;
+}
+
+}
+
+
+/*--------------------------------------------------------------
+# Hero Section End
+--------------------------------------------------------------*/
+
+
+
+
+
+
+/** Features of Personal Loan section **/
+
+.Services {
+margin-top: 90px;
+padding: 60px 0;
+font-family: Poppins;
+background-color: #abccfe;
+background-repeat: no-repeat;
+background-size: 100%;
+}
+
+@media screen and (max-width:990px){
+.Services {
+margin-top: 90px;
+padding: 60px 0;
+font-family: Poppins;
+background: none;
+background-repeat: no-repeat;
+background-size: 100%;
+}
+}
+
+.Services .titlepage {
+text-align: center;
+}
+
+.Services .titlepage h2 {
+color: #0057c5;
+padding-bottom: 20px;
+}
+
+.Services .titlepage p {
+color: black;
+}
+
+.Services .Services-box i {
+background: white;
+width: 100px;
+height: 100px;
+border-radius: 50px;
+display: inline-block;
+padding-top: 19px;
+box-shadow: 3px 3px 10px;
+}
+
+.Services .Services-box i:hover {
+background: #ddd;
+}
+
+.Services .Services-box h3 {
+padding: 20px 0px 20px 0px;
+font-size: 20px;
+line-height: 25px;
+color: black;
+display: block;
+font-weight: 500;
+}
+
+.Services .Services-box {
+text-align: center;
+background-color: transparent;
+border-radius: 20px;
+border: #cecfd7 solid 2px;
+padding: 10px;
+transition: ease-in all 0.5s;
+margin-bottom: 30px;
+box-shadow: 0px 0px 10px;
+}
+
+.Services .Services-box:hover {
+background: #fd264f;
+transition: ease-in all 0.5s;
+cursor: pointer;
+}
+
+.Services .Services-box p {
+font-size: 16px;
+line-height: 24px;
+color: black;
+text-align: justify;
+}
+
+
+/** end Features of Personal Loan **/
+
+
+
+
+/* step section start */
+
+.timeline {
+border-left: 3px solid #E6E9ED;
+padding: 1rem 0; }
+
+.timeline-card {
+position: relative;
+margin-left: 31px;
+border-left: 5px solid;
+margin-bottom: 2rem; }
+
+.timeline-card:last-child {
+margin-bottom: 1rem; }
+
+.timeline-card:before {
+content: '';
+display: inline-block;
+position: absolute;
+background-color: #fff;
+border-radius: 10px;
+width: 12px;
+height: 12px;
+top: 20px;
+left: -41px;
+border: 2px solid;
+z-index: 2; }
+
+.timeline-card:after {
+content: '';
+display: inline-block;
+position: absolute;
+background-color: currentColor;
+width: 29px;
+height: 2px;
+top: 25px;
+left: -29px;
+z-index: 1; }
+
+.timeline-card-primary {
+border-left-color: #4A89DC; }
+
+.timeline-card-primary:before {
+border-color: #4A89DC; }
+
+.timeline-card-primary:after {
+background-color: #4A89DC; }
+
+.timeline-card-success {
+border-left-color: #37BC9B; }
+
+.timeline-card-success:before {
+border-color: #37BC9B; }
+
+.timeline-card-success:after {
+background-color: #37BC9B; }
+
+/* step section stop */
+
+
+
+
+
+
+{% endblock style %}
+
+{% block content %}
+
+
+<center>
+  <div class="header-links">
+    <div class="banner-btn">
+      <a href="{% url 'car_loan_overview' %}" data-aos="fade-down" data-aos-delay="100" data-aos-duration="1000"
+        style=" color: #07043f; background: #fff;"> <span></span> Overview </a>
+      <a href="{% url 'car_loan_eligibility_criteria' %}" data-aos="fade-down" data-aos-delay="150"
+        data-aos-duration="1000"> <span></span> Eligibility Criteria </a>
+      <!--<a href="#" data-aos="fade-down" data-aos-delay="150" data-aos-duration="1000" data-toggle="modal"
+        data-target="#exampleModal">
+        <span></span> EMI Calculator </a>
+      <a href=" " data-aos="fade-down" data-aos-delay="150"
+        data-aos-duration="1000"> <span></span> Interest Rate & Processing Fees </a>--> 
+      <a href="{% url 'car_loan_document_required' %}" data-aos="fade-down" data-aos-delay="150"
+        data-aos-duration="1000"> <span></span> Document Required </a>
+    </div>
+  </div>
+  <div class="waves_img"></div>
+</center>
+
+
+
+<div class="links mt-3">
+  <a href="../index.html" class="text-light">Home/</a>
+  <a href="#" class="text-light">car Loan/</a>
+  <a href="#" class="text-warning"> Overview</a>
+</div>
+
+
+<!-- ======= Hero Section ======= -->
+<section id="hero">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-sm-12 hero-content">
+        <h1 class=" "  data-aos="zoom-in"   data-aos-easing="linear"   data-aos-delay="100" data-aos-duration="1000">Car Loan</h1>
+        <p></p>
+        <a href="#" class="btn btn-danger px-5 py-2 mt-4"  data-aos="fade-down"   data-aos-easing="linear"   data-aos-delay="400" data-aos-duration="1000">Apply Now</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="hero-footer"  data-aos="zoom-in"   data-aos-easing="linear"   data-aos-delay="100" data-aos-duration="1000">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 left">
+        <img src="{% static 'img/car_loan/header_overview.jpg' %}" alt="" style="width:100%">
+      </div>
+      <div class="col-sm-6 right">
+        <p class="text-justify">
+          <h3>What is car Loan ?</h3>
+          <p class="text-justify">
+            Cars today are a basic utility that everyone feels the need to own. You've been waiting patiently and saving for that purpose. MoneyTrusts offers you the opportunity to own a car that you would not dream to own a decade ago. MoneyTrusts offers tailor-made car loans with exclusive features both for salaried and self-employed persons. To get your car within your reach, talk to your MoneyTrusts Team for constructive choices via phone, email, or chat, and apply for a Car Loan to get your MoneyTrusts' Flexible Car Loans Advantage. Own a car you want with MoneyTrusts team at your service!</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- End Hero -->
+
+
+
+<section class="why_choose alert alert-danger mt-5" >
+  <div class="container px-3 py-3">
+    <div class="row"  data-aos="zoom-in"   data-aos-easing="linear"   data-aos-delay="100" data-aos-duration="1000">
+      <div class="col-sm-12 text-center">
+        <h2>What Makes You Choose Us</h2>
+        <p class="text-justify">
+          MoneyTrusts has the means and resources to make life comfortable and secure for you. You may command our interest in your assignment to procure a car to make life easy for you. We are interested in your goodwill. Our loan professionals understand and predict the nature of your financial liquidity. Being aware of your troubles and travails of availing car finance for the new car you have in mind, makes us less fussy, and more capable of assistance. However challenging your case, we will not turn our back on you. That's the reason why more than 150 well-known Banks and NBFCs have partnered with us. Our 24/7 digital resources are designed to serve your immediate and urgent computing needs, so that you can compute your car loan eligibility, EMIs, cost of loan, etc. With an eye on your wellbeing, we work for you. Trust us, you'll thank your stars that you're with us.
+        </p>
+      </div>
+    </div>
+
+    <div class="row px-2 py-2 mt-2" style="background:rgba(0, 108, 255, .1);border-radius:10px; margin:10px;"  data-aos="fade-left"   data-aos-easing="linear"   data-aos-delay="100" data-aos-duration="1000">
+      <div class="col-sm-12" style="display:flex; flex-direction:row;  ">
+        <div style="width:60px; height:100%; ">
+          <h2><i class="fa-solid fa-dollar-sign"></i> </h2>
+        </div>
+        <div class="px-3">
+          <h4>High Value Loans</h4> 
+        </div>
+      </div>
+    </div>
+
+    <div class="row px-2 py-2 mt-2" style="background:rgba(0, 108, 255, .1);border-radius:10px; margin:10px;"  data-aos="fade-left"   data-aos-easing="linear"   data-aos-delay="100" data-aos-duration="1000">
+      <div class="col-sm-12" style="display:flex; flex-direction:row;  ">
+        <div style="width:60px; height:100%; ">
+          <h2>&#x20b9; </h2>
+        </div>
+        <div class="px-3">
+          <h4>90% to 100% Finance Available</h4> 
+        </div>
+      </div>
+    </div>
+
+    <div class="row px-2 py-2 mt-2" style="background:rgba(0, 108, 255, .1);border-radius:10px; margin:10px;"  data-aos="fade-left"   data-aos-easing="linear"   data-aos-delay="100" data-aos-duration="1000">
+      <div class="col-sm-12" style="display:flex; flex-direction:row;  ">
+        <div style="width:60px; height:100%; ">
+          <h2>% </h2>
+        </div>
+        <div class="px-3">
+          <h4>Low Interest Rates</h4> 
+        </div>
+      </div>
+    </div>
+
+    <div class="row px-2 py-2 mt-2" style="background:rgba(0, 108, 255, .1);border-radius:10px; margin:10px;"  data-aos="fade-left"   data-aos-easing="linear"   data-aos-delay="100" data-aos-duration="1000">
+      <div class="col-sm-12" style="display:flex; flex-direction:row;  ">
+        <div style="width:60px; height:100%; ">
+          <h2><i class="fa fa-calendar-days"></i> </h2>
+        </div>
+        <div class="px-3">
+          <h4>Flexible Loan Tenures</h4> 
+        </div>
+      </div>
+    </div>
+
+    <div class="row px-2 py-2 mt-2" style="background:rgba(0, 108, 255, .1);border-radius:10px; margin:10px;"  data-aos="fade-left"   data-aos-easing="linear"   data-aos-delay="100" data-aos-duration="1000">
+      <div class="col-sm-12" style="display:flex; flex-direction:row;  ">
+        <div style="width:60px; height:100%; ">
+          <h2><i class="fa-solid fa-handshake"></i> </h2>
+        </div>
+        <div class="px-3">
+          <h4>Friendly EMIs</h4> 
+        </div>
+      </div>
+    </div>
+
+    <div class="row px-2 py-2 mt-2" style="background:rgba(0, 108, 255, .1);border-radius:10px; margin:10px;"  data-aos="fade-left"   data-aos-easing="linear"   data-aos-delay="100" data-aos-duration="1000">
+      <div class="col-sm-12" style="display:flex; flex-direction:row;  ">
+        <div style="width:60px; height:100%; ">
+          <h2><i class="fa-solid fa-file"></i> </h2>
+        </div>
+        <div class="px-3">
+          <h4>Easy Documentation</h4> 
+        </div>
+      </div>
+    </div>
+
+    <div class="row px-2 py-2 mt-2" style="background:rgba(0, 108, 255, .1);border-radius:10px; margin:10px;"  data-aos="fade-left"   data-aos-easing="linear"   data-aos-delay="100" data-aos-duration="1000">
+      <div class="col-sm-12" style="display:flex; flex-direction:row;  ">
+        <div style="width:60px; height:100%; ">
+          <h2><i class="fa-solid fa-chart-simple"></i> </h2>
+        </div>
+        <div class="px-3">
+          <h4>Quick and Simple Process</h4> 
+        </div>
+      </div>
+    </div>
+
+    <div class="row px-2 py-2 mt-2" style="background:rgba(0, 108, 255, .1);border-radius:10px; margin:10px;"  data-aos="fade-left"   data-aos-easing="linear"   data-aos-delay="100" data-aos-duration="1000">
+      <div class="col-sm-12" style="display:flex; flex-direction:row;  ">
+        <div style="width:60px; height:100%; ">
+          <h2><i class="fa-solid fa-check-to-slot"></i> </h2>
+        </div>
+        <div class="px-3">
+          <h4>Speedy Approval and Disbursal</h4> 
+        </div>
+      </div>
+    </div>
+
+    <div class="row px-2 py-2 mt-2" style="background:rgba(0, 108, 255, .1);border-radius:10px; margin:10px;"  data-aos="fade-left"   data-aos-easing="linear"   data-aos-delay="100" data-aos-duration="1000">
+      <div class="col-sm-12" style="display:flex; flex-direction:row;  ">
+        <div style="width:60px; height:100%; ">
+          <h2><i class="fa fa-list" aria-hidden="true"></i></h2>
+        </div>
+        <div class="px-3">
+          <h4>Choice of Multiple Lender Offers</h4> 
+        </div>
+      </div>
+    </div>
+
+    <div class="row px-2 py-2 mt-2" style="background:rgba(0, 108, 255, .1);border-radius:10px; margin:10px;"  data-aos="fade-left"   data-aos-easing="linear"   data-aos-delay="100" data-aos-duration="1000">
+      <div class="col-sm-12" style="display:flex; flex-direction:row;  ">
+        <div style="width:60px; height:100%; ">
+          <h2><i class="fa-solid fa-landmark"></i> </h2>
+        </div>
+        <div class="px-3">
+          <h4>Top Up Loans Available</h4> 
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+<!-- Features of Personal Loan  -->
+<div id="service" class="Services">
+  <div class="container" style="max-width:1500px;">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="titlepage">
+          <h2 class="text-dark">Car Loan - Benefits and Characteristics</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+
+      <div class="col-xl-4 col-lg-4 col-md-3 col-sm-12">
+        <div class="Services-box" style="height: 92%;" data-aos="fade-down" data-aos-delay="50"
+          data-aos-duration="1500"><br>
+          <p>Finance for purchasing of both new and used cars</p>
+        </div>
+      </div>
+
+      <div class="col-xl-4 col-lg-4 col-md-3 col-sm-12">
+        <div class="Services-box" style="height: 92%;" data-aos="fade-down" data-aos-delay="50"
+          data-aos-duration="1500"><br>
+          <p>85% to 90% of on-road price available as finance. Some lenders also offer 100% finance depending on the vehicle on-road price</p>
+        </div>
+      </div>
+
+      <div class="col-xl-4 col-lg-4 col-md-3 col-sm-12">
+        <div class="Services-box" style="height: 92%;" data-aos="fade-down" data-aos-delay="50"
+          data-aos-duration="1500"><br>
+          <p>Loans tenures range from 1 year to 7 years</p>
+        </div>
+      </div>
+
+      <div class="col-xl-4 col-lg-4 col-md-3 col-sm-12">
+        <div class="Services-box" style="height: 92%;" data-aos="fade-down" data-aos-delay="50"
+          data-aos-duration="1500"><br>
+          <p>Loan value or loan amount up to three times your annual income also sanctioned</p>
+        </div>
+      </div>
+
+      <div class="col-xl-4 col-lg-4 col-md-3 col-sm-12">
+        <div class="Services-box" style="height: 92%;" data-aos="fade-down" data-aos-delay="50"
+          data-aos-duration="1500"><br>
+          <p>Instant finance also offered on select cars</p>
+        </div>
+      </div>
+
+      <div class="col-xl-4 col-lg-4 col-md-3 col-sm-12">
+        <div class="Services-box" style="height: 92%;" data-aos="fade-down" data-aos-delay="50"
+          data-aos-duration="1500"><br>
+          <p>Additional discounts and offers available on dealer or manufacturer-lender tieups</p>
+        </div>
+      </div>
+
+      <div class="col-xl-4 col-lg-4 col-md-3 col-sm-12">
+        <div class="Services-box" style="height: 92%;" data-aos="fade-down" data-aos-delay="50"
+          data-aos-duration="1500"><br>
+          <p>Purchased car acts as collateral until completion of loan repayment</p>
+        </div>
+      </div>
+
+      <div class="col-xl-4 col-lg-4 col-md-3 col-sm-12">
+        <div class="Services-box" style="height: 92%;" data-aos="fade-down" data-aos-delay="50"
+          data-aos-duration="1500"><br>
+          <p>Repayment structured on easy Equated Monthly Instalments</p>
+        </div>
+      </div>
+ 
+
+    </div>
+  </div>
+</div>
+<!-- end Features of Personal Loan -->
+
+
+
+<!--=========== How to Apply Start ============-->
+<section class="alert alert-danger">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 text-center">
+        <h2>Application Process</h2> 
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container mt-4" style="max-width:1400px;">
+
+    <div class="work-experience-section px-3 px-lg-4">
+      <div class="timeline" style="border-left:2px solid #D8D8D8;">
+
+        <div class="timeline-card timeline-card-primary card shadow-sm"  data-aos="fade-left"   data-aos-easing="linear"   data-aos-delay="100" data-aos-duration="1000">
+          <div class="card-body">
+    
+            <div class="content">
+              <div class="h5 mb-1">Online Application</div>
+              <div>
+                <p class="text-justify">Fill out your 'Basic Details</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-card timeline-card-primary card shadow-sm"  data-aos="fade-left"   data-aos-easing="linear"   data-aos-delay="100" data-aos-duration="1000">
+          <div class="card-body">
+     
+            <div class="content">
+              <div class="h5 mb-1">Document Submission</div>
+              <div>
+                <p class="text-justify">After you receive your 'Loan Eligibility', choose your 'Financial Institution', and upload 'Required Documents'</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-card timeline-card-primary card shadow-sm"  data-aos="fade-left"   data-aos-easing="linear"   data-aos-delay="100" data-aos-duration="1000">
+          <div class="card-body">
+  
+            <div class="content">
+              <div class="h5 mb-1">Verification</div>
+              <div>
+                <p class="text-justify">The Institutions will 'Verify' your Car Loan application, and submitted documents</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-card timeline-card-primary card shadow-sm"  data-aos="fade-left"   data-aos-easing="linear"   data-aos-delay="100" data-aos-duration="1000">
+          <div class="card-body">
+ 
+            <div class="content">
+              <div class="h5 mb-1">Professional Guidance and Advice</div>
+              <div>
+                <p class="text-justify">Experts at MoneyTrusts know the ins and outs of the business. Our committed group of individual specialists will guide you to pick the right credit fee.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-card timeline-card-primary card shadow-sm"  data-aos="fade-left"   data-aos-easing="linear"   data-aos-delay="100" data-aos-duration="1000">
+          <div class="card-body">
+       
+            <div class="content">
+              <div class="h5 mb-1">Approval </div>
+              <div>
+                <p class="text-justify">Your Car Loan will be 'Sanctioned'</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-card timeline-card-primary card shadow-sm"  data-aos="fade-left"   data-aos-easing="linear"   data-aos-delay="100" data-aos-duration="1000">
+          <div class="card-body">
+          
+            <div class="content">
+              <div class="h5 mb-1">Disbursal</div>
+              <div>
+                <p class="text-justify">Receive your 'Car Loan Amount' in your Bank Account - Simply Well-Organized!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+</section>
+<!--=========== How to Apply Stop ============-->
+
+
+<!-- Stepper Start -->
+<section class="loan-steps-section mb-3">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 text-center text-light">
+        <h2>Get Personal Loan with four easy steps</h2><br>
+      </div>
+    </div>
+  </div>
+{% include "apply_loan_steps.html" %}
+</section>
+<!-- Stepper Stop -->
+
+
+{% include "personal_loan_post_clients.html" %}
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+  integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+  integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+  integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+{% endblock content %}

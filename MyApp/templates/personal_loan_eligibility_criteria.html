@@ -656,8 +656,7 @@ Personal Loan Eligibility Criteria
         data-aos-duration="1000"> <span></span> Overview </a>
       <a href="{% url 'personal_loan_eligibility_criteria' %}" data-aos="fade-down" data-aos-delay="150"
         data-aos-duration="1000" style="color: #07043f; background: #fff;"> <span></span> Eligibility Criteria </a>
-      <a href="#" data-aos="fade-down" data-aos-delay="150" data-aos-duration="1000" data-toggle="modal" data-target="#exampleModal">
-        <span></span> EMI Calculator </a>
+  
         <a href="{% url 'personal_loan_interest_rate_and_fees' %}"  data-aos="fade-down" data-aos-delay="150"
         data-aos-duration="1000"  > <span></span> Interest Rate & Processing Fees </a>
       <a href="{% url 'personal_loan_document_required' %}"  
@@ -683,17 +682,17 @@ Personal Loan Eligibility Criteria
   <div class="container">
     <div class="row text-center">
       <div class="col-sm-12 hero-content">
-        <h3 class="text-danger">Personal Loan</h3>
-        <h1 class=" ">Eligibility Criteria</h1>
-        <a href="#" class="btn btn-danger px-5 py-2 mt-4">Apply Now</a>
+        <h3 class="text-danger"  data-aos="zoom-in" data-aos-easing="linear"  data-aos-delay="100" data-aos-duration="1000">Personal Loan</h3>
+        <h1 class=" "  data-aos="zoom-in" data-aos-easing="linear"  data-aos-delay="100" data-aos-duration="1000">Eligibility Criteria</h1>
+        <a href="#" class="btn btn-danger px-5 py-2 mt-4"  data-aos="fade-down" data-aos-easing="linear"  data-aos-delay="400" data-aos-duration="1000">Apply Now</a>
       </div>
 
     </div>
   </div>
 </section>
 
-<section class="hero-footer" style="z-index:1">
-  <div class="container">
+<section class="hero-footer" style="z-index:1"  data-aos="zoom-in" data-aos-easing="linear"  data-aos-delay="100" data-aos-duration="1000">
+  <div class="container" >
     <div class="row">
       <div class="col-sm-6 left">
         <img src="{% static 'img/personal_loan/criteria.jpeg' %}" alt="" style="width:100%">
@@ -934,7 +933,7 @@ Personal Loan Eligibility Criteria
   
   
   <br>
-  {% include "links_and_faq.html" %}
+  {% include "personal_loan_links_and_faq.html" %}
   {% include "personal_loan_post_clients.html" %}
   
     

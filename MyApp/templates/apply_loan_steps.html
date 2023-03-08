@@ -1,0 +1,98 @@
+{% load static %}
+<style>
+.loan-steps-section{
+    background:url("{% static 'img/step-bg.png' %}");
+    padding:20px;
+    background-size:100% ;
+}
+.loan-steps .step-card{
+    display:flex;
+    width:100%;
+    padding:5px;
+    border:1px solid white;
+    animation: step-animation1 3s infinite;
+    animation-delay:inherit; 
+}
+.loan-steps .step-card .step-number{
+width:60px;
+padding:10px;
+background:#B40018;
+color:white;
+text-align:center;
+border-radius:5px;
+font-weight:bold;
+font-size:30px;
+box-shadow:0px 0px 7px -1px black;
+}
+.loan-steps .step-card .step-name h3{
+font-weight:bold;
+padding:10px;
+color:white;
+}
+.loan-steps .step-discription{
+    padding:10px;
+    background:white;
+    border-radius:5px;
+    border-bottom:3px solid gray;
+    margin-top:25px;
+}
+.loan-steps  .curve{
+height:25px;
+width:25px;
+background:white;
+position: relative;
+top:-22px;
+left:10px;
+transform:rotate(40deg);
+}
+
+@keyframes step-animation1 {
+    0%{opacity: 0;}
+    100%{opacity: 1; background:#B40018;}
+}
+</style>
+
+<div class="container loan-steps " style="max-width:1350px;">
+    <div class="row">
+        <div class="col-sm-3 mt-1 mb-1">
+            <div class="step-card ">
+                <div class="step-number">1</div>
+                <div class="step-name"><h3>&nbsp;&nbsp;&nbsp;Check</h3></div>
+            </div>
+            <div class="step-discription">
+                <div class="curve"></div>
+                <p>Check Your Eligibility</p>
+            </div>
+        </div>
+        <div class="col-sm-3 mt-1 mb-1">
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <div class="step-name"><h3>&nbsp;&nbsp;&nbsp;Apply</h3></div>
+            </div>
+            <div class="step-discription">
+                <div class="curve"></div>
+                <p>Click On Apply Now</p>
+            </div>
+        </div>
+        <div class="col-sm-3 mt-1 mb-1">
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <div class="step-name"><h3>&nbsp;&nbsp;&nbsp;Fill</h3></div>
+            </div>
+            <div class="step-discription">
+                <div class="curve"></div>
+                <p>Fill In Personal And Financial Details</p>
+            </div>
+        </div>
+        <div class="col-sm-3 mt-1 mb-1">
+            <div class="step-card">
+                <div class="step-number">4</div>
+                <div class="step-name"><h3>&nbsp;&nbsp;&nbsp;Submit</h3></div>
+            </div>
+            <div class="step-discription">
+                <div class="curve"></div>
+                <p>Submit Application</p>
+            </div>
+        </div>
+    </div>
+</div>

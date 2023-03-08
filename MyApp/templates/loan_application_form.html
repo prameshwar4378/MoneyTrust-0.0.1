@@ -1,3 +1,4 @@
+{% load crispy_forms_tags %}
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
@@ -50,120 +51,118 @@
 
             <div class="col-sm-4" style="margin:10px;">
             </div>
-
         </div>
     </div>
+
     <div class="container">
         <div class="row" style="padding:20px;">
             <div class="col-sm-4 left-img">
-                    <img src="{% static 'img/registration-form.png' %}" alt="" style="width:100%">
+                <img src="{% static 'img/registration-form.png' %}" alt="" style="width:100%">
             </div>
             <div class="col-sm-8  ">
+                <form action="" method="POST">{% csrf_token %}
+                    <h3 class="alert alert-info text-center">Loan Application Form</h3>
 
-                <h3 class="alert alert-info text-center">Loan Application Form</h3>
-
-                <div class="row">
-                    <div class="col-sm-6">
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text" id="basic-addon1"><i class="fa fa-user"></i></span>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1"><i class="fa fa-user"></i></span>
+                                </div>
+                                {{fm.first_name}}
                             </div>
-                            <input type="text" class="form-control" placeholder="First Name" aria-label="Username"
-                                aria-describedby="basic-addon1">
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1"><i class="fa fa-user"></i></span>
+                                </div>
+                                {{fm.last_name}}
+                            </div>
                         </div>
                     </div>
-                    <div class="col-sm-6">
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text" id="basic-addon1"><i class="fa fa-user"></i></span>
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1"><i class="fa fa-map-marker"
+                                            aria-hidden="true"></i></span>
+                                </div>
+                                {{fm.pin_code}}
                             </div>
-                            <input type="text" class="form-control" placeholder="Last Name" aria-label="Username"
-                                aria-describedby="basic-addon1">
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1"><i class="fa fa-phone"></i></span>
+                                </div>
+                                {{fm.mobile}}
+                            </div>
                         </div>
                     </div>
-                </div>
 
-
-                <div class="row">
-                    <div class="col-sm-6">
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text" id="basic-addon1"><i class="fa fa-map-marker"
-                                        aria-hidden="true"></i></span>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1"><i class="fa fa-user"></i></span>
+                                </div>
+                                {{fm.emp_type}}
                             </div>
-                            <input type="Number" class="form-control" placeholder="Pin Code" aria-label="Username"
-                                aria-describedby="basic-addon1">
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1"><b>&#8377;</b></span>
+                                </div>
+                                {{fm.loan_amount}}
+                            </div>
                         </div>
                     </div>
-                    <div class="col-sm-6">
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text" id="basic-addon1"><b>&#8377;</b></span>
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="input-group mb-6">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1"><i class="fa fa-university"
+                                            aria-hidden="true"></i></span>
+                                </div>
+                                {{fm.salary_received}}
                             </div>
-                            <input type="Number" class="form-control" placeholder="Monthly Income" aria-label="Username"
-                                aria-describedby="basic-addon1">
+                        </div>
+                        
+                        <div class="col-sm-6">
+                            <div class="input-group mb-6">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1"><i class="fa fa-university"
+                                            aria-hidden="true"></i></span>
+                                </div>
+                                {{fm.income}}
+                            </div>
                         </div>
                     </div>
-                </div>
 
-
-                <div class="row">
-                    <div class="col-sm-6">
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text" id="basic-addon1"><i class="fa fa-user"></i></span>
-                            </div>
-                            <select name="" id="" class="form-control" aria-label="Username"
-                                aria-describedby="basic-addon1">
-                                <option value="">--- Select Emp Type ---</option>
-                                <option value="">Salaried</option>
-                                <option value="">Self-employed</option>
-                                <option value="">Business Owner</option>
-                                <option value="">Other</option>
-                            </select>
+                    <div class="row text-center mt-4">
+                        <div class="col-sm-12">
+                            <button class="btn btn-danger">Submit</button>
                         </div>
                     </div>
-                    <div class="col-sm-6">
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text" id="basic-addon1"><b>&#8377;</b></span>
-                            </div>
-                            <input type="Number" class="form-control" placeholder="Loan Amount" aria-label="Username"
-                                aria-describedby="basic-addon1">
-                        </div>
-                    </div>
-                </div>
-
-
-
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div class="input-group mb-6">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text" id="basic-addon1"><i class="fa fa-university"
-                                        aria-hidden="true"></i></span>
-                            </div>
-                            <select name="" id="" class="form-control" aria-label="Username"
-                                aria-describedby="basic-addon1">
-                                <option value="">---Salary Received ---</option>
-                                <option value="">Bank Transfer</option>
-                                <option value="">Cash</option>
-                                <option value="">Chaque</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row text-center mt-4">
-                    <div class="col-sm-12">
-                        <input type="submit" value="Submit" class="btn btn-danger">
-                    </div>
-                </div>
-
+                </form>
 
             </div>
         </div>
     </div>
 </body>
+    
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script>
+  {% for msg in messages %}
+  swal("Done", "{{msg}}", "success");
+{% endfor %}
+</script>
+
 
 </html>

@@ -292,13 +292,13 @@ background-color: #B40018;
 
 
 <!-- Servicess Start -->
-<div class="container service-cards pt-3 pb-3">
+<div class="container service-cards pt-3 pb-3"  >
     <div class="text-center">
         <h1 style="">Loan Services</h1>
     </div>
 
     <div class="row">
-        <div class="col-md">
+        <div class="col-md"  data-aos="fade-right" data-aos-easing="linear"  data-aos-delay="100" data-aos-duration="1000">
             <div class="flip-card" onclick="personal_loan_calculator()" >
 
                 <div class="flip-card-inner">
@@ -315,7 +315,7 @@ background-color: #B40018;
                 </div>
             </div>
         </div>
-        <div class="col-md">
+        <div class="col-md"  data-aos="fade-left" data-aos-easing="linear"  data-aos-delay="100" data-aos-duration="1000">
             <div class="flip-card" onclick="business_loan_calculator()">
                 <div class="flip-card-inner">
                     <div class="flip-card-front" id="business_loan_flip_card">
@@ -326,7 +326,9 @@ background-color: #B40018;
                         <center><span style="font-size:16px;">Business Loan</span> </center>
                         <div style="width:90%; margin:10px;border:1px solid gray;"></div>
                         Business Vintage > 3years <br>
-                        Business Vintage < 3years </div> </div> </div> </div> <div class="col-md">
+                        Business Vintage < 3years </div> </div> </div> </div>
+                        
+                        <div class="col-md"  data-aos="fade-right" data-aos-easing="linear"  data-aos-delay="100" data-aos-duration="1000">
                             <div class="flip-card" onclick="doctor_loan_calculator()">
                                 <div class="flip-card-inner">
                                     <div class="flip-card-front" id="doctor_loan_flip_card">
@@ -343,7 +345,7 @@ background-color: #B40018;
                     </div>
 
 
-                    <div class="col-md">
+                    <div class="col-md"  data-aos="fade-left" data-aos-easing="linear"  data-aos-delay="100" data-aos-duration="1000">
                         <div class="flip-card" onclick="home_loan_calculator()">
                             <div class="flip-card-inner">
                                 <div class="flip-card-front" id="home_loan_flip_card">
@@ -359,7 +361,7 @@ background-color: #B40018;
                         </div>
                     </div>
 
-                    <div class="col-md">
+                    <div class="col-md"  data-aos="fade-right" data-aos-easing="linear"  data-aos-delay="100" data-aos-duration="1000">
                         <div class="flip-card" onclick="car_loan_calculator()">
                             <div class="flip-card-inner">
                                 <div class="flip-card-front" id="car_loan_flip_card">
@@ -519,7 +521,7 @@ background-color: #B40018;
 
                         <a href="{% url 'loan_application_form' %}" class="mt-2 btn btn-danger">Apply
                             now</a>
-                        <a href="#" class="mt-2 text-danger ml-3"
+                        <a href="{% url 'home_loan_overview' %}" class="mt-2 text-danger ml-3"
                             style="vertical-align:bottom;text-decoration:none;">Read More</a>
                     </div>
                 </div>
@@ -585,7 +587,7 @@ background-color: #B40018;
 
                         <a href="{% url 'loan_application_form' %}" class="mt-2 btn btn-danger">Apply
                             now</a>
-                        <a href="#" class="mt-2 text-danger ml-3"
+                        <a href="{% url 'personal_loan_overview' %}" class="mt-2 text-danger ml-3"
                             style="vertical-align:bottom;text-decoration:none;">Read More</a>
                     </div>
                 </div>
@@ -651,7 +653,7 @@ background-color: #B40018;
 
                         <a href="{% url 'loan_application_form' %}" class="mt-2 btn btn-danger">Apply
                             now</a>
-                        <a href="#" class="mt-2 text-danger ml-3"
+                        <a href="{% url 'business_loan_overview' %}" class="mt-2 text-danger ml-3"
                             style="vertical-align:bottom;text-decoration:none;">Read More</a>
                     </div>
                 </div>
@@ -783,7 +785,7 @@ background-color: #B40018;
 
                         <a href="{% url 'loan_application_form' %}" class="mt-2 btn btn-danger">Apply
                             now</a>
-                        <a href="#" class="mt-2 text-danger ml-3"
+                        <a href="car_loan_overview" class="mt-2 text-danger ml-3"
                             style="vertical-align:bottom;text-decoration:none;">Read More</a>
                     </div>
                 </div>
@@ -852,7 +854,7 @@ background-color: #B40018;
 
                         <a href="{% url 'loan_application_form' %}" class="mt-2 btn btn-danger">Apply
                             now</a>
-                        <a href="#" class="mt-2 text-danger ml-3"
+                        <a href="{% url 'personal_loan_overview' %}" class="mt-2 text-danger ml-3"
                             style="vertical-align:bottom;text-decoration:none;">Read More</a>
                     </div>
                 </div>
@@ -1285,7 +1287,7 @@ background-color: #B40018;
                                         <h5 class="btn btn-danger mt-2">Submit</h5>
                                     </div>
                                     <br>
-                                    <a href="{% url 'loan_application_form' %}" class="text-danger"
+                                    <a href="{% url 'become_partner' %}" class="text-danger"
                                         style="text-decoration:none;">Read more</a>
                                 </center>
                             </div>
@@ -1436,7 +1438,7 @@ background-color: #B40018;
                                         </select>
                                         <h5 class="btn btn-danger mt-2">Submit</h5>
                                     </div><br>
-                                    <a href="{% url 'loan_application_form' %}" class="text-danger"
+                                    <a href="#" class="text-danger"
                                         style="text-decoration:none;">Read more</a>
 
                                 </center>
@@ -1641,21 +1643,21 @@ background-color: #B40018;
 <div style="width: 100%; background-color:#ffa6a6 ; padding: 10px;">
     <div class="container ">
         <div class="row ">
-            <div class="col-md-3 col-sm-6">
-                <div class="counter">
+            <div class="col-md-3 col-sm-6" >
+                <div class="counter"  data-aos="flip-left" data-aos-easing="linear"  data-aos-delay="100" data-aos-duration="1000">
                     <div class="counter-content">
-                        <div class="counter-icon">
+                        <div class="counter-icon"  data-aos="fade-down" data-aos-easing="linear"  data-aos-delay="400" data-aos-duration="1000">
                             <i class="fa fa-heart"></i>
                         </div>
                         <h3>Happy Customer</h3>
                     </div>
-                    <span class="counter-value">3000+</span>
+                    <span class="counter-value" >3000+</span>
                 </div>
             </div>
             <div class="col-md-3 col-sm-6">
-                <div class="counter green">
+                <div class="counter green"  data-aos="flip-left" data-aos-easing="linear"  data-aos-delay="250" data-aos-duration="1000">
                     <div class="counter-content">
-                        <div class="counter-icon">
+                        <div class="counter-icon"  data-aos="fade-down" data-aos-easing="linear"  data-aos-delay="550" data-aos-duration="1000">
                             <i class="fa fa-users"></i>
                         </div>
                         <h3>Registred Members</h3>
@@ -1665,9 +1667,9 @@ background-color: #B40018;
             </div>
 
             <div class="col-md-3 col-sm-6">
-                <div class="counter">
+                <div class="counter"  data-aos="flip-left" data-aos-easing="linear"  data-aos-delay="400" data-aos-duration="1000">
                     <div class="counter-content">
-                        <div class="counter-icon">
+                        <div class="counter-icon"  data-aos="fade-down" data-aos-easing="linear"  data-aos-delay="700" data-aos-duration="1000">
                             <i class="fa fa-clock"></i>
                         </div>
                         <h3>Service</h3>
@@ -1676,9 +1678,9 @@ background-color: #B40018;
                 </div>
             </div>
             <div class="col-md-3 col-sm-6">
-                <div class="counter green">
+                <div class="counter green"  data-aos="flip-left" data-aos-easing="linear"  data-aos-delay="550" data-aos-duration="1000">
                     <div class="counter-content">
-                        <div class="counter-icon">
+                        <div class="counter-icon"  data-aos="fade-down" data-aos-easing="linear"  data-aos-delay="850" data-aos-duration="1000">
                             <i class="fa fa-user-plus   "></i>
                         </div>
                         <h3>Partners</h3>
@@ -1754,7 +1756,7 @@ background-color: #B40018;
 
 
     <!-- ======= Call To Action Section ======= -->
-    <section id="call-to-action" class="call-to-action">
+    <section id="call-to-action" class="call-to-action"  data-aos="zoom-in" data-aos-easing="linear"  data-aos-delay="100" data-aos-duration="1000">
 
         <div class="container text-center " data-aos="zoom-out" style="max-width:100%;"><br><br>
           <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox play-btn " style="left:42%;top:10%"></a>
@@ -1770,14 +1772,14 @@ background-color: #B40018;
 
 <!-- Blog Start -->
 <div class="blog">
-    <div class="container ">
+    <div class="container "  data-aos="zoom-in" data-aos-easing="linear"  data-aos-delay="100" data-aos-duration="1000">
         <div class="titlepage text-center ">
             <h1>Letest Blog</h1>
             <p class="">Blog related description</p><br>
         </div>
 
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-6" >
                 <div class="blog-item">
                     <div class="blog-img">
                         <img src="{% static 'img/blog-1.jpg' %}" alt="Blog">
@@ -1797,7 +1799,7 @@ background-color: #B40018;
                     </div>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6" >
                 <div class="blog-item">
                     <div class="blog-img">
                         <img src="{% static 'img/blog-2.jpg' %}" alt="Blog">
@@ -1972,6 +1974,7 @@ background-color: #B40018;
         })
     });
 </script>
+ 
  
 
 <!--Code for play Button -->
@@ -2227,5 +2230,12 @@ const glightbox = GLightbox({
 
 
 
+    <!-- scrolling animation    -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init(); {
+            duration: 2000;
+        }
+    </script>
 
 {% endblock content %}
