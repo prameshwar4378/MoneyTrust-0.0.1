@@ -120,7 +120,7 @@ top:50px;
 }
 
 .hero-footer{
-  padding:10px;
+padding:10px;
 }
 .hero-footer .container{
 border-radius:15px;
@@ -140,24 +140,27 @@ border-right:5px solid #B40018;
 
 @media screen and (max-width: 770px) {
 
-  .hero-footer .container{
-    border-radius:15px;
-    box-shadow:0px 0px 10px;
-    position:relative;
-    top: 0px;
-    z-index:1;
-    border:2px solid white;
-    padding:20px;
-    background:white;
-    margin-bottom:0px;
-    }
-    
-    .hero-footer .container .left{
-    border-right:none;
-    margin-bottom:10px;
-    }
-    
+.hero-footer .container{
+border-radius:15px;
+box-shadow:0px 0px 10px;
+position:relative;
+top: 0px;
+z-index:1;
+border:2px solid white;
+padding:20px;
+background:white;
+margin-bottom:0px;
 }
+
+.hero-footer .container .left{
+border-right:none;
+margin-bottom:10px;
+}
+
+}
+
+
+
 
 
 /*--------------------------------------------------------------
@@ -402,97 +405,97 @@ font-size:35px;
 # difirent_loan_type Section
 --------------------------------------------------------------*/
 .difirent_loan_type .nav-tabs {
-  border: 0;
+border: 0;
 }
 
 .difirent_loan_type .nav-link {
-  border: 0;
-  padding: 25px 20px;
-  color: var(--color-secondary);
-  box-shadow: 5px 5px 25px rgba(var(--color-secondary-rgb), 0.5);
-  border-radius: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  transition: 0s;
-  cursor: pointer;
-  height: 100%;
+border: 0;
+padding: 25px 20px;
+color: var(--color-secondary);
+box-shadow: 5px 5px 25px rgba(var(--color-secondary-rgb), 0.5);
+border-radius: 0;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+transition: 0s;
+cursor: pointer;
+height: 100%;
 }
 
 .difirent_loan_type .nav-link fa-solid {
-  font-size: 32px;
-  line-height: 0;
+font-size: 32px;
+line-height: 0;
 }
 
 .difirent_loan_type .nav-link h4 {
-  font-size: 20px;
-  font-weight: 600;
-  margin: 10px 0 0 0;
-  color: var(--color-secondary);
+font-size: 20px;
+font-weight: 600;
+margin: 10px 0 0 0;
+color: var(--color-secondary);
 }
 
 .difirent_loan_type .nav-link:hover {
-  color: var(--color-primary);
+color: var(--color-primary);
 }
 
 .difirent_loan_type .nav-link.active {
-  transition: 0.3s;
-  background: #DF0328;
-  border-color: var(--color-primary);
-  border-radius:5px;
+transition: 0.3s;
+background: #DF0328;
+border-color: var(--color-primary);
+border-radius:5px;
 }
 
 .difirent_loan_type .nav-link.active h6 {
-  color: var(--color-white);
+color: var(--color-white);
 }
 
 .difirent_loan_type .nav-link.active i {
-  color: var(--color-white) !important;
+color: var(--color-white) !important;
 }
 
 .difirent_loan_type .tab-content {
-  margin-top: 30px;
+margin-top: 30px;
 }
 
 .difirent_loan_type .tab-pane.active {
-  -webkit-animation: fadeIn 0.5s ease-out;
-  animation: fadeIn 0.5s ease-out;
+-webkit-animation: fadeIn 0.5s ease-out;
+animation: fadeIn 0.5s ease-out;
 }
 
 .difirent_loan_type .tab-pane h3 {
-  font-weight: 600;
-  font-size: 36px;
-  color: var(--color-secondary);
+font-weight: 600;
+font-size: 36px;
+color: var(--color-secondary);
 }
 
 .difirent_loan_type .tab-pane ul {
-  list-style: none;
-  padding: 0;
+list-style: none;
+padding: 0;
 }
 
 .difirent_loan_type .tab-pane ul li {
-  padding-bottom: 10px;
+padding-bottom: 10px;
 }
 
 .difirent_loan_type .tab-pane ul i {
-  font-size: 24px;
-  margin-right: 4px;
-  color: var(--color-primary);
+font-size: 24px;
+margin-right: 4px;
+color: var(--color-primary);
 }
 
 .difirent_loan_type .tab-pane p:last-child {
-  margin-bottom: 0;
+margin-bottom: 0;
 }
 
 @keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
+0% {
+opacity: 0;
+}
 
-  100% {
-    opacity: 1;
-  }
+100% {
+opacity: 1;
+}
 }
 
 
@@ -511,9 +514,9 @@ font-size:35px;
         style=" color: #07043f; background: #fff;"> <span></span> Overview </a>
       <a href="{% url 'personal_loan_eligibility_criteria' %}" data-aos="fade-down" data-aos-delay="150"
         data-aos-duration="1000"> <span></span> Eligibility Criteria </a>
-    <!--<a href="#" data-aos="fade-down" data-aos-delay="150" data-aos-duration="1000" data-toggle="modal"
+      <!--<a href="#" data-aos="fade-down" data-aos-delay="150" data-aos-duration="1000" data-toggle="modal"
         data-target="#exampleModal">
-        <span></span> EMI Calculator </a>-->  
+        <span></span> EMI Calculator </a>-->
       <a href="{% url 'personal_loan_interest_rate_and_fees' %}" data-aos="fade-down" data-aos-delay="150"
         data-aos-duration="1000"> <span></span> Interest Rate & Processing Fees </a>
       <a href="{% url 'personal_loan_document_required' %}" data-aos="fade-down" data-aos-delay="150"
@@ -537,34 +540,77 @@ font-size:35px;
   <div class="container">
     <div class="row text-center">
       <div class="col-sm-12 hero-content">
-        <h1 class=" "  data-aos="zoom-in" data-aos-easing="linear"  data-aos-delay="100" data-aos-duration="1000">Personal Loan</h1>
-        <p class="text-light"  data-aos="zoom-in" data-aos-easing="linear"  data-aos-delay="100" data-aos-duration="1000">Charity beginner for your little dreams</p>
-        <a href="#" class="btn btn-danger px-5 py-2 mt-4"  data-aos="fade-down" data-aos-easing="linear"  data-aos-delay="400" data-aos-duration="1000">Apply Now</a>
+        <h1 class=" " data-aos="zoom-in" data-aos-easing="linear" data-aos-delay="100" data-aos-duration="1000">Personal
+          Loan</h1>
+        <p class="text-light" data-aos="zoom-in" data-aos-easing="linear" data-aos-delay="100" data-aos-duration="1000">
+          Charity beginner for your little dreams</p>
+        <a href="#" class="btn btn-danger px-5 py-2 mt-4" data-aos="fade-down" data-aos-easing="linear"
+          data-aos-delay="400" data-aos-duration="1000">Apply Now</a>
       </div>
+    </div>
 
+  </div>
+
+  <div class="hero-banner-icon-section">
+    <div class="hero-banner-icon" data-aos="zoom-in" data-aos-easing="linear"  data-aos-delay="800" data-aos-duration="1000">
+      <div class="icon contact">
+        <div class="tooltip  text-center" style="width:170px;">
+          <a href="{% url 'contact_us' %}" class="text-light"> Contact Now</a>
+        </div>
+        <a href="{% url 'contact_us' %}">
+          <span><i class="fa-solid fa-phone-volume"></i></span>
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-banner-icon" data-aos="zoom-in" data-aos-easing="linear"  data-aos-delay="1000" data-aos-duration="1000">
+      <div class="icon whats_app">
+        <div class="tooltip text-center" style="width:170px;">
+          <a href="#" class="text-light"> Message us</a>
+        </div>
+        <a href="#">
+          <span><i class="fa-solid fa-message"></i></span>
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-banner-icon" data-aos="zoom-in" data-aos-easing="linear"  data-aos-delay="1200" data-aos-duration="1000">
+      <div class="icon partner">
+        <div class="tooltip text-center" style="width:170px;">
+          <a href="{% url 'become_partner' %}" class="text-light"> Partner</a>
+        </div>
+        <a href="{% url 'become_partner' %}">
+          <span><i class="fa-solid fa-handshake"></i></span>
+        </a>
+      </div>
     </div>
   </div>
+
 </section>
 
 <section class="hero-footer">
-  <div class="container"  data-aos="zoom-in" data-aos-easing="linear"  data-aos-delay="100" data-aos-duration="1000">
+  <div class="container" data-aos="zoom-in" data-aos-easing="linear" data-aos-delay="100" data-aos-duration="1000">
     <div class="row">
       <div class="col-sm-6 left">
         <img src="{% static 'img/personal_loan/header_overview.jpg' %}" alt="" style="width:100%">
       </div>
       <div class="col-sm-6 right">
-        <p class="text-justify">By virtue of being an unsecured form of credit, you can avail a Personal Loan without pledging any collateral
-          with minimal documentation, and easy eligibility criteria. This kind of instant loan does not have any end-usage
+        <p class="text-justify">By virtue of being an unsecured form of credit, you can avail a Personal Loan without
+          pledging any collateral
+          with minimal documentation, and easy eligibility criteria. This kind of instant loan does not have any
+          end-usage
           restrictions, which means you could finance a royal wedding, a trip to your dream destination, renovate your
           home, deal with a medical emergency, or finance the expansion of your business.</p>
-          <p class="text-justify">MoneyTrust will connect you to a lending partner of your choice, and our team will take you through the process
-            quickly with ease. Choose from our catalog of Personal Loan Partners of Banks and NBFCs according to your needs
-            and convenience for rapid approval and swift disbursal of your personal loan.</p>
+        <p class="text-justify">MoneyTrust will connect you to a lending partner of your choice, and our team will take
+          you through the process
+          quickly with ease. Choose from our catalog of Personal Loan Partners of Banks and NBFCs according to your
+          needs
+          and convenience for rapid approval and swift disbursal of your personal loan.</p>
       </div>
     </div>
   </div>
 </section>
- 
+
 <!-- End Hero -->
 
 
@@ -573,54 +619,61 @@ Types of personal loan
 =====================-->
 
 <section id="difirent_loan_type" class="difirent_loan_type mt-3">
-  <div class="container" data-aos="fade-up"  style="max-width:1400px;">
+  <div class="container" data-aos="fade-up" style="max-width:1400px;">
     <div class="row">
       <div class="col-sm-12 text-center">
         <h2>Different Types of Personal Loans for your Special Needs</h2>
-        <p >Our lending partners will be more than pleased to offer you a personal loan for your urgent upfront needs. At MoneyTrusts, you can opt for online personal loans or loans offline when you need money for expenses</p>
+        <p>Our lending partners will be more than pleased to offer you a personal loan for your urgent upfront needs. At
+          MoneyTrusts, you can opt for online personal loans or loans offline when you need money for expenses</p>
       </div>
     </div>
 
     <ul class="nav nav-tabs row gy-4 d-flex">
 
-      <li class="nav-item col-6 col-md-4 col-lg-2"  data-aos="zoom-in" data-aos-easing="linear"  data-aos-delay="200" data-aos-duration="1000">
+      <li class="nav-item col-6 col-md-4 col-lg-2" data-aos="zoom-in" data-aos-easing="linear" data-aos-delay="200"
+        data-aos-duration="1000">
         <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#tab-1">
           <i class="fa-solid fa-graduation-cap color-cyan"></i>
           <h6 class="mt-4">Education</h6>
         </a>
       </li><!-- End Tab 1 Nav -->
 
-      <li class="nav-item col-6 col-md-4 col-lg-2"  data-aos="zoom-in" data-aos-easing="linear"  data-aos-delay="200" data-aos-duration="1000">
+      <li class="nav-item col-6 col-md-4 col-lg-2" data-aos="zoom-in" data-aos-easing="linear" data-aos-delay="200"
+        data-aos-duration="1000">
         <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-2">
           <i class="fa-solid fa-notes-medical color-indigo"></i>
           <h6 class="mt-4">Medical Emergency</h6>
         </a>
       </li><!-- End Tab 2 Nav -->
 
-      <li class="nav-item col-6 col-md-4 col-lg-2"  data-aos="zoom-in" data-aos-easing="linear"  data-aos-delay="200" data-aos-duration="1000">
+      <li class="nav-item col-6 col-md-4 col-lg-2" data-aos="zoom-in" data-aos-easing="linear" data-aos-delay="200"
+        data-aos-duration="1000">
         <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-3">
           <i class="fa-solid fa-ring color-teal"></i>
           <h6 class="mt-4">Marriage</h6>
         </a>
       </li><!-- End Tab 3 Nav -->
 
-      <li class="nav-item col-6 col-md-4 col-lg-2"  data-aos="zoom-in" data-aos-easing="linear"  data-aos-delay="200" data-aos-duration="1000">
+      <li class="nav-item col-6 col-md-4 col-lg-2" data-aos="zoom-in" data-aos-easing="linear" data-aos-delay="200"
+        data-aos-duration="1000">
         <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-4">
           <i class="fa-solid fa-plane color-red"></i>
           <h6 class="mt-4">Travel</h6>
         </a>
       </li><!-- End Tab 4 Nav -->
 
-      <li class="nav-item col-6 col-md-4 col-lg-2"  data-aos="zoom-in" data-aos-easing="linear"  data-aos-delay="200" data-aos-duration="1000">
+      <li class="nav-item col-6 col-md-4 col-lg-2" data-aos="zoom-in" data-aos-easing="linear" data-aos-delay="200"
+        data-aos-duration="1000">
         <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-5">
           <i class="fa-solid fa-house-circle-check color-blue"></i>
           <h6 class="mt-4">Home Renovation</h6>
         </a>
       </li><!-- End Tab 5 Nav -->
 
-      <li class="nav-item col-6 col-md-4 col-lg-2"  data-aos="zoom-in" data-aos-easing="linear"  data-aos-delay="200" data-aos-duration="1000">
+      <li class="nav-item col-6 col-md-4 col-lg-2" data-aos="zoom-in" data-aos-easing="linear" data-aos-delay="200"
+        data-aos-duration="1000">
         <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-6">
-          <i class="fa-solid fa-star-of-david color-orange"></i> 
+          <i class="fa-solid fa-star-of-david color-orange"></i>
           <h6 class="mt-4">Festival</h6>
         </a>
       </li><!-- End Tab 6 Nav -->
@@ -634,16 +687,26 @@ Types of personal loan
           <div class="col-lg-8 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="100">
             <h3>Education Loan</h3>
             <p class="fst-italic text-justify">
-              Getting a degree or honing your skills demand a considerable amount of money especially when you aim for overseas. While the cost of education continues to soar, it is imperative to plan your finances ahead of admission. Education is a tool to change the world and money must not be an obstacle to knowledge. With MoneyTrusts, fulfil your dream of studying in a world-class university in India or overseas. Once your application in the college or university you envisioned gets accepted, MoneyTrusts assists you in acquiring the right Personal Loan at the best available rate to fund your dream. 
+              Getting a degree or honing your skills demand a considerable amount of money especially when you aim for
+              overseas. While the cost of education continues to soar, it is imperative to plan your finances ahead of
+              admission. Education is a tool to change the world and money must not be an obstacle to knowledge. With
+              MoneyTrusts, fulfil your dream of studying in a world-class university in India or overseas. Once your
+              application in the college or university you envisioned gets accepted, MoneyTrusts assists you in
+              acquiring the right Personal Loan at the best available rate to fund your dream.
             </p>
             <ul>
-              <li><i class="fa fa-arrow-circle-right text-danger" style="font-size:17px;"></i>&nbsp;&nbsp;Up to Rs. 25 lakhs Instant Education Loan</li>
-              <li><i class="fa fa-arrow-circle-right text-danger" style="font-size:17px;"></i>&nbsp;&nbsp;Up to 72 Months Repayment Period </li>
-              <li><i class="fa fa-arrow-circle-right text-danger" style="font-size:17px;"></i>&nbsp;&nbsp;Flexible  EMIs</li>
-              <li><i class="fa fa-arrow-circle-right text-danger" style="font-size:17px;"></i>&nbsp;&nbsp;Attractive Interest Rates</li>
-              <li><i class="fa fa-arrow-circle-right text-danger" style="font-size:17px;"></i>&nbsp;&nbsp;Easy documentation</li>
+              <li><i class="fa fa-arrow-circle-right text-danger" style="font-size:17px;"></i>&nbsp;&nbsp;Up to Rs. 25
+                lakhs Instant Education Loan</li>
+              <li><i class="fa fa-arrow-circle-right text-danger" style="font-size:17px;"></i>&nbsp;&nbsp;Up to 72
+                Months Repayment Period </li>
+              <li><i class="fa fa-arrow-circle-right text-danger" style="font-size:17px;"></i>&nbsp;&nbsp;Flexible EMIs
+              </li>
+              <li><i class="fa fa-arrow-circle-right text-danger" style="font-size:17px;"></i>&nbsp;&nbsp;Attractive
+                Interest Rates</li>
+              <li><i class="fa fa-arrow-circle-right text-danger" style="font-size:17px;"></i>&nbsp;&nbsp;Easy
+                documentation</li>
             </ul>
-            
+
           </div>
           <div class="col-lg-4 order-1 order-lg-2 text-center" data-aos="fade-up" data-aos-delay="200">
             <img src="{% static 'img/personal_loan/education.jpg' %}" alt="" class="img-fluid">
@@ -656,18 +719,29 @@ Types of personal loan
           <div class="col-lg-8 order-2 order-lg-1">
             <h3>Medical Emergency Loan</h3>
             <p class="fst-italic text-justify">
-              A medical emergency can knock on your door when you least expect it. Unfortunately, most of us aren't prepared enough and face the turmoil it brings along. No warning situation can land you in trouble as these unforeseen expenses are unthought and unplanned. MoneyTrusts stands tall with you in need of an hour. With multiple Personal loan options and quick disbursals, you can claim a hassle-free loan to attend your contingency.
+              A medical emergency can knock on your door when you least expect it. Unfortunately, most of us aren't
+              prepared enough and face the turmoil it brings along. No warning situation can land you in trouble as
+              these unforeseen expenses are unthought and unplanned. MoneyTrusts stands tall with you in need of an
+              hour. With multiple Personal loan options and quick disbursals, you can claim a hassle-free loan to attend
+              your contingency.
             </p>
             <p class="fst-italic text-justify">
-              Deal with your medical expenses without having to pledge any asset or investment as collateral. Experts at MoneyTrusts provide you with the right guidance ensuring that you receive the personal loan amount for your emergency at the most competitive rate.
+              Deal with your medical expenses without having to pledge any asset or investment as collateral. Experts at
+              MoneyTrusts provide you with the right guidance ensuring that you receive the personal loan amount for
+              your emergency at the most competitive rate.
             </p>
             <ul>
-              <li><i class="fa fa-arrow-circle-right text-danger" style="font-size:17px;"></i>&nbsp;&nbsp;Up to Rs. 25 lakhs Medical Emergency Loan</li>
-              <li><i class="fa fa-arrow-circle-right text-danger" style="font-size:17px;"></i>&nbsp;&nbsp;Up to 72 Months Repayment Period </li>
-              <li><i class="fa fa-arrow-circle-right text-danger" style="font-size:17px;"></i>&nbsp;&nbsp;Flexible  EMIs</li>
-              <li><i class="fa fa-arrow-circle-right text-danger" style="font-size:17px;"></i>&nbsp;&nbsp;Attractive Interest Rates</li>
-              <li><i class="fa fa-arrow-circle-right text-danger" style="font-size:17px;"></i>&nbsp;&nbsp;Easy documentation</li>
-          </ul>
+              <li><i class="fa fa-arrow-circle-right text-danger" style="font-size:17px;"></i>&nbsp;&nbsp;Up to Rs. 25
+                lakhs Medical Emergency Loan</li>
+              <li><i class="fa fa-arrow-circle-right text-danger" style="font-size:17px;"></i>&nbsp;&nbsp;Up to 72
+                Months Repayment Period </li>
+              <li><i class="fa fa-arrow-circle-right text-danger" style="font-size:17px;"></i>&nbsp;&nbsp;Flexible EMIs
+              </li>
+              <li><i class="fa fa-arrow-circle-right text-danger" style="font-size:17px;"></i>&nbsp;&nbsp;Attractive
+                Interest Rates</li>
+              <li><i class="fa fa-arrow-circle-right text-danger" style="font-size:17px;"></i>&nbsp;&nbsp;Easy
+                documentation</li>
+            </ul>
           </div>
           <div class="col-lg-4 order-1 order-lg-2 text-center">
             <img src="{% static 'img/personal_loan/medical.jpg' %}" alt="" class="img-fluid">
@@ -680,16 +754,25 @@ Types of personal loan
           <div class="col-lg-8 order-2 order-lg-1">
             <h3>Marriage Loan</h3>
             <p class="text-justify">
-              Have you placed your wedding in the shopping cart with exquisite location and dreamy décor? If yes then you need not worry about ready funds to drive your wedding. MoneyTrusts Personal Loan is tailor-made to host all your financial needs. A picture-perfect wedding demands expenses of various kinds including- caterer, venue, décor and more. To fund all your wedding needs, MoneyTrusts assists you in meeting the right lender and borrow right!
+              Have you placed your wedding in the shopping cart with exquisite location and dreamy décor? If yes then
+              you need not worry about ready funds to drive your wedding. MoneyTrusts Personal Loan is tailor-made to
+              host all your financial needs. A picture-perfect wedding demands expenses of various kinds including-
+              caterer, venue, décor and more. To fund all your wedding needs, MoneyTrusts assists you in meeting the
+              right lender and borrow right!
             </p>
             <ul>
-              <li><i class="fa fa-arrow-circle-right text-danger" style="font-size:17px;"></i>&nbsp;&nbsp;Up to Rs. 25 lakhs Instant Marriage Loan</li>
-              <li><i class="fa fa-arrow-circle-right text-danger" style="font-size:17px;"></i>&nbsp;&nbsp;Up to 72 Months Repayment Period </li>
-              <li><i class="fa fa-arrow-circle-right text-danger" style="font-size:17px;"></i>&nbsp;&nbsp;Flexible  EMIs</li>
-              <li><i class="fa fa-arrow-circle-right text-danger" style="font-size:17px;"></i>&nbsp;&nbsp;Attractive Interest Rates</li>
-              <li><i class="fa fa-arrow-circle-right text-danger" style="font-size:17px;"></i>&nbsp;&nbsp;Easy documentation</li>
-          </ul>
-            
+              <li><i class="fa fa-arrow-circle-right text-danger" style="font-size:17px;"></i>&nbsp;&nbsp;Up to Rs. 25
+                lakhs Instant Marriage Loan</li>
+              <li><i class="fa fa-arrow-circle-right text-danger" style="font-size:17px;"></i>&nbsp;&nbsp;Up to 72
+                Months Repayment Period </li>
+              <li><i class="fa fa-arrow-circle-right text-danger" style="font-size:17px;"></i>&nbsp;&nbsp;Flexible EMIs
+              </li>
+              <li><i class="fa fa-arrow-circle-right text-danger" style="font-size:17px;"></i>&nbsp;&nbsp;Attractive
+                Interest Rates</li>
+              <li><i class="fa fa-arrow-circle-right text-danger" style="font-size:17px;"></i>&nbsp;&nbsp;Easy
+                documentation</li>
+            </ul>
+
           </div>
           <div class="col-lg-4 order-1 order-lg-2 text-center">
             <img src="{% static 'img/personal_loan/marriage.jpeg' %}" alt="" class="img-fluid">
@@ -702,15 +785,24 @@ Types of personal loan
           <div class="col-lg-8 order-2 order-lg-1">
             <h3>Travel Loan</h3>
             <p class="text-justify">
-              Has the global pandemic shelved all your travel plans to the snow-covered ranges, beautiful hills or dreamy beaches? Well, it's time to redeem and travel back! Get Set & Go to your dream destinations without worrying about your budget. Avail a holiday loan product to ease your travel and add good memories with us. MoneyTrusts offer you the best and helps you borrow right. A measure of budget, planning of dates and a holiday loan that fits the best is all you need to set some astounding travel goals.
+              Has the global pandemic shelved all your travel plans to the snow-covered ranges, beautiful hills or
+              dreamy beaches? Well, it's time to redeem and travel back! Get Set & Go to your dream destinations without
+              worrying about your budget. Avail a holiday loan product to ease your travel and add good memories with
+              us. MoneyTrusts offer you the best and helps you borrow right. A measure of budget, planning of dates and
+              a holiday loan that fits the best is all you need to set some astounding travel goals.
             </p>
             <ul>
-              <li><i class="fa fa-arrow-circle-right text-danger" style="font-size:17px;"></i>&nbsp;&nbsp;Up to Rs. 25 lakhs Instant Travel Loan</li>
-              <li><i class="fa fa-arrow-circle-right text-danger" style="font-size:17px;"></i>&nbsp;&nbsp;Up to 72 Months Repayment Period </li>
-              <li><i class="fa fa-arrow-circle-right text-danger" style="font-size:17px;"></i>&nbsp;&nbsp;Flexible  EMIs</li>
-              <li><i class="fa fa-arrow-circle-right text-danger" style="font-size:17px;"></i>&nbsp;&nbsp;Attractive Interest Rates</li>
-              <li><i class="fa fa-arrow-circle-right text-danger" style="font-size:17px;"></i>&nbsp;&nbsp;Easy documentation</li>
-          </ul>
+              <li><i class="fa fa-arrow-circle-right text-danger" style="font-size:17px;"></i>&nbsp;&nbsp;Up to Rs. 25
+                lakhs Instant Travel Loan</li>
+              <li><i class="fa fa-arrow-circle-right text-danger" style="font-size:17px;"></i>&nbsp;&nbsp;Up to 72
+                Months Repayment Period </li>
+              <li><i class="fa fa-arrow-circle-right text-danger" style="font-size:17px;"></i>&nbsp;&nbsp;Flexible EMIs
+              </li>
+              <li><i class="fa fa-arrow-circle-right text-danger" style="font-size:17px;"></i>&nbsp;&nbsp;Attractive
+                Interest Rates</li>
+              <li><i class="fa fa-arrow-circle-right text-danger" style="font-size:17px;"></i>&nbsp;&nbsp;Easy
+                documentation</li>
+            </ul>
           </div>
           <div class="col-lg-4 order-1 order-lg-2 text-center">
             <img src="{% static 'img/personal_loan/travel.jpeg' %}" alt="" class="img-fluid">
@@ -723,15 +815,22 @@ Types of personal loan
           <div class="col-lg-8 order-2 order-lg-1">
             <h3>Home Renovation Loan</h3>
             <p class="text-justify">
-              Feel like sprucing up your nest? Look around, maybe that age-old furniture, bathroom fittings or electricals around need some do-up. Home Renovation can cost you arm and a leg especially when changes are substantial. Take a Personal loan for a much-needed makeover to glam up your nest and hike up its worth.
+              Feel like sprucing up your nest? Look around, maybe that age-old furniture, bathroom fittings or
+              electricals around need some do-up. Home Renovation can cost you arm and a leg especially when changes are
+              substantial. Take a Personal loan for a much-needed makeover to glam up your nest and hike up its worth.
             </p>
-            
+
             <ul>
-              <li><i class="fa fa-arrow-circle-right text-danger" style="font-size:17px;"></i>&nbsp;&nbsp;Up to Rs. 25 lakhs Instant Home Renovation Loan</li>
-              <li><i class="fa fa-arrow-circle-right text-danger" style="font-size:17px;"></i>&nbsp;&nbsp;Up to 72 Months Repayment Period </li>
-              <li><i class="fa fa-arrow-circle-right text-danger" style="font-size:17px;"></i>&nbsp;&nbsp;Flexible  EMIs</li>
-              <li><i class="fa fa-arrow-circle-right text-danger" style="font-size:17px;"></i>&nbsp;&nbsp;Attractive Interest Rates</li>
-              <li><i class="fa fa-arrow-circle-right text-danger" style="font-size:17px;"></i>&nbsp;&nbsp;Easy documentation</li>
+              <li><i class="fa fa-arrow-circle-right text-danger" style="font-size:17px;"></i>&nbsp;&nbsp;Up to Rs. 25
+                lakhs Instant Home Renovation Loan</li>
+              <li><i class="fa fa-arrow-circle-right text-danger" style="font-size:17px;"></i>&nbsp;&nbsp;Up to 72
+                Months Repayment Period </li>
+              <li><i class="fa fa-arrow-circle-right text-danger" style="font-size:17px;"></i>&nbsp;&nbsp;Flexible EMIs
+              </li>
+              <li><i class="fa fa-arrow-circle-right text-danger" style="font-size:17px;"></i>&nbsp;&nbsp;Attractive
+                Interest Rates</li>
+              <li><i class="fa fa-arrow-circle-right text-danger" style="font-size:17px;"></i>&nbsp;&nbsp;Easy
+                documentation</li>
             </ul>
           </div>
           <div class="col-lg-4 order-1 order-lg-2 text-center">
@@ -745,15 +844,22 @@ Types of personal loan
           <div class="col-lg-8 order-2 order-lg-1">
             <h3>Festival Loan</h3>
             <p class="text-justify">
-              Bring the lights and grand celebrations & festivities in your home without worrying about your finances. Festival Loan product helps you celebrate your God, Hope & faith in a fulfilling way. Are you in a festive mood? Bring home joy and happiness with our Loan and make your festival bigger & brighter.
+              Bring the lights and grand celebrations & festivities in your home without worrying about your finances.
+              Festival Loan product helps you celebrate your God, Hope & faith in a fulfilling way. Are you in a festive
+              mood? Bring home joy and happiness with our Loan and make your festival bigger & brighter.
             </p>
-            
+
             <ul>
-              <li><i class="fa fa-arrow-circle-right text-danger" style="font-size:17px;"></i>&nbsp;&nbsp;Up to Rs. 25 lakhs Instant Festive Loan</li>
-              <li><i class="fa fa-arrow-circle-right text-danger" style="font-size:17px;"></i>&nbsp;&nbsp;Up to 72 Months Repayment Period </li>
-              <li><i class="fa fa-arrow-circle-right text-danger" style="font-size:17px;"></i>&nbsp;&nbsp;Flexible  EMIs</li>
-              <li><i class="fa fa-arrow-circle-right text-danger" style="font-size:17px;"></i>&nbsp;&nbsp;Attractive Interest Rates</li>
-              <li><i class="fa fa-arrow-circle-right text-danger" style="font-size:17px;"></i>&nbsp;&nbsp;Easy documentation</li>
+              <li><i class="fa fa-arrow-circle-right text-danger" style="font-size:17px;"></i>&nbsp;&nbsp;Up to Rs. 25
+                lakhs Instant Festive Loan</li>
+              <li><i class="fa fa-arrow-circle-right text-danger" style="font-size:17px;"></i>&nbsp;&nbsp;Up to 72
+                Months Repayment Period </li>
+              <li><i class="fa fa-arrow-circle-right text-danger" style="font-size:17px;"></i>&nbsp;&nbsp;Flexible EMIs
+              </li>
+              <li><i class="fa fa-arrow-circle-right text-danger" style="font-size:17px;"></i>&nbsp;&nbsp;Attractive
+                Interest Rates</li>
+              <li><i class="fa fa-arrow-circle-right text-danger" style="font-size:17px;"></i>&nbsp;&nbsp;Easy
+                documentation</li>
             </ul>
           </div>
           <div class="col-lg-4 order-1 order-lg-2 text-center">
@@ -854,7 +960,7 @@ Types of personal loan
   <div class="container">
     <div class="row">
       <div class="col-sm-12 text-center">
-        <h2>Why Trust MoneyTrusts</h2> 
+        <h2>Why Trust MoneyTrusts</h2>
       </div>
     </div>
   </div>
@@ -865,7 +971,8 @@ Types of personal loan
     <div class="work-experience-section px-3 px-lg-4">
       <div class="timeline" style="border-left:2px solid #D8D8D8;">
 
-        <div class="timeline-card timeline-card-primary card shadow-sm"  data-aos="fade-left"   data-aos-delay="100" data-aos-duration="1000">
+        <div class="timeline-card timeline-card-primary card shadow-sm" data-aos="fade-left" data-aos-delay="100"
+          data-aos-duration="1000">
           <div class="card-body">
             <div style="width:60px;">
               <i class="fa-solid fa-location-dot"></i>
@@ -873,13 +980,15 @@ Types of personal loan
             <div class="content">
               <div class="h5 mb-1">Easy Availability Across Maharashtra</div>
               <div>
-                <p class="text-justify">MoneyTrusts along with significant partner Banks extend Instant Online Personal Loan up to Rs. 25 lakhs to virtually all salaried individuals in Maharashtra.</p>
+                <p class="text-justify">MoneyTrusts along with significant partner Banks extend Instant Online Personal
+                  Loan up to Rs. 25 lakhs to virtually all salaried individuals in Maharashtra.</p>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="timeline-card timeline-card-primary card shadow-sm"  data-aos="fade-left"   data-aos-delay="100" data-aos-duration="1000">
+        <div class="timeline-card timeline-card-primary card shadow-sm" data-aos="fade-left" data-aos-delay="100"
+          data-aos-duration="1000">
           <div class="card-body">
             <div style="width:60px;">
               <i class="fa-solid fa-gauge-high"></i>
@@ -887,13 +996,16 @@ Types of personal loan
             <div class="content">
               <div class="h5 mb-1">High-Speed Process</div>
               <div>
-                <p class="text-justify">At MoneyTrusts, Adhaar based e-KYC speeds up the documentation process by eliminating physical paperwork. You can obtain a personal loan at the least financing costs within 24 to 48 hours.</p>
+                <p class="text-justify">At MoneyTrusts, Adhaar based e-KYC speeds up the documentation process by
+                  eliminating physical paperwork. You can obtain a personal loan at the least financing costs within 24
+                  to 48 hours.</p>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="timeline-card timeline-card-primary card shadow-sm"  data-aos="fade-left"   data-aos-delay="100" data-aos-duration="1000">
+        <div class="timeline-card timeline-card-primary card shadow-sm" data-aos="fade-left" data-aos-delay="100"
+          data-aos-duration="1000">
           <div class="card-body">
             <div style="width:60px;">
               <i class="fa-solid fa-tachograph-digital"></i>
@@ -901,13 +1013,17 @@ Types of personal loan
             <div class="content">
               <div class="h5 mb-1">MoneyTrusts Digital Resources Advantage</div>
               <div>
-                <p class="text-justify">You can think about loan costs, offers, and online services on our digital platform. Our online resources will direct you to settle on the right decision, and pick the right bank for your advance according to your financial plan and assumptions. You can pick the moneylender contrasting different key components of a credit like loan fee, tenure, processing fees, etc.</p>
+                <p class="text-justify">You can think about loan costs, offers, and online services on our digital
+                  platform. Our online resources will direct you to settle on the right decision, and pick the right
+                  bank for your advance according to your financial plan and assumptions. You can pick the moneylender
+                  contrasting different key components of a credit like loan fee, tenure, processing fees, etc.</p>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="timeline-card timeline-card-primary card shadow-sm"  data-aos="fade-left"   data-aos-delay="100" data-aos-duration="1000">
+        <div class="timeline-card timeline-card-primary card shadow-sm" data-aos="fade-left" data-aos-delay="100"
+          data-aos-duration="1000">
           <div class="card-body">
             <div style="width:60px;">
               <i class="fa-solid fa-user-tie"></i>
@@ -915,14 +1031,16 @@ Types of personal loan
             <div class="content">
               <div class="h5 mb-1">Professional Guidance and Advice</div>
               <div>
-                <p class="text-justify">Experts at MoneyTrusts know the ins and outs of the business. Our committed group of individual specialists will guide you to pick the right credit fee.
+                <p class="text-justify">Experts at MoneyTrusts know the ins and outs of the business. Our committed
+                  group of individual specialists will guide you to pick the right credit fee.
                 </p>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="timeline-card timeline-card-primary card shadow-sm"  data-aos="fade-left"   data-aos-delay="100" data-aos-duration="1000">
+        <div class="timeline-card timeline-card-primary card shadow-sm" data-aos="fade-left" data-aos-delay="100"
+          data-aos-duration="1000">
           <div class="card-body">
             <div style="width:60px;">
               <i class="fa-solid fa-folder-open"></i>
@@ -930,13 +1048,16 @@ Types of personal loan
             <div class="content">
               <div class="h5 mb-1">Minimum Documentation Requirements </div>
               <div>
-                <p class="text-justify">As mentioned earlier, the bulk of the paperwork are easy to obtain KYC connected papers and evidence. Hence, individual personal loans are authorized and disbursed speedily without issues. MoneyTrusts handles this loan eligibility criterion for you with ease.</p>
+                <p class="text-justify">As mentioned earlier, the bulk of the paperwork are easy to obtain KYC connected
+                  papers and evidence. Hence, individual personal loans are authorized and disbursed speedily without
+                  issues. MoneyTrusts handles this loan eligibility criterion for you with ease.</p>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="timeline-card timeline-card-primary card shadow-sm"  data-aos="fade-left"   data-aos-delay="100" data-aos-duration="1000">
+        <div class="timeline-card timeline-card-primary card shadow-sm" data-aos="fade-left" data-aos-delay="100"
+          data-aos-duration="1000">
           <div class="card-body">
             <div style="width:60px;">
               <i class="fa-solid fa-gift"></i>
@@ -944,7 +1065,9 @@ Types of personal loan
             <div class="content">
               <div class="h5 mb-1">Profit from Best Offers</div>
               <div>
-                <p class="text-justify">We esteem our clients and are consistently on our toes to give them advantages of our abilities. Applying for any advance or loans through us, allows you an opportunity to benefit from the best offers and agreements our Partner Banks and NBFCs have to offer.</p>
+                <p class="text-justify">We esteem our clients and are consistently on our toes to give them advantages
+                  of our abilities. Applying for any advance or loans through us, allows you an opportunity to benefit
+                  from the best offers and agreements our Partner Banks and NBFCs have to offer.</p>
               </div>
             </div>
           </div>
@@ -962,7 +1085,7 @@ Types of personal loan
 
 
 <!-- Stepper Start -->
-<section class="loan-steps-section mb-3"  data-aos="zoom-in"   data-aos-delay="100" data-aos-duration="1000">
+<section class="loan-steps-section mb-3" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000">
   <div class="container">
     <div class="row">
       <div class="col-sm-12 text-center text-light">
@@ -970,7 +1093,7 @@ Types of personal loan
       </div>
     </div>
   </div>
-{% include "apply_loan_steps.html" %}
+  {% include "apply_loan_steps.html" %}
 </section>
 <!-- Stepper Stop -->
 

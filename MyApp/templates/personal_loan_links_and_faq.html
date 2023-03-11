@@ -148,37 +148,37 @@ input:checked ~ .accordion-content {
 <div class="row">
 
   <div class="col-lg-4 col-md-3 ">
-    <div class="faq-options mt-2"  onclick="faq_section_1()">
+    <div class="faq-options  mt-2" id="btn-faq-1"  onclick="faq_section_1()">
             <span style="vertical-align: middle;">Ovierview</span>
     </div>      
   </div>
 
   <div class="col-lg-4 col-md-3 ">
-    <div class="faq-options mt-2"  onclick="faq_section_2()">
+    <div class="faq-options  mt-2" id="btn-faq-2"  onclick="faq_section_2()">
             <span style="vertical-align: middle;">Eligibility Criteria & Calculator</span>
     </div>      
   </div>
 
   <div class="col-lg-4 col-md-3 ">
-    <div class="faq-options mt-2"  onclick="faq_section_3()">
+    <div class="faq-options  mt-2" id="btn-faq-3"  onclick="faq_section_3()">
             <span style="vertical-align: middle;">EMI Calculator</span>
     </div>      
   </div>
 
   <div class="col-lg-4 col-md-3 ">
-    <div class="faq-options mt-2"  onclick="faq_section_4()">
+    <div class="faq-options  mt-2" id="btn-faq-4"  onclick="faq_section_4()">
             <span style="vertical-align: middle;">Interest Rate & Processing Fees</span>
     </div>      
   </div>
 
   <div class="col-lg-4 col-md-3 ">
-    <div class="faq-options mt-2"  onclick="faq_section_5()">
+    <div class="faq-options  mt-2" id="btn-faq-5"  onclick="faq_section_5()">
             <span style="vertical-align: middle;">Document Required</span>
     </div>      
   </div>
 
   <div class="col-lg-4 col-md-3 ">
-    <div class="faq-options mt-2"  onclick="faq_section_6()">
+    <div class="faq-options  mt-2" id="btn-faq-6"  onclick="faq_section_6()">
             <span style="vertical-align: middle;">Balance Transfer & Topup</span>
     </div>      
   </div>
@@ -756,6 +756,11 @@ input:checked ~ .accordion-content {
 <!-- FAQ Stop-->
 
 <script>
+  document.getElementById('accordion-section-1').style.animation = 'fadeEffect 1s';
+  document.getElementById('btn-faq-1').style.background = '#B40018';
+  document.getElementById('btn-faq-1').style.color = 'white';
+2
+
   document.getElementById('accordion-section-1').style.display='block';
   document.getElementById('accordion-section-2').style.display='none';
   document.getElementById('accordion-section-3').style.display='none';
@@ -765,6 +770,21 @@ input:checked ~ .accordion-content {
  
   function faq_section_1()
   {
+    
+  document.getElementById('accordion-section-1').style.animation = 'fadeEffect 1s';
+  document.getElementById('btn-faq-1').style.background = '#B40018';
+  document.getElementById('btn-faq-1').style.color = 'white';
+  document.getElementById('btn-faq-2').style.background = 'white';
+  document.getElementById('btn-faq-2').style.color = 'black';
+  document.getElementById('btn-faq-3').style.background = 'white';
+  document.getElementById('btn-faq-3').style.color = 'black';
+  document.getElementById('btn-faq-4').style.background = 'white';
+  document.getElementById('btn-faq-4').style.color = 'black';
+  document.getElementById('btn-faq-5').style.background = 'white';
+  document.getElementById('btn-faq-5').style.color = 'black';
+  document.getElementById('btn-faq-6').style.background = 'white';
+  document.getElementById('btn-faq-6').style.color = 'black';
+
    document.getElementById('accordion-section-1').style.display='block';
    document.getElementById('accordion-section-2').style.display='none';
    document.getElementById('accordion-section-3').style.display='none';
@@ -773,8 +793,22 @@ input:checked ~ .accordion-content {
    document.getElementById('accordion-section-6').style.display='none';
   }
   function faq_section_2()
- {
-   document.getElementById('accordion-section-1').style.display='none';
+  {
+  document.getElementById('accordion-section-2').style.animation = 'fadeEffect 1s';
+  document.getElementById('btn-faq-1').style.background = 'white';
+  document.getElementById('btn-faq-1').style.color = 'black';
+  document.getElementById('btn-faq-2').style.background = '#B40018';
+  document.getElementById('btn-faq-2').style.color = 'white';
+  document.getElementById('btn-faq-3').style.background = 'white';
+  document.getElementById('btn-faq-3').style.color = 'black';
+  document.getElementById('btn-faq-4').style.background = 'white';
+  document.getElementById('btn-faq-4').style.color = 'black';
+  document.getElementById('btn-faq-5').style.background = 'white';
+  document.getElementById('btn-faq-5').style.color = 'black';
+  document.getElementById('btn-faq-6').style.background = 'white';
+  document.getElementById('btn-faq-6').style.color = 'black';
+
+  document.getElementById('accordion-section-1').style.display='none';
   document.getElementById('accordion-section-2').style.display='block';
   document.getElementById('accordion-section-3').style.display='none';
   document.getElementById('accordion-section-4').style.display='none';
@@ -783,6 +817,20 @@ input:checked ~ .accordion-content {
  }
      function faq_section_3()
    {
+  document.getElementById('accordion-section-3').style.animation = 'fadeEffect 1s';
+  document.getElementById('btn-faq-1').style.background = 'white';
+  document.getElementById('btn-faq-1').style.color = 'black';
+  document.getElementById('btn-faq-2').style.background = 'white';
+  document.getElementById('btn-faq-2').style.color = 'black';
+  document.getElementById('btn-faq-3').style.background = '#B40018';
+  document.getElementById('btn-faq-3').style.color = 'white';
+  document.getElementById('btn-faq-4').style.background = 'white';
+  document.getElementById('btn-faq-4').style.color = 'black';
+  document.getElementById('btn-faq-5').style.background = 'white';
+  document.getElementById('btn-faq-5').style.color = 'black';
+  document.getElementById('btn-faq-6').style.background = 'white';
+  document.getElementById('btn-faq-6').style.color = 'black';
+
      document.getElementById('accordion-section-1').style.display='none';
      document.getElementById('accordion-section-2').style.display='none';
      document.getElementById('accordion-section-3').style.display='block';
@@ -792,6 +840,21 @@ input:checked ~ .accordion-content {
    }
      function faq_section_4()
    {
+  document.getElementById('accordion-section-4').style.animation = 'fadeEffect 1s';
+  document.getElementById('btn-faq-1').style.background = 'white';
+  document.getElementById('btn-faq-1').style.color = 'black';
+  document.getElementById('btn-faq-2').style.background = 'white';
+  document.getElementById('btn-faq-2').style.color = 'black';
+  document.getElementById('btn-faq-3').style.background = 'white';
+  document.getElementById('btn-faq-3').style.color = 'black';
+  document.getElementById('btn-faq-4').style.background = '#B40018';
+  document.getElementById('btn-faq-4').style.color = 'white';
+  document.getElementById('btn-faq-5').style.background = 'white';
+  document.getElementById('btn-faq-5').style.color = 'black';
+  document.getElementById('btn-faq-6').style.background = 'white';
+  document.getElementById('btn-faq-6').style.color = 'black';
+
+
      document.getElementById('accordion-section-1').style.display='none';
      document.getElementById('accordion-section-2').style.display='none';
      document.getElementById('accordion-section-3').style.display='none';
@@ -802,6 +865,22 @@ input:checked ~ .accordion-content {
    
    function faq_section_5()
    {
+  document.getElementById('accordion-section-5').style.animation = 'fadeEffect 1s';
+  document.getElementById('btn-faq-1').style.background = 'white';
+  document.getElementById('btn-faq-1').style.color = 'black';
+  document.getElementById('btn-faq-2').style.background = 'white';
+  document.getElementById('btn-faq-2').style.color = 'black';
+  document.getElementById('btn-faq-3').style.background = 'white';
+  document.getElementById('btn-faq-3').style.color = 'black';
+  document.getElementById('btn-faq-4').style.background = 'white';
+  document.getElementById('btn-faq-4').style.color = 'black';
+  document.getElementById('btn-faq-5').style.background = '#B40018';
+  document.getElementById('btn-faq-5').style.color = 'white';
+  document.getElementById('btn-faq-6').style.background = 'white';
+  document.getElementById('btn-faq-6').style.color = 'black';
+
+
+
      document.getElementById('accordion-section-1').style.display='none';
      document.getElementById('accordion-section-2').style.display='none';
      document.getElementById('accordion-section-3').style.display='none';
@@ -813,6 +892,22 @@ input:checked ~ .accordion-content {
    
    function faq_section_6()
    {
+  document.getElementById('accordion-section-6').style.animation = 'fadeEffect 1s';
+  document.getElementById('btn-faq-1').style.background = 'white';
+  document.getElementById('btn-faq-1').style.color = 'black';
+  document.getElementById('btn-faq-2').style.background = 'white';
+  document.getElementById('btn-faq-2').style.color = 'black';
+  document.getElementById('btn-faq-3').style.background = 'white';
+  document.getElementById('btn-faq-3').style.color = 'black';
+  document.getElementById('btn-faq-4').style.background = 'white';
+  document.getElementById('btn-faq-4').style.color = 'black';
+  document.getElementById('btn-faq-5').style.background = 'white';
+  document.getElementById('btn-faq-5').style.color = 'black';
+  document.getElementById('btn-faq-6').style.background = '#B40018';
+  document.getElementById('btn-faq-6').style.color = 'white';
+
+
+
      document.getElementById('accordion-section-1').style.display='none';
      document.getElementById('accordion-section-2').style.display='none';
      document.getElementById('accordion-section-3').style.display='none';

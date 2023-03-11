@@ -24,8 +24,7 @@ def admin_login(request):
         password=request.POST['password']
         user=authenticate(request,username=username,password=password)
         if user is not None:
-            login(request,user)
-            messages.success(request,'Account Deleted Successfully!!!')
+            login(request,user) 
             return redirect('/admin_dashboard',{'user',user})
         else:
             form=login_form()
@@ -55,7 +54,7 @@ def enquiry_records(request):
  
     totalpage=page_record_finel.paginator.num_pages
     data={'rec':page_record_finel,'filter':Filter,'count':count,'pagenumbers':[n+1 for n in range(totalpage)]} 
-    return render(request,'Admin/enquiry_records.html',data)
+    return render(request,'admin/enquiry_records.html',data)
  
 
 
@@ -65,6 +64,11 @@ def delete_enquiry(request,id):
         rm.delete()
         messages.success(request,'Record Deleted Successfully')
     return redirect('/enquiry_records/',{'rm':rm})
+   
+
+def enquiry_records_more_details(request,id):
+    rec=DB_Enquiry.objects.get(pk=id)
+    return render(request,'admin/enquiry_records_more_details.html',{'rec':rec})
    
 
 
@@ -79,7 +83,7 @@ def loan_application_records(request):
  
     totalpage=page_record_finel.paginator.num_pages
     data={'rec':page_record_finel,'filter':Filter,'count':count,'pagenumbers':[n+1 for n in range(totalpage)]} 
-    return render(request,'Admin/loan_application_records.html',data)
+    return render(request,'admin/loan_application_records.html',data)
 
 
 def delete_loan_application_record(request,id):
@@ -103,7 +107,7 @@ def become_a_partner_records(request):
  
     totalpage=page_record_finel.paginator.num_pages
     data={'rec':page_record_finel,'filter':Filter,'count':count,'pagenumbers':[n+1 for n in range(totalpage)]} 
-    return render(request,'Admin/become_a_partner_records.html',data)
+    return render(request,'admin/become_a_partner_records.html',data)
 
 
 def delete_become_partner(request,id):

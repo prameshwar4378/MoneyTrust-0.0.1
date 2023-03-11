@@ -135,7 +135,7 @@
         <nav>
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="{% url 'admin_dashboard' %}">Home</a></li>
-                <li class="breadcrumb-item active">Loan Application Records</li>
+                <li class="breadcrumb-item active">Enquiry Records</li>
             </ol>
         </nav>
     </div><!-- End Page Title -->
@@ -226,9 +226,10 @@
                         <td>{{r.email}}</td>
                         <td>{{r.city}}</td>
                         <td>{{r.reason}}</td>
-                        <td>{{r.subject}}</td>
-                        <td>{{r.message}}</td>
+                        <td>{{r.subject|slice:20}}.....</td>
+                        <td>{{r.message|slice:10}}.....</td>
                         <td>
+                            <a href="{% url 'enquiry_records_more_details' r.id %}" class="btn btn-primary">More info</a>
                             <form action="{% url 'delete_enquiry' r.id %}" method='POST'
                                 class="d-inline" novalidate>
                                 {% csrf_token %}

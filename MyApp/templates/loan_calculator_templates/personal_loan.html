@@ -12,10 +12,10 @@
         
             <div class="slidecontainer text-left" style="margin-bottom: 25px;" id="">
                 Loan Amount
-                <input type="range" min="1000" max="30000" value="50" class="slider"
+                <input type="range" min="50000" max="100000000" value="5000000"  class="slider"
                     id="range_personal_loan_amount" step="500"  onchange="call_test()">
                 <p style="display: none;">Value: <span id="lbl_personal_loan_amount"></span></p>
-                <input type="text" id="txt_personal_loan_amount" class="form-control"
+                <input type="text" id="txt_personal_loan_amount" class="form-control"  value="5000000" 
                     placeholder="Enter amount from 1,00,000 to 10,00,00,000"
                     onchange="calculation_text_input()">
             </div>
@@ -24,23 +24,23 @@
                 <div class="col-sm-6">
                     <div class="slidecontainer text-left" style="margin-bottom: 5px;">
                         Rate of Interest
-                        <input type="range" min="2" max="15" value="5" class="slider"
+                        <input type="range" min="2" max="15" value="12.5" class="slider"
                             id="range_personal_loan_rate_of_interest">
                         <p style="display: none;">Value: <span
                                 id="lbl_personal_loan_rate_of_interest"></span></p>
                         <input type="text" id="txt_personal_loan_rate_of_interest" class="form-control"
-                            value="5" onchange="calculation_text_input()">
+                        value="12.5" onchange="calculation_text_input()">
                     </div>
                 </div>
                 <div class="col-sm-6">
                     <div class="slidecontainer text-left">
                         Loan Duration (year)
-                        <input type="range" min="1" max="30" value="5" class="slider"
+                        <input type="range" min="1" max="30" value="3" class="slider"
                             id="range_personal_loan_tenure">
                         <p style="display: none;">Value: <span id="lbl_personal_loan_tenure"></span>
                         </p>
                         <input type="text" id="txt_personal_loan_tenure" class="form-control"
-                            value="5" onchange="calculation_text_input()">
+                        value="3" onchange="calculation_text_input()">
                     </div>
                 </div>
             </div>
@@ -51,17 +51,17 @@
                 <div class="col-sm-4">
                     <p style="font-size: 15px;">Monthly EMI</p>
                     <span id="lbl_personal_loan_monthly_emi"
-                        style="font-size: 25px; font-weight: 1000;"><b>000</b></span>
+                        style="font-size: 25px; font-weight: 1000;"><b>190972</b></span>
                 </div>
                 <div class="col-sm-4">
                     <p style="font-size: 15px;">Total Interest Payable</p>
                     <span id="lbl_personal_loan_total_interest_payable"
-                        style="font-size: 25px; font-weight: 1000;"><b>000</b></span>
+                        style="font-size: 25px; font-weight: 1000;"><b>1875000</b></span>
                 </div>
                 <div class="col-sm-4">
                     <p style="font-size: 15px;">TOTAL AMOUNT PAYABLE</p>
                     <span id="lbl_personal_loan_total_amount_payable"
-                        style="font-size: 25px; font-weight: 1000;"><b>000</b></span>
+                        style="font-size: 25px; font-weight: 1000;"><b>6875000</b></span>
                 </div>
             </div>
         </center>

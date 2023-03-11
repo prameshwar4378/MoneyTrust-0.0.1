@@ -2,7 +2,7 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - Glassmorphism login Form Tutorial in html css</title>
+  <title>MoneyTrust Login</title>
   
 
 </head>
@@ -161,5 +161,12 @@ button{
 </html>
 <!-- partial -->
   
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script>
+  {% for msg in messages %}
+  swal("Done", "{{msg}}", "error");
+{% endfor %}
+</script>
+
 </body>
 </html>

@@ -30,6 +30,7 @@ urlpatterns = [
 
 
 
+
     # Personal Loan Start 
     path('personal_loan_overview/', views.personal_loan_overview, name="personal_loan_overview"),
     path('personal_loan_eligibility_criteria/', views.personal_loan_eligibility_criteria, name="personal_loan_eligibility_criteria"),
@@ -67,6 +68,7 @@ urlpatterns = [
 
 
     #Admin Section Start
+
     path('admin_dashboard/', views.admin_dashboard, name="admin_dashboard"),
     path('become_a_partner_records/', views.become_a_partner_records, name="become_a_partner_records"),
     path('enquiry_records/', views.enquiry_records, name="enquiry_records"),
@@ -79,6 +81,8 @@ urlpatterns = [
     path('export_data_become_partner/',views.export_data_become_partner, name='export_data_become_partner'), 
     path('export_data_enquiry/',views.export_data_enquiry, name='export_data_enquiry'), 
     path('export_data_loan_application/',views.export_data_loan_application, name='export_data_loan_application'), 
+
+    path('enquiry_records_more_details/<int:id>/', views.enquiry_records_more_details, name="enquiry_records_more_details"),
 
     #Admin Section Stop
 

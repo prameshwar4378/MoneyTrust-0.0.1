@@ -50,8 +50,7 @@
         id="calculator_output">
         <div class="col-sm-4">
             <p style="font-size: 15px;">Monthly EMI</p>
-            <span id="lbl_home_loan_monthly_emi"
-                style="font-size: 25px; font-weight: 1000;"><b>190972</b></span>
+            <span id="lbl_home_loan_monthly_emi" style="font-size: 25px; font-weight: 1000;"><b>190972</b></span>
         </div>
         <div class="col-sm-4">
             <p style="font-size: 15px;">Total Interest Payable</p>
@@ -119,7 +118,6 @@ document.getElementById('lbl_home_loan_monthly_emi').textContent = (rate_of_inte
 }
 
 function calculation_text_input_home_loan() {
-alert("Success")
 var var_txt_loan_amount = Number(document.getElementById('txt_home_loan_amount').value)
 var var_txt_rate_of_interest = Number(document.getElementById('txt_home_loan_rate_of_interest').value)
 var var_txt_loan_tenure = Number(document.getElementById('txt_home_loan_tenure').value)
